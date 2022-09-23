@@ -1,0 +1,9 @@
+.sidebar{
+    min-height: 50vh;
+    background-color: var(--white) !important;
+    border-right: 2px solid var(--primary) !important;
+}
+.sidebar-title{
+    color:var(--primary) !important;
+    font-weight: 700;
+}
