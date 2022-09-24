@@ -16,7 +16,7 @@
     <!--====== Favicon Icon ======-->
     <link
       rel="shortcut icon"
-      href="./assets/images/favicon.svg"
+      href="./assets/img/favicon.svg"
       type="image/svg"
     />
 
@@ -31,6 +31,7 @@
 
     <link rel="stylesheet" href="./assets/css/navbar/navbar.css" />
     <link rel="stylesheet" href="./assets/css/tab/tab.css" />
+    <link rel="stylesheet" href="./assets/css/alert/alert.css" />
   </head>
 
   <body>
@@ -55,9 +56,9 @@
                 <span class="toggler-icon"></span>
               </button>
 
-              <a class="navbar-brand " href="javascript:void(0)">
-                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pr-3"/>
-                LiveWire
+              <a class="navbar-brand" href="javascript:void(0)">
+                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2"/>
+                Live<span class="live-green">Wire</span>
               </a>
 
               <div
@@ -75,15 +76,15 @@
                     <a href="javascript:void(0)">Sections</a>
                   </li>
                   <li class="nav-item">
-                    <a class="active" href="javascript:void(0)"> Components</a>
-                  </li>
-                 
-                  <li class="nav-item">
                     <a href="javascript:void(0)">Contents</a>
                   </li>
                   <li class="nav-item">
                     <a href="javascript:void(0)">Forms</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="active" href="javascript:void(0)"> Components</a>
+                  </li>
+                 
                 </ul>
               </div>
 
@@ -101,11 +102,11 @@
 
     <!--====== NAVBAR FOUR PART ENDS ======-->
   <!--====== MAIN AREA START ======-->
-    <div class="container">
-        <div class="row p-3">
+    <div class="container-md">
+        <div class="row p-md-3">
          <div class="col">
           <div class="tabs mt-3">
-            <h5 class="tabs-title mb-3">
+            <h5 class="tabs-title mb-5">
               <i class="bi bi-layers-fill"></i> Components</h5>
             <div class="single-tabs tabs-six">
               <div class="row no-gutters">
@@ -126,157 +127,171 @@
                     <a id="v-pills-six-cards-tab" data-bs-toggle="pill" href="#v-pills-six-cards" role="tab"
                       aria-controls="v-pills-six-cards" aria-selected="false"> Cards</a>
 
-                      <a id="v-pills-six-cards-tab" data-bs-toggle="pill" href="#v-pills-six-carousels" role="tab"
+                      <a id="v-pills-six-carousels-tab" data-bs-toggle="pill" href="#v-pills-six-carousels" role="tab"
                       aria-controls="v-pills-six-carousels" aria-selected="false"> Carousels</a>
                       
-                      <a id="v-pills-six-cards-tab" data-bs-toggle="pill" href="#v-pills-six-chips" role="tab"
+                      <a id="v-pills-six-chips-tab" data-bs-toggle="pill" href="#v-pills-six-chips" role="tab"
                       aria-controls="v-pills-six-chips" aria-selected="false"> Chips</a>
                       
-                      <a id="v-pills-six-cards-tab" data-bs-toggle="pill" href="#v-pills-six-feeds" role="tab"
+                      <a id="v-pills-six-feeds-tab" data-bs-toggle="pill" href="#v-pills-six-feeds" role="tab"
                       aria-controls="v-pills-six-feeds" aria-selected="false"> Feeds</a>
+                     
+                      <a id="v-pills-six-icons-tab" data-bs-toggle="pill" href="#v-pills-six-icons" role="tab"
+                      aria-controls="v-pills-six-icons" aria-selected="false"> Icons</a>
+                      <a id="v-pills-six-menus-tab" data-bs-toggle="pill" href="#v-pills-six-menus" role="tab"
+                      aria-controls="v-pills-six-menus" aria-selected="false"> Menus</a>
+                      <a id="v-pills-six-modals-tab" data-bs-toggle="pill" href="#v-pills-six-modals" role="tab"
+                      aria-controls="v-pills-six-modals" aria-selected="false"> Modals</a>
+                      <a id="v-pills-six-scroll-top-tab" data-bs-toggle="pill" href="#v-pills-six-scroll-top" role="tab"
+                      aria-controls="v-pills-six-scroll-top" aria-selected="false"> Scroll to Top</a>
+                      <a id="v-pills-six-spinner-tab" data-bs-toggle="pill" href="#v-pills-six-spinner" role="tab"
+                      aria-controls="v-pills-six-spinner" aria-selected="false"> Spinners</a>
+                      <a id="v-pills-six-cards-tab" data-bs-toggle="pill" href="#v-pills-six-tabs" role="tab"
+                      aria-controls="v-pills-six-tabs" aria-selected="false"> Tabs</a>
+                      <a id="v-pills-six-toast-tab" data-bs-toggle="pill" href="#v-pills-six-toast" role="tab"
+                      aria-controls="v-pills-six-toast" aria-selected="false"> Toast</a>
                       
                   </div>
                 </div>
                 <div class="col-sm-9">
-                  <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-six-alerts" role="tabpanel"
+                  <div class="spinner" id="spinner"></div>
+                  <div class="tab-content" id="v-pills-tabContent" style="display:none">
+                    <div class="tab-pane  show active" id="v-pills-six-alerts" role="tabpanel"
                       aria-labelledby="v-pills-six-alerts-tab">
                       <div class="tab-text">
-                        <div class="spinner"></div>
-                        <p class="text">
-                          Raw denim you probably haven’t heard of them jean
-                          shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                          synth master cleanse. Mustache cliche tempor,
-                          williamsburg carles vegan helvetica. Reprehenderit
-                          butcher retro keffiyeh dreamcatcher synth.
-                          <br /><br />
-                          Cosby sweater eu banh mi, qui irure terry richardson
-                          ex squid. Aliquip placeat salvia cillum iphone.
-                          Seitan aliquip quis cardigan american apparel,
-                          butcher voluptate nisi qui.
+                        <h3 class="mb-2">Alerts</h3>
+                        <p class="text mb-2">
+                          Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
                         </p>
-                      </div>
+                        
+                        <h5 class="my-3">Primary</h5>
+                            <div class="alert alert-primary  d-flex align-items-center" role="alert">
+                              <div class="alert-message">
+                                <h6 class="alert-title-primary">
+                                  <i class="bi bi-info-circle-fill"></i> This is a default message</h6>
+                                <p class="alert-text">
+                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                  Nesciunt a in, ullam. Lorem ipsum dolor sit amet,
+                                  consectetur adipisicing.
+                                </p>
+                                 </div>
+                            </div>
+                          </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-six-accordions" role="tabpanel"
+                    <div class="tab-pane " id="v-pills-six-accordions" role="tabpanel"
                       aria-labelledby="v-pills-six-accordions-tab">
                       <div class="tab-text">
                         <p class="text">
-                          Raw denim you probably haven’t heard of them jean
-                          shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                          synth master cleanse. Mustache cliche tempor,
-                          williamsburg carles vegan helvetica. Reprehenderit
-                          butcher retro keffiyeh dreamcatcher synth.
-                          <br /><br />
-                          Cosby sweater eu banh mi, qui irure terry richardson
-                          ex squid. Aliquip placeat salvia cillum iphone.
-                          Seitan aliquip quis cardigan american apparel,
-                          butcher voluptate nisi qui.
+                          <h3>Accordion</h3>
                         </p>
+                        
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-six-buttons" role="tabpanel"
+                    <div class="tab-pane " id="v-pills-six-buttons" role="tabpanel"
                       aria-labelledby="v-pills-six-buttons-tab">
                       <div class="tab-text">
                         <p class="text">
-                          Raw denim you probably haven’t heard of them jean
-                          shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                          synth master cleanse. Mustache cliche tempor,
-                          williamsburg carles vegan helvetica. Reprehenderit
-                          butcher retro keffiyeh dreamcatcher synth.
-                          <br /><br />
-                          Cosby sweater eu banh mi, qui irure terry richardson
-                          ex squid. Aliquip placeat salvia cillum iphone.
-                          Seitan aliquip quis cardigan american apparel,
-                          butcher voluptate nisi qui.
+                          <h3>Buttons</h3>
                         </p>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-six-breadcrumbs" role="tabpanel"
+                    <div class="tab-pane " id="v-pills-six-breadcrumbs" role="tabpanel"
                     aria-labelledby="v-pills-six-breadcrumbs-tab">
                     <div class="tab-text">
                       <p class="text">
-                        Raw denim you probably haven’t heard of them jean
-                        shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                        synth master cleanse. Mustache cliche tempor,
-                        williamsburg carles vegan helvetica. Reprehenderit
-                        butcher retro keffiyeh dreamcatcher synth.
-                        <br /><br />
-                        Cosby sweater eu banh mi, qui irure terry richardson
-                        ex squid. Aliquip placeat salvia cillum iphone.
-                        Seitan aliquip quis cardigan american apparel,
-                        butcher voluptate nisi qui.
+                        <h3>Breadcrumbs</h3>
                       </p>
                     </div>
                   </div>
-                    <div class="tab-pane fade" id="v-pills-six-cards" role="tabpanel"
+                    <div class="tab-pane " id="v-pills-six-cards" role="tabpanel"
                       aria-labelledby="v-pills-six-cards-tab">
                       <div class="tab-text">
                         <p class="text">
-                          Raw denim you probably haven’t heard of them jean
-                          shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                          synth master cleanse. Mustache cliche tempor,
-                          williamsburg carles vegan helvetica. Reprehenderit
-                          butcher retro keffiyeh dreamcatcher synth.
-                          <br /><br />
-                          Cosby sweater eu banh mi, qui irure terry richardson
-                          ex squid. Aliquip placeat salvia cillum iphone.
-                          Seitan aliquip quis cardigan american apparel,
-                          butcher voluptate nisi qui.
+                          <h3>Cards</h3>
                         </p>
                       </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-six-carousels" role="tabpanel"
+                    <div class="tab-pane " id="v-pills-six-carousels" role="tabpanel"
                     aria-labelledby="v-pills-six-carousels-tab">
                     <div class="tab-text">
                       <p class="text">
-                        Raw denim you probably haven’t heard of them jean
-                        shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                        synth master cleanse. Mustache cliche tempor,
-                        williamsburg carles vegan helvetica. Reprehenderit
-                        butcher retro keffiyeh dreamcatcher synth.
-                        <br /><br />
-                        Cosby sweater eu banh mi, qui irure terry richardson
-                        ex squid. Aliquip placeat salvia cillum iphone.
-                        Seitan aliquip quis cardigan american apparel,
-                        butcher voluptate nisi qui.
+                        <h3>Carousels</h3>
                       </p>
                     </div>
                   </div>
 
-                  <div class="tab-pane fade" id="v-pills-six-chips" role="tabpanel"
+                  <div class="tab-pane " id="v-pills-six-chips" role="tabpanel"
                     aria-labelledby="v-pills-six-chips-tab">
                     <div class="tab-text">
                       <p class="text">
-                        Raw denim you probably haven’t heard of them jean
-                        shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                        synth master cleanse. Mustache cliche tempor,
-                        williamsburg carles vegan helvetica. Reprehenderit
-                        butcher retro keffiyeh dreamcatcher synth.
-                        <br /><br />
-                        Cosby sweater eu banh mi, qui irure terry richardson
-                        ex squid. Aliquip placeat salvia cillum iphone.
-                        Seitan aliquip quis cardigan american apparel,
-                        butcher voluptate nisi qui.
+                        <h3>Chips</h3>
                       </p>
                     </div>
                   </div>
                  
-                  <div class="tab-pane fade" id="v-pills-six-feeds" role="tabpanel"
-                  aria-labelledby="v-pills-six-chips-feeds">
+                  <div class="tab-pane " id="v-pills-six-feeds" role="tabpanel"
+                  aria-labelledby="v-pills-six-feeds">
                   <div class="tab-text">
                     <p class="text">
-                      Raw denim you probably haven’t heard of them jean
-                      shorts Austin. Nesciunt tofu stumptown aliqua, retro
-                      synth master cleanse. Mustache cliche tempor,
-                      williamsburg carles vegan helvetica. Reprehenderit
-                      butcher retro keffiyeh dreamcatcher synth.
-                      <br /><br />
-                      Cosby sweater eu banh mi, qui irure terry richardson
-                      ex squid. Aliquip placeat salvia cillum iphone.
-                      Seitan aliquip quis cardigan american apparel,
-                      butcher voluptate nisi qui.
+                      <h3>Feeds</h3>
                     </p>
                   </div>
+                </div>
+                <div class="tab-pane " id="v-pills-six-icons" role="tabpanel"
+                aria-labelledby="v-pills-six-icons">
+                <div class="tab-text">
+                  <p class="text">
+                    <h3>Icons</h3>
+                  </p>
+                </div>
+                </div>
+                <div class="tab-pane " id="v-pills-six-menus" role="tabpanel"
+                aria-labelledby="v-pills-six-menus">
+                <div class="tab-text">
+                  <p class="text">
+                    <h3>Menus</h3>
+                  </p>
+                </div>
+                </div>
+                <div class="tab-pane " id="v-pills-six-modals" role="tabpanel"
+                aria-labelledby="v-pills-six-modals">
+                <div class="tab-text">
+                  <p class="text">
+                    <h3>Modals</h3>
+                  </p>
+                </div>
+                </div>
+                <div class="tab-pane " id="v-pills-six-scroll-top" role="tabpanel"
+                aria-labelledby="v-pills-six-scroll-top">
+                <div class="tab-text">
+                  <p class="text">
+                    <h3>Scroll to Top</h3>
+                  </p>
+                </div>
+                </div>
+                <div class="tab-pane " id="v-pills-six-spinners" role="tabpanel"
+                aria-labelledby="v-pills-six-spinners">
+                <div class="tab-text">
+                  <p class="text">
+                    <h3>Spinners</h3>
+                  </p>
+                </div>
+                </div>
+                <div class="tab-pane " id="v-pills-six-tabs" role="tabpanel"
+                aria-labelledby="v-pills-tabs">
+                <div class="tab-text">
+                  <p class="text">
+                    <h3>Tabs</h3>
+                  </p>
+                </div>
+                </div>
+                <div class="tab-pane " id="v-pills-six-toast" role="tabpanel"
+                aria-labelledby="v-pills-six-toast">
+                <div class="tab-text">
+                  <p class="text">
+                    <h3>Toast</h3>
+                  </p>
+                </div>
                 </div>
 
                 </div>
@@ -289,17 +304,15 @@
         </div>
     </div>
   <!--====== MAIN AREA ENDS ======-->
+
+    <!--====== JQuery js ======-->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!--====== Main js ======-->
+    <script src="./assets/js/main.js"></script>
+    <!--====== Tabs js ======-->
+     <script src="./assets/js/tabs.js"></script>
     <!--====== Bootstrap js ======-->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      //===== close navbar-collapse when a  clicked
-      let navbarTogglerFour = document.querySelector(
-        ".navbar-four .navbar-toggler"
-      );
-      navbarTogglerFour.addEventListener("click", function () {
-        navbarTogglerFour.classList.toggle("active");
-      });
-    </script>
+   
   </body>
 </html>
