@@ -19,7 +19,7 @@
   min-height: 65%;
 }
 .tabs-six .nav {
-  height: 100%;
+  height: 60vh;
   position: relative;
 }
 .tabs-six .nav::before {

@@ -15,6 +15,10 @@
   pointer-events: none;
 }
 
+.navbar-social{
+  color: var(--blue) !important;
+}
+
 /*===========================
   NAVBAR css 
 ===========================*/
