@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="./assets/css/navbar/navbar.css" />
     <link rel="stylesheet" href="./assets/css/tab/tab.css" />
     <link rel="stylesheet" href="./assets/css/alert/alert.css" />
+    <link rel="stylesheet" href="./assets/css/button/button.css" />
   </head>
 
   <body>
@@ -165,23 +166,195 @@
                     <div class="tab-pane  show active" id="v-pills-six-alerts" role="tabpanel"
                       aria-labelledby="v-pills-six-alerts-tab">
                       <div class="tab-text">
+                        <!-- Alerts -->
                         <h3 class="mb-2">Alerts</h3>
                         <p class="text mb-2">
                           Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
                         </p>
                         
-                        <h5 class="my-3">Primary</h5>
-                            <div class="alert alert-primary  d-flex align-items-center" role="alert">
+                        <h5 class="my-3">With Action Buttons</h5>
+                        <p class="text mb-3">
+                            Alert messages might comes with action buttons for the users feedback and response. 
+                            For proper styling, use any of the contextual classes applicable to the message.
+                        </p>
+                       
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading my-3 ">
+                            <h5 class="mb-1">Preview</h5>
+                          </div>
+                            <div class="alert alert-primary  d-flex align-items-start" role="alert">
+                              <div class="alert-icon">
+                                <i class="bi bi-info-circle-fill"></i>
+                             </div>
                               <div class="alert-message">
-                                <h6 class="alert-title-primary">
-                                  <i class="bi bi-info-circle-fill"></i> This is a default message</h6>
+                              
+                                <h5 class="alert-title-primary">
+                                 Information Message</h5>
                                 <p class="alert-text">
-                                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                  Nesciunt a in, ullam. Lorem ipsum dolor sit amet,
-                                  consectetur adipisicing.
+                                  Conveying an important message should be noticebly visible and yet not disruptive to core contents.
+                                  It is a good practice to always offer suggestions for user actions, you may use control input button and other form controls.
                                 </p>
+                                <button type="button" class="btn btn-sm btn-primary my-3">Close</button>
                                  </div>
                             </div>
+
+                            <h5 class="mb-1 mt-3">Sample Code</h5>
+                            <div class="card border-0 mt-2">
+                              <button class="btn btn-clipboard"> 
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                               </button>
+                              <pre>
+                                <code> 
+&lt;div class="alert alert-primary  d-flex align-items-start" role="alert"&gt;
+  &lt;div class="alert-icon" &gt;
+    &lt;i class="bi bi-info-circle-fill" &gt; &lt;/i&gt;
+  &lt;/div &gt;
+    &lt;div class="alert-message"&gt;
+        &lt;h5 class="alert-title-primary" &gt; Information Message &lt;/h5&gt;
+        &lt;p class="alert-text" &gt;
+          Conveying an important message should be noticebly visible and yet not disruptive to core contents.
+          It is a good practice to always offer suggestions for user actions, you may use control input button and other form controls.
+        &lt;/p &gt;
+        &lt;button type="button" class="btn btn-sm btn-primary my-3" &gt;Close &lt;/button&gt;
+    &lt;/div &gt;
+&lt;/div &gt;
+</code>
+                              </pre>
+                              <h5 class=" my-3">Variations</h5>
+                              <p class="text mb-2">
+                                The following are variation of alert messages styles available for use.
+                                
+                              </p>
+                              <h5 class=" my-3">Success Alert</h5>
+                              <p class="text mb-3">
+                              Success alerts are properl use warned and requires a response from the users.
+                              Use the class <code>.alert alert-secondary</code> to wrap your message if you intend to warn users.
+                              </p>
+                              <div class="alert alert-success d-flex align-items-start" role="alert">
+                                <div class="alert-icon">
+                                  <i class="bi bi-check-circle-fill"></i>
+                               </div>
+                                <div class="alert-message">
+                                
+                                  <h5 class="alert-title-success">
+                                   Success Message</h5>
+                                  <p class="alert-text">
+                                     Providing feedback after a data changes or system tasks is essential for users.
+                                  </p>
+                                  <button type="button" class="btn btn-sm btn-primary my-3">Yes</button>
+                                  <button type="button" class="btn btn-sm btn-primary-outline my-3">Cancel</button>
+                                   </div>
+                              </div>
+                              <div class="card border-0 mt-2">
+                                <button class="btn btn-clipboard"> 
+                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                 </button>
+                              <pre>
+                                <code>
+&lt;div class="alert alert-secondary d-flex align-items-start" role="alert" &gt;
+  &lt;div class="alert-icon" &gt;
+      &lt;i class="bi bi-exclamation-triangle" &gt; &lt;/i &gt;
+  &lt;/div &gt;
+  &lt;div class="alert-message" &gt;
+    &lt;h5 class="alert-title-secondary" &gt;Warning Message &lt;/h5 &gt;
+    &lt;p class="alert-text" &gt;
+        Confirming user response is essential for data updates.
+    &lt;/p &gt;
+    &lt;button type="button" class="btn btn-sm btn-primary my-3" &gt;Yes &lt;/button &gt;
+    &lt;button type="button" class="btn btn-sm btn-primary-outline my-3" &gt;Cancel &lt;/button &gt;
+  &lt;/div &gt;
+&lt;/div &gt;
+</code>
+                              </pre>
+                              </div>
+                              
+                              <h5 class=" my-3">Warning Alert</h5>
+                              <p class="text mb-3">
+                              Warning alerts are properly used to warned and requires a response from the users.
+                              Use the class <code>.alert alert-secondary</code> to wrap your message if you intend to warn users.
+                              </p>
+                              <div class="alert alert-secondary d-flex align-items-start" role="alert">
+                                <div class="alert-icon">
+                                  <i class="bi bi-exclamation-triangle"></i>
+                               </div>
+                                <div class="alert-message">
+                                
+                                  <h5 class="alert-title-secondary">
+                                   Warning Message</h5>
+                                  <p class="alert-text">
+                                     Confirming user response is essential for data updates.
+                                  </p>
+                                  <button type="button" class="btn btn-sm btn-primary my-3">Yes</button>
+                                  <button type="button" class="btn btn-sm btn-primary-outline my-3">Cancel</button>
+                                   </div>
+                              </div>
+                              <div class="card border-0 mt-2">
+                                <button class="btn btn-clipboard"> 
+                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                 </button>
+                              <pre>
+                                <code>
+&lt;div class="alert alert-secondary d-flex align-items-start" role="alert" &gt;
+  &lt;div class="alert-icon" &gt;
+      &lt;i class="bi bi-exclamation-triangle" &gt; &lt;/i &gt;
+  &lt;/div &gt;
+  &lt;div class="alert-message" &gt;
+    &lt;h5 class="alert-title-secondary" &gt;Warning Message &lt;/h5 &gt;
+    &lt;p class="alert-text" &gt;
+        Confirming user response is essential for data updates.
+    &lt;/p &gt;
+    &lt;button type="button" class="btn btn-sm btn-primary my-3" &gt;Yes &lt;/button &gt;
+    &lt;button type="button" class="btn btn-sm btn-primary-outline my-3" &gt;Cancel &lt;/button &gt;
+  &lt;/div &gt;
+&lt;/div &gt;
+</code>
+                              </pre>
+                              </div>
+                              <h5 class=" my-3">Error Alert</h5>
+                              <p class="text mb-3">
+                              Error alerts are recommended to be used for critical errors for users.
+                              Use the class <code>.alert alert-error</code> to wrap your message if you intend to inform users for errors related.
+                              </p>
+
+                              <div class="alert alert-error d-flex align-items-start" role="alert">
+                                <div class="alert-icon">
+                                  <i class="bi bi-x-octagon"></i>
+                               </div>
+                                <div class="alert-message-error">
+                                
+                                  <h5 class="alert-title-error">
+                                   Error Message</h5>
+                                  <p class="alert-text">
+                                     Informing system error is important to provide feedback for a specific task such as data updates.
+                                  </p>
+                                  <button type="button" class="btn btn-sm btn-error my-3">OK</button>
+                                   </div>
+                              </div>
+                              <div class="card border-0 mt-2">
+                                <button class="btn btn-clipboard"> 
+                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                 </button>
+                              <pre>
+                                <code>
+&lt;div class="alert alert-error d-flex align-items-start" role="alert" &gt;
+  &lt;div class="alert-icon" &gt;
+    &lt;i class="bi bi-x-octagon" &gt; &lt;/i &gt;
+  &lt;/div &gt;
+  &lt;div class="alert-message-error" &gt;
+    &lt;h5 class="alert-title-error" &gt; Error Message &lt;/h5 &gt;
+    &lt;p class="alert-text" &gt;
+      Informing system error is important to provide feedback for a specific task such as data updates.
+    &lt;/p &gt;
+    &lt;button type="button" class="btn btn-sm btn-error my-3" &gt;OK &lt;/button &gt;
+    &lt;/div &gt;
+    &lt;/div &gt;
+</code>
+  </pre>
+                              </div>
+                            </div>
+                            </div>
+                           
+                          <!--End of Alerts-->
                           </div>
                     </div>
                     <div class="tab-pane " id="v-pills-six-accordions" role="tabpanel"

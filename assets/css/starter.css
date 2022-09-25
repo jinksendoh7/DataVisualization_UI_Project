@@ -18,6 +18,7 @@
   --dewberry:#993D81;
   --charcoal:#646464;
   --charcoal-plus:#4B4B4B;
+  --charcoal-light: #cbc7c7;
   --black: #191919;
   --white: #FFFFFF;
   --gray: #f9f9f9;
@@ -261,5 +262,32 @@ a{
   font-style: italic !important;
   font-weight: 700 !important;
   color: var(--live-green) !important;
+}
+code {
+  font-family: monospace;
+  white-space:break-spaces !important;
+}
+pre {
+  overflow-x: auto;
+  word-wrap:break-word;
+  padding: 8px 12px;
+  background-color: var(--charcoal-light);
+  border-radius: 5px;
+  width:auto;
+  tab-size:  0;
+}
+
+.btn-clipboard {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  display: block;
+  padding: 5px;
+  color: #818a91;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+  border-radius: .25rem;
 }
 /*# sourceMappingURL=starter.css.map */
