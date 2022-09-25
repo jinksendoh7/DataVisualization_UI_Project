@@ -234,7 +234,7 @@ p {
 }
 
 a{
-  color: var(--blue);
+  color: var(--primary);
   font-size: 15px !important;
   font-weight: 500;
   margin-right: 2px;
