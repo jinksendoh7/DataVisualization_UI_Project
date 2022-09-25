@@ -1,0 +1,59 @@
+/* ===== Buttons Css ===== */
+.btn{
+    text-transform: none !important;
+    font-size: 15px !important;
+}
+.btn-secondary {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow-2);
+  }
+.btn-error {
+    background: var(--tetra-mustard);
+    color: var(--tangerine);
+    box-shadow: var(--shadow-2);
+}
+.btn-primary {
+    background: var(--primary);
+    color: var(--white);
+    box-shadow: var(--shadow-2);
+  }
+  .btn-primary-outline {
+    border-color: var(--primary) !important;
+    color: var(--primary) !important;
+  }
+  .active.btn-primary, .btn-primary:hover, .btn-primary:focus {
+    background: var(--tetra-mustard);
+    color: var(--primary);
+    box-shadow: var(--shadow-4);
+    border-color: var(--primary);
+  }
+  .deactive.btn-primary {
+    background: var(--charcoal-plus);
+    color: var(--black);
+    pointer-events: none;
+  }
+  
+
+  .active.btn-primary-outline, .btn-primary-outline:hover, .btn-primary-outline:focus {
+    background: var(--primary);
+    color: var(--white)
+    
+  }
+  .deactive.btn-primary-outline {
+    color: var(--black);
+    border-color: var(--charcoal-plus);
+    pointer-events: none;
+  }
+  
+  .btn-primary-link {
+    color: var(--primary);
+  }
+  .active.btn-primary-link, .btn-primary-link:hover, .btn-primary-link:focus {
+    color: var(--bright-yellow);
+  }
+  .deactive.btn-primary-link {
+    color: var(--black);
+    pointer-events: none;
+  }
+  
