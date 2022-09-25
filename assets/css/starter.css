@@ -35,7 +35,9 @@
   --shadow-6: 0px 2px 8px rgba(40, 41, 61, 0.08),
     0px 20px 32px rgba(96, 97, 112, 0.24);
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--font-family);
   color: var(--black);
@@ -232,7 +234,7 @@ p {
 }
 
 a{
-  color: var(--primary);
+  color: var(--blue);
   font-size: 15px !important;
   font-weight: 500;
   margin-right: 2px;
@@ -289,5 +291,11 @@ pre {
   background-color: transparent;
   border: 0;
   border-radius: .25rem;
+}
+.mustard{
+  background-color: var(--tetra-mustard);
+  color: var(--white);
+  border:none !important;
+  border-radius: none !important;
 }
 /*# sourceMappingURL=starter.css.map */

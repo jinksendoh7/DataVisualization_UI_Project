@@ -168,13 +168,76 @@
                       <div class="tab-text">
                         <!-- Alerts -->
                         <h3 class="mb-2">Alerts</h3>
-                        <p class="text mb-2">
+                        <div class="row ">
+                        <p class="text mb-1">
                           Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
                         </p>
-                        
-                        <h5 class="my-3">With Action Buttons</h5>
+                        <p class="text mb-2">
+                          The following are available contextual classes ready to use, click on the name for more details.
+                        </p>
+                        <div class="border-1 my-3 ">
+                        <table class="table table-hover bg-light">
+                          <thead>
+                            <tr>
+                              <th scope="col">Alert</th>
+                              <th scope="col">Class</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><a href="#simple-alert">Simple Alert</a></td>
+                              <td><code>.alert alert-simple</code></td>
+                            </tr>
+                            <tr>
+                              <td><a href="#primary-alert">Primary Alert</a></td>
+                              <td><code>.alert alert-primary</code></td>
+                            </tr>
+                            <tr>
+                              <td> <a href="#success-alert">Success Alert</a></td>
+                              <td><code>.alert alert-success</code></td>
+                            </tr>
+                            <tr>
+                              <td><a href="#simple-alert">Warning Alert</a></td>
+                              <td><code>.alert alert-secondary</code></td>
+                            </tr>
+                            <tr>
+                              <td><a href="#error-alert">Error Alert</a></td>
+                              <td><code>.alert alert-error</code></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                      </div>
+                        <h5 class="my-3" id="simple-alert">Simple Alerts</h5>
                         <p class="text mb-3">
-                            Alert messages might comes with action buttons for the users feedback and response. 
+                          Simple Alerts is any feedback message container that does not require any feedback or response from users. Use the proper styling class <code>alert alert-simple</code>.
+                       </p>
+                      
+                       <div class="card p-3 mt-3">
+                        <div class="card-heading my-3 ">
+                          <h5 class="mb-1" id="primary-alert"> Primary Alert</h5>
+                        </div>
+                        <div class="alert alert-simple d-flex align-items-start" role="alert" >
+                          <div class="">
+                              <p class="alert-text">This is a simple feedback message that does not require user feedback or response.</p>
+                          </div>
+                        </div>
+                        <h5 class="mb-1 mt-3">Sample Code</h5>
+                        <pre>
+                          <code>
+&lt;div class="alert alert-simple d-flex align-items-start" role="alert"  &gt;
+    &lt;div class="" &gt;
+       &lt;p class="alert-text" &gt;This is a simple feedback message that does not require user feedback or response. &lt;/p &gt;
+    &lt;/div &gt;
+&lt;/div &gt;
+</code>
+</pre>
+</div>
+
+               
+                      </div>
+                        <h5 class="my-3">Alerts with Action Buttons</h5>
+                        <p class="text mb-3">
+                            Alert messages might comes with action buttons for the users feedback or response. 
                             For proper styling, use any of the contextual classes applicable to the message.
                         </p>
                        
@@ -225,10 +288,9 @@
                                 The following are variation of alert messages styles available for use.
                                 
                               </p>
-                              <h5 class=" my-3">Success Alert</h5>
+                              <h5 class=" my-3" id="success-alert">Success Alert</h5>
                               <p class="text mb-3">
-                              Success alerts are properl use warned and requires a response from the users.
-                              Use the class <code>.alert alert-secondary</code> to wrap your message if you intend to warn users.
+                              To provide feedback for any successful data updates, use the class <code>.alert alert-success</code> to wrap your message if you intend to warn users.
                               </p>
                               <div class="alert alert-success d-flex align-items-start" role="alert">
                                 <div class="alert-icon">
@@ -241,8 +303,7 @@
                                   <p class="alert-text">
                                      Providing feedback after a data changes or system tasks is essential for users.
                                   </p>
-                                  <button type="button" class="btn btn-sm btn-primary my-3">Yes</button>
-                                  <button type="button" class="btn btn-sm btn-primary-outline my-3">Cancel</button>
+                                  <button type="button" class="btn btn-sm btn-success my-3">OK</button>
                                    </div>
                               </div>
                               <div class="card border-0 mt-2">
@@ -251,24 +312,23 @@
                                  </button>
                               <pre>
                                 <code>
-&lt;div class="alert alert-secondary d-flex align-items-start" role="alert" &gt;
+&lt;div class="alert alert-success d-flex align-items-start" role="alert" &gt;
   &lt;div class="alert-icon" &gt;
-      &lt;i class="bi bi-exclamation-triangle" &gt; &lt;/i &gt;
+    &lt;i class="bi bi-check-circle-fill" &gt; &lt;/i &gt;
   &lt;/div &gt;
   &lt;div class="alert-message" &gt;
-    &lt;h5 class="alert-title-secondary" &gt;Warning Message &lt;/h5 &gt;
-    &lt;p class="alert-text" &gt;
-        Confirming user response is essential for data updates.
-    &lt;/p &gt;
-    &lt;button type="button" class="btn btn-sm btn-primary my-3" &gt;Yes &lt;/button &gt;
-    &lt;button type="button" class="btn btn-sm btn-primary-outline my-3" &gt;Cancel &lt;/button &gt;
-  &lt;/div &gt;
+     &lt;h5 class="alert-title-success" &gt;Success Message &lt;/h5 &gt;
+     &lt;p class="alert-text" &gt;
+        Providing feedback after a data changes or system tasks is essential for users.
+     &lt;/p &gt;
+     &lt;button type="button" class="btn btn-sm btn-success my-3" &gt;OK &lt;/button &gt;
+    &lt;/div &gt;
 &lt;/div &gt;
 </code>
-                              </pre>
-                              </div>
+</pre>
+                          </div>
                               
-                              <h5 class=" my-3">Warning Alert</h5>
+                              <h5 class=" my-3" id="warning-alerts">Warning Alert</h5>
                               <p class="text mb-3">
                               Warning alerts are properly used to warned and requires a response from the users.
                               Use the class <code>.alert alert-secondary</code> to wrap your message if you intend to warn users.
@@ -310,7 +370,7 @@
 </code>
                               </pre>
                               </div>
-                              <h5 class=" my-3">Error Alert</h5>
+                              <h5 class=" my-3" id="error-alert">Error Alert</h5>
                               <p class="text mb-3">
                               Error alerts are recommended to be used for critical errors for users.
                               Use the class <code>.alert alert-error</code> to wrap your message if you intend to inform users for errors related.
