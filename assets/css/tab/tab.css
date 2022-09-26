@@ -17,6 +17,7 @@
 .tabs-six {
   border: none;
   min-height: 65%;
+  font-family: var(--font-family-medium);
 }
 .tabs-six .nav {
   min-height: 60vh;
