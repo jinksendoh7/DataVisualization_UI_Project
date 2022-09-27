@@ -1,3 +1,4 @@
 .card .card-primary{
-    background-color: var(--white) !important;
+    background-color: var(--tangerine) !important;
+    color: var(--white) !important;
 }
