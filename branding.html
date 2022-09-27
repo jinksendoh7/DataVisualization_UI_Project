@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./assets/css/starter.css" />
     <link rel="stylesheet" href="./assets/css/navbar/navbar.css" />
     <link rel="stylesheet" href="./assets/css/tab/tab.css" />
-    <link rel="stylesheet" href="./assets/css/alert/alert.css" />
+    <link rel="stylesheet" href="./assets/css/colors/color.css" />
   </head>
   <body>
     <!--====== NAVBAR FOUR PART START ======-->
@@ -108,227 +108,194 @@
                     </div>
                     <div class="tab-pane " id="v-pills-six-colors" role="tabpanel" aria-labelledby="v-pills-six-colors-tab">
                       <div class="tab-text">
-                        <p class="text">
-                        <h3 id="brand-color">Brand Color</h3>
-                        <hr>
-                        <div class="row">
-                          <div class="col">
-                            <br><br>
-                            <p class="text">
-                              These are the corporate colors of LiveWire. Colours that evoke <b>PASSION, SPEED and ENERGY</b> throughout various mediums and wide media of usage. Ideally, these colours should be used in a clean White base colour for better stand-out.
-                            </p>
+                        <div class="row p-3">
+                          <div class="col-md-9">
+                            <h4 class="mb-3">Primary Color</h4>
+                            <div class="card p-3">
+                              <p class="text pb-1">
+                                These are the corporate colors of LiveWire. Colours that evoke <span class="text-primary">PASSION, SPEED and ENERGY</span> throughout various mediums and wide media of usage. Ideally, these colours should be used in a clean White base colour for better stand-out.
+                              </p>
+                              <p class="text pb-2">
+                                It comes with <a href="#secondary-colors">secondary colors</a> and <a href="#ancillary-colors">ancillary colors</a>.
+                              </p>
+                            </div>
                           </div>
-                          <div class="col">
-                            <h5 class="text-center" id="livewire-red">LiveWire Red</h5><br>
-                            <div class="col">
-                              <div class="card text-white mb-1 p-1 mx-auto" style="background-color: var(--primary); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white text-center">
-                                  <p>Hex: #FF0009</p>
-                                  <p>R: 255 G: 0 B: 9</p>
-                                  <p>H: 358 S: 100 B: 100</p>
-                                </h4>
-                                </div>
+                          <div class="col-md-3">
+                            <h5 class="text-center text-primary my-2" >LiveWire Red</h5>
+                            <div class="card text-white color-primary mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #FF0009 </h5>
+                                <p class="small text-center">R: 255 G: 0 B: 9</p>
+                                <p class="small text-center">H: 358 S: 100 B: 100</p>
                               </div>
                             </div>
                           </div>
                         </div>
-                        <br><br>
-                          <div class="row">
-                          <h5 class="text-left" id="secondary-colors">Secondary Colors</h5><br><br>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--tetra-mustard); max-width: 280px">
+                        <h4 class="mb-3 mt-3" id="secondary-colors">Secondary Colors</h4>
+                        <div class="row p-3">
+                            <div class="col-md-4">
+                              <div class="card text-white color-tetra-mustard mb-1 p-1 mx-auto">
                                 <div class="card-body">
-                                  <h4 class="card-title">
-                                  <p>Hex: #FFCA0D</p>
-                                  <p>R: 255 G: 202 B: 13</p>
-                                  <p>H: 47 S: 95 B: 100</p>
-                                  </h4>
+                                  <h5 class="card-title text-white text-center">Hex: #FFCA0D</h5>
+                                  <p class="small text-center">R: 255 G: 202 B: 13</p>
+                                  <p class="small text-center">H: 47 S: 95 B: 100</p>
                                 </div>
                               </div>
-                              <h5 class="card-title text-center">Tetra Mustard</h5>
+                              <h5 class="text-center my-3" >Tetra Mustard</h5>
                             </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-2 p-1 mx-auto" style="background-color: var(--blue); max-width: 280px">
+                            <div class="col-md-4">
+                              <div class="card text-white color-live-green mb-1 p-1 mx-auto">
                                 <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #0D52FF</p>
-                                    <p>R: 13 G: 82 B: 255</p>
-                                    <p>H: 358 S: 100 B: 100</p>
-                                    </h4>
+                                  <h5 class="card-title text-white text-center">Hex: #5DE500</h5>
+                                  <p class="small text-center">R: 2R: 93 G: 229 B: 0</p>
+                                  <p class="small text-center">H: 96 S: 100 B: 90</p>
                                 </div>
                               </div>
-                              <h5 class="card-title text-center">LiveWire Blue</h5>
+                              <h5 class="text-center my-3" >Live Green</h5>
                             </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--live-green); max-width: 280px">
+                            <div class="col-md-4">
+                              <div class="card text-white color-blue mb-1 p-1 mx-auto">
                                 <div class="card-body">
-                                  <h4 class="card-title">
-                                    <p>Hex: #5DE500</p>
-                                    <p>R: 93 G: 229 B: 0</p>
-                                    <p>H: 96 S: 100 B: 90</p>
-                                    </h4>
+                                  <h5 class="card-title text-white text-center">Hex: #5DE500</h5>
+                                  <p class="small text-center">R: 93 G: 229 B: 0</p>
+                                  <p class="small text-center">H: 96 S: 100 B: 90</p>
                                 </div>
                               </div>
-                              <h5 class="card-title text-center">Live Green</h5>
+                              <h5 class="text-center my-3" >LiveWire Blue</h5>
+                            </div>
+                        </div>
+                        <h4 class="mb-3 mt-3" id="ancillary-colors">Ancillary Colors</h4>
+                        <div class="row p-3">
+                          <div class="col-md-4">
+                            <div class="card text-white color-bright-yellow mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title  text-center">Hex: #FFFC0D</h5>
+                                <p class="small text-center">R: 255 G: 202 B: 13</p>
+                                <p class="small text-center">H: 59 S: 95 B: 100</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3" >Bright Yellow</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-muted-blue mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #1449CC</h5>
+                                <p class="small text-white text-center">R: 20 G: 204 B: 22</p>
+                                <p class="small text-white text-center">H: 121 S: 90 B: 80</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3" >Muted Blue</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-sat-green mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #FF4700</h5>
+                                <p class="small text-white text-center">R: 255 G: 71 B: 0</p>
+                                <p class="small text-white text-center">H: 17 S: 100 B: 100</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3" >Sat Green</h5>
+                          </div>
+                      </div>  
+                      <div class="row p-3 mt-2">
+                        <div class="col-md-4">
+                          <div class="card text-white color-tangerine mb-1 p-1 mx-auto">
+                            <div class="card-body">
+                              <h5 class="card-title text-white text-center">Hex: #FF4700</h5>
+                              <p class="small text-white text-center">R: 255 G: 71 B: 0</p>
+                              <p class="small text-white text-center">H: 17 S: 100 B: 100</p>
                             </div>
                           </div>
-                          <br>
-                          <div class="row" id="ancillary-colors">
-                            <h5 class="text-left" id="ancillary-colors">Ancillary Colors</h5><br><br>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--bright-yellow); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title">
-                                    <p>Hex: #FFFC0D</p>
-                                    <p>R: 255 G: 252 B: 13</p>
-                                    <p>H: 59 S: 95 B: 100</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Bright Yellow</h5>
-                            </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--muted-blue); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #1449CC</p>
-                                    <p>R: 20 G: 73 B: 204</p>
-                                    <p>H: 223 S: 90 B: 80</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Muted Blue</h5>
-                            </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--sat-green); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title">
-                                    <p>Hex: #14CC16</p>
-                                    <p>R: 20 G: 204 B: 22</p>
-                                    <p>H: 121 S: 90 B: 80</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Sat Green</h5>
-                            </div><br>
-                          </div>
-                          <div class="row" id="ancillary-colors">
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--tangerine); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #FF4700</p>
-                                    <p>R: 255 G: 71 B: 0</p>
-                                    <p>H: 17 S: 100 B: 100</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Tangerine</h5>
-                            </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--sky-blue); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title">
-                                    <p>Hex: #26E7FF</p>
-                                    <p>R: 38 G: 231 B: 255</p>
-                                    <p>H: 187 S: 85B: 100</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Sky Blue</h5>
-                            </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--royal-purple); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #6917E5</p>
-                                    <p>R: 105 G: 23 B: 229</p>
-                                    <p>H: 264: 90 B: 90</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Royale Purple</h5>
-                            </div>
-                          </div><br>
-                          <div class="row" id="ancillary-colors">
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--heliotrope); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #FF33CB</p>
-                                    <p>R: 255 G: 51 B: 203</p>
-                                    <p>H: 315 S: 80 B: 100</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Heliotrope</h5>
-                            </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--rich-dewberry); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #CC149D</p>
-                                    <p>R: 204 G: 20 B: 157</p>
-                                    <p>H: 315 S: 90 B: 80</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Rich Dewberry</h5>
-                            </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--dewberry); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #993D81</p>
-                                    <p>R: 153 G: 61 B: 129</p>
-                                    <p>H: 316 S: 60 B: 60</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">Dewberry</h5>
-                            </div>
-                          </div><br>
-                          <div class="row" id="ancillary-colors">
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--charcoal); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #646464</p>
-                                    <p>R: 100 G: 100 B: 100</p>
-                                    <p>H: 0 S: 0 B: 39</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">LiveWire Charcoal</h5>
-                            </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--charcoal-plus); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #4B4B4B</p>
-                                    <p>R: 75 G: 75 B: 75</p>
-                                    <p>H: 0 S: 0 B: 29</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">LiveWire Charcoal+</h5>
-                            </div>
-                            <div class="col">
-                              <div class="card text-white text-center mb-1 p-1 mx-auto" style="background-color: var(--black); max-width: 280px">
-                                <div class="card-body">
-                                  <h4 class="card-title text-white">
-                                    <p>Hex: #191919</p>
-                                    <p>R: 25 G: 25 B: 25</p>
-                                    <p>H: 0 S: 0 B: 10</p>
-                                    </h4>
-                                </div>
-                              </div>
-                              <h5 class="card-title text-center">LiveWire Black</h5>
+                          <h5 class="text-center my-3" >Tangerine</h5>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card text-white color-sky-blue mb-1 p-1 mx-auto">
+                            <div class="card-body">
+                              <h5 class="card-title  text-center">Hex: #26E7FF</h5>
+                              <p class="small  text-center">R: 105 G: 23 B: 229</p>
+                              <p class="small  text-center">H: 264: 90 B: 90</p>
                             </div>
                           </div>
-                        </p>
+                          <h5 class="text-center my-3" >Sky Blue</h5>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="card text-white color-royal-purple mb-1 p-1 mx-auto">
+                            <div class="card-body">
+                              <h5 class="card-title text-white text-center">Hex: #FF33CB</h5>
+                              <p class="small text-white text-center">R: 255 G: 51 B: 203</p>
+                              <p class="small text-white text-center">H: 315 S: 80 B: 100</p>
+                            </div>
+                          </div>
+                          <h5 class="text-center my-3" >Royal Purple</h5>
+                        </div>
+                    </div>
+
+                    <div class="row p-3 mt-2">
+                      <div class="col-md-4">
+                        <div class="card text-white color-heliotrope mb-1 p-1 mx-auto">
+                          <div class="card-body">
+                            <h5 class="card-title text-white text-center">#FF33CB</h5>
+                            <p class="small text-white text-center">R: 255 G: 51 B: 203</p>
+                            <p class="small text-white text-center">H: 315 S: 80 B: 100</p>
+                          </div>
+                        </div>
+                        <h5 class="text-center my-3" >Heliotrope</h5>
                       </div>
+                      <div class="col-md-4">
+                        <div class="card text-white color-rich-dewberry mb-1 p-1 mx-auto">
+                          <div class="card-body">
+                            <h5 class="card-title text-white text-center">Hex: #CC149D</h5>
+                            <p class="small  text-center">R: 204 G: 20 B: 157</p>
+                            <p class="small  text-center">H: 315 S: 90 B: 80</p>
+                          </div>
+                        </div>
+                        <h5 class="text-center my-3" >Rich Dewberry</h5>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="card text-white color-dewberry mb-1 p-1 mx-auto">
+                          <div class="card-body">
+                            <h5 class="card-title text-white text-center">Hex: #993D81</h5>
+                            <p class="small text-white text-center">R: 153 G: 61 B: 129</p>
+                            <p class="small text-white text-center">H: 316 S: 60 B: 60</p>
+                          </div>
+                        </div>
+                        <h5 class="text-center my-3" >Dewberry</h5>
+                      </div>
+                  </div>
+
+                  <div class="row p-3 mt-2 mb-3">
+                    <div class="col-md-4">
+                      <div class="card text-white color-charcoal mb-1 p-1 mx-auto">
+                        <div class="card-body">
+                          <h5 class="card-title text-white text-center">Hex: #646464</h5>
+                          <p class="small text-white text-center">R: 100 G: 100 B: 100</p>
+                          <p class="small text-white text-center">H: 0 S: 0 B: 39</p>
+                        </div>
+                      </div>
+                      <h5 class="text-center my-3" >LiveWire Charcoal</h5>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card text-white color-charcoal-plus mb-1 p-1 mx-auto">
+                        <div class="card-body">
+                          <h5 class="card-title text-white text-center">Hex: #4B4B4B</h5>
+                          <p class="small  text-center">R: 75 G: 75 B: 75</p>
+                          <p class="small  text-center">H: 0 S: 0 B: 29</p>
+                        </div>
+                      </div>
+                      <h5 class="text-center my-3" >LiveWire Charcoal+</h5>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="card text-white color-black mb-1 p-1 mx-auto">
+                        <div class="card-body">
+                          <h5 class="card-title text-white text-center">Hex: #191919</h5>
+                          <p class="small text-white text-center">R: 25 G: 25 B: 25</p>
+                          <p class="small text-white text-center">H: 0 S: 0 B: 10</p>
+                        </div>
+                      </div>
+                      <h5 class="text-center my-3" >LiveWire Black</h5>
+                    </div>
+                </div>
+                  </div>
                     </div>
                     <div class="tab-pane " id="v-pills-six-media-queries" role="tabpanel" aria-labelledby="v-pills-six-media-queries-tab">
                       <div class="tab-text">
