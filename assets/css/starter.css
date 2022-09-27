@@ -307,4 +307,12 @@ pre {
   border:none !important;
   border-radius: none !important;
 }
+.text-primary{
+  font-family:var(--font-family-bold) !important; 
+  font-weight:700 !important; 
+  color:var(--primary) !important;
+}
+.small{
+  font-size: 15px !important;
+}
 /*# sourceMappingURL=starter.css.map */
