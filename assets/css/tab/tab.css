@@ -4,7 +4,7 @@
 .tabs-title {
   font-size: 24px;
   font-weight: 600;
-  color: var(--charcoal-plus);
+  color: var(--bleck);
 }
 @media (max-width: 767px) {
   .tabs-title {
