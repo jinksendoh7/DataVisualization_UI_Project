@@ -202,10 +202,11 @@ p {
 }
 .btn.btn-lg {
   font-size: 1.15em;
-  padding: 16px 24px;
+  padding: 16px 24px !important;
 }
 .btn.btn-sm {
-  padding: 8px 16px;
+  padding: 5px 10px !important;
+  font-size: 12px !important;
 }
 .btn.square {
   border-radius: 0px;
