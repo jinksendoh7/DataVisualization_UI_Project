@@ -315,4 +315,28 @@ pre {
 .small{
   font-size: 15px !important;
 }
+
+#scrollToTop {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  padding: 12px 15px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-4)
+}
+
+#scrollToTop:hover {
+  background-color: var(--white);
+  color: var(--primary);
+  border-color: var(--primary);
+  border: 1px solid var(--primary);
+}
 /*# sourceMappingURL=starter.css.map */
