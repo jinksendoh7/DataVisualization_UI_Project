@@ -1,0 +1,99 @@
+.stat-chart{
+    box-shadow: var(--shadow-2);
+    border-radius: 4px !important;
+    min-height: 150px !important;
+    text-align: center;
+}
+.stat-chart-icon{
+    box-shadow: var(--shadow-2);
+    border-radius: 4px !important;
+    min-height: 150px !important;
+}
+
+.stat-chart-primary{
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: var(--primary);
+}
+.stat-chart-primary:hover{
+    color: var(--primary);
+    background: var(--white);
+    cursor:hand;
+    border-color: var(--primary);
+}
+.stat-chart-primary-outline:hover{
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: var(--primary);
+}
+.stat-chart-primary-outline{
+    color: var(--primary);
+    background: var(--white);
+    cursor:hand;
+    border-color: var(--primary);
+}
+.stat-chart-warning{
+    border: 2px solid var(--white);
+    color: var(--black);
+    background: var(--tetra-mustard);
+}
+.stat-chart-warning:hover{
+    color: var(--black);
+    background: var(--white);
+    cursor:hand;
+    border-color: var(--tetra-mustard);
+}
+.stat-chart-warning-outline:hover{
+    border: 2px solid var(--white);
+    color: var(--black);
+    background: var(--tetra-mustard);
+}
+.stat-chart-warning-outline{
+    color: var(--black);
+    background: var(--white);
+    cursor:hand;
+    border-color: var(--tetra-mustard);
+}
+.stat-chart-success{
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: var(--sat-green);
+}
+.stat-chart-success:hover{
+    color: var(--sat-green);
+    background: var(--white);
+    cursor:hand;
+    border-color: var(--sat-green);
+}
+
+.stat-chart-success-outline:hover{
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: var(--sat-green);
+}
+.stat-chart-success-outline{
+    color: var(--sat-green);
+    background: var(--white);
+    cursor:hand;
+    border-color: var(--sat-green);
+}
+.stat-chart-title{
+    font-family: var(--font-family-bold);
+    font-size: 40px;
+    font-weight: 600;
+}
+.stat-chart-icon{
+    font-family: var(--font-family-bold);
+    font-size: 44px;
+    font-weight: 600;
+}
+.stat-chart-subtitle{
+    font-family: var(--font-family-medium);
+    font-size:20px;
+    font-weight: 600;
+}
+.stat-chart-text{
+    font-family: var(--font-family-bold);
+    font-size:16px;
+
+}
