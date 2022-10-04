@@ -27,3 +27,11 @@ function scrollFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
+  // for displaying modals
+  var myModal = document.getElementById('myModal');
+  var myInput = document.getElementById('myInput');
+
+  myModal.addEventListener('shown.bs.modal', function () {
+    myInput.focus()
+  });

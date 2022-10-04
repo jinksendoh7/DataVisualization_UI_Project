@@ -388,7 +388,7 @@ pre {
   background-color: var(--primary);
   color: var(--white);
   cursor: pointer;
-  padding: 12px 15px;
+  padding: 10px 15px;
   border-radius: 50%;
   box-shadow: var(--shadow-4)
 }
