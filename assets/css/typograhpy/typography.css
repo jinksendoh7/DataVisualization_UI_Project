@@ -1,0 +1,9 @@
+.text-regular{
+    font-family: var(--font-family);
+}
+.text-medium{
+    font-family: var(--font-family-medium);
+}
+.text-bold{
+    font-family: var(--font-family-bold);
+}

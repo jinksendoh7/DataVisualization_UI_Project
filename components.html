@@ -57,7 +57,7 @@
                   <ul>
                     <li>
                       <a href="https://github.com/aasuncion-fol/ui-data-visualization-project">
-                        <i class="bi bi-github" style="font-size: 2rem; color: var(--blue) !important;"></i>
+                        <i class="bi bi-github" style="font-size: 2rem; color: var(--sat-green) !important;"></i>
                       </a>
                     </li>
                   </ul>
@@ -85,6 +85,7 @@
                 <div class="col-sm-3">
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="active" id="v-pills-six-alerts-tab" data-bs-toggle="pill" href="#v-pills-six-alerts" role="tab" aria-controls="v-pills-six-alerts" aria-selected="true"> Alerts</a>
+                    <a id="v-pills-six-badges-tab" data-bs-toggle="pill" href="#v-pills-six-badges" role="tab" aria-controls="v-pills-six-badges" aria-selected="false"> Badges</a>
                     <a id="v-pills-six-buttons-tab" data-bs-toggle="pill" href="#v-pills-six-buttons" role="tab" aria-controls="v-pills-six-buttons" aria-selected="false"> Buttons</a>
                     <a id="v-pills-six-calendar-tab" data-bs-toggle="pill" href="#v-pills-six-calendar" role="tab" aria-controls="v-pills-six-calendar" aria-selected="false"> Calendar Input</a>
                     <a id="v-pills-six-cards-tab" data-bs-toggle="pill" href="#v-pills-six-cards" role="tab" aria-controls="v-pills-six-cards" aria-selected="false"> Cards</a>
@@ -92,6 +93,7 @@
                     <a id="v-pills-six-form-elements-tab" data-bs-toggle="pill" href="#v-pills-six-form-elements" role="tab" aria-controls="v-pills-six-form-elements" aria-selected="false"> Form Elements</a>
                     <a id="v-pills-six-icons-tab" data-bs-toggle="pill" href="#v-pills-six-icons" role="tab" aria-controls="v-pills-six-icons" aria-selected="false"> Icons</a>
                     <a id="v-pills-six-modals-tab" data-bs-toggle="pill" href="#v-pills-six-modals" role="tab" aria-controls="v-pills-six-modals" aria-selected="false"> Modals</a>
+                    <a id="v-pills-six-navigational-tab" data-bs-toggle="pill" href="#v-pills-six-navigational" role="tab" aria-controls="v-pills-six-navigational" aria-selected="false"> Navigational Elements</a>
                     <a id="v-pills-six-scroll-top-tab" data-bs-toggle="pill" href="#v-pills-six-scroll-top" role="tab" aria-controls="v-pills-six-scroll-top" aria-selected="false"> Scroll to Top</a>
                     <a id="v-pills-six-spinners-tab" data-bs-toggle="pill" href="#v-pills-six-spinners" role="tab" aria-controls="v-pills-six-spinner" aria-selected="false"> Spinners</a>
                   </div>
@@ -169,6 +171,7 @@
                             </div>
                           </div>
                         </div>
+
                         <div class="row ">
                           <h5 class="my-3" id="simple-alert">Simple Alerts</h5>
                           <p class="text mb-3"> Simple Alerts is any feedback message container that does not require any feedback or response from users. Use the proper styling class <code>alert alert-simple</code>. </p>
@@ -340,6 +343,14 @@
                         <!--End of Alerts-->
                       </div>
                     </div>
+                    <div class="tab-pane " id="v-pills-six-badges" role="tabpanel" aria-labelledby="v-pills-six-badges-tab">
+                      <div class="tab-text">
+                        <p class="text">
+                        <h3>Badges</h3>
+                        </p>
+                      </div>
+                    </div>
+                
                     <div class="tab-pane " id="v-pills-six-buttons" role="tabpanel" aria-labelledby="v-pills-six-buttons-tab">
                       <div class="tab-text">
                         <h3 class="mb-3">Buttons</h3>
@@ -594,10 +605,103 @@
                         </p>
                       </div>
                     </div>
+                    <!--Modals will come here-->
                     <div class="tab-pane " id="v-pills-six-modals" role="tabpanel" aria-labelledby="v-pills-six-modals">
                       <div class="tab-text">
                         <p class="text">
-                        <h3>Modals</h3>
+                        <!--<h3>Modals</h3>-->
+                        <!--Put your works below here-->
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h3 class="mb-3">Modals</h3>
+                            <div class="card p-3">
+                              <p class="text mb-1"> Modals are used to bring the attention of a site visitor to an important thing he/she needs to take action on. And unless the action is taken of the modal window is closed, the visitor cannot do any other thing </p>
+                              <p class="text mb-2"> Modals are of diffent <i>
+                                  <a href="#">types</a>
+                                </i> and <i>
+                                  <a href="#">sizes</a>
+                                </i></p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="border-1 my-3 bg-light ">
+                              <table class="table table-hover bg-light">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Modal</th>
+                                    <th scope="col">Use</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <a href="#">Alert Modal</a>
+                                    </td>
+                                    <td>
+                                      <!--<code>.alert alert-simple</code>-->
+                                      Used to call the user's attention to something important                                      
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#">Login Modal</a>
+                                    </td>
+                                    <td>
+                                      <!--<code>.alert alert-primary</code>-->
+                                      Used to Login in to a resource on the site                                      
+                                    </td>
+                                  </tr>
+                                  <!--Next row here-->
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <h5 class="my-3">Preview</h5>
+                            <!-- Button trigger modal -->
+                             <div class="d-flex justify-content-start">
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Launch demo modal
+                              </button>
+                             </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    ...
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                  </div>
+                                </div>
+                              </div>
+                             </div>
+                             <h5 class="my-3">Code</h5>
+                             <div class="card border-0 mt-2">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																	<code>Code here
+                                  </code>
+                              </pre>
+                            </div>
+                        </div>
+                        <!--PUT YOUR WORKS ABOVE HERE-->        
+                        </p>
+                      </div>
+                    </div>
+                    <div class="tab-pane " id="v-pills-six-navigational" role="tabpanel" aria-labelledby="v-pills-six-navigational">
+                      <div class="tab-text">
+                        <p class="text">
+                        <h3>Navigational Elements</h3>
                         </p>
                       </div>
                     </div>
@@ -608,6 +712,7 @@
                         </p>
                       </div>
                     </div>
+                    <!--End of Scroll to top-->
                     <div class="tab-pane " id="v-pills-six-spinners" role="tabpanel" aria-labelledby="v-pills-six-spinners">
                       <div class="tab-text">
                         <h3 class="mb-2">Spinners</h3>
@@ -634,5 +739,8 @@
       <script src="./assets/js/tabs.js"></script>
       <!--====== Bootstrap js ======-->
       <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+
   </body>
 </html>
