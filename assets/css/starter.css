@@ -1,11 +1,24 @@
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@font-face {
+  font-family: Quicksand-Regular;
+  src: url('../fonts/Quicksand-Regular.ttf');
+}
+@font-face {
+  font-family: Quicksand-Bold;
+  src: url('../fonts/Quicksand-Bold.ttf');
+}
+@font-face {
+  font-family: Quicksand-Medium;
+  src: url('../fonts/Quicksand-Medium.ttf');
+}
+
 /*===========================
   COMMON css 
 ===========================*/
+
 :root {
-  --font-family: "Quicksand", sans-serif;
-  --font-family-bold: "Quicksand Bold",sans-serif;
-  --font-family-medium: "Quicksand Medium",sans-serif;
+  --font-family: Quicksand-Regular, sans-serif;
+  --font-family-bold: Quicksand-Bold, sans-serif;
+  --font-family-medium: Quicksand-Medium,sans-serif;
   --primary: #FF0009;
   --tetra-mustard: #FFCA0D;
   --blue: #0D52FF;
@@ -150,10 +163,14 @@ h6,
   font-size: 3.25em;
   line-height: 1.25;
 }
+.display-5 {
+  font-size: 1.75em;
+  line-height: 1.25;
+}
 
 p {
   font-size: 1em;
-  font-weight: 400;
+  /*font-weight: 400;*/
   line-height: 1.5;
   color: var(--dark-3);
   margin: 0px;
@@ -167,6 +184,49 @@ p {
 .text-lg {
   font-size: 1.15em;
   line-height: 1.5;
+}
+
+.text-regular {
+  font-family: var(--font-family), sans-serif;
+
+}
+
+.text-medium {
+  font-style: var(--font-family-medium);
+  font-weight: 600;
+}
+
+.text-bold {
+  font-style: var(--font-family-bold);
+  font-weight: 900;
+}
+
+.text-xxs {
+  font-size: 1.4rem;
+}
+
+.text-xs {
+  font-size: 1.6rem;
+}
+
+.text-sm {
+  font-size: 1.9rem;
+}
+
+.text-md {
+  font-size: 2.4rem;
+}
+
+.text-lar {
+  font-size: 2.8rem;
+}
+
+.text-xl {
+  font-size: 3.6rem;
+}
+
+.text-xxl {
+  font-size: 4.2rem;
 }
 
 .bg_cover {
@@ -255,11 +315,11 @@ a{
 }
 
 .spinner {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: conic-gradient(#0000 10%,#ff0009);
-  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
   animation: spinner-zp9dbg 0.6s infinite linear;
   margin: 5rem auto;
 }
