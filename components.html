@@ -1038,14 +1038,15 @@
                     <!--Modals will come here-->
                     <div class="tab-pane " id="v-pills-six-modals" role="tabpanel" aria-labelledby="v-pills-six-modals">
                       <div class="tab-text">
-                        <p class="text">
+                        < class="text">
                         <!--<h3>Modals</h3>-->
                         <!--Put your works below here-->
                         <div class="row">
                           <div class="col-md-6">
                             <h3 class="mb-3">Modals</h3>
                             <div class="card p-3">
-                              <p class="text mb-1"> Modals are used to bring the attention of a site visitor to an important thing he/she needs to take action on. And unless the action is taken of the modal window is closed, the visitor cannot do any other thing </p>
+                              <p class="text mb-1"> Modals are used to bring the attention of a site visitor to an important thing he/she needs to take action on. 
+                                And unless the action is taken or the modal window is closed, the visitor cannot continue interacting with the page. </p>
                               <p class="text mb-2"> Modals are of diffent <i>
                                   <a href="#">types</a>
                                 </i> and <i>
@@ -1074,11 +1075,20 @@
                                   </tr>
                                   <tr>
                                     <td>
-                                      <a href="#">Login Modal</a>
+                                      <a href="#">Confirmation Modal</a>
                                     </td>
                                     <td>
                                       <!--<code>.alert alert-primary</code>-->
-                                      Used to Login in to a resource on the site                                      
+                                      Used to confirm user's choice for an action                                      
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#">Scrollable Modal</a>
+                                    </td>
+                                    <td>
+                                      <!--<code>.alert alert-primary</code>-->
+                                      It is use to provide an important information where the content is longer that the viewport of the device
                                     </td>
                                   </tr>
                                   <!--Next row here-->
@@ -1087,7 +1097,10 @@
                             </div>
                           </div>
                         </div>
+                        <!--Modal starts from here-->
                         <div class="card p-3 mt-3">
+                          <h5 class="my-3" id="simple-alert">Alert Modal</h5>
+                          <p class="text mb-3">An Alert or simple information modal is used to call the attention of a user to an important thing.</p>
                           <h5 class="my-3">Preview</h5>
                             <!-- Button trigger modal -->
                              <div class="d-flex justify-content-start">
@@ -1104,7 +1117,7 @@
                                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                   </div>
                                   <div class="modal-body">
-                                    ...
+                                    Note that all activities on this site are being tracked
                                   </div>
                                   <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -1112,19 +1125,217 @@
                                   </div>
                                 </div>
                               </div>
-                             </div>
+                            </div>
+                            <!--End of the modal-->
                              <h5 class="my-3">Code</h5>
                              <div class="card border-0 mt-2">
                               <button class="btn-clipboard">
                                 <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
                               </button>
                               <pre>
-																	<code>Code here
+																	<code>
+<!--Put code here-->
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+      &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+      &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        Note that all activities on this site are being tracked
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
                                   </code>
-                              </pre>
-                            </div>
+                                </pre>
+                              </div>
+                            </div>    
+<!--End of code-->
+<div class="card p-3 mt-3">
+  <h5 class="my-3" id="simple-alert">Confirmation Modal</h5>
+  <p class="text mb-3">A Confirmation modal is used to confirm the user's choice of an action. It could be to post a comment to a particular mail address, to confirm login, deletion, or an update.</p>
+  <h5 class="my-3">Preview</h5>
+    <!-- Button trigger modal -->
+     <div class="d-flex justify-content-start">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#confirmationModal">
+        Launch demo modal
+      </button>
+     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="recipient-name" class="col-form-label">Recipient:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="mb-3">
+                <label for="message-text" class="col-form-label">Message:</label>
+                <textarea class="form-control" id="message-text"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Send message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of the modal--> 
+    <h5 class="my-3">Code</h5>
+    <div class="card border-0 mt-2">
+    <button class="btn-clipboard">
+      <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+    </button>
+    <pre>
+      <code>
+
+&lt;div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="exampleModalLabel"&gt;New message&lt;/h5&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        &lt;form&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="recipient-name" class="col-form-label"&gt;Recipient:&lt;/label&gt;
+            &lt;input type="text" class="form-control" id="recipient-name"&gt;
+          &lt;/div&gt;
+          &lt;div class="mb-3"&gt;
+            &lt;label for="message-text" class="col-form-label"&gt;Message:&lt;/label&gt;
+            &lt;textarea class="form-control" id="message-text"&gt;&lt;/textarea&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Send message&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt; 
+        </code>
+      </pre>
+    </div>
+    </div>
+<!--End of code-->
+
+              <!--Next Modal-->
+              <div class="card p-3 mt-3">
+                <h5 class="my-3" id="simple-alert">Scrollable Modal</h5>
+                <p class="text mb-3">An Alert or simple information modal is used to call the attention of a user to an important thing.</p>
+                <h5 class="my-3">Preview</h5>
+                  <!-- Button trigger modal -->
+                   <div class="d-flex justify-content-start">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                      Launch demo modal
+                    </button>
+                   </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="scrollableModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-scrollable"> <!--To make it sctollable-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <!--PUT YOUR WORKS ABOVE HERE-->        
+                        <div class="modal-body">
+                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae blanditiis voluptas 
+                          distinctio! Dolorum aut sapiente modi! Corrupti corporis distinctio porro officia beatae ducimus 
+                          magni iste explicabo, et quisquam iusto veritatis similique illo ab autem debitis. Perferendis 
+                          nulla natus dolorem ullam iste! Qui suscipit dolor sequi. Quam cum vitae ex illo ipsum fugiat 
+                          sapiente blanditiis illum facere, eum fuga soluta, delectus, possimus minus. Tenetur, excepturi! 
+                          Officia neque, officiis aspernatur cumque at error nobis distinctio eum accusantium dolore nulla 
+                          quae laborum quidem debitis tempora corporis enim, nostrum atque, illum voluptas quisquam! 
+                          Ducimus doloribus sed inventore tempore a eius dolor quia, ea blanditiis esse rerum odio dicta 
+                          recusandae facere alias, placeat dolorum fugiat quae aliquid ratione eum officiis magni eveniet
+                           in. Nemo vel harum perspiciatis quis facere repellat eos expedita sit! Voluptates itaque dicta 
+                           doloremque sapiente nulla laborum magni, minima numquam commodi perspiciatis excepturi voluptatibus 
+                           officiis fugiat exercitationem, praesentium deleniti corrupti eveniet, possimus laboriosam facere 
+                           suscipit inventore voluptatum. Quaerat, ipsam! Quae explicabo unde sit optio, sapiente ad quo deleniti 
+                           aut eaque, voluptates architecto, corrupti nulla illo in. Minima nihil, nemo velit architecto ratione 
+                           et excepturi ad veniam odit distinctio repellat maiores illum quidem nam fugiat magni! Modi natus id 
+                           at officia corporis commodi maiores quas. Laudantium suscipit earum porro commodi labore iusto debitis, 
+                           doloribus autem ab asperiores voluptate facere laboriosam impedit quaerat, eaque voluptas cupiditate 
+                           itaque quae dolorum dolor numquam sed rerum. Natus pariatur nisi ullam, consequatur similique quas 
+                           voluptatibus expedita delectus ipsam nesciunt laborum dolor, voluptatem repudiandae illum ratione 
+                           nulla at! Eaque odio natus iure id iusto consequatur dolorem delectus necessitatibus quas doloribus 
+                           voluptatibus minus harum, vel, non tempora? Expedita debitis provident beatae porro quod dicta, 
+                           dolores necessitatibus sapiente modi eaque consequuntur mollitia cupiditate aspernatur ullam magnam 
+                           vitae iure sed eos dolor quas nihil blanditiis a fuga culpa. Libero minima impedit, ex dolore animi 
+                           laudantium nostrum totam, obcaecati quibusdam, a soluta. Eum harum odit nam quibusdam cumque? Eaque 
+                           quae rem fugiat, labore placeat quibusdam porro neque quaerat fuga libero quod vero earum, in officia 
+                           tempore, ea obcaecati laboriosam similique nostrum? Earum modi eveniet, corporis vitae odio eligendi 
+                           recusandae temporibus mollitia accusamus facere, alias molestias in excepturi harum minus doloribus, 
+                           quo exercitationem consequatur magni. Nesciunt aspernatur dolore provident minima tempore expedita 
+                           voluptate quos totam ut, quam quibusdam quo voluptatum laudantium modi? Aliquid et earum, deserunt 
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!--End of the modal-->
+                   <h5 class="my-3">Code</h5>
+                   <div class="card border-0 mt-2">
+                    <button class="btn-clipboard">
+                      <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                    </button>
+                    <pre>
+                        <code>
+<!--Put code here-->
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur quae blanditiis voluptas .....
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+                        </code>
+                      </pre>
+                    </div>
+                  </div>  
+
+
+                          
+               <!--PUT YOUR WORKS ABOVE HERE-->
+                  <!--         
+                </div>
+                </div>
+                </div>
+                </div>
+              </div> 
+            -->
+                               
                         </p>
                       </div>
                     </div>
