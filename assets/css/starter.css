@@ -29,15 +29,17 @@
   --tangerine: #FF4700;
   --sky-blue: #26E7FF;
   --royal-purple: #6917E5;
-  --heliotrope: #FF33CB;
-  --rich-dewberry:#CC149D;
-  --dewberry:#993D81;
+  --heliotrope: #CC149D;
+  --rich-dewberry:#993A8C;
+  --dewberry:#752967;
   --charcoal:#646464;
-  --charcoal-plus:#4B4B4B;
-  --charcoal-light: #cbc7c7;
-  --black: #191919;
+  --charcoal-lite: #E1E1E1;
+  --charcoal-plus:#4D4D4D;
+  --yale: #005B8F;
+  --navy-blue:#1F1F67;
+  --turquoise: #009EBD;
+  --black: #252020;
   --white: #FFFFFF;
-  --gray: #f9f9f9;
   --shadow-1: 0px 0px 1px rgba(40, 41, 61, 0.08),
     0px 0.5px 2px rgba(232, 233, 238, 0.16);
   --shadow-2: 0px 0px 1px rgba(40, 41, 61, 0.04),
