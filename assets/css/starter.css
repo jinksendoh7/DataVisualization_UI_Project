@@ -393,6 +393,21 @@ pre {
   box-shadow: var(--shadow-4)
 }
 
+/*This is added for scroll to top demo*/
+#scrollToTopDemo {
+  display: none;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-4)
+} 
+
 #scrollToTop:hover {
   background-color: var(--white);
   color: var(--primary);
