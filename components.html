@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--====== Title ======-->
     <title>LiveWire UI Design Pattern Library | Project #1</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/svg" />
     <!--====== Bootstrap css ======-->
@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./assets/css/alert/alert.css" />
     <link rel="stylesheet" href="./assets/css/button/button.css" />
     <link rel="stylesheet" href="./assets/css/cards/cards.css" />
+    <link rel="stylesheet" href="./assets/css/chips/chips.css">
     <!-- Include Bootstrap Datepicker -->
     <link rel="stylesheet" href="./assets/css/bootstrap-datepicker.css">
   </head>
@@ -94,12 +95,12 @@
                 <div class="col-sm-3">
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="active" id="v-pills-six-alerts-tab" data-bs-toggle="pill" href="#v-pills-six-alerts" role="tab" aria-controls="v-pills-six-alerts" aria-selected="true"> Alerts</a>
-                    <a id="v-pills-six-badges-tab" data-bs-toggle="pill" href="#v-pills-six-badges" role="tab" aria-controls="v-pills-six-badges" aria-selected="false"> Badges</a>
+                    <!-- <a id="v-pills-six-badges-tab" data-bs-toggle="pill" href="#v-pills-six-badges" role="tab" aria-controls="v-pills-six-badges" aria-selected="false"> Badges</a> -->
                     <a id="v-pills-six-buttons-tab" data-bs-toggle="pill" href="#v-pills-six-buttons" role="tab" aria-controls="v-pills-six-buttons" aria-selected="false"> Buttons</a>
                     <a id="v-pills-six-calendar-tab" data-bs-toggle="pill" href="#v-pills-six-calendar" role="tab" aria-controls="v-pills-six-calendar" aria-selected="false"> Calendar Input</a>
                     <a id="v-pills-six-cards-tab" data-bs-toggle="pill" href="#v-pills-six-cards" role="tab" aria-controls="v-pills-six-cards" aria-selected="false"> Cards</a>
                     <a id="v-pills-six-chips-tab" data-bs-toggle="pill" href="#v-pills-six-chips" role="tab" aria-controls="v-pills-six-chips" aria-selected="false"> Chips</a>
-                    <a id="v-pills-six-form-elements-tab" data-bs-toggle="pill" href="#v-pills-six-form-elements" role="tab" aria-controls="v-pills-six-form-elements" aria-selected="false"> Form Elements</a>
+                    <!-- <a id="v-pills-six-form-elements-tab" data-bs-toggle="pill" href="#v-pills-six-form-elements" role="tab" aria-controls="v-pills-six-form-elements" aria-selected="false"> Form Elements</a> -->
                     <a id="v-pills-six-icons-tab" data-bs-toggle="pill" href="#v-pills-six-icons" role="tab" aria-controls="v-pills-six-icons" aria-selected="false"> Icons</a>
                     <a id="v-pills-six-modals-tab" data-bs-toggle="pill" href="#v-pills-six-modals" role="tab" aria-controls="v-pills-six-modals" aria-selected="false"> Modals</a>
                     <a id="v-pills-six-navigational-tab" data-bs-toggle="pill" href="#v-pills-six-navigational" role="tab" aria-controls="v-pills-six-navigational" aria-selected="false"> Navigational Elements</a>
@@ -355,13 +356,13 @@
                         <!--End of Alerts-->
                       </div>
                     </div>
-                    <div class="tab-pane " id="v-pills-six-badges" role="tabpanel" aria-labelledby="v-pills-six-badges-tab">
+                <!--     <div class="tab-pane " id="v-pills-six-badges" role="tabpanel" aria-labelledby="v-pills-six-badges-tab">
                       <div class="tab-text">
                         <p class="text">
                         <h3>Badges</h3>
                         </p>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="tab-pane " id="v-pills-six-buttons" role="tabpanel" aria-labelledby="v-pills-six-buttons-tab">
                       <div class="tab-text">
                         <h3 class="mb-3">Buttons</h3>
@@ -369,7 +370,7 @@
                         <div class="row">
                           <div class="col-md-6">
                             <div class="card p-3 m-2">
-                              <p class="text mb-1">A way for users provide feedback and response to application pending task or to navigate from page to page. </p>
+                              <p class="text mb-1">A way for users to trigger action and response to application pending task or to navigate from page to page. </p>
                               <p class="text mb-2">Use button styles for actions in forms, dialogs and more with support for multiple sizes and states. </p>
                             </div>
                           </div>
@@ -417,7 +418,7 @@
                             <h5 class="my-3" id="button-simple">Simple Buttons</h5>
                             <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
                               <button type="button" class="btn btn-primary m-1">Primary</button>
-                              <button type="button" class="btn btn-secondary m-1">Secondary</button>
+                              <button type="button" class="btn btn-secondary m-1">Info</button>
                               <button type="button" class="btn btn-error m-1">Error</button>
                               <button type="button" class="btn btn-success m-1">Success</button>
                               <button type="button" class="btn btn-dark m-1">Dark</button>
@@ -431,7 +432,7 @@
                             <pre class="mt-3">
 																		<code>
 &lt;button type="button" class="btn btn-primary m-1"&gt;Primary&lt;/button&gt;
-&lt;button type="button" class="btn btn-secondary m-1"&gt;Warning&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary m-1"&gt;Info&lt;/button&gt;
 &lt;button type="button" class="btn btn-error m-1"&gt;Error&lt;/button&gt;
 &lt;button type="button" class="btn btn-success m-1"&gt;Success&lt;/button&gt;
 &lt;button type="button" class="btn btn-dark m-1"&gt;Dark&lt;/button&gt;
@@ -446,7 +447,7 @@
                             <p class="text mb-3"> The outline buttons is an alternative variants for the filled button.Replace the default modifier classes with the <code>.btn-*-outline</code> ones to remove all background images and colors on any button. Applicable for colored background for contrast and provides a context for the user. </p>
                             <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
                               <button type="button" class="btn btn-primary-outline m-1">Primary</button>
-                              <button type="button" class="btn btn-secondary-outline m-1">Warning</button>
+                              <button type="button" class="btn btn-secondary-outline m-1">Info</button>
                               <button type="button" class="btn btn-error-outline m-1">Error</button>
                               <button type="button" class="btn btn-success-outline m-1">Success</button>
                               <button type="button" class="btn btn-dark-outline m-1">Dark</button>
@@ -459,7 +460,7 @@
                             <pre class="mt-3">
 																		<code>
   &lt;button type="button" class="btn btn-primary-outline m-1"&gt;Primary&lt;/button&gt;
-  &lt;button type="button" class="btn btn-secondary-outline m-1"&gt;Warning&lt;/button&gt;
+  &lt;button type="button" class="btn btn-secondary-outline m-1"&gt;Info&lt;/button&gt;
   &lt;button type="button" class="btn btn-error-outline m-1"&gt;Error&lt;/button&gt;
   &lt;button type="button" class="btn btn-success-outline m-1"&gt;Success&lt;/button&gt;
   &lt;button type="button" class="btn btn-dark-outline m-1"&gt;Dark&lt;/button&gt;
@@ -580,7 +581,7 @@
                           <div class="col-md-6">
                             <h3 class="mb-3">Calendar Input</h3>
                             <div class="card p-3">
-                              <p class="text mb-3">A user-friendly way to provide input dates for user such as filtering graphs, tables etc. </p>
+                              <p class="text mb-3">A user-friendly way for user to provide input dates such as filtering graphs, tables etc. </p>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -785,18 +786,84 @@
                     </div>
                     <div class="tab-pane " id="v-pills-six-chips" role="tabpanel" aria-labelledby="v-pills-six-chips-tab">
                       <div class="tab-text">
-                        <p class="text">
-                        <h3>Chips</h3>
-                        </p>
+                        <h3 class="mb-3">Chips</h3>
+                        <div class="row">
+                          <div class="col-12">
+                                <p class="text mb-1">A way to categorize content with the use of text and icons. It is also use to filter data results and narrowing charts.</p>
+                              </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="card p-3 mx-3">
+                            <p class="text mb-3">For charts that could only be filtered by one category, you may use the single selection.</p>
+                      
+                            <div class="d-flex flex-row mb-3 mt-2" id="chips">
+                              <div class="chip chip-primary mx-1">Last 7 days</div>
+                              <div class="chip chip-primary-outline mx-1 ">Last 14 days</div>
+                              <div class="chip chip-primary-outline mx-1">Last 28 days</div>
+                            </div>
+                            <script type="text/javascript">
+                              $(function() {
+                                $('.chip-primary-outline').click(function() {
+                                  $("#chips>div").removeClass("chip-primary").addClass('chip-primary-outline');
+                                  $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+                                });
+                                $('.chip-primary').click(function() {
+                                  $("#chips>div").removeClass("chip-primary").addClass('chip-primary-outline');
+                                  $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+                                });
+                              });
+                            </script>
+                             <h5 class="my-3">HTML</h5>
+                             <div class="card border-0 mt-2">
+                               <button class="btn-clipboard">
+                                 <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                               </button>
+                               <pre><code>
+&lt;div class="d-flex flex-row mb-3 mt-2" id="chips"&gt;
+  &lt;div class="chip chip-primary mx-1"&gt;Last 7 days&lt;/div&gt;
+  &lt;div class="chip chip-primary-outline mx-1 "&gt;Last 14 days&lt;/div&gt;
+  &lt;div class="chip chip-primary-outline mx-1"&gt;Last 28 days&lt;/div&gt;
+&lt;/div&gt;                             
+                                
+                                                                </code>
+                                                             
+                                </pre>
+                                </div>
+
+                               <h5 class="my-3">JS</h5>
+                             <div class="card border-0 mt-2">
+                               <button class="btn-clipboard">
+                                 <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                               </button>
+
+                                <pre>
+                                  <code>
+     &lt;script type="text/javascript"&gt;
+      $(function() {
+      $('.chip-primary-outline').click(function() {
+        $("#chips&gt;div").removeClass("chip-primary").addClass('chip-primary-outline');
+        $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+     });
+     $('.chip-primary').click(function() {
+       $("#chips&gt;div").removeClass("chip-primary").addClass('chip-primary-outline');
+        $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+      });
+    });
+  &lt;/script&gt;
+  
+                                  </code>
+                                </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div class="tab-pane " id="v-pills-six-form-elements" role="tabpanel" aria-labelledby="v-pills-six-form-elements-tab">
+                <!--     <div class="tab-pane " id="v-pills-six-form-elements" role="tabpanel" aria-labelledby="v-pills-six-form-elements-tab">
                       <div class="tab-text">
                         <p class="text">
                         <h3>Form Elements</h3>
                         </p>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="tab-pane " id="v-pills-six-icons" role="tabpanel" aria-labelledby="v-pills-six-icons">
                       <div class="tab-text">
                         <p class="text">
@@ -814,7 +881,7 @@
                           <div class="col-md-6">
                             <h3 class="mb-3">Modals</h3>
                             <div class="card p-3">
-                              <p class="text mb-1">A way to (1) ask multiple inputs <a href="#form-modal">(form modal)</a> that were related together such as advanced filters, (2) another way to display tips and <a href="#info-modal">infomation</a> about charts or data and (3) a pop up window to view a Youtube video. </p>
+                              <p class="text mb-1">A way for user to (1) provide multiple inputs <a href="#form-modal">(form modal)</a> that were related together such as advanced filters, (2) another way to display tips and <a href="#info-modal">infomation</a> about charts or data and (3) a pop up window to view a Youtube video. </p>
                               <p class="text mb-1">The modal is a popup screen that only available whenever needed.</p>
                             </div>
                           </div>
@@ -823,14 +890,14 @@
                               <table class="table table-hover bg-light">
                                 <thead>
                                   <tr>
-                                    <th scope="col">Modal</th>
-                                    <th scope="col">Use</th>
+                                    <th>Modal</th>
+                                    <th >Use</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
                                     <td>
-                                      <a href="#info-modal">Info Modal</a>
+                                      <a href="#info-modal">Infor Modal</a>
                                     </td>
                                     <td>Display help tips about a chart or pages. </td>
                                   </tr>
@@ -844,7 +911,7 @@
                                   </tr>
                                   <tr>
                                     <td>
-                                      <a href="#media-modal">Media Modal</a>
+                                      <a href="#media-modal">Embed Media Modal</a>
                                     </td>
                                     <td>
                                       <!--<code>.alert alert-primary</code>--> A pop up screen that will embed a Youtube video URL.
@@ -1001,7 +1068,7 @@
                         <!--End of code-->
                         <!--Next Modal-->
                         <div class="card p-3 mt-3">
-                          <h5 class="my-3" id="media-modal">Media Modal</h5>
+                          <h5 class="my-3" id="media-modal">Embed Media Modal</h5>
                           <p class="text mb-3">Media Modal is used to embed Youtube Video.</p>
                           <h5 class="my-3">Preview</h5>
                           <!-- Button trigger modal -->
