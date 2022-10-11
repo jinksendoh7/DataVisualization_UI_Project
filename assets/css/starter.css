@@ -462,4 +462,10 @@ pre {
   animation: spinner-zp9dbg 0.6s infinite linear;
 
 }
+
+.lite{
+  background: var(--charcoal-lite);
+  padding: 15px;
+  border: 1px dotted var(--charcoal);
+}
 /*# sourceMappingURL=starter.css.map */
