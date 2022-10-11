@@ -399,4 +399,30 @@ pre {
   border-color: var(--primary);
   border: 1px solid var(--primary);
 }
+.spinner-primary{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%,var(--primary));
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
+  animation: spinner-zp9dbg 0.6s infinite linear;
+}
+.spinner-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 5%,var(--primary));
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
+  animation: spinner-zp9dbg 0.6s infinite linear;
+
+}
+.spinner-lg {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 15%,var(--primary));
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
+  animation: spinner-zp9dbg 0.6s infinite linear;
+
+}
 /*# sourceMappingURL=starter.css.map */

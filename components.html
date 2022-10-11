@@ -193,7 +193,7 @@
                                 <p class="alert-text">This is a simple feedback message that does not require user feedback or response.</p>
                               </div>
                             </div>
-                            <div class="card">
+                            <div class="card border-0 m-3">
                               <button class="btn-clipboard">
                                 <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
                               </button>
@@ -202,7 +202,9 @@
                               
 &lt;div class="alert alert-simple d-flex align-items-start" role="alert" &gt;
     &lt;div class=""&gt;
-       &lt;p class="alert-text" &gt;This is a simple feedback message that does not require user feedback or response. &lt;/p &gt;
+       &lt;p class="alert-text" &gt;
+        This is a simple feedback message that does not require user feedback or response.
+        &lt;/p &gt;
     &lt;/div&gt;
 &lt;/div&gt;
 </code>
@@ -579,69 +581,79 @@
                       </div>
                     </div>
                     <div class="tab-pane " id="v-pills-six-calendar" role="tabpanel" aria-labelledby="v-pills-six-calendar-tab">
-                      <div class="tab-text">
-                        <p class="text">
-                        <h3>Calendar Input</h3>
-                        </p>
-
+                      <div class="tab-text ">
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="card p-3 m-2">
-                                    <p class="text mb-1">Bootstrap-datepicker provides a flexible datepicker widget in the Bootstrap style. </p>
-                                    <p class="text mb-2">It is a jQuery plugin that provides a flexible datepicker widget for your project. Css and js scripts are required to make the datepicker works as it should be.</p>
-                                     <h5>Dependencies</h5>
-                                    <p class="text mb-2">css CDN link: <a href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css">Datepicker css</a></p>
-                                    <p class="text mb-2">script CDN link: <a href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js">Datepicker js</a></p>
-                                </div>    
+                              <h3 class="mb-3">Calendar Input</h3>
+                                <div class="card p-3">
+                                    <p class="text mb-3">A user-friendly way to provide input dates for user such as filtering graphs, tables etc. </p>
+                                    </div>    
                             </div>
                             <div class="col-md-6">
-                                <div class="mt-2">
+                                <div class="mt-2 mb-3">
                                   <table class="table table-hover bg-light">
                                     <thead>
                                       <tr>
-                                        <th scope="col">Variations</th>
+                                        <th>Quick Links</th>
                                       </tr>
                                     </thead>
                                     <tbody>
                                       <tr>
                                         <td>
-                                          <a href="#min-setup">Minimum Setup</a>
+                                          <a href="#min-setup">Dependencies</a>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
-                                          <a href="#view-mode">View Mode</a>
+                                          <a href="#single-input">Single Calendar input</a>
                                         </td>
                                       </tr>
                                       <tr>
                                         <td>
-                                          <a href="#dis-weeks">Disabled and Highlight Days of the Week<</a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <a href="#enabled-disabled">Enabled/Disabled Dates</a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <a href="#multidate">Multidate</a>
+                                          <a href="#multidate">Calendar Input in Date Range</a>
                                         </td>
                                       </tr>
                                     </tbody>
                                     </table>
-                                </div>
+                                   </div>
                             </div>
-                            <hr/>
-                            <div class="alert alert-info">
+                          </div>
+
+                          <div class="card p-3 mt-3">
+                            <div class="card-heading">
+                              <h5 class="my-3" id="min-setup">Dependencies</h5>
+                            </div>
+                              <p class="text mb-3">To use the calendar input, the following are the dependencies to make it work.</p>
+                             
+                            <div class="card p-3 border-0">
+                              <p class="text mb-3"> Use the <code>&lt;link&gt;</code> tag to require the dependencies. </p>
+                        
+                              <table class="table border-0">
+                                <tbody><tr>
+                                  <td>CDN</td>
+                                  <td>Links</td>
+                                </tr>
+                                <tr>
+                                  <td>Date Picker CSS</td>
+                                  <td><code>https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css</code></td>
+                                </tr>
+                                <tr>
+                                  <td>Date Picker JS</td>
+                                  <td><code>https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js</code></td>
+                                </tr>
+                              </tbody></table>
+                              <div class="alert alert-simple mt-3">
                                 <strong>Note</strong>
                                 All functions are accessed via the <code>data</code> attribute e.g. <code>$('#datepicker').data("datepicker").FUNCTION()</code>
                               </div>
-                        </div>
-
-                        <div class="card p-3">
-                          <div class="card-heading">
-                            <h5 class="my-3" id="min-setup">Minimum Setup</h5>
+                            </div>
+                       
+                          </div>
+                        
+                          <div class="card p-3 mt-3">
+                            <h5 class="mt-2 mb-3" id="single-input">Single calendar input</h5>
+                            <p class="mb-1">For a single calendar input, you may use the a form to layout.</p>
+                            <p class="mb-3">The single calendar input is best used for drilling down charts and as well as data in tabular format.</p>
                             <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
                                 <div class="container">
                                   <div class="row">
@@ -669,13 +681,12 @@
                                   </div>
                                 </div>
                             </div>    
-                          </div>
-                          <div class="card border-0 mt-3">
+                       
+                          <div class="card p-0 border-0">
                             <button class="btn-clipboard mt-3">
                               <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
                             </button>
-                          <pre class="mt-3">
-                            <code>
+                          <pre>                            <code>
   &lt;form&gt;
    &lt;div class="row form-group"&gt;
       &lt;label for="date" class="col-sm-1 col-form-label"&gt;Date&lt;/&gt;
@@ -691,7 +702,7 @@
          &lt;/div&gt;
       &lt;/div&gt;
 &lt;/form&gt;
-      &lt;script type=&quot;text/javascript&quot;&gt;
+      &lt;script type="text/javascript"&gt;
          $(function () {
              $('#datepicker').datepicker();
          });
@@ -701,309 +712,75 @@
                           </pre>
                         </div>
                       </div>
-
-
-                    <div class="card p-3">
+                        <div class="card p-3 mt-3">
                           <div class="card-heading">
-                            <h5 class="my-3" id="view-mode">View Mode</h5>
-                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
-                              <p>Number, String. Default: 0, “days” </p>
-                               <p>The view that the datepicker should show when it is opened. Accepts: 0 or “days” or “month”, 1 or “months” or “year”, 2 or “years” or “decade”, 3 or “decades” or “century”, and 4 or “centuries” or “millenium”. Useful for date-of-birth datepickers. </p>
-                                <div class="container">
-                                  <div class="row">
-                                      <form>
-                                        <div class="row form-group" style="height:50px; margin-top: 5%;">
-                                            <label for="date" class="col-sm-2 col-form-label">Year</label>
-                                            <div class="col-sm-4">
-                                                <div class="input-group date" id="datepicker1">
-                                                    <input type="text" class="form-control">
-                                                    <span class="input-group-append">
-                                                        <span class="input-group-text bg-white">
-                                                            <i class="bi-calendar-event"></i>
-                                                        </span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                      <script type="text/javascript">
-                                      $(function() {
-                                          $('#datepicker1').datepicker({ format: 'yyyy', todayHighlight: true, todayBtn: true, startView: "years", minViewMode: 'years', autoclose: true });
-                                      });
-                                    
-                                      </script>
-                                  </div>
-                                </div>
-                            </div>    
+                            <h5 class="my-3" id="multidate">Calendar Input in Date Range</h5>
                           </div>
-                          <div class="card border-0 mt-3">
-                            <button class="btn-clipboard mt-3">
-                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                            </button>
-                          <pre class="mt-3">
-                            <code>
-  &lt;form&gt;
-   &lt;div class="row form-group"&gt;
-      &lt;label for="date" class="col-sm-1 col-form-label"&gt;Year&lt;/&gt;
-         &lt;div class="col-sm-4"&gt;
-            &lt;div class="input-group date" id="datepicker1"&gt;
-               &lt;input type="text" class="form-control"&gt;
-               &lt;span class="input-group-append"&gt;
-                  &lt;span class="input-group-text bg-white"&gt;
-                    &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
-                  &lt;/span&gt;
-               &lt;/span&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
+                          <p class="text mb-3">
+                            The input calendar in a date range is used to drill down charts into a specific date period. 
+
+                          </p>
+                     
+                      <div class="card p-3 border-0">
+                        <form class="row gx-3 gy-2 align-items-center">
+                          <div class="col-md-4">
+                            <label for="specificSizeInputGroupUsername">Date From</label>
+                            <div class="input-group date" id="datepicker">
+                              <input type="text" class="form-control">
+                              <span class="input-group-append">
+                                  <span class="input-group-text bg-white">
+                                      <i class="bi-calendar-event"></i>
+                                  </span>
+                              </span>
+                          </div>
+                          </div>
+                          <div class="col-md-4">
+                            <label for="specificSizeInputGroupUsername">Date To</label>
+                            <div class="input-group date" id="datepicker">
+                              <input type="text" class="form-control">
+                              <span class="input-group-append">
+                                  <span class="input-group-text bg-white">
+                                      <i class="bi-calendar-event"></i>
+                                  </span>
+                              </span>
+                          </div>
+                          </div>
+                        </form>
+
+                        <div class="card border-0 mt-3">
+                          <pre>                            <code>
+&lt;form class="row gx-3 gy-2 align-items-center"&gt;
+&lt;div class="col-md-4"&gt;
+  &lt;label for="specificSizeInputGroupUsername"&gt;Date From&lt;/label&gt;
+  &lt;div class="input-group date" id="datepicker"&gt;
+    &lt;input type="text" class="form-control"&gt;
+    &lt;span class="input-group-append"&gt;
+        &lt;span class="input-group-text bg-white"&gt;
+            &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-md-4"&gt;
+  &lt;label for="specificSizeInputGroupUsername"&gt;Date To&lt;/label&gt;
+  &lt;div class="input-group date" id="datepicker"&gt;
+    &lt;input type="text" class="form-control"&gt;
+    &lt;span class="input-group-append"&gt;
+        &lt;span class="input-group-text bg-white"&gt;
+            &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;/form&gt;
-      &lt;script type=&quot;text/javascript&quot;&gt;
-         $(function () {
-             $('#datepicker1').datepicker({ format: 'yyyy', todayHighlight: true, todayBtn: true, startView: "years", minViewMode: 'years', autoclose: true });
-         });
-      &lt;/script&gt;
-
-                          </code>
+                            </code>
                           </pre>
                         </div>
                       </div>
-
-
-
-                        <div class="card p-3">
-                          <div class="card-heading">
-                            <h5 class="my-3" id="dis-weeks">Disabled and Highlight Days of the Week</h5>
-                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
-                              <p>String, Array. Default: []</p>
-                              <p>Days of the week that should be disabled. Values are 0 (Sunday) to 6 (Saturday). Multiple values should be comma-separated. Example: disable weekends: '06' or '0,6' or [0,6]. </p>
-                                <div class="container">
-                                  <div class="row">
-                                        <div class="col-sm-6" style="height:50px; margin-top: 5%;">
-                                          <div class="form-group">
-                                            <div class='input-group date' id='datepicker2'>
-                                                <input type='text' class="form-control" />
-                                                <span class="input-group-append">
-                                                        <span class="input-group-text bg-white">
-                                                            <i class="bi-calendar-event"></i>
-                                                        </span>
-                                                </span>
-                                            </div>
-                                          </div>
-                                      </div>
-                                      <script type="text/javascript">
-                                          $(function () {
-                                              $('#datepicker2').datepicker({
-                                                  daysOfWeekDisabled: [0, 6],
-                                                  todayHighlight: true,
-                                                  todayBtn: true,
-                                                  daysOfWeekHighlighted: [0,6]
-                                              });
-                                          });
-                                      </script>
-                                  </div>
-                                </div>
-                            </div>    
-                          </div>
-                          <div class="card border-0 mt-3">
-                            <button class="btn-clipboard mt-3">
-                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                            </button>
-                          <pre class="mt-3">
-                            <code>
-   &lt;div class="col-sm-6" style="height:130px;"&gt;
-         &lt;div class="form-group"&gt;
-            &lt;div class='input-group date' id='datepicker2'&gt;
-               &lt;input type='text' class="form-control" /&gt;
-               &lt;span class="input-group-append"&gt;
-                  &lt;span class="input-group-text bg-white"&gt;
-                    &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
-                  &lt;/span&gt;
-               &lt;/span&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-
-      &lt;script type=&quot;text/javascript&quot;&gt;
-         $(function () {
-             $('#datepicker2').datepicker({
-                daysOfWeekDisabled: [0, 6],
-                todayHighlight: true,
-                todayBtn: true
-              });
-         });
-      &lt;/script&gt;
-
-                          </code>
-                          </pre>
-                        </div>
                       </div>
-
-
-
-
-
-                        <div class="card p-3">
-                          <div class="card-heading">
-                            <h5 class="my-3" id="enabled-disabled">Enabled/Disabled Days</h5>
-                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
-                              <p>String, Array. Default: []</p>
-                              <p>Array of date strings or a single date string formatted in the given date format. </p>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class='col-sm-6' style="height:50px; margin-top: 5%;">
-                                          <div class="form-group">
-                                              <div class='input-group date' id='datepicker3'>
-                                                <input type='text' class="form-control" />
-                                                <span class="input-group-addon">
-                                                  <span class="input-group-text bg-white">
-                                                            <i class="bi-calendar-event"></i>
-                                                  </span>
-                                                </span>
-                                              </div>
-                                          </div>
-                                        </div>
-                                        <script type="text/javascript">
-                                          $(function () {
-                                           
-                                              $('#datepicker3').datepicker({
-                                                  todayHighlight: true,
-                                                  datesDisabled: [
-                                                      new Date(2022,10-1,10),
-                                                      new Date(2022,10-1,11),
-                                                      new Date(2022,10-1,12),
-                                                      new Date(2022,10-1,13),
-                                                      new Date(2022,10-1,14),
-                                                  ],
-                                              });
-                                          });
-                                        </script>
-                                    </div>
-                                  </div>
-                            </div>    
-                          </div>
-                          <div class="card border-0 mt-3">
-                            <button class="btn-clipboard mt-3">
-                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                            </button>
-                          <pre class="mt-3">
-                            <code>
-&lt;div class="row"&gt;
-   &lt;div class='col-sm-6' style="height:50px; margin-top: 5%;"&gt;
-         &lt;div class="form-group"&gt;
-            &lt;div class='input-group date' id='datepicker3'&gt;
-               &lt;input type='text' class="form-control" /&gt;
-               &lt;span class="input-group-addon"&gt;
-                  &lt;span class="input-group-text bg-white"&gt;
-                    &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
-                  &lt;/span&gt;
-               &lt;/span&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;script type=&quot;text/javascript&quot;&gt;
-         $(function () {
-             $('#datepicker3').datepicker({
-                todayHighlight: true,
-                datesDisabled: [
-                    new Date(2022,10-1,10),
-                    new Date(2022,10-1,11),
-                    new Date(2022,10-1,12),
-                    new Date(2022,10-1,13),
-                    new Date(2022,10-1,14),
-                  ]
-                });
-         });
-      &lt;/script&gt;
-
-                          </code>
-                          </pre>
-                        </div>
-                      </div>
-
-
-
-
-                      <div class="card p-3">
-                          <div class="card-heading">
-                            <h5 class="my-3" id="multidate">Multidate</h5>
-                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
-                              <p>Boolean, Number. Default: false</p>
-                              <p>Enable multidate picking.  Each date in month view acts as a toggle button, keeping track of which dates the user has selected in order.  If a number is given, the picker will limit how many dates can be selected to that number, dropping the oldest dates from the list when the number is exceeded.  <code class="docutils literal notranslate"><span class="pre">true</span></code> equates to no limit.  The input’s value (if present) is set to a string generated by joining the dates, formatted, with <code class="docutils literal notranslate"><span class="pre">multidateSeparator</span></code>.</p>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class='col-sm-6' style="height:50px; margin-top: 5%;">
-                                          <div class="form-group">
-                                              <div class='input-group date' id='datepicker4'>
-                                                <input type='text' class="form-control" />
-                                                <span class="input-group-addon">
-                                                  <span class="input-group-text bg-white">
-                                                            <i class="bi-calendar-event"></i>
-                                                  </span>
-                                                </span>
-                                              </div>
-                                          </div>
-                                        </div>
-                                        <script type="text/javascript">
-                                          $(function () {
-                                              $('#datepicker4').datepicker({
-                                                  todayHighlight: true,
-                                                  multidate: true,
-                                                  multidateSeparator: " , "
-                                              });
-                                          });
-                                        </script>
-                                    </div>
-                                  </div>
-                            </div>    
-                          </div>
-                          <div class="card border-0 mt-3">
-                            <button class="btn-clipboard mt-3">
-                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                            </button>
-                          <pre class="mt-3">
-                            <code>
-&lt;div class="row"&gt;
-   &lt;div class='col-sm-6' style="height:50px; margin-top: 5%;"&gt;
-         &lt;div class="form-group"&gt;
-            &lt;div class='input-group date' id='datepicker4'&gt;
-               &lt;input type='text' class="form-control" /&gt;
-               &lt;span class="input-group-addon"&gt;
-                  &lt;span class="input-group-text bg-white"&gt;
-                    &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
-                  &lt;/span&gt;
-               &lt;/span&gt;
-            &lt;/div&gt;
-         &lt;/div&gt;
-      &lt;/div&gt;
-&lt;/div&gt;
-
-      &lt;script type=&quot;text/javascript&quot;&gt;
-         $(function () {
-             $('#datepicker4').datepicker({
-                todayHighlight: true,
-                multidate: true,
-                multidateSeparator: " , "
-                });
-         });
-      &lt;/script&gt;
-
-                          </code>
-                          </pre>
-                        </div>
-                      </div>
-
-
-
-
                       </div>
                     </div>
                 
-
-
-
-
                     <div class="tab-pane " id="v-pills-six-cards" role="tabpanel" aria-labelledby="v-pills-six-cards-tab">
                       <div class="tab-text">
                         <h3>Cards Aaron</h3>
@@ -1362,13 +1139,12 @@
                     <!--End of Scroll to top-->
                     <div class="tab-pane " id="v-pills-six-spinners" role="tabpanel" aria-labelledby="v-pills-six-spinners">
                       <div class="tab-text">
-                        <h3 class="mb-2">Spinners</h3>
                         <p class="text">
-                          <div class="row">
+                          </p><div class="row">
                             <div class="col-md-6">
-                                <div class="card p-3 m-2">
-                                    <p class="text mb-1">Showing the loading status in your application. Developed through HTML and CSS, and JavaScript is not a necessity. Toggling their visibility, however, will require some unique JavaScript. </p>
-                                    <p class="text mb-2">Spinner variations, color, sizes and alignment are available for numerous options. </p>
+                              <h3 class="mb-2">Spinners</h3>
+                                <div class="card p-3 mb-3">
+                                  <p class="text mb-3"> A way to provide feedback to user that a certain action is currently being done by the system.</p>
                                 </div>    
                             </div>
                             <div class="col-md-6">
@@ -1387,27 +1163,12 @@
                                       </tr>
                                       <tr>
                                         <td>
-                                          <a href="#growing-spnr">Growing Spinner</a>
-                                        </td>
-                                       </tr>
-                                      <tr>
-                                        <td>
-                                          <a href="#spnr-color">Spinner Color Variants</a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <a href="#spnr-size">Spinner Sizes</a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
                                           <a href="#button-spnr">Button Spinners</a>
                                         </td>
                                       </tr>
                                        <tr>
                                         <td>
-                                          <a href="#spnr-placement">Spinner Placement</a>
+                                          <a href="#spnr-size">Spinner Sizes</a>
                                         </td>
                                       </tr>
                                     </tbody>
@@ -1419,8 +1180,8 @@
                           <div class="card-heading">
                             <h5 class="my-3" id="border-spnr">Border Spinner</h5>
                             <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
-                              <p class="text mb-3"> Use the border spinners for a lightweight loading indicator.</p>
-                                <div class="spinner-border" role="status">
+                              <p class="text mb-3">The border spinner is used when the section page is enough and not limited. Consider the appropriate <a href="spnr-size">sizes</a> of the containers or screens when using a spinner.</p>
+                                <div class="spinner-primary" role="status">
                                   <span class="sr-only"></span>
                                 </div>
                             </div>    
@@ -1429,214 +1190,14 @@
                             <button class="btn-clipboard mt-3">
                               <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
                             </button>
-                          <pre class="mt-3">
-                            <code>
-  &lt;div class="spinner-border" role="status"&gt;
+                          <pre class="mt-3">                            <code>
+  &lt;div class="spinner-primary" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
   &lt;/div&gt;
                           </code>
                           </pre>
                         </div>
                </div>
-               <div class="card p-3 mt-3">
-                <div class="card-heading">
-                  <h5 class="my-3" id="growing-spnr">Growing Spinner</h5>
-                  <p class="text mb-3"> If you don't fancy a border spinner, switch to the grow spinner by setting the prop type to 'grow'. While it doesn't technically spin, it does repeatedly grow! </p>
-                  <div class="spinner-grow" role="status">
-                    <span class="sr-only"></span>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;div class="spinner-grow" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-                  </code>
-                    </pre>
-                </div>
-              </div>
-              <div class="card p-3 mt-3">
-                <div class="card-heading">
-                  <h5 class="my-3" id="spnr-color">Spinner color variants</h5>
-                  <p class="text mb-3"> The border spinner uses <code class="highlighter-rouge">currentColor</code> for its <code class="highlighter-rouge">border-color</code>, meaning you can customize the color with text color utilities. You can use any of our text color utilities on the standard spinner.</p>
-                  
-                  <!-- border spinner color-->
-                  <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                    <div class="spinner-border text-primary" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-border text-secondary" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-border text-success" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-border text-danger" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-border text-warning" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-border text-info" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-border text-light" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-border text-dark" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                  </div>
-
-                  <!-- growing spinner color-->
-                  <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                    <div class="spinner-grow text-primary" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow text-secondary" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow text-success" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow text-danger" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow text-warning" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow text-info" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow text-light" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow text-dark" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-                         <!-- border spinner color code-->
-        &lt;div class="spinner-border text-primary" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-border text-secondary" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-border text-success" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-border text-danger" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-border text-warning" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-border text-info" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-border text-light" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-border text-dark" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-
-
-          <!-- growing spinner color code-->
-        &lt;div class="spinner-grow text-primary" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-grow text-secondary" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-grow text-success" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-grow text-danger" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-grow text-warning" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-grow text-info" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-grow text-light" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class="spinner-grow text-dark" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-                  </code>
-                    </pre>
-                </div>
-              </div>
-              <div class="card p-3 mt-3">
-                <div class="card-heading">
-                  <h5 class="my-3" id="spnr-size">Spinner Sizes</h5>
-                  <p class="text mb-3"> Add <code class="highlighter-rouge">.spinner-border-sm</code> and <code class="highlighter-rouge">.spinner-grow-sm</code> to make a smaller spinner that can quickly be used within other components.</p>
-                  <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                   <div class="spinner-border spinner-border-sm" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow spinner-grow-sm" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;div class="spinner-border spinner-border-sm" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-
-        &lt;div class="spinner-grow spinner-grow-sm" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        </code>
-                    </pre>
-                    <p>Or, use custom CSS or inline styles to change the dimensions as needed.</p>
-                  <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                    <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;div class="spinner-border" style="width: 3rem; height: 3rem;" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-
-        &lt;div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-        </code>
-                    </pre>
-                </div>
-              </div>
               <div class="card p-3 mt-3">
                 <div class="card-heading">
                   <h5 class="my-3" id="button-spnr">Button Spinners</h5>
@@ -1645,11 +1206,11 @@
                 <!--border spinner in button -->
                 <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
                   <div>
-                  <button class="btn btn-primary" type="button" disabled>
+                  <button class="btn btn-primary disabled" type="button">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     <span class="sr-only"></span>
                   </button>
-                  <button class="btn btn-primary" type="button" disabled>
+                  <button class="btn btn-primary disabled">
                     <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
                     Loading...
                   </button>
@@ -1658,8 +1219,7 @@
                   <button class="btn-clipboard mt-3">
                     <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
                   </button>
-                  <pre>
-                      <code>
+                  <pre>                      <code>
   &lt;button class="btn btn-primary" type="button" disabled&gt;
     &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
       &lt;span class="sr-only"&lt;/span&gt;
@@ -1673,119 +1233,40 @@
                 </div>
               </div>
             
-
-
-            <!--growing spinner in button -->
-                <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                  <div>
-                  <button class="btn btn-primary" type="button" disabled>
-                    <span class="spinner-grow  spinner-grow -sm" role="status" aria-hidden="true"></span>
-                    <span class="sr-only"></span>
-                  </button>
-                  <button class="btn btn-primary" type="button" disabled>
-                    <span class="spinner-grow  spinner-grow -sm" role="status" aria-hidden="true"></span>
-                    Loading...
-                  </button>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre>
-                      <code>
-  &lt;button class="btn btn-primary" type="button" disabled&gt;
-    &lt;span class="spinner-grow  spinner-grow -sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
-      &lt;span class="sr-only"&lt;/span&gt;
-  &lt;/div&gt;
-
-  &lt;button class="btn btn-primary" type="button" disabled&gt;
-    &lt;span class="spinner-grow  spinner-grow -sm" role="status" aria-hidden="true"&gt;Loading...&lt;/span&gt;
-  &lt;/button&gt;
-                    </code>
-                    </pre>
-                </div>
               </div>
-
-
               <div class="card p-3 mt-3">
                 <div class="card-heading">
-                  <h5 class="my-3" id="spnr-placement">Spinner Placement</h5>
-                  <p class="text mb-3"> Use flexbox utilities, float utilities, or text alignment utilities to place spinners exactly where you need them in any situation.</p>
-                  
-                  <!--placement flex-->
-                  <p style="font-size: 20px">Flex</p>
-                  <div class="d-flex justify-content-center">
-                    <div class="spinner-border" role="status">
-                      <span class="sr-only"></span>
+                  <h5 class="my-3" id="spnr-size">Spinner Sizes</h5>
+                  <p class="text mb-3"> Customize spinner sizes by adding <code class="highlighter-rouge">.spinner-border-sm</code> or <code class="highlighter-rouge">.spinner-border-lg</code> to alter the spinner dimension as needed. Smaller spinner is mainly used for charts with small window of display whereas larger spinner for the whole page loading.</p>
+                  <div class="d-flex flex-row justify-content-evenly mb-3">
+                    <div class="p-2">
+                      <p class="text p-2"><code>.spinner-sm</code></p>
+                      <div class="spinner-sm">
+                      </div>
+                
                     </div>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;div class="d-flex justify-content-center"&gt;
-          &lt;div class="spinner-border" role="status"&gt;
-          &lt;span class="sr-only"&lt;/span&gt;
-        &lt;/div&gt;
-                  </code>
-                    </pre>
-                </div>
-
-
-                <div class="d-flex align-items-center">
-                  <strong>Loading...</strong>
-                  <div class="spinner-border ml-auto" role="status" aria-hidden="true"></div>
-                </div>
-
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;div class="d-flex align-items-center"&gt;
-          &lt;strong&gt;Loading...&lt;/strong&gt;
-          &lt;div class="spinner-border ml-auto" role="status" aria-hidden="true"&lt;/div&gt;
-        &lt;/div&gt;
-                  </code>
-                    </pre>
-                </div>
-
-
-
-                <!--placement floats-->
-                  <p style="font-size: 20px">Floats</p>
-                  <div class="clearfix">
-                    <div class="spinner-border float-right" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                  </div>
-
-                  <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;div class="clearfix"&gt;
-        &lt;div class="spinner-border float-right" role="status"&gt;
-          &lt;span class="sr-only"&gt;&lt;/span&gt;
-        &lt;/div&gt;
-                  </code>
-                    </pre>
-                </div>
-
-                </div>
-              </div>
-              
-
-                      </p>
+                    <div class="p-2"> 
+                      <p class="text p-2"><code>.spinner-primary</code></p>
+                      <div class="spinner-primary">
                       </div>
                     </div>
+                    <div class="p-2">
+                      <p class="text p-2"><code>.spinner-lg</code></p>
+                      <div class="spinner-lg">
+                      </div>
+                    </div>
+                   
+                 
                   </div>
+                  
+
+                  </div>
+                </div>
+             
+              </div>
+              </div>
+                    </div>
+                 
                 </div>
                 <!-- row -->
               </div>
