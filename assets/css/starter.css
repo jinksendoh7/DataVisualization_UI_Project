@@ -320,7 +320,27 @@ a{
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: conic-gradient(#0000 10%,#ff0009);
+  background: conic-gradient(#0000 10%,#FF4700);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
+  animation: spinner-zp9dbg 0.6s infinite linear;
+  margin: 5rem auto;
+}
+
+.spinner-sm {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%,#FF4700);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
+  animation: spinner-zp9dbg 0.6s infinite linear;
+  margin: 5rem auto;
+}
+
+.spinner-lg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%,#FF4700);
   -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
   animation: spinner-zp9dbg 0.6s infinite linear;
   margin: 5rem auto;
@@ -394,6 +414,21 @@ pre {
   border-radius: 50%;
   box-shadow: var(--shadow-4)
 }
+
+/*This is added for scroll to top demo*/
+#scrollToTopDemo {
+  display: none;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-4)
+} 
 
 #scrollToTop:hover {
   background-color: var(--white);
