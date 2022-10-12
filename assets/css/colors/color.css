@@ -70,6 +70,27 @@
     border: 4px solid var(--white);
     border-radius: 6px;
 }
+.color-apricot{
+    background-color: var(--apricot) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
+.color-shamrock{
+    background-color: var(--shamrock) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
+.color-rosso{
+    background-color: var(--rosso) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
 .color-navy-blue{
     background-color: var(--navy-blue) !important;
     color:var(---black) !important;
