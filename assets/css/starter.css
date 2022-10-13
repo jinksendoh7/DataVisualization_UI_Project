@@ -64,6 +64,10 @@ body {
   color: var(--black);
   font-size: 16px;
 }
+
+.icon-red {
+  color: #CC0007 !important;
+}
 @media (max-width: 991px) {
   body {
     font-size: 14px;
