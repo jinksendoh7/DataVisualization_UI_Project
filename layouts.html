@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/navbar/navbar.css" />
     <link rel="stylesheet" href="./assets/css/tab/tab.css" />
     <link rel="stylesheet" href="./assets/css/colors/color.css" />
+    <link rel="stylesheet" href="./assets/css/alert/alert.css" />
   </head>
   <body>
     <button onclick="topFunction()" id="scrollToTop" title="Go to top"><i class="bi bi-arrow-up"></i></button>
@@ -322,8 +323,128 @@
                       <div class="tab-pane " id="v-pills-six-media-queries" role="tabpanel" aria-labelledby="v-pills-six-media-queries-tab">
                       <div class="tab-text">
                         <p class="text">
-                        <h3>Media Queries</h3>
+                        <h3>Breakpoints</h3>
                         </p>
+                        <div class="row">
+                          <div class="col-12">
+                                <p class="text mb-1">Setting up the web application dimensions in different screen sizes of the device. These breakpoints will be used to create a flexible interfaces regardless the site is viewed in mobile, tablets or desktop.</p>
+                          </div>
+                        </div>
+
+                        <div class="row mt-3">
+                          <div class="card p-3 mx-3">
+                             <h4>Core concepts</h4>
+                             <div class="card p-3 border-0">
+                                <ul style="list-style-type:circle;">
+                                    <li>
+                                       <p class="text mb-3">There are six default breakpoints (grid tiers) to make a responsive design. The following are the identified screen size dimensions. </p>
+                                    </li>
+
+                                                  <div class="card-heading">
+                                            <h5 class="my-3" id="min-setup">Default Breakpoints</h5>
+                                          </div>
+                                          <div class="card p-3 border-0">
+                                          <table class="table border-0">
+                                              <thead>
+                                                <tr style="border-bottom-color: #FF0009;">
+                                                  <th>Breakpoint</th>
+                                                  <th>Class infix</th>
+                                                  <th>Dimensions</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr style="border-bottom-color: #E1E1E1">
+                                                  <td>X-Small</td>
+                                                  <td><em>None</em></td>
+                                                  <td>&lt;576px</td>
+                                                </tr>
+                                                <tr style="border-bottom-color: #E1E1E1">
+                                                  <td>Small</td>
+                                                  <td><code>sm</code></td>
+                                                  <td>&ge;576px</td>
+                                                </tr>
+                                                <tr style="border-bottom-color: #E1E1E1">
+                                                  <td>Medium</td>
+                                                  <td><code>md</code></td>
+                                                  <td>&ge;768px</td>
+                                                </tr>
+                                                <tr style="border-bottom-color: #E1E1E1">
+                                                  <td>Large</td>
+                                                  <td><code>lg</code></td>
+                                                  <td>&ge;992px</td>
+                                                </tr>
+                                                <tr style="border-bottom-color: #E1E1E1">
+                                                  <td>Extra large</td>
+                                                  <td><code>xl</code></td>
+                                                  <td>&ge;1200px</td>
+                                                </tr>
+                                                <tr style="border-bottom-color: #E1E1E1">
+                                                  <td>Extra extra large</td>
+                                                  <td><code>xxl</code></td>
+                                                  <td>&ge;1400px</td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+                                          <div class="alert alert-simple mt-3">
+                                              <strong>Note:</strong> Breakpoint width are multiples of 12 and customizable via Sass— in a Sass map in the <code>_variables.scss</code> stylesheet.
+                                            </div>
+                                    <li>
+                                       <p class="text mb-3">Breakpoints are supported through using a handful of media queries that will make the page responsive as viewport changes. </p>
+                                    </li>
+
+                                    <div class="card p-3 border-0">
+                                          <table class="table border-0">
+                                              <thead>
+                                                <tr style="border-bottom-color: #FF0009;">
+                                                  <th class="col-md-3">Viewport</th>
+                                                  <th class="col-md-6">Breakpoint</th>
+                                                  <th class="col-md-3">Notes</th>
+                                                </tr>
+                                              </thead>
+                                              <tbody>
+                                                <tr style="border-bottom-color: #E1E1E1">
+                                                  <td>Min-width</td>
+                                                  <td style="font-size: 12px">
+                                                    <ul style="list-style-type:circle;">
+                                                      <li>@include media-breakpoint-up(sm) { ... }</li>
+                                                      <li>@include media-breakpoint-up(md) { ... }</li>
+                                                      <li>@include media-breakpoint-up(lg) { ... }</li>
+                                                      <li>@include media-breakpoint-up(xl) { ... }</li>
+                                                      <li>@include media-breakpoint-up(xxl) { ... }</li>
+                                                    </ul>
+                                                  </td>
+                                                  <td style="font-size: 12px">
+                                                    For xs breakpoint, @media (min-width: 0) { ... } is used.
+                                                  </td>
+                                                </tr>
+                                                <tr style="border-bottom-color: #E1E1E1">
+                                                  <td>Max-width</td>
+                                                  <td style="font-size: 12px">
+                                                    <ul style="list-style-type:circle;">
+                                                      <li>@include media-breakpoint-down(sm) { ... }</li>
+                                                      <li>@include media-breakpoint-down(md) { ... }</li>
+                                                      <li>@include media-breakpoint-down(lg) { ... }</li>
+                                                      <li>@include media-breakpoint-down(xl) { ... }</li>
+                                                      <li>@include media-breakpoint-down(xxl) { ... }</li>
+                                                    </ul>
+                                                  </td>
+                                                  <td style="font-size: 12px">
+                                                    For xs breakpoint, @media (max-width: 0) { ... } is used.
+                                                  </td>
+                                                </tr>
+                                              </tbody>
+                                            </table>
+                                          </div>
+
+                             </ul>
+                             </div>
+
+                             
+       
+                          </div>
+                        </div>
+
                       </div>
                     </div>
                   </div>
