@@ -10,9 +10,8 @@
     <title>LiveWire UI Design Pattern Library | Project #1</title>
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/svg" />
-
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <!--====== BS Icons css ======-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--====== Style css ======-->
@@ -23,7 +22,9 @@
     <link rel="stylesheet" href="./assets/css/typography/typograhpy.css" />
   </head>
   <body>
-    <button onclick="topFunction()" id="scrollToTop" title="Go to top"><i class="bi bi-arrow-up"></i></button>
+    <button onclick="topFunction()" id="scrollToTop" title="Go to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
     <!--====== NAVBAR FOUR PART START ======-->
     <section class="navbar-area navbar-six">
       <div class="container">
@@ -36,12 +37,12 @@
                 <span class="toggler-icon"></span>
               </button>
               <a class="navbar-brand" href="javascript:void(0)">
-                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live<span class="live-green">Wire</span>
+                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live <span class="live-green">Wire</span>
               </a>
               <div class="collapse navbar-collapse justify-content-end" id="navbarFour">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="active" href="guides.html">Core Guides</a>
+                    <a class="active" href="guides.html">Brand Guides</a>
                   </li>
                   <li class="nav-item">
                     <a href="charts.html">Data Visualization</a>
@@ -78,13 +79,13 @@
         <div class="col">
           <div class="tabs mt-3">
             <h5 class="tabs-title mb-5">
-              <i class="bi bi-window-stack text-primary"></i> Core Guides
+              <i class="bi bi-window-stack text-primary"></i> Brand Guides
             </h5>
             <div class="single-tabs tabs-six">
               <div class="row no-gutters">
                 <div class="col-sm-3">
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="active" id="v-pills-six-getting-started-tab" data-bs-toggle="pill" href="#v-pills-six-getting-started" role="tab" aria-controls="v-pills-six-getting-started" aria-selected="true"> Getting Started</a>
+                    <a class="active" id="v-pills-six-getting-started-tab" data-bs-toggle="pill" href="#v-pills-six-getting-started" role="tab" aria-controls="v-pills-six-getting-started" aria-selected="true"> Introduction</a>
                     <a id="v-pills-six-typography-tab" data-bs-toggle="pill" href="#v-pills-six-typography" role="tab" aria-controls="v-pills-six-accordions" aria-selected="false"> Typography</a>
                     <a id="v-pills-six-colors-tab" data-bs-toggle="pill" href="#v-pills-six-colors" role="tab" aria-controls="v-pills-six-colors" aria-selected="false"> Colors</a>
                   </div>
@@ -94,15 +95,118 @@
                   <div class="tab-content" id="v-pills-tabContent" style="display:none">
                     <div class="tab-pane  show active" id="v-pills-six-getting-started" role="tabpanel" aria-labelledby="v-pills-six-getting-started-tab">
                       <div class="tab-text">
-                        <h3 class="mb-2">Getting Started</h3>
-                        <hr>
-                        <div class="text pb-1">
-                          <div>
-                            <h3>Welcome</h3><br>
-                            <img src="assets/img/guide_header.jpg" class="img-fluid" alt="Responsive image">
-                            <p>
-                              This is your guide in using LiveWire's brand typography and colors. Here, you'll have better understanding on how to use LiveWire's branding and assets consistently that stays true to the brand and embodies <span class="text-primary">PASSION, SPEED and ENERGY</span> throughout.
-                            </p>
+                        <h3 class="mb-3">LiveWire UI Kit</h3>
+                        <div class="card border-0 my-3">
+                          <img src="assets/img/guide_header.jpg" class="img-fluid pb-3" alt="Responsive image">
+                          <p class="my-3"> This is your guide in using LiveWire's brand typography and colors. Here, you'll have better understanding on how to use LiveWire's branding and assets consistently that stays true to the brand and embodies <span class="text-primary">PASSION, SPEED and ENERGY</span> throughout. </p>
+                          <p class="mt-3"> The LiveWire UI Kit includes the following:
+                          <div class="list-group my-3">
+                            <a href="components.html" class="list-group-item list-group-item-action py-3" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="text-primary mb-1">
+                                  <i class="bi bi-layers text-primary"></i> UI Elements
+                                </h5>
+                              </div>
+                              <small class="mx-4 mb-2 text-wrap">Collection of building blocks to build the dashboard from zero to up.</small>
+                            </a>
+                            <a href="layouts.html" class="list-group-item list-group-item-action py-3" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="text-primary mb-1">
+                                  <i class="bi bi-bar-chart text-primary"></i> Page Layouts
+                                </h5>
+                              </div>
+                              <small class="mx-4 mb-2 text-wrap">Some core principles and guidelines to layout your pages and content.</small>
+                            </a>
+                            <a href="charts.html" class="list-group-item list-group-item-action py-3" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="text-primary mb-1">
+                                  <i class="bi bi-grid-1x2 text-primary"></i> Data Visualization
+                                </h5>
+                              </div>
+                              <small class="mx-4 mb-2 text-wrap">A collection of data charts for your visual needs.</small>
+                            </a>
+                          </div>
+                          </p>
+                          <div class="card py-3 border-0">
+                            <h5 class="mb-3">Getting Started</h5>
+                            <p class="text mb-3">To get started, make sure you do the following steps.</p>
+                            <ol class="list-group list-group-numbered p-3">
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div style="width:98%">
+                                  <div class="fw-bold mb-3">Enable Mobile Responsive</div>
+                                  <p class="text mb-3">Include the <code>&lt;meta name="viewport"&gt;</code> tag as well for <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">proper responsive behavior</a> in mobile devices. </p>
+                                  <div class="card border-0 my-3">
+                                    <button class="btn-clipboard">
+                                      <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                    </button>
+                                    <pre>
+																						<code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Bootstrap demo&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;                                       
+                                      </code>
+																					</pre>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div style="width:98%">
+                                  <div class="fw-bold mb-3">Include the Boostrap JS and CSS</div>
+                                  <p class="text mb-3"> Place the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> for our CSS, and the <code>&lt;script&gt;</code> tag for our JavaScript bundle before the closing <code>&lt;body&gt;</code>. </p>
+                                  <div class="card border-0 my-3">
+                                    <button class="btn-clipboard">
+                                      <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                    </button>
+                                    <pre>
+																						<code>
+&lt;!--CSS --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;!--JS --&gt;              
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"&gt;&lt;/script&gt;                   
+                                    </code>
+																					</pre>
+                                    <h5 class="my-2">CDN Links</h5>
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th>Description</th>
+                                          <th>URL</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>CSS</td>
+                                          <td>
+                                            <code>https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css</code>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>JS</td>
+                                          <td>
+                                            <code>https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js</code>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">Read the Documentation</div>
+                                  <p class="my-3"> Read through the documentation so you will be familiarize with the available UI elements. </p>
+                                </div>
+                              </li>
+                            </ol>
                           </div>
                         </div>
                       </div>
@@ -110,103 +214,86 @@
                     <div class="tab-pane " id="v-pills-six-typography" role="tabpanel" aria-labelledby="v-pills-six-typography-tab">
                       <div class="tab-text">
                         <p class="text">
-                        <h3 class="text-bold mb-3">Typography</h3>
-                        <div class="card p-3 my-3">
-                            <div class="row">
-                              <div class="col-md-6">
-                                <h2 class="text-medium  my-3 border-bottom pb-2">Typeface</h2>
-                                  <p class="text-regular" style="font-size: 2em;">
-                                    This is Quicksand. <br>
-                                    Our typeface. We use this on every asset and material for <span class="text-bold"> LiveWire.</span> 
-                                  </p>
-                              </div>
-                              <div class="col-md-6">
-                                <h2 class="text-medium  my-3 border-bottom pb-2">Weights</h2>
-                                <p class="text-regular">We use <span class="text-regular">"Regular", </span>
-                                  <span class="text-medium">Medium</span> and <span class="text-bold">Bold</span> throughout our assets</p>
-                              </div>
+                        <h2 class="text-bold mb-3">Typography</h2>
+                        <div class="card my-3 border-0">
+                          <div>
+                            <div class="col-lr-6 my-3">
+                              <h3 class="text-medium  my-3 border-bottom pb-2">Typeface</h3>
+                              <p class="text-regular" style="font-size: 3em; line-height: 1.2em;"> This is Quicksand. <br> Our typeface. We use this on every asset and material for <span class="text-bold"> LiveWire.</span>
+                              </p>
                             </div>
+                            <div class="col-lr-6">
+                              <h3 class="text-medium  my-3 border-bottom pb-2">Weights</h3>
+                              <p class="text-regular">We use <span class="text-regular">"Regular", </span>
+                                <span class="text-medium">Medium</span> and <span class="text-bold">Bold</span> throughout our assets.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <br>
+                        <div class="card my-3 border-0">
+                          <div class="row">
+                            <div class="col-md-6">
+                              <h3 class="text-medium my-3 border-bottom pb-2">Contexual Example</h3>
+                              <p class="text-regular"> LiveWire’s choice of typography is about passion, speed, and energy when used consistently for navigation, messaging, and entertainment to convey your brand management message effectively without any clash with LiveWire’s branding and corporate identity. </p>
+                            </div>
+                            <div class="col-md-6">
+                              <br>
+                              <p class="text-xl my-3" style="line-height: 3.5rem">THIS HEADER TEXT IS AN EXAMPLE.</p>
+                              <p class="text-regular" style="font-size: 1.2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante elit, vestibulum vel commodo vitae, euismod sed massa. Aenean malesuada neque ut egestas malesuada. Nunc sapien quam, fermentum at laoreet id, accumsan id enim. Sed blandit est vel dui fringilla pretium.</p>
+                            </div>
+                          </div>
                         </div>
                         <div>
-                          <div class="card p-3">
-                            <h2 class="text-medium my-2">
-                              Quicksand
-                            </h2>
+                          <br>
+                          <div class="card border-0 p-3">
+                            <h2 class="text-medium my-3 border-bottom pb-2"> Quicksand Text Variations </h2>
                             <div>
-                              <p class="text-regular" style="text-decoration: underline; font-size: large;">
-                                Quicksand 16.8pt
-                              </p>
+                              <p class="text-regular" style="text-decoration: underline; font-size: large;"> Quicksand 16.8pt </p>
                               <p class="text-xxs mb-3">
-                                <span class="text-regular">This is a xxs text.</span>
-                                <span class="text-medium"> This is a xxs medium text.</span>
-                                <span class="text-bold"> This is a xxs bold text.</span>
+                                <span class="text-regular">This is a xxs text,</span>
+                                <span class="text-medium"> in Medium</span>
+                                <span class="text-bold"> & Bold.</span>
                               </p>
-                              <p class="text-regular" style="text-decoration: underline; font-size: large;">
-                                Quicksand 19.2pt
-                              </p>
+                              <p class="text-regular" style="text-decoration: underline; font-size: large;"> Quicksand 19.2pt </p>
                               <p class="text-xs mb-3">
-                                <span class="text-regular">This is a xs text.</span>
-                                <span class="text-medium"> This is a xs medium text.</span>
-                                <span class="text-bold"> This is a xs bold text.</span>
+                                <span class="text-regular">This is a xs text,</span>
+                                <span class="text-medium"> in Medium</span>
+                                <span class="text-bold"> & Bold.</span>
                               </p>
-                              <p class="text-regular" style="text-decoration: underline; font-size: large;">
-                                Quicksand 22.8pt
-                              </p>
+                              <p class="text-regular" style="text-decoration: underline; font-size: large;"> Quicksand 22.8pt </p>
                               <p class="text-sm mb-3">
-                                <span class="text-regular">This is a sm text.</span>
-                                <span class="text-medium"> This is a sm medium text.</span>
-                                <span class="text-bold"> This is a sm bold text.</span>
+                                <span class="text-regular">This is a sm text,</span>
+                                <span class="text-medium"> in Medium</span>
+                                <span class="text-bold"> & Bold.</span>
                               </p>
-                              <p class="text-regular" style="text-decoration: underline; font-size: large;">
-                                Quicksand 28.8pt
-                              </p>
+                              <p class="text-regular" style="text-decoration: underline; font-size: large;"> Quicksand 28.8pt </p>
                               <p class="text-md mb-3">
-                                <span class="text-regular">This is a md text.</span>
-                                <span class="text-medium"> This is a md medium text.</span>
-                                <span class="text-bold"> This is a md bold text.</span>
+                                <span class="text-regular">This is a md text,</span>
+                                <span class="text-medium"> in Medium</span>
+                                <span class="text-bold"> & Bold.</span>
                               </p>
-                              <p class="text-regular" style="text-decoration: underline; font-size: large;">
-                                Quicksand 33.6pt
-                              </p>
+                              <p class="text-regular" style="text-decoration: underline; font-size: large;"> Quicksand 33.6pt </p>
                               <p class="text-lar mb-3">
-                                <span class="text-regular">This is a lg text.</span>
-                                <span class="text-medium"> This is a lg medium text.</span>
-                                <span class="text-bold"> This is a lg bold text.</span>
+                                <span class="text-regular">This is a lg text,</span>
+                                <span class="text-medium"> in Medium</span>
+                                <span class="text-bold"> & Bold.</span>
                               </p>
-                              <p class="text-regular" style="text-decoration: underline; font-size: large;">
-                                Quicksand 43.2pt
+                              <p class="text-regular" style="text-decoration: underline; font-size: large;"> Quicksand 43.2pt </p>
+                              <p class="text-xl mb-3" style="line-height: 1.2em;">
+                                <span class="text-regular">This is a xl text,</span>
+                                <span class="text-medium"> in Medium</span>
+                                <span class="text-bold"> & Bold.</span>
                               </p>
-                              <p class="text-xl mb-3">
-                                <span class="text-regular">This is a xl text.</span>
-                                <span class="text-medium"> This is a xl medium text.</span>
-                                <span class="text-bold"> This is a xl bold text.</span>
-                              </p>
-                              <p class="text-regular" style="text-decoration: underline; font-size: large;">
-                                Quicksand 50.4pt
-                              </p>
-                              <p class="text-xxl mb-3">
-                                <span class="text-regular">This is a xxl text.</span>
-                                <span class="text-medium"> This is a xxl medium text.</span>
-                                <span class="text-bold"> This is a xxl bold text.</span>
+                              <p class="text-regular" style="text-decoration: underline; font-size: large;"> Quicksand 50.4pt </p>
+                              <p class="text-xxl mb-3" style="line-height: 1.2em;">
+                                <span class="text-regular">This is a xxl text,</span>
+                                <span class="text-medium"> in Medium</span>
+                                <span class="text-bold"> & Bold.</span>
                               </p>
                             </div>
-                            <br><br>
-                       
-                          </div>
-                          <div class="card p-3 mt-3">
-                            <div class="row">
-                              <div class="col-md-6">
-                                <p class="text-medium my-3">Contexual Example</p>
-                                  <p class="text-regular" style="font-size: 1.4rem;">
-                                    LiveWire’s choice of typography is about passion, speed, and energy when used consistently for navigation, messaging, and entertainment to convey your brand management message effectively without any clash with LiveWire’s branding and corporate identity.
-                                  </p>
-                              </div>
-                             
-                              <div class="col-md-6">
-                                <p class="text-xl my-3" style="line-height: 3.5rem">THIS HEADER TEXT IS AN EXAMPLE.</p>
-                                <p class="text-regular" style="font-size: 1.4rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ante elit, vestibulum vel commodo vitae, euismod sed massa. Aenean malesuada neque ut egestas malesuada. Nunc sapien quam, fermentum at laoreet id, accumsan id enim. Sed blandit est vel dui fringilla pretium.</p>
-                              </div>
-                            </div>
+                            <br>
+                            <br>
                           </div>
                         </div>
                         </p>
@@ -216,18 +303,16 @@
                       <div class="tab-text">
                         <div class="row p-3">
                           <div class="col-md-6">
-                            <h4 class="mb-3">Primary Color</h4>
+                            <h2 class="mb-3">Primary Brand Color</h2>
                             <div class="card p-3">
-                              <p class="text pb-1">
-                                These are the corporate colors of LiveWire. Colours that evoke <span class="text-primary">PASSION, SPEED and ENERGY</span> throughout various mediums and wide media of usage. Ideally, these colours should be used in a clean White base colour for better stand-out.
-                              </p>
-                              <p class="text pb-2">
-                                It comes with <a href="#secondary-colors">secondary colors</a> and <a href="#ancillary-colors">ancillary colors</a>.
+                              <p class="text pb-1"> These are the corporate colors of LiveWire. Colours that evoke <span class="text-primary">PASSION, SPEED and ENERGY</span> throughout various mediums and wide media of usage. Ideally, these colours should be used in a clean White base colour for better stand-out. </p>
+                              <p class="text pb-2"> It comes with <a href="#secondary-colors">secondary colors,</a>
+                                <a href="#functional-colors"> functional colors, </a> and <a href="#feedback-colors">feedback colors, </a>.
                               </p>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <h5 class="text-center text-primary my-2" >LiveWire Red</h5>
+                            <h5 class="text-center text-primary my-2">LiveWire Red</h5>
                             <div class="card text-white color-primary mb-1 p-1 mx-auto mt-3">
                               <div class="card-body pt-2">
                                 <h5 class="card-title text-white text-center mt-5">Hex: #FF0009 </h5>
@@ -239,58 +324,15 @@
                         </div>
                         <h4 class="mb-3 mt-3" id="secondary-colors">Secondary Colors</h4>
                         <div class="row p-3">
-                            <div class="col-md-4">
-                              <div class="card text-white color-tetra-mustard mb-1 p-1 mx-auto">
-                                <div class="card-body">
-                                  <h5 class="card-title text-white text-center">Hex: #FFCA0D</h5>
-                                  <p class="small text-center">R: 255 G: 202 B: 13</p>
-                                  <p class="small text-center">H: 47 S: 95 B: 100</p>
-                                </div>
-                              </div>
-                              <h5 class="text-center my-3" >Tetra Mustard</h5>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="card text-white color-live-green mb-1 p-1 mx-auto">
-                                <div class="card-body">
-                                  <h5 class="card-title text-white text-center">Hex: #5DE500</h5>
-                                  <p class="small text-center">R: 2R: 93 G: 229 B: 0</p>
-                                  <p class="small text-center">H: 96 S: 100 B: 90</p>
-                                </div>
-                              </div>
-                              <h5 class="text-center my-3" >Live Green</h5>
-                            </div>
-                            <div class="col-md-4">
-                              <div class="card text-white color-blue mb-1 p-1 mx-auto">
-                                <div class="card-body">
-                                  <h5 class="card-title text-white text-center">Hex: #5DE500</h5>
-                                  <p class="small text-center">R: 93 G: 229 B: 0</p>
-                                  <p class="small text-center">H: 96 S: 100 B: 90</p>
-                                </div>
-                              </div>
-                              <h5 class="text-center my-3" >LiveWire Blue</h5>
-                            </div>
-                        </div>
-                        <h4 class="mb-3 mt-3" id="ancillary-colors">Ancillary Colors</h4>
-                        <div class="row p-3">
                           <div class="col-md-4">
-                            <div class="card text-white color-bright-yellow mb-1 p-1 mx-auto">
+                            <div class="card text-white color-tetra-mustard mb-1 p-1 mx-auto">
                               <div class="card-body">
-                                <h5 class="card-title  text-center">Hex: #FFFC0D</h5>
+                                <h5 class="card-title text-white text-center">Hex: #FFCA0D</h5>
                                 <p class="small text-center">R: 255 G: 202 B: 13</p>
-                                <p class="small text-center">H: 59 S: 95 B: 100</p>
+                                <p class="small text-center">H: 47 S: 95 B: 100</p>
                               </div>
                             </div>
-                            <h5 class="text-center my-3" >Bright Yellow</h5>
-                          </div>
-                          <div class="col-md-4">
-                            <div class="card text-white color-muted-blue mb-1 p-1 mx-auto">
-                              <div class="card-body">
-                                <h5 class="card-title text-white text-center">Hex: #1449CC</h5>
-                                <p class="small text-white text-center">R: 20 G: 204 B: 22</p>
-                                <p class="small text-white text-center">H: 121 S: 90 B: 80</p>
-                              </div>
-                            </div>
-                            <h5 class="text-center my-3" >Muted Blue</h5>
+                            <h5 class="text-center my-3">Tetra Mustard</h5>
                           </div>
                           <div class="col-md-4">
                             <div class="card text-white color-sat-green mb-1 p-1 mx-auto">
@@ -300,110 +342,177 @@
                                 <p class="small text-white text-center">H: 17 S: 100 B: 100</p>
                               </div>
                             </div>
-                            <h5 class="text-center my-3" >Sat Green</h5>
+                            <h5 class="text-center my-3">Sat Green</h5>
                           </div>
-                      </div>  
-                      <div class="row p-3 mt-2">
-                        <div class="col-md-4">
-                          <div class="card text-white color-tangerine mb-1 p-1 mx-auto">
-                            <div class="card-body">
-                              <h5 class="card-title text-white text-center">Hex: #FF4700</h5>
-                              <p class="small text-white text-center">R: 255 G: 71 B: 0</p>
-                              <p class="small text-white text-center">H: 17 S: 100 B: 100</p>
+                          <div class="col-md-4">
+                            <div class="card text-white color-blue mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #5DE500</h5>
+                                <p class="small text-center">R: 93 G: 229 B: 0</p>
+                                <p class="small text-center">H: 96 S: 100 B: 90</p>
+                              </div>
                             </div>
+                            <h5 class="text-center my-3">LiveWire Blue</h5>
                           </div>
-                          <h5 class="text-center my-3" >Tangerine</h5>
                         </div>
-                        <div class="col-md-4">
-                          <div class="card text-white color-sky-blue mb-1 p-1 mx-auto">
-                            <div class="card-body">
-                              <h5 class="card-title  text-center">Hex: #26E7FF</h5>
-                              <p class="small  text-center">R: 105 G: 23 B: 229</p>
-                              <p class="small  text-center">H: 264: 90 B: 90</p>
+                        <h4 class="mb-3 mt-3" id="functional-colors">Functional Colors</h4>
+                        <div class="row p-3">
+                          <div class="col-md-4">
+                            <div class="card text-white color-charcoal-lite mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-black text-center">Hex: #E1E1E1</h5>
+                                <p class="small text-center">R: 225 G: 225 B: 225</p>
+                                <p class="small text-center">H: 0 S: 0 B: 88.4</p>
+                              </div>
                             </div>
+                            <h5 class="text-center my-3">LiveWire Charcoal-Lite</h5>
                           </div>
-                          <h5 class="text-center my-3" >Sky Blue</h5>
-                        </div>
-                        <div class="col-md-4">
-                          <div class="card text-white color-royal-purple mb-1 p-1 mx-auto">
-                            <div class="card-body">
-                              <h5 class="card-title text-white text-center">Hex: #FF33CB</h5>
-                              <p class="small text-white text-center">R: 255 G: 51 B: 203</p>
-                              <p class="small text-white text-center">H: 315 S: 80 B: 100</p>
+                          <div class="col-md-4">
+                            <div class="card text-white color-charcoal-plus mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #4D4D4D</h5>
+                                <p class="small  text-center">R: 77 G: 77 B: 77</p>
+                                <p class="small  text-center">H: 0 S: 0 B: 30.2</p>
+                              </div>
                             </div>
+                            <h5 class="text-center my-3">LiveWire Charcoal+</h5>
                           </div>
-                          <h5 class="text-center my-3" >Royal Purple</h5>
-                        </div>
-                    </div>
-
-                    <div class="row p-3 mt-2">
-                      <div class="col-md-4">
-                        <div class="card text-white color-heliotrope mb-1 p-1 mx-auto">
-                          <div class="card-body">
-                            <h5 class="card-title text-white text-center">#FF33CB</h5>
-                            <p class="small text-white text-center">R: 255 G: 51 B: 203</p>
-                            <p class="small text-white text-center">H: 315 S: 80 B: 100</p>
+                          <div class="col-md-4">
+                            <div class="card text-white color-black mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #191919</h5>
+                                <p class="small text-white text-center">R: 25 G: 25 B: 25</p>
+                                <p class="small text-white text-center">H: 315.3 S: 90.2 B: 80</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">LiveWire Black</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-heliotrope mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #CC149D</h5>
+                                <p class="small text-white text-center">R: 204 G: 20 B: 157</p>
+                                <p class="small text-white text-center">H: 315 S: 80 B: 100</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Heliotrope</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-rich-dewberry mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #993A8C</h5>
+                                <p class="small  text-center">R: 153 G: 58 B: 140</p>
+                                <p class="small  text-center">H: 308.21 S: 62.09 B: 60</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Rich Dewberry</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-dewberry mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #752967</h5>
+                                <p class="small text-white text-center">R: 117 G: 41 B: 103</p>
+                                <p class="small text-white text-center">H: 311 S: 64.96 B: 45.8</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Dewberry</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-turquoise mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #009EBD</h5>
+                                <p class="small text-white text-center">R: 0 G: 158 B: 189</p>
+                                <p class="small text-white text-center">H: 189.8 S: 100 B: 74.12</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Turquoise</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-yale mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #005B8F</h5>
+                                <p class="small text-white text-center">R: 0 G: 91 B: 143</p>
+                                <p class="small text-white text-center">H: 201.8 S: 100 B: 56.08</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Yale</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-navy-blue mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #1F1F67</h5>
+                                <p class="small text-white text-center">R: 31 G: 31 B: 103</p>
+                                <p class="small text-white text-center">H: 240 S: 69.9 B: 40.4</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Navy Blue</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-apricot mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #FFA733</h5>
+                                <p class="small text-white text-center">R: 255 G: 167 B: 51</p>
+                                <p class="small text-white text-center">H: 34.12 S: 80 B: 100</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Apricot</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-rosso mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #CC0007</h5>
+                                <p class="small text-white text-center">R: 204 G: 0 B: 7</p>
+                                <p class="small text-white text-center">H: 357.9 S: 100 B: 80</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Rosso</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-shamrock mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #48B200</h5>
+                                <p class="small text-white text-center">R: 72 G: 178 B: 0</p>
+                                <p class="small text-white text-center">H: 95.73 S: 100 B: 69.8</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Shamrock</h5>
                           </div>
                         </div>
-                        <h5 class="text-center my-3" >Heliotrope</h5>
-                      </div>
-                      <div class="col-md-4">
-                        <div class="card text-white color-rich-dewberry mb-1 p-1 mx-auto">
-                          <div class="card-body">
-                            <h5 class="card-title text-white text-center">Hex: #CC149D</h5>
-                            <p class="small  text-center">R: 204 G: 20 B: 157</p>
-                            <p class="small  text-center">H: 315 S: 90 B: 80</p>
+                        <h4 class="mb-3 mt-3" id="feedback-colors">Feedback Colors</h4>
+                        <div class="row p-3">
+                          <div class="col-md-4">
+                            <div class="card text-white color-tangerine mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #FF4700</h5>
+                                <p class="small text-white text-center">R: 255 G: 71 B: 0</p>
+                                <p class="small text-white text-center">H: 17 S: 100 B: 100</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Tangerine</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-muted-blue mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #1449CC</h5>
+                                <p class="small text-white text-center">R: 20 G: 204 B: 22</p>
+                                <p class="small text-white text-center">H: 121 S: 90 B: 80</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Muted Blue</h5>
+                          </div>
+                          <div class="col-md-4">
+                            <div class="card text-white color-live-green mb-1 p-1 mx-auto">
+                              <div class="card-body">
+                                <h5 class="card-title text-white text-center">Hex: #5DE500</h5>
+                                <p class="small text-center">R: 2R: 93 G: 229 B: 0</p>
+                                <p class="small text-center">H: 96 S: 100 B: 90</p>
+                              </div>
+                            </div>
+                            <h5 class="text-center my-3">Live Green</h5>
                           </div>
                         </div>
-                        <h5 class="text-center my-3" >Rich Dewberry</h5>
                       </div>
-                      <div class="col-md-4">
-                        <div class="card text-white color-dewberry mb-1 p-1 mx-auto">
-                          <div class="card-body">
-                            <h5 class="card-title text-white text-center">Hex: #993D81</h5>
-                            <p class="small text-white text-center">R: 153 G: 61 B: 129</p>
-                            <p class="small text-white text-center">H: 316 S: 60 B: 60</p>
-                          </div>
-                        </div>
-                        <h5 class="text-center my-3" >Dewberry</h5>
-                      </div>
-                  </div>
-
-                  <div class="row p-3 mt-2 mb-3">
-                    <div class="col-md-4">
-                      <div class="card text-white color-charcoal mb-1 p-1 mx-auto">
-                        <div class="card-body">
-                          <h5 class="card-title text-white text-center">Hex: #646464</h5>
-                          <p class="small text-white text-center">R: 100 G: 100 B: 100</p>
-                          <p class="small text-white text-center">H: 0 S: 0 B: 39</p>
-                        </div>
-                      </div>
-                      <h5 class="text-center my-3" >LiveWire Charcoal</h5>
                     </div>
-                    <div class="col-md-4">
-                      <div class="card text-white color-charcoal-plus mb-1 p-1 mx-auto">
-                        <div class="card-body">
-                          <h5 class="card-title text-white text-center">Hex: #4B4B4B</h5>
-                          <p class="small  text-center">R: 75 G: 75 B: 75</p>
-                          <p class="small  text-center">H: 0 S: 0 B: 29</p>
-                        </div>
-                      </div>
-                      <h5 class="text-center my-3" >LiveWire Charcoal+</h5>
-                    </div>
-                    <div class="col-md-4">
-                      <div class="card text-white color-black mb-1 p-1 mx-auto">
-                        <div class="card-body">
-                          <h5 class="card-title text-white text-center">Hex: #191919</h5>
-                          <p class="small text-white text-center">R: 25 G: 25 B: 25</p>
-                          <p class="small text-white text-center">H: 0 S: 0 B: 10</p>
-                        </div>
-                      </div>
-                      <h5 class="text-center my-3" >LiveWire Black</h5>
-                    </div>
-                </div>
-                  </div>
-                    </div>
-                 
                   </div>
                 </div>
                 <!-- row -->

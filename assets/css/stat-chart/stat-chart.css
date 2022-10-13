@@ -1,13 +1,13 @@
 .stat-chart{
     box-shadow: var(--shadow-2);
-    border-radius: 4px !important;
-    min-height: 150px !important;
+    border-radius: 8px !important;
+    min-height: 180px !important;
     text-align: center;
 }
 .stat-chart-icon{
     box-shadow: var(--shadow-2);
-    border-radius: 4px !important;
-    min-height: 150px !important;
+    border-radius: 8px !important;
+    min-height: 180px !important;
 }
 
 .stat-chart-primary{
@@ -18,7 +18,7 @@
 .stat-chart-primary:hover{
     color: var(--primary);
     background: var(--white);
-    cursor:hand;
+    cursor:pointer;
     border-color: var(--primary);
 }
 .stat-chart-primary-outline:hover{
@@ -29,7 +29,7 @@
 .stat-chart-primary-outline{
     color: var(--primary);
     background: var(--white);
-    cursor:hand;
+    cursor:pointer;
     border-color: var(--primary);
 }
 .stat-chart-warning{
@@ -40,7 +40,7 @@
 .stat-chart-warning:hover{
     color: var(--black);
     background: var(--white);
-    cursor:hand;
+    cursor:pointer;
     border-color: var(--tetra-mustard);
 }
 .stat-chart-warning-outline:hover{
@@ -51,7 +51,7 @@
 .stat-chart-warning-outline{
     color: var(--black);
     background: var(--white);
-    cursor:hand;
+    cursor:pointer;
     border-color: var(--tetra-mustard);
 }
 .stat-chart-success{
@@ -62,7 +62,7 @@
 .stat-chart-success:hover{
     color: var(--sat-green);
     background: var(--white);
-    cursor:hand;
+    cursor:pointer;
     border-color: var(--sat-green);
 }
 
@@ -74,8 +74,32 @@
 .stat-chart-success-outline{
     color: var(--sat-green);
     background: var(--white);
-    cursor:hand;
+    cursor:pointer;
     border-color: var(--sat-green);
+}
+
+
+.stat-chart-dark{
+    border: 2px solid var(--white);
+    color: var(--white);
+    background: var(--muted-blue);
+}
+.stat-chart-dark:hover{
+    color: var(--p);
+    background: var(--white);
+    cursor:pointer;
+    border-color: var(--muted-blue);
+}
+.stat-chart-dark-outline:hover{
+    border: 2px solid var(--muted-blue);
+    color: var(--muted-blue);
+    background: var(--white);
+}
+.stat-chart-dark-outline{
+    color: var(--muted-blue);
+    background: var(--white);
+    cursor:pointer;
+    border-color: var(--muted-blue);
 }
 .stat-chart-title{
     font-family: var(--font-family-bold);
@@ -86,6 +110,7 @@
     font-family: var(--font-family-bold);
     font-size: 44px;
     font-weight: 600;
+    border-radius: 8px;
 }
 .stat-chart-subtitle{
     font-family: var(--font-family-medium);
@@ -94,6 +119,10 @@
 }
 .stat-chart-text{
     font-family: var(--font-family-bold);
-    font-size:16px;
+    font-size:12px;
 
+}
+.stat-chart-text-lg{
+    font-family: var(--font-family-bold);
+    font-size:16px;
 }

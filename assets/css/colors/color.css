@@ -56,7 +56,48 @@
     border: 4px solid var(--white);
     border-radius: 6px;
 }
-
+.color-turquoise{
+    background-color: var(--turquoise) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
+.color-yale{
+    background-color: var(--yale) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
+.color-apricot{
+    background-color: var(--apricot) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
+.color-shamrock{
+    background-color: var(--shamrock) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
+.color-rosso{
+    background-color: var(--rosso) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
+.color-navy-blue{
+    background-color: var(--navy-blue) !important;
+    color:var(---black) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
 .color-sky-blue{
     background-color: var(--sky-blue) !important;
     color:var(--black) !important;
@@ -95,6 +136,13 @@
 .color-charcoal{
     background-color: var(--charcoal) !important;
     color:var(--white) !important;
+    box-shadow: var(--shadow-3);
+    border: 4px solid var(--white);
+    border-radius: 6px;
+}
+.color-charcoal-lite{
+    background-color: var(--charcoal-lite) !important;
+    color:var(---black) !important;
     box-shadow: var(--shadow-3);
     border: 4px solid var(--white);
     border-radius: 6px;

@@ -4,7 +4,7 @@
 .tabs-title {
   font-size: 24px;
   font-weight: 600;
-  color: var(--bleck);
+  color: var(--black);
 }
 @media (max-width: 767px) {
   .tabs-title {
@@ -16,19 +16,16 @@
 /* tabs-six */
 .tabs-six {
   border: none;
-  min-height: 65%;
+ 
   font-family: var(--font-family-medium);
 }
 .tabs-six .nav {
-  min-height: 60vh;
-  position: relative;
 }
 .tabs-six .nav::before {
   position: absolute;
   content: "";
-  width: 4px;
+  width: 1px;
   height: 100%;
-  background-color: var(--gray);
   top: 0;
   right: 0;
 }
@@ -65,7 +62,7 @@
   right: 0;
 }
 .tabs-six .tab-content .tab-text {
-  padding: 15px;
+  padding: 5px 15px;
 }
 .tabs-six .tab-content .tab-text .text {
   color: var(--black);

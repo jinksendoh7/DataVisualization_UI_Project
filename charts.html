@@ -11,7 +11,7 @@
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/svg" />
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <!--====== BS Icons css ======-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!--====== Style css ======-->
@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="./assets/css/stat-chart/stat-chart.css" />
   </head>
   <body>
-    <button onclick="topFunction()" id="scrollToTop" title="Go to top"><i class="bi bi-arrow-up"></i></button>
+    <button onclick="topFunction()" id="scrollToTop" title="Go to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
     <!--====== NAVBAR FOUR PART START ======-->
     <section class="navbar-area navbar-six">
       <div class="container">
@@ -35,12 +37,12 @@
                 <span class="toggler-icon"></span>
               </button>
               <a class="navbar-brand" href="javascript:void(0)">
-                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live<span class="live-green">Wire</span>
+                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live <span class="live-green">Wire</span>
               </a>
               <div class="collapse navbar-collapse justify-content-end" id="navbarFour">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a href="guides.html">Core Guides</a>
+                    <a href="guides.html">Brand Guides</a>
                   </li>
                   <li class="nav-item">
                     <a class="active" href="charts.html">Data Visualization</a>
@@ -85,9 +87,10 @@
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="active" id="v-pills-six-stat-charts-tab" data-bs-toggle="pill" href="#v-pills-six-stat-charts" role="tab" aria-controls="v-pills-six-stat-charts" aria-selected="true"> Stat Charts</a>
                     <a id="v-pills-six-doughnut-charts-tab" data-bs-toggle="pill" href="#v-pills-six-doughnut-charts" role="tab" aria-controls="v-pills-doughnut-chartsdoughnut-charts" aria-selected="false"> Dougnut Charts</a>
+                    <a id="v-pills-six-area-charts-tab" data-bs-toggle="pill" href="#v-pills-six-bar-charts" role="tab" aria-controls="v-pills-six-area-charts" aria-selected="false"> Area Charts</a>
                     <a id="v-pills-six-bar-charts-tab" data-bs-toggle="pill" href="#v-pills-six-bar-charts" role="tab" aria-controls="v-pills-six-bar-charts" aria-selected="false"> Bar Charts</a>
                     <a id="v-pills-six-line-charts-tab" data-bs-toggle="pill" href="#v-pills-six-line-charts" role="tab" aria-controls="v-pills-line-charts" aria-selected="false"> Line Charts</a>
-                    <a id="v-pills-six-scatter-charts-tab" data-bs-toggle="pill" href="#v-pills-scatter-charts" role="tab" aria-controls="v-pills-six-scatter-charts" aria-selected="false"> scatter Charts</a>
+                    <a id="v-pills-six-scatter-charts-tab" data-bs-toggle="pill" href="#v-pills-scatter-charts" role="tab" aria-controls="v-pills-six-scatter-charts" aria-selected="false"> Scatter Charts</a>
                     <a id="v-pills-six-mixed-charts-tab" data-bs-toggle="pill" href="#v-pills-six-mixed-charts" role="tab" aria-controls="v-pills-six-mixed-charts" aria-selected="false"> Mixed Charts</a>
                   </div>
                 </div>
@@ -101,9 +104,7 @@
                           <div class="col-md-8">
                             <div class="card p-3 m-2">
                               <p class="text mb-1">A way to display single value data in order to make the value stand out at a glance.</p>
-                              <p class="text mb-1">Stat chart usually aggregated data value to provide meaningful insights. It is recommended that it is always display at the top and should start on the left side of the screen</p>
-                              <p class="text mb-2">The simple stat chart comes with the following variants such as primary, warning, success and dark.</p>
-                            
+                              <p class="text mb-3">Stat chart usually aggregated data value to provide meaningful insights. It is recommended that it is always display at the top and should start on the left side of the screen</p>
                             </div>
                           </div>
                           <div class="col-md-4">
@@ -123,129 +124,257 @@
                                   <td>
                                     <a href="#stat-chart-outline">Outline Stat Chart</a>
                                   </td>
-                                 </tr>
+                                </tr>
                                 <tr>
                                   <td>
                                     <a href="#stat-chart-icons">Stat Chart with Icons</a>
                                   </td>
-                                 </tr>
+                                </tr>
                                 <tr>
                                   <td>
                                     <a href="#stat-chart-mixed">Mixed Stat Chart</a>
                                   </td>
                                 </tr>
-                              </table>
+                            </table>
                           </div>
-                        
-                            <div class="card m-3 p-3">
-                              <h3 class="mb-3" id="stat-chart-simple">Simple Stat Chart</h3>
-                             <div class="row my-3 p-3">
-                              <div class="col-md-4">
+                          <div class="card m-3 p-3">
+                            <h3 class="mb-3" id="stat-chart-simple">Simple Stat Chart</h3>
+                            <p class="text mb-2">The simple stat chart comes with the following variants such as primary, secondary, success and info.</p>
+                            <div class="row my-3 p-3">
+                              <div class="col-md-3">
                                 <div class="card stat-chart stat-chart-primary p-3">
                                   <div class="stat-chart-title">$17.6K</div>
                                   <div class="stat-chart-subtitle">Earnings</div>
-                                  <div class="stat-chart-text"><i class="bi bi-arrow-up-circle mr-3"></i> up by 3.5% Last 30 Days</div>
+                                  <div class="stat-chart-text">
+                                    <i class="bi bi-arrow-up-circle mr-3"></i> up by 3.5% Last 30 Days
+                                  </div>
+                                </div>
+                                <div class="text mt-3 text-center">
+                                  <code>.stat-chart-primary</code>
                                 </div>
                               </div>
-                              <div class="col-md-4">
+                              <div class="col-md-3">
                                 <div class="card stat-chart stat-chart-warning p-3">
                                   <div class="stat-chart-title">256.3K</div>
                                   <div class="stat-chart-subtitle">Subscribers</div>
-                                  <div class="stat-chart-text"><i class="bi bi-arrow-down-circle mr-3"></i> down by 8.1% Last 30 Days</div>
+                                  <div class="stat-chart-text">
+                                    <i class="bi bi-arrow-down-circle mr-3"></i> down by 8.1% Last 30 Days
+                                  </div>
+                                </div>
+                                <div class="text mt-3 text-center">
+                                  <code>.stat-chart-secondary</code>
                                 </div>
                               </div>
-                              <div class="col-md-4">
+                              <div class="col-md-3">
                                 <div class="card stat-chart stat-chart-success p-3">
                                   <div class="stat-chart-title">7.9K</div>
                                   <div class="stat-chart-subtitle">New Subscribers</div>
-                                  <div class="stat-chart-text"><i class="bi bi-arrow-up-circle mr-3"></i> up by 37.1% Last 30 Days</div>
+                                  <div class="stat-chart-text">
+                                    <i class="bi bi-arrow-up-circle mr-3"></i> up by 37.1% Last 30 Days
+                                  </div>
+                                </div>
+                                <div class="text mt-3 text-center">
+                                  <code>.stat-chart-success</code>
+                                </div>
+                              </div>
+                              <div class="col-md-3">
+                                <div class="card stat-chart stat-chart-dark p-3">
+                                  <div class="stat-chart-title">85</div>
+                                  <div class="stat-chart-subtitle">Total Unsubscribe</div>
+                                  <div class="stat-chart-text">
+                                    <i class="bi bi-arrow-up-circle mr-3"></i> up by 8.1% Last 30 Days
+                                  </div>
+                                </div>
+                                <div class="text mt-3 text-center">
+                                  <code>.stat-chart-info</code>
                                 </div>
                               </div>
                             </div>
-                              <pre class="mx-3">
-                                <code>
-&lt;div class="row my-2"&gt;
-  &lt;div class="col-md-4"&gt;
-      &lt;div class="card stat-chart stat-chart-primary p-3"&gt;
-        &lt;div class="stat-chart-title"&gt;$17.6K&lt;/div&gt;
-        &lt;div class="stat-chart-subtitle"&gt;Earnings&lt;/div&gt;
-        &lt;div class="stat-chart-text"&gt;&lt;i class="bi bi-arrow-up-circle mr-3"&gt;&lt;/i&gt; up by 3.5% Last 30 Days&lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="col-md-4"&gt;
-     &lt;div class="card stat-chart stat-chart-warning p-3"&gt;
-        &lt;div class="stat-chart-title"&gt;256.3K&lt;/div&gt;
-        &lt;div class="stat-chart-subtitle"&gt;Subscribers&lt;/div&gt;
-        &lt;div class="stat-chart-text"&gt;&lt;i class="bi bi-arrow-down-circle mr-3"&gt;&lt;/i&gt; down by 8.1% Last 30 Days&lt;/div&gt;
-      &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="col-md-4"&gt;
-    &lt;div class="card stat-chart stat-chart-success p-3"&gt;
-       &lt;div class="stat-chart-title"&gt;7.9K&lt;/div&gt;
-       &lt;div class="stat-chart-subtitle"&gt;New Subscribers&lt;/div&gt;
-       &lt;div class="stat-chart-text"&gt;&lt;i class="bi bi-arrow-up-circle mr-3"&gt;&lt;/i&gt; up by 37.1% Last 30 Days&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+                            <div class="row my-3 p-3">
+                              <h3 class="mb-3" id="stat-chart-outline">Outline Stat Chart</h3>
+                              <p class="text mb-1">To use the outline variant add the class <code>
+                                  <b>start-chart-*-outline</b>
                                 </code>
-                              </pre>
-                              <div class="row my-3 p-3">
-                                <h3 class="mb-3" id="stat-chart-outline">Outline Stat Chart</h3>
-                                <p class="text mb-1">To use the outline variant add the class <code><b>start-chart-*-outline</b></code></p>
-                                <div class="col-md-4 my-3">
-                                  <div class="card stat-chart stat-chart-primary-outline p-3">
-                                    <div class="stat-chart-title">$17.6K</div>
-                                    <div class="stat-chart-subtitle">Earnings</div>
-                                    <div class="stat-chart-text"><i class="bi bi-arrow-up-circle mr-3"></i> up by 3.5% Last 30 Days</div>
+                              </p>
+                              <div class="col-md-3 my-3">
+                                <div class="card stat-chart stat-chart-primary-outline p-3">
+                                  <div class="stat-chart-title">$17.6K</div>
+                                  <div class="stat-chart-subtitle">Earnings</div>
+                                  <div class="stat-chart-text">
+                                    <i class="bi bi-arrow-up-circle mr-3"></i> up by 3.5% Last 30 Days
                                   </div>
                                 </div>
-                                <div class="col-md-4 my-3">
-                                  <div class="card stat-chart stat-chart-warning-outline p-3">
-                                    <div class="stat-chart-title">256.3K</div>
-                                    <div class="stat-chart-subtitle">Subscribers</div>
-                                    <div class="stat-chart-text"><i class="bi bi-arrow-down-circle mr-3"></i> down by 8.1% Last 30 Days</div>
-                                  </div>
-                                </div>
-                                <div class="col-md-4 my-3">
-                                  <div class="card stat-chart stat-chart-success-outline p-3">
-                                    <div class="stat-chart-title">7.9K</div>
-                                    <div class="stat-chart-subtitle">New Subscribers</div>
-                                    <div class="stat-chart-text"><i class="bi bi-arrow-up-circle mr-3"></i> up by 37.1% Last 30 Days</div>
-                                  </div>
-                                </div>
-                                
                               </div>
-                              <div class="row my-3 p-3">
-                                <h3 class="mb-3" id="stat-chart-icons">Stat Chart with Icons</h3>
-                                <p class="text mb-2">To use the stat chart with icon styles add the class <code><b>start-chart-*-icon</b></code>. Outline variant is also available.</p>
-                                <div class="row my-2">
-                                  <div class="col-md-6">
-                                      <div class="col">
-                                        <div class="card stat-chart-icon stat-chart-primary p-3">
-                                          <div class="d-flex justify-content-between">
-                                              <div class="start-chart-icon"><i class="bi bi-eye"></i> </div>
-                                              <div class="stat-chart-title">1.8M</div>
-                                          </div>
-                                            <div class="stat-chart-subtitle">Views</div>
-                                            <div class="stat-chart-text"><i class="bi bi-arrow-up-circle mr-3"></i> up by 37.1% Last 30 Days</div>
-                                      
-                                        </div>
-                                      </div>
+                              <div class="col-md-3 my-3">
+                                <div class="card stat-chart stat-chart-warning-outline p-3">
+                                  <div class="stat-chart-title">256.3K</div>
+                                  <div class="stat-chart-subtitle">Subscribers</div>
+                                  <div class="stat-chart-text">
+                                    <i class="bi bi-arrow-down-circle mr-3"></i> down by 8.1% Last 30 Days
                                   </div>
-                                  <div class="col-md-6"></div>
                                 </div>
-                              
+                              </div>
+                              <div class="col-md-3 my-3">
+                                <div class="card stat-chart stat-chart-success-outline p-3">
+                                  <div class="stat-chart-title">7.9K</div>
+                                  <div class="stat-chart-subtitle">New Subscribers</div>
+                                  <div class="stat-chart-text">
+                                    <i class="bi bi-arrow-up-circle mr-3"></i> up by 37.1% Last 30 Days
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-md-3 my-3">
+                                <div class="card stat-chart stat-chart-dark-outline p-3">
+                                  <div class="stat-chart-title">85</div>
+                                  <div class="stat-chart-subtitle">Unsubscribe</div>
+                                  <div class="stat-chart-text">
+                                    <i class="bi bi-arrow-up-circle mr-3"></i> up by 8.1% Last 30 Days
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row my-3 p-3">
+                              <h3 class="mb-3" id="stat-chart-icons">Stat Chart with Icons</h3>
+                              <p class="text mb-2">To use the stat chart with icon styles add the class <code>
+                                  <b>start-chart-*-icon</b>
+                                </code>. Outline variant is also available. </p>
+                              <div class="row my-2">
+                                <div class="col-md-6">
+                                  <div class="card stat-chart-icon stat-chart-primary p-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="start-chart-icon">
+                                        <i class="bi bi-eye"></i>
+                                      </div>
+                                      <div class="stat-chart-title">1.8M</div>
+                                    </div>
+                                    <div class="stat-chart-subtitle">Views</div>
+                                    <div class="stat-chart-text-lg">
+                                      <i class="bi bi-arrow-up-circle mr-3"></i> up by 37.1% Last 30 Days
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="card stat-chart-icon stat-chart-warning p-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="start-chart-icon">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                      </div>
+                                      <div class="stat-chart-title">2.6K</div>
+                                    </div>
+                                    <div class="stat-chart-subtitle">Shares</div>
+                                    <div class="stat-chart-text-lg">
+                                      <i class="bi bi-arrow-down-circle mr-3"></i> down by 5.3% Last 30 Days
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="card stat-chart-icon stat-chart-success p-3 mt-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="start-chart-icon">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                      </div>
+                                      <div class="stat-chart-title">103K</div>
+                                    </div>
+                                    <div class="stat-chart-subtitle">Likes</div>
+                                    <div class="stat-chart-text-lg">
+                                      <i class="bi bi-arrow-up-circle mr-3"></i> up by 7.1% Last 30 Days
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="card stat-chart-icon stat-chart-dark p-3 mt-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="start-chart-icon">
+                                        <i class="bi bi-chat-dots"></i>
+                                      </div>
+                                      <div class="stat-chart-title">1.2k</div>
+                                    </div>
+                                    <div class="stat-chart-subtitle">Comments</div>
+                                    <div class="stat-chart-text-lg">
+                                      <i class="bi bi-arrow-up-circle mr-3"></i> up by 7.1% Last 30 Days
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row my-3 p-3">
+                              <h3 class="mb-3" id="stat-chart-icons">Mixed Stat Chart</h3>
+                              <p class="text mb-2">Mixed stat chart are used to highlight the most important stat.</p>
+                              <div class="row my-2">
+                                <div class="col-md-6">
+                                  <div class="card stat-chart-icon stat-chart-primary p-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="start-chart-icon">
+                                        <i class="bi bi-eye"></i>
+                                      </div>
+                                      <div class="stat-chart-title">1.8M</div>
+                                    </div>
+                                    <div class="stat-chart-subtitle">Views</div>
+                                    <div class="stat-chart-text-lg">
+                                      <i class="bi bi-arrow-up-circle mr-3"></i> up by 37.1% Last 30 Days
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="card stat-chart-icon stat-chart-primary-outline p-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="start-chart-icon">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                      </div>
+                                      <div class="stat-chart-title">2.6K</div>
+                                    </div>
+                                    <div class="stat-chart-subtitle">Shares</div>
+                                    <div class="stat-chart-text-lg">
+                                      <i class="bi bi-arrow-down-circle mr-3"></i> down by 5.3% Last 30 Days
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="card stat-chart-icon stat-chart-primary-outline p-3 mt-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="start-chart-icon">
+                                        <i class="bi bi-hand-thumbs-up"></i>
+                                      </div>
+                                      <div class="stat-chart-title">103K</div>
+                                    </div>
+                                    <div class="stat-chart-subtitle">Likes</div>
+                                    <div class="stat-chart-text-lg">
+                                      <i class="bi bi-arrow-up-circle mr-3"></i> up by 7.1% Last 30 Days
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <div class="card stat-chart-icon stat-chart-primary-outline p-3 mt-3">
+                                    <div class="d-flex justify-content-between">
+                                      <div class="start-chart-icon">
+                                        <i class="bi bi-chat-dots"></i>
+                                      </div>
+                                      <div class="stat-chart-title">1.2k</div>
+                                    </div>
+                                    <div class="stat-chart-subtitle">Comments</div>
+                                    <div class="stat-chart-text-lg">
+                                      <i class="bi bi-arrow-up-circle mr-3"></i> up by 7.1% Last 30 Days
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                   
-                    </div>
+                        </div>
+                      </div>
                     </div>
                     <div class="tab-pane " id="v-pills-six-doughnut-charts" role="tabpanel" aria-labelledby="v-pills-six-doughnut-charts-tab">
                       <div class="tab-text">
                         <p class="text">
                         <h3>Doughnut Charts</h3>
                           <p>Testing the chart form</p>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="tab-pane " id="v-pills-six-area-charts" role="tabpanel" aria-labelledby="v-pills-six-area-charts-tab">
+                      <div class="tab-text">
+                        <p class="text">
+                        <h3>Area Charts</h3>
                         </p>
                       </div>
                     </div>

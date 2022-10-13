@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--====== Title ======-->
     <title>LiveWire UI Design Pattern Library | Project #1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/svg" />
     <!--====== Bootstrap css ======-->
@@ -21,9 +22,18 @@
     <link rel="stylesheet" href="./assets/css/alert/alert.css" />
     <link rel="stylesheet" href="./assets/css/button/button.css" />
     <link rel="stylesheet" href="./assets/css/cards/cards.css" />
+    <link rel="stylesheet" href="./assets/css/chips/chips.css">
+    <!-- Include Bootstrap Datepicker -->
+    <link rel="stylesheet" href="./assets/css/bootstrap-datepicker.css">
   </head>
   <body>
-    <button onclick="topFunction()" id="scrollToTop" title="Go to top"><i class="bi bi-arrow-up"></i></button>
+    <!--====== JQuery js ======-->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- Include Bootstrap Datepicker -->
+    <script src="./assets/js/bootstrap-datepicker.min.js"></script>
+    <button onclick="topFunction()" id="scrollToTop" title="Go to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
     <!--====== NAVBAR FOUR PART START ======-->
     <section class="navbar-area navbar-six">
       <div class="container">
@@ -36,12 +46,12 @@
                 <span class="toggler-icon"></span>
               </button>
               <a class="navbar-brand" href="javascript:void(0)">
-                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live<span class="live-green">Wire</span>
+                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live <span class="live-green">Wire</span>
               </a>
               <div class="collapse navbar-collapse justify-content-end" id="navbarFour">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a href="guides.html">Core Guides</a>
+                    <a href="guides.html">Brand Guides</a>
                   </li>
                   <li class="nav-item">
                     <a href="charts.html">Data Visualization</a>
@@ -85,12 +95,12 @@
                 <div class="col-sm-3">
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="active" id="v-pills-six-alerts-tab" data-bs-toggle="pill" href="#v-pills-six-alerts" role="tab" aria-controls="v-pills-six-alerts" aria-selected="true"> Alerts</a>
-                    <a id="v-pills-six-badges-tab" data-bs-toggle="pill" href="#v-pills-six-badges" role="tab" aria-controls="v-pills-six-badges" aria-selected="false"> Badges</a>
+                    <!-- <a id="v-pills-six-badges-tab" data-bs-toggle="pill" href="#v-pills-six-badges" role="tab" aria-controls="v-pills-six-badges" aria-selected="false"> Badges</a> -->
                     <a id="v-pills-six-buttons-tab" data-bs-toggle="pill" href="#v-pills-six-buttons" role="tab" aria-controls="v-pills-six-buttons" aria-selected="false"> Buttons</a>
                     <a id="v-pills-six-calendar-tab" data-bs-toggle="pill" href="#v-pills-six-calendar" role="tab" aria-controls="v-pills-six-calendar" aria-selected="false"> Calendar Input</a>
                     <a id="v-pills-six-cards-tab" data-bs-toggle="pill" href="#v-pills-six-cards" role="tab" aria-controls="v-pills-six-cards" aria-selected="false"> Cards</a>
                     <a id="v-pills-six-chips-tab" data-bs-toggle="pill" href="#v-pills-six-chips" role="tab" aria-controls="v-pills-six-chips" aria-selected="false"> Chips</a>
-                    <a id="v-pills-six-form-elements-tab" data-bs-toggle="pill" href="#v-pills-six-form-elements" role="tab" aria-controls="v-pills-six-form-elements" aria-selected="false"> Form Elements</a>
+                    <!-- <a id="v-pills-six-form-elements-tab" data-bs-toggle="pill" href="#v-pills-six-form-elements" role="tab" aria-controls="v-pills-six-form-elements" aria-selected="false"> Form Elements</a> -->
                     <a id="v-pills-six-icons-tab" data-bs-toggle="pill" href="#v-pills-six-icons" role="tab" aria-controls="v-pills-six-icons" aria-selected="false"> Icons</a>
                     <a id="v-pills-six-modals-tab" data-bs-toggle="pill" href="#v-pills-six-modals" role="tab" aria-controls="v-pills-six-modals" aria-selected="false"> Modals</a>
                     <a id="v-pills-six-navigational-tab" data-bs-toggle="pill" href="#v-pills-six-navigational" role="tab" aria-controls="v-pills-six-navigational" aria-selected="false"> Navigational Elements</a>
@@ -104,16 +114,17 @@
                     <div class="tab-pane  show active" id="v-pills-six-alerts" role="tabpanel" aria-labelledby="v-pills-six-alerts-tab">
                       <div class="tab-text">
                         <!-- Alerts -->
-                        <div class="row">
+                        <div class="row p-3">
                           <div class="col-md-6">
                             <h3 class="mb-3">Alerts</h3>
                             <div class="card p-3">
                               <p class="text mb-1"> Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. </p>
                               <p class="text mb-2"> Alerts comes with two(2) kinds, <i>
-                                  <a href="#simple-alerts">simple alerts</a>
+                                  <a href="#simple-alert">simple alerts</a>
                                 </i> and <i>
-                                  <a href="alerts-with-buttons">alerts with action buttons</a>
-                                </i></p>
+                                  <a href="#alerts-with-buttons">alerts with action buttons</a>
+                                </i>
+                              </p>
                             </div>
                           </div>
                           <div class="col-md-6">
@@ -121,8 +132,8 @@
                               <table class="table table-hover bg-light">
                                 <thead>
                                   <tr>
-                                    <th scope="col">Alert</th>
-                                    <th scope="col">Class</th>
+                                    <th scope="col">Type</th>
+                                    <th scope="col">Description</th>
                                   </tr>
                                 </thead>
                                 <tbody>
@@ -130,49 +141,21 @@
                                     <td>
                                       <a href="#simple-alert">Simple Alert</a>
                                     </td>
-                                    <td>
-                                      <code>.alert alert-simple</code>
+                                    <td> Use to display information and no actions needed from the user. </td>
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>
-                                      <a href="#primary-alert">Primary Alert</a>
+                                      <a href="#alert-with-buttons">Alert with Action Buttons</a>
                                     </td>
-                                    <td>
-                                      <code>.alert alert-primary</code>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#success-alert">Success Alert</a>
-                                    </td>
-                                    <td>
-                                      <code>.alert alert-success</code>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#warning-alert">Warning Alert</a>
-                                    </td>
-                                    <td>
-                                      <code>.alert alert-secondary</code>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#error-alert">Error Alert</a>
-                                    </td>
-                                    <td>
-                                      <code>.alert alert-error</code>
-                                    </td>
+                                    <td> Use when feedback and action from user is required. </td>
                                   </tr>
                                 </tbody>
                               </table>
                             </div>
                           </div>
                         </div>
-
-                        <div class="row ">
+                        <div class="row p-3">
                           <h5 class="my-3" id="simple-alert">Simple Alerts</h5>
                           <p class="text mb-3"> Simple Alerts is any feedback message container that does not require any feedback or response from users. Use the proper styling class <code>alert alert-simple</code>. </p>
                           <div class="card p-3 mt-3">
@@ -181,45 +164,74 @@
                                 <p class="alert-text">This is a simple feedback message that does not require user feedback or response.</p>
                               </div>
                             </div>
-                            <div class="card">
+                            <div class="alert alert-primary  d-flex align-items-start" role="alert">
+                              <div class="alert-icon">
+                                <i class="bi bi-info-circle-fill"></i>
+                              </div>
+                              <div class="alert-message">
+                                <h5 class="alert-title-primary"> Note</h5>
+                                <p class="alert-text"> This is a more noticable alert message that can be place on top of the page. </p>
+                              </div>
+                            </div>
+                            <div class="alert alert-success  d-flex align-items-start" role="alert">
+                              <div class="alert-icon">
+                                <i class="bi bi-info-circle-fill"></i>
+                              </div>
+                              <div class="alert-message">
+                                <h5 class="alert-title-primary"> Note</h5>
+                                <p class="alert-text"> This is another noticeable but positive message. </p>
+                              </div>
+                            </div>
+                            <div class="card border-0">
                               <button class="btn-clipboard">
                                 <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
                               </button>
                               <pre>
-                        				<code>
-                              
-&lt;div class="alert alert-simple d-flex align-items-start" role="alert" &gt;
-    &lt;div class=""&gt;
-       &lt;p class="alert-text" &gt;This is a simple feedback message that does not require user feedback or response. &lt;/p &gt;
+																			<code>
+ &lt;div class="alert alert-primary  d-flex align-items-start" role="alert"&gt;
+  &lt;div class="alert-icon"&gt;
+    &lt;i class="bi bi-info-circle-fill"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;div class="alert-message"&gt;
+   &lt;h5 class="alert-title-primary"&gt; Note&lt;/h5&gt;
+   &lt;p class="alert-text"&gt; This is a more noticable alert message that can be place on top of the page. &lt;/p&gt;
+   &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="alert alert-success  d-flex align-items-start" role="alert"&gt;
+    &lt;div class="alert-icon"&gt;
+      &lt;i class="bi bi-info-circle-fill"&gt;&lt;/i&gt;
     &lt;/div&gt;
+    &lt;div class="alert-message"&gt;
+      &lt;h5 class="alert-title-primary"&gt; Note&lt;/h5&gt;
+    &lt;p class="alert-text"&gt; This is another noticeable but positive message. &lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 </code>
-															</pre>
+																		</pre>
                             </div>
                           </div>
-                        </div>
-                        <h5 class="my-3">Alerts with Action Buttons</h5>
-                        <p class="text mb-3"> Alert messages might comes with action buttons for the users feedback or response. For proper styling, use any of the contextual classes applicable to the message. </p>
-                        <div class="card p-3 mt-3">
-                          <div class="card-heading my-3 ">
-                            <h5 class="mb-1" id="primary-alert">Primary Alert</h5>
-                          </div>
-                          <div class="alert alert-primary  d-flex align-items-start" role="alert">
-                            <div class="alert-icon">
-                              <i class="bi bi-info-circle-fill"></i>
+                          <h5 class="my-3" id="alert-with-buttons">Alerts with Action Buttons</h5>
+                          <p class="text mb-3"> Alert messages might comes with action buttons for the users feedback or response. For proper styling, use any of the contextual classes applicable to the message. </p>
+                          <div class="card p-3 mt-3">
+                            <div class="card-heading my-3 ">
+                              <h5 class="mb-1" id="primary-alert">Primary Alert</h5>
                             </div>
-                            <div class="alert-message">
-                              <h5 class="alert-title-primary"> Information Message</h5>
-                              <p class="alert-text"> Conveying an important message should be noticebly visible and yet not disruptive to core contents. It is a good practice to always offer suggestions for user actions, you may use control input button and other form controls. </p>
-                              <button type="button" class="btn btn-sm btn-primary my-3">Close</button>
+                            <div class="alert alert-primary  d-flex align-items-start" role="alert">
+                              <div class="alert-icon">
+                                <i class="bi bi-info-circle-fill"></i>
+                              </div>
+                              <div class="alert-message">
+                                <h5 class="alert-title-primary"> Information Message</h5>
+                                <p class="alert-text"> Conveying an important message should be noticebly visible and yet not disruptive to core contents. It is a good practice to always offer suggestions for user actions, you may use control input button and other form controls. </p>
+                                <button type="button" class="btn btn-sm btn-primary my-3">Close</button>
+                              </div>
                             </div>
-                          </div>
-                          <div class="card border-0 mt-2">
-                            <button class="btn-clipboard">
-                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                            </button>
-                            <pre>
-																<code> 
+                            <div class="card border-0 mt-2">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																			<code> 
 &lt;div class="alert alert-primary  d-flex align-items-start" role="alert"&gt;
   &lt;div class="alert-icon" &gt;
     &lt;i class="bi bi-info-circle-fill" &gt; &lt;/i&gt;
@@ -234,27 +246,27 @@
     &lt;/div &gt;
 &lt;/div &gt;
 </code>
-															</pre>
-                            <h5 class=" my-3">Variations</h5>
-                            <p class="text mb-2"> The following are variation of alert messages styles available for use. </p>
-                            <h5 class=" my-3" id="success-alert">Success Alert</h5>
-                            <p class="text mb-3"> To provide feedback for any successful data updates, use the class <code>.alert alert-success</code> to wrap your message if you intend to warn users. </p>
-                            <div class="alert alert-success d-flex align-items-start" role="alert">
-                              <div class="alert-icon">
-                                <i class="bi bi-check-circle-fill"></i>
+																		</pre>
+                              <h5 class=" my-3">Variations</h5>
+                              <p class="text mb-2"> The following are variation of alert messages styles available for use. </p>
+                              <h5 class=" my-3" id="success-alert">Success Alert</h5>
+                              <p class="text mb-3"> To provide feedback for any successful data updates, use the class <code>.alert alert-success</code> to wrap your message if you intend to warn users. </p>
+                              <div class="alert alert-success d-flex align-items-start" role="alert">
+                                <div class="alert-icon">
+                                  <i class="bi bi-check-circle-fill"></i>
+                                </div>
+                                <div class="alert-message">
+                                  <h5 class="alert-title-success"> Success Message</h5>
+                                  <p class="alert-text"> Providing feedback after a data changes or system tasks is essential for users. </p>
+                                  <button type="button" class="btn btn-sm btn-success my-3">OK</button>
+                                </div>
                               </div>
-                              <div class="alert-message">
-                                <h5 class="alert-title-success"> Success Message</h5>
-                                <p class="alert-text"> Providing feedback after a data changes or system tasks is essential for users. </p>
-                                <button type="button" class="btn btn-sm btn-success my-3">OK</button>
-                              </div>
-                            </div>
-                            <div class="card border-0 mt-2">
-                              <button class="btn-clipboard">
-                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                              </button>
-                              <pre>
-																	<code>
+                              <div class="card border-0 mt-2">
+                                <button class="btn-clipboard">
+                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                </button>
+                                <pre>
+																				<code>
 &lt;div class="alert alert-success d-flex align-items-start" role="alert" &gt;
   &lt;div class="alert-icon" &gt;
     &lt;i class="bi bi-check-circle-fill" &gt; &lt;/i &gt;
@@ -268,33 +280,33 @@
     &lt;/div &gt;
 &lt;/div &gt;
 </code>
-																</pre>
-                            </div>
-                            <h5 class=" my-3" id="warning-alerts">Warning Alert</h5>
-                            <p class="text mb-3"> Warning alerts are properly used to warned and requires a response from the users. Use the class <code>.alert alert-secondary</code> to wrap your message if you intend to warn users. </p>
-                            <div class="alert alert-secondary d-flex align-items-start" role="alert">
-                              <div class="alert-icon">
-                                <i class="bi bi-exclamation-triangle"></i>
+																			</pre>
                               </div>
-                              <div class="alert-message">
-                                <h5 class="alert-title-secondary"> Warning Message</h5>
-                                <p class="alert-text"> Confirming user response is essential for data updates. </p>
-                                <button type="button" class="btn btn-sm btn-primary my-3">Yes</button>
-                                <button type="button" class="btn btn-sm btn-primary-outline my-3">Cancel</button>
+                              <h5 class=" my-3" id="warning-alerts">Secondary Alert</h5>
+                              <p class="text mb-3"> Secondary alerts are properly used to warned and requires a response from the users. Use the class <code>.alert alert-secondary</code> to wrap your message if you intend to warn users. </p>
+                              <div class="alert alert-secondary d-flex align-items-start" role="alert">
+                                <div class="alert-icon">
+                                  <i class="bi bi-exclamation-triangle"></i>
+                                </div>
+                                <div class="alert-message">
+                                  <h5 class="alert-title-secondary"> Secondary Message</h5>
+                                  <p class="alert-text"> Confirming user response is essential for data updates. </p>
+                                  <button type="button" class="btn btn-sm btn-secondary my-3">Yes</button>
+                                  <button type="button" class="btn btn-sm btn-secondary-outline my-3">Cancel</button>
+                                </div>
                               </div>
-                            </div>
-                            <div class="card border-0 mt-2">
-                              <button class="btn-clipboard">
-                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                              </button>
-                              <pre>
-																	<code>
+                              <div class="card border-0 mt-2">
+                                <button class="btn-clipboard">
+                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                </button>
+                                <pre>
+																				<code>
 &lt;div class="alert alert-secondary d-flex align-items-start" role="alert"&gt;
   &lt;div class="alert-icon" &gt;
       &lt;i class="bi bi-exclamation-triangle" &gt; &lt;/i&gt;
   &lt;/div &gt;
   &lt;div class="alert-message"&gt;
-    &lt;h5 class="alert-title-secondary" &gt;Warning Message &lt;/h5&gt;
+    &lt;h5 class="alert-title-secondary" &gt;Secondary Message &lt;/h5&gt;
     &lt;p class="alert-text"&gt;
         Confirming user response is essential for data updates.
     &lt;/p&gt;
@@ -303,26 +315,26 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code>
-																</pre>
-                            </div>
-                            <h5 class=" my-3" id="error-alert">Error Alert</h5>
-                            <p class="text mb-3"> Error alerts are recommended to be used for critical errors for users. Use the class <code>.alert alert-error</code> to wrap your message if you intend to inform users for errors related. </p>
-                            <div class="alert alert-error d-flex align-items-start" role="alert">
-                              <div class="alert-icon">
-                                <i class="bi bi-x-octagon"></i>
+																			</pre>
                               </div>
-                              <div class="alert-message-error">
-                                <h5 class="alert-title-error"> Error Message</h5>
-                                <p class="alert-text"> Informing system error is important to provide feedback for a specific task such as data updates. </p>
-                                <button type="button" class="btn btn-sm btn-error-outline my-3">OK</button>
+                              <h5 class=" my-3" id="error-alert">Error Alert</h5>
+                              <p class="text mb-3"> Error alerts are recommended to be used for critical errors for users. Use the class <code>.alert alert-error</code> to wrap your message if you intend to inform users for errors related. </p>
+                              <div class="alert alert-error d-flex align-items-start" role="alert">
+                                <div class="alert-icon">
+                                  <i class="bi bi-x-octagon"></i>
+                                </div>
+                                <div class="alert-message-error">
+                                  <h5 class="alert-title-error"> Error Message</h5>
+                                  <p class="alert-text"> Informing system error is important to provide feedback for a specific task such as data updates. </p>
+                                  <button type="button" class="btn btn-sm btn-error-outline my-3">OK</button>
+                                </div>
                               </div>
-                            </div>
-                            <div class="card border-0 mt-2">
-                              <button class="btn-clipboard">
-                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                              </button>
-                              <pre>
-																	<code>
+                              <div class="card border-0 mt-2">
+                                <button class="btn-clipboard">
+                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                </button>
+                                <pre>
+																				<code>
 &lt;div class="alert alert-error d-flex align-items-start" role="alert"&gt;
   &lt;div class="alert-icon"&gt;
     &lt;i class="bi bi-x-octagon"&gt;&lt;/i &gt;
@@ -336,411 +348,1259 @@
     &lt;/div &gt;
     &lt;/div &gt;
 </code>
-																</pre>
+																			</pre>
+                              </div>
                             </div>
                           </div>
                         </div>
                         <!--End of Alerts-->
                       </div>
                     </div>
-                    <div class="tab-pane " id="v-pills-six-badges" role="tabpanel" aria-labelledby="v-pills-six-badges-tab">
-                      <div class="tab-text">
-                        <p class="text">
-                        <h3>Badges</h3>
-                        </p>
-                      </div>
-                    </div>
-                
+                    <!--     <div class="tab-pane " id="v-pills-six-badges" role="tabpanel" aria-labelledby="v-pills-six-badges-tab"><div class="tab-text"><p class="text"><h3>Badges</h3></p></div></div> -->
                     <div class="tab-pane " id="v-pills-six-buttons" role="tabpanel" aria-labelledby="v-pills-six-buttons-tab">
                       <div class="tab-text">
                         <h3 class="mb-3">Buttons</h3>
-                      <p class="text">
-                          <div class="row">
-                            <div class="col-md-6">
-                                <div class="card p-3 m-2">
-                                    <p class="text mb-1">A way for users provide feedback and response to application pending task or to navigate from page to page. </p>
-                                    <p class="text mb-2">Use button styles for actions in forms, dialogs and more with support for multiple sizes and states. </p>
-                                </div>    
-                            </div>
-                            <div class="col-md-6">
-                                <div class="mt-2">
-                                  <table class="table table-hover bg-light">
-                                    <thead>
-                                      <tr>
-                                        <th scope="col">Variations</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td>
-                                          <a href="#button-simple">Simple Buttons</a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <a href="#button-outline">Outline Buttons</a>
-                                        </td>
-                                       </tr>
-                                      <tr>
-                                        <td>
-                                          <a href="#button-icons">Buttons with Icons</a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <a href="#button-size">Buttons Sizes</a>
-                                        </td>
-                                      </tr>
-                                      <tr>
-                                        <td>
-                                          <a href="#button-dark">Disabled Buttons</a>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card p-3">
-                          <div class="card-heading">
-                            <h5 class="my-3" id="button-simple">Simple Buttons</h5>
-                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
-                                <button type="button" class="btn btn-primary m-1">Primary</button>
-                                <button type="button" class="btn btn-warning m-1">Warning</button>
-                                <button type="button" class="btn btn-error m-1">Error</button>
-                                <button type="button" class="btn btn-success m-1">Success</button>
-                                <button type="button" class="btn btn-dark m-1">Dark</button>
-                            </div>    
-                          </div>
-                          <div class="card border-0 mt-3">
-                            <button class="btn-clipboard mt-3">
-                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                            </button>
-                          <pre class="mt-3">
-                            <code>
-&lt;button type="button" class="btn btn-primary m-1"&gt;Primary&lt;/button&gt;
-&lt;button type="button" class="btn btn-warning m-1"&gt;Warning&lt;/button&gt;
-&lt;button type="button" class="btn btn-error m-1"&gt;Error&lt;/button&gt;
-&lt;button type="button" class="btn btn-success m-1"&gt;Success&lt;/button&gt;
-&lt;button type="button" class="btn btn-dark m-1"&gt;Dark&lt;/button&gt;
-                          </code>
-                          </pre>
-                        </div>
-               </div>
-               <div class="card p-3 mt-3">
-                <div class="card-heading">
-                  <h5 class="my-3" id="button-outline">Outline Buttons</h5>
-                  <p class="text mb-3"> The outline buttons is an alternative variants for the filled button.Replace the default modifier classes with the <code>.btn-*-outline</code> ones to remove all background images and colors on any button. Applicable for colored background for contrast and provides a context for the user. </p>
-                  <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                    <button type="button" class="btn btn-primary-outline m-1">Primary</button>
-                    <button type="button" class="btn btn-warning-outline m-1">Warning</button>
-                    <button type="button" class="btn btn-error-outline m-1">Error</button>
-                    <button type="button" class="btn btn-success-outline m-1">Success</button>
-                    <button type="button" class="btn btn-dark-outline m-1">Dark</button>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;button type="button" class="btn btn-primary-outline m-1"&gt;Primary&lt;/button&gt;
-        &lt;button type="button" class="btn btn-warning-outline m-1"&gt;Warning&lt;/button&gt;
-        &lt;button type="button" class="btn btn-error-outline m-1"&gt;Error&lt;/button&gt;
-        &lt;button type="button" class="btn btn-success-outline m-1"&gt;Success&lt;/button&gt;
-        &lt;button type="button" class="btn btn-dark-outline m-1"&gt;Dark&lt;/button&gt;
-                  </code>
-                    </pre>
-                </div>
-              </div>
-              <div class="card p-3 mt-3">
-                <div class="card-heading">
-                  <h5 class="my-3" id="button-icons">Icon Buttons</h5>
-                  <p class="text mb-3"> Icon buttons is best used for smaller screens such as mobile or tablet devices where space is limited. Refer to the <a href="v-pills-six-icons">Icons library</a> for available icons. To use an icon buttons, wrapped the button with an avalibale icon class <code>&lt;i&gt; class="bi bi-star"&gt;&lt;/i&gt;</code>. </p>
-                  <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                    <button type="button" class="btn btn-primary m-1">
-                      <i class="bi bi-star"></i>
-                    </button>
-                    <button type="button" class="btn btn-warning m-1">
-                      <i class="bi bi-exclamation-triangle"></i>
-                    </button>
-                    <button type="button" class="btn btn-error m-1">
-                      <i class="bi bi-trash3"></i>
-                    </button>
-                    <button type="button" class="btn btn-success m-1">
-                      <i class="bi bi-check-circle"></i>
-                    </button>
-                    <button type="button" class="btn btn-dark m-1">
-                      <i class="bi bi-download"></i>
-                    </button>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;button type="button" class="btn btn-primary m-1"&gt;&lt;i class="bi bi-star"&gt;&lt;/i&gt;&lt;/button&gt;
-        &lt;button type="button" class="btn btn-warning m-1"&gt;&lt;i class="bi bi-exclamation-triangle"&gt;&lt;/i&gt;&lt;/button&gt;
-        &lt;button type="button" class="btn btn-error m-1"&gt;&lt;i class="bi bi-trash3"&gt;&lt;/i&gt;&lt;/button&gt;
-        &lt;button type="button" class="btn btn-success m-1"&gt;&lt;i class="bi bi-check-circle"&gt;&lt;/i&gt;&lt;/button&gt;
-        &lt;button type="button" class="btn btn-dark m-1"&gt;&lt;i class="bi bi-download"&gt;&lt;/i&gt;&lt;/button&gt;
-                  </code>
-                    </pre>
-                  <p class="text-small mb-3">
-                    <i>*Outline buttons can also be used as long as the background of the buttons are non-white to provide clear context of the buttons.</i>
-                  </p>
-                </div>
-              </div>
-              <div class="card p-3 mt-3">
-                <div class="card-heading">
-                  <h5 class="my-3" id="button-size">Button Sizes</h5>
-                  <p class="text mb-3"> For larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code>
-                  </p>
-                  <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                    <button type="button" class="btn btn-primary btn-lg m-1">Large Primary Button</button>
-                    <button type="button" class="btn btn-lg btn-warning m-1">Large Warning Button</button>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;button type="button" class="btn btn-lg btn-primary m-1"&gt;Large Primary Button&lt;/button&gt;
-        &lt;button type="button" class="btn btn-lg btn-warning m-1"&gt;Large Warning Button&lt;/button&gt;
-        </code>
-                    </pre>
-                  <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                    <button type="button" class="btn btn-primary btn-sm m-1">Small</button>
-                    <button type="button" class="btn btn-sm btn-warning m-1">Small</button>
-                  </div>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre class="mt-3">
-                      <code>
-        &lt;button type="button" class="btn btn-lg btn-primary m-1"&gt;Large Primary Button&lt;/button&gt;
-        &lt;button type="button" class="btn btn-lg btn-warning m-1"&gt;Large Dark Button&lt;/button&gt;
-        </code>
-                    </pre>
-                </div>
-              </div>
-              <div class="card p-3 mt-3">
-                <div class="card-heading">
-                  <h5 class="my-3" id="button-disabled">Disabled Button</h5>
-                  <p class="text mb-3"> To add styles for disabled button, add <code>disabled</code>. </p>
-                </div>
-                <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
-                  <button type="button" class="btn btn-primary m-1 disabled">
-                    <i class="bi bi-star"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary m-1 disabled">Primary</button>
-                </div>
-                <div class="card border-0 mt-3">
-                  <button class="btn-clipboard mt-3">
-                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                  </button>
-                  <pre>
-                      <code>
-  &lt;button type="button" class="btn btn-primary m-1 disabled"&gt;&lt;i class="bi bi-star"&gt;&lt;/i&gt;&lt;/button&gt;
-  &lt;button type="button" class="btn btn-primary m-1 disabled"&gt;Primary&lt;/button&gt;
-                    </code>
-                    </pre>
-                </div>
-              </div>
-            
-
-
-                      </p>
-                      </div>
-                    </div>
-                    <div class="tab-pane " id="v-pills-six-calendar" role="tabpanel" aria-labelledby="v-pills-six-calendar-tab">
-                      <div class="tab-text">
                         <p class="text">
-                        <h3>Calendar Input</h3>
-                        </p>
-                      </div>
-                    </div>
-                
-                    <div class="tab-pane " id="v-pills-six-cards" role="tabpanel" aria-labelledby="v-pills-six-cards-tab">
-                      <div class="tab-text">
-                        <h3>Cards Aaron</h3>
-                        <p class="text">
-                          <div class="card">
-                            <div class="card-primary">
-                              <div class="card-body">
-                                This is some text within a card body.
-                              </div>
-                            </div>
-                          </div>
-                          
-                        </p>
-                      </div>
-                    </div>
-                    <div class="tab-pane " id="v-pills-six-chips" role="tabpanel" aria-labelledby="v-pills-six-chips-tab">
-                      <div class="tab-text">
-                        <p class="text">
-                        <h3>Chips</h3>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="tab-pane " id="v-pills-six-form-elements" role="tabpanel" aria-labelledby="v-pills-six-form-elements-tab">
-                      <div class="tab-text">
-                        <p class="text">
-                        <h3>Form Elements</h3>
-                        </p>
-                      </div>
-                    </div>
-                
-                    <div class="tab-pane " id="v-pills-six-icons" role="tabpanel" aria-labelledby="v-pills-six-icons">
-                      <div class="tab-text">
-                        <p class="text">
-                        <h3>Icons</h3>
-                        </p>
-                      </div>
-                    </div>
-                    <!--Modals will come here-->
-                    <div class="tab-pane " id="v-pills-six-modals" role="tabpanel" aria-labelledby="v-pills-six-modals">
-                      <div class="tab-text">
-                        <p class="text">
-                        <!--<h3>Modals</h3>-->
-                        <!--Put your works below here-->
                         <div class="row">
                           <div class="col-md-6">
-                            <h3 class="mb-3">Modals</h3>
-                            <div class="card p-3">
-                              <p class="text mb-1"> Modals are used to bring the attention of a site visitor to an important thing he/she needs to take action on. And unless the action is taken of the modal window is closed, the visitor cannot do any other thing </p>
-                              <p class="text mb-2"> Modals are of diffent <i>
-                                  <a href="#">types</a>
-                                </i> and <i>
-                                  <a href="#">sizes</a>
-                                </i></p>
+                            <div class="card p-3 m-2">
+                              <p class="text mb-1">A way for users to trigger action and response to application pending task or to navigate from page to page. </p>
+                              <p class="text mb-2">Use button styles for actions in forms, dialogs and more with support for multiple sizes and states. </p>
                             </div>
                           </div>
                           <div class="col-md-6">
-                            <div class="border-1 my-3 bg-light ">
+                            <div class="mt-2">
                               <table class="table table-hover bg-light">
                                 <thead>
                                   <tr>
-                                    <th scope="col">Modal</th>
-                                    <th scope="col">Use</th>
+                                    <th scope="col">Variations</th>
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr>
                                     <td>
-                                      <a href="#">Alert Modal</a>
-                                    </td>
-                                    <td>
-                                      <!--<code>.alert alert-simple</code>-->
-                                      Used to call the user's attention to something important                                      
+                                      <a href="#button-simple">Simple Buttons</a>
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>
-                                      <a href="#">Login Modal</a>
-                                    </td>
-                                    <td>
-                                      <!--<code>.alert alert-primary</code>-->
-                                      Used to Login in to a resource on the site                                      
+                                      <a href="#button-outline">Outline Buttons</a>
                                     </td>
                                   </tr>
-                                  <!--Next row here-->
+                                  <tr>
+                                    <td>
+                                      <a href="#button-icons">Buttons with Icons</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#button-size">Buttons Sizes</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#button-dark">Disabled Buttons</a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card p-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="button-simple">Simple Buttons</h5>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                              <button type="button" class="btn btn-primary m-1">Primary</button>
+                              <button type="button" class="btn btn-secondary m-1">Info</button>
+                              <button type="button" class="btn btn-error m-1">Error</button>
+                              <button type="button" class="btn btn-success m-1">Success</button>
+                              <button type="button" class="btn btn-dark m-1">Dark</button>
+                              <button type="button" class="btn btn-light m-1">Light</button>
+                            </div>
+                          </div>
+                          <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+&lt;button type="button" class="btn btn-primary m-1"&gt;Primary&lt;/button&gt;
+&lt;button type="button" class="btn btn-secondary m-1"&gt;Info&lt;/button&gt;
+&lt;button type="button" class="btn btn-error m-1"&gt;Error&lt;/button&gt;
+&lt;button type="button" class="btn btn-success m-1"&gt;Success&lt;/button&gt;
+&lt;button type="button" class="btn btn-dark m-1"&gt;Dark&lt;/button&gt;
+&lt;button type="button" class="btn btn-light m-1"&gt;Light&lt;/button&gt;
+                          </code>
+																		</pre>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="button-outline">Outline Buttons</h5>
+                            <p class="text mb-3"> The outline buttons is an alternative variants for the filled button.Replace the default modifier classes with the <code>.btn-*-outline</code> ones to remove all background images and colors on any button. Applicable for colored background for contrast and provides a context for the user. </p>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
+                              <button type="button" class="btn btn-primary-outline m-1">Primary</button>
+                              <button type="button" class="btn btn-secondary-outline m-1">Info</button>
+                              <button type="button" class="btn btn-error-outline m-1">Error</button>
+                              <button type="button" class="btn btn-success-outline m-1">Success</button>
+                              <button type="button" class="btn btn-dark-outline m-1">Dark</button>
+                            </div>
+                          </div>
+                          <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+  &lt;button type="button" class="btn btn-primary-outline m-1"&gt;Primary&lt;/button&gt;
+  &lt;button type="button" class="btn btn-secondary-outline m-1"&gt;Info&lt;/button&gt;
+  &lt;button type="button" class="btn btn-error-outline m-1"&gt;Error&lt;/button&gt;
+  &lt;button type="button" class="btn btn-success-outline m-1"&gt;Success&lt;/button&gt;
+  &lt;button type="button" class="btn btn-dark-outline m-1"&gt;Dark&lt;/button&gt;
+                  </code>
+																		</pre>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="button-icons">Icon Buttons</h5>
+                            <p class="text mb-3"> Icon buttons is best used for smaller screens such as mobile or tablet devices where space is limited. Refer to the <a href="v-pills-six-icons">Icons library</a> for available icons. To use an icon buttons, wrapped the button with an avalibale icon class <code>&lt;i&gt; class="bi bi-star"&gt;&lt;/i&gt;</code>. </p>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
+                              <button type="button" class="btn btn-primary m-1">
+                                <i class="bi bi-star"></i>
+                              </button>
+                              <button type="button" class="btn btn-secondary m-1">
+                                <i class="bi bi-exclamation-triangle"></i>
+                              </button>
+                              <button type="button" class="btn btn-error m-1">
+                                <i class="bi bi-trash3"></i>
+                              </button>
+                              <button type="button" class="btn btn-success m-1">
+                                <i class="bi bi-check-circle"></i>
+                              </button>
+                              <button type="button" class="btn btn-dark m-1">
+                                <i class="bi bi-download"></i>
+                              </button>
+                              <button type="button" class="btn btn-light m-1">
+                                <i class="bi bi-arrow-right"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+  &lt;button type="button" class="btn btn-primary m-1"&gt;&lt;i class="bi bi-star"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button type="button" class="btn btn-secondary m-1"&gt;&lt;i class="bi bi-exclamation-triangle"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button type="button" class="btn btn-error m-1"&gt;&lt;i class="bi bi-trash3"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button type="button" class="btn btn-success m-1"&gt;&lt;i class="bi bi-check-circle"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button type="button" class="btn btn-dark m-1"&gt;&lt;i class="bi bi-download"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button type="button" class="btn btn-light m-1"&gt;&lt;i class="bi bi-arrow-right"&gt;&lt;/i&gt;&lt;/button&gt;
+                  </code>
+																		</pre>
+                            <p class="text-small mb-3">
+                              <i>*Outline buttons can also be used as long as the background of the buttons are non-white to provide clear context of the buttons.</i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="button-size">Button Sizes</h5>
+                            <p class="text mb-3"> For larger or smaller buttons? Add <code>.btn-lg</code> or <code>.btn-sm</code>
+                            </p>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
+                              <button type="button" class="btn btn-primary btn-lg m-1">Large Primary Button</button>
+                              <button type="button" class="btn btn-lg btn-secondary m-1">Large Warning Button</button>
+                            </div>
+                          </div>
+                          <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+        &lt;button type="button" class="btn btn-lg btn-primary m-1"&gt;Large Primary Button&lt;/button&gt;
+        &lt;button type="button" class="btn btn-lg btn-secondary m-1"&gt;Large Warning Button&lt;/button&gt;
+        </code>
+																		</pre>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
+                              <button type="button" class="btn btn-primary btn-sm m-1">Small</button>
+                              <button type="button" class="btn btn-sm btn-secondary m-1">Small</button>
+                            </div>
+                          </div>
+                          <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+        &lt;button type="button" class="btn btn-lg btn-primary m-1"&gt;Large Primary Button&lt;/button&gt;
+        &lt;button type="button" class="btn btn-lg btn-secondary m-1"&gt;Large Dark Button&lt;/button&gt;
+        </code>
+																		</pre>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="button-disabled">Disabled Button</h5>
+                            <p class="text mb-3"> To add styles for disabled button, add <code>disabled</code>. </p>
+                          </div>
+                          <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
+                            <button type="button" class="btn btn-primary m-1 disabled">
+                              <i class="bi bi-star"></i>
+                            </button>
+                            <button type="button" class="btn btn-primary m-1 disabled">Primary</button>
+                          </div>
+                          <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre>
+																			<code>
+  &lt;button type="button" class="btn btn-primary m-1 disabled"&gt;&lt;i class="bi bi-star"&gt;&lt;/i&gt;&lt;/button&gt;
+  &lt;button type="button" class="btn btn-primary m-1 disabled"&gt;Primary&lt;/button&gt;
+                    </code>
+																		</pre>
+                          </div>
+                        </div>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="tab-pane " id="v-pills-six-calendar" role="tabpanel" aria-labelledby="v-pills-six-calendar-tab">
+                      <div class="tab-text ">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h3 class="mb-3">Calendar Input</h3>
+                            <div class="card p-3">
+                              <p class="text mb-3">A user-friendly way for user to provide input dates such as filtering graphs, tables etc. </p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mt-2 mb-3">
+                              <table class="table table-hover bg-light">
+                                <thead>
+                                  <tr>
+                                    <th>Quick Links</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <a href="#min-setup">Dependencies</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#single-input">Single Calendar input</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#multidate">Calendar Input in Date Range</a>
+                                    </td>
+                                  </tr>
                                 </tbody>
                               </table>
                             </div>
                           </div>
                         </div>
                         <div class="card p-3 mt-3">
-                          <h5 class="my-3">Preview</h5>
-                            <!-- Button trigger modal -->
-                             <div class="d-flex justify-content-start">
-                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Launch demo modal
-                              </button>
-                             </div>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                              <div class="modal-dialog">
-                                <div class="modal-content">
-                                  <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          <div class="card-heading">
+                            <h5 class="my-3" id="min-setup">Dependencies</h5>
+                          </div>
+                          <p class="text mb-3">To use the calendar input, the following are the dependencies to make it work.</p>
+                          <div class="card p-3 border-0">
+                            <p class="text mb-3"> Use the <code>&lt;link&gt;</code> tag to require the dependencies. </p>
+                            <table class="table border-0">
+                              <tbody>
+                                <tr>
+                                  <td>CDN</td>
+                                  <td>Links</td>
+                                </tr>
+                                <tr>
+                                  <td>Date Picker CSS</td>
+                                  <td>
+                                    <code>https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker-standalone.min.css</code>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>Date Picker JS</td>
+                                  <td>
+                                    <code>https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js</code>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div class="alert alert-simple mt-3">
+                              <strong>Note</strong> All functions are accessed via the <code>data</code> attribute e.g. <code>$('#datepicker').data("datepicker").FUNCTION()</code>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <h5 class="mt-2 mb-3" id="single-input">Single calendar input</h5>
+                          <p class="mb-1">For a single calendar input, you may use the a form to layout.</p>
+                          <p class="mb-3">The single calendar input is best used for drilling down charts and as well as data in tabular format.</p>
+                          <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                            <div class="container">
+                              <div class="row">
+                                <form>
+                                  <div class="row form-group">
+                                    <label for="date" class="col-sm-2 col-form-label">Date</label>
+                                    <div class="col-sm-4">
+                                      <div class="input-group date" id="datepicker">
+                                        <input type="text" class="form-control">
+                                        <span class="input-group-append">
+                                          <span class="input-group-text bg-white">
+                                            <i class="bi-calendar-event"></i>
+                                          </span>
+                                        </span>
+                                      </div>
+                                    </div>
                                   </div>
-                                  <div class="modal-body">
-                                    ...
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </form>
+                                <script type="text/javascript">
+                                  $(function() {
+                                    $('#datepicker').datepicker();
+                                    $('#datepickerFrom').datepicker();
+                                    $('#datepickerTo').datepicker();
+                                  });
+                                </script>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card p-0 border-0">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre>
+																			<code>
+  &lt;form&gt;
+   &lt;div class="row form-group"&gt;
+      &lt;label for="date" class="col-sm-1 col-form-label"&gt;Date&lt;/&gt;
+         &lt;div class="col-sm-4"&gt;
+            &lt;div class="input-group date" id="datepicker"&gt;
+               &lt;input type="text" class="form-control"&gt;
+               &lt;span class="input-group-append"&gt;
+                  &lt;span class="input-group-text bg-white"&gt;
+                    &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
+                  &lt;/span&gt;
+               &lt;/span&gt;
+            &lt;/div&gt;
+         &lt;/div&gt;
+      &lt;/div&gt;
+&lt;/form&gt;
+      &lt;script type="text/javascript"&gt;
+         $(function () {
+             $('#datepicker').datepicker();
+         });
+      &lt;/script&gt;
+
+                          </code>
+																		</pre>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="multidate">Calendar Input in Date Range</h5>
+                          </div>
+                          <p class="text mb-3"> The input calendar in a date range is used to drill down charts into a specific date period. </p>
+                          <div class="card p-3 border-0">
+                            <form class="row gx-3 gy-2 align-items-center">
+                              <div class="col-md-4">
+                                <label for="specificSizeInputGroupUsername">Date From</label>
+                                <div class="input-group date" id="datepickerFrom">
+                                  <input type="text" class="form-control">
+                                  <span class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                      <i class="bi-calendar-event"></i>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <label for="specificSizeInputGroupUsername">Date To</label>
+                                <div class="input-group date" id="datepickerTo">
+                                  <input type="text" class="form-control">
+                                  <span class="input-group-append">
+                                    <span class="input-group-text bg-white">
+                                      <i class="bi-calendar-event"></i>
+                                    </span>
+                                  </span>
+                                </div>
+                              </div>
+                            </form>
+                            <div class="card border-0 mt-3">
+                              <pre>
+																						<code>
+&lt;form class="row gx-3 gy-2 align-items-center"&gt;
+&lt;div class="col-md-4"&gt;
+  &lt;label for="specificSizeInputGroupUsername"&gt;Date From&lt;/label&gt;
+  &lt;div class="input-group date" id="datepicker"&gt;
+    &lt;input type="text" class="form-control"&gt;
+    &lt;span class="input-group-append"&gt;
+        &lt;span class="input-group-text bg-white"&gt;
+            &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-md-4"&gt;
+  &lt;label for="specificSizeInputGroupUsername"&gt;Date To&lt;/label&gt;
+  &lt;div class="input-group date" id="datepicker"&gt;
+    &lt;input type="text" class="form-control"&gt;
+    &lt;span class="input-group-append"&gt;
+        &lt;span class="input-group-text bg-white"&gt;
+            &lt;i class="bi-calendar-event"&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/span&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/form&gt;
+                            </code>
+																					</pre>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane " id="v-pills-six-cards" role="tabpanel" aria-labelledby="v-pills-six-cards-tab">
+                      <div class="tab-text">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h3 class="mb-2">Cards</h3>
+                            <div class="card p-3 mb-3">
+                              <p class="text mb-3"> A box-form container that holds the website's information and charts. It flexibly design the presentation of the website using multiple variants and option sizes. </p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mt-2">
+                              <table class="table table-hover bg-light">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Variations</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <a href="#card-lkbtn">Cards with Link or Buttons</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#card-img">Cards with Chart</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#card-sz">Cards Sizes</a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="card-lkbtn">Cards with Links or Buttons</h5>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                              <p class="text mb-3">Cards are easily be customized by adding <code class="highlighter-rouge">.card-title</code> to a <code class="highlighter-rouge">&lt;h*&gt;</code> tag. Similarly, links and buttons are added and placed next to each other by adding <code class="highlighter-rouge">.card-link</code> and <code class="highlighter-rouge">.btn</code> to an <code class="highlighter-rouge">&lt;a&gt;</code> tag. </p>
+                              <p class="text mb-3">For showing additional information about the charts, a subtitle class is available to support the main content. It is used by adding a <code class="highlighter-rouge">.card-subtitle</code> to a <code class="highlighter-rouge">&lt;h*&gt;</code> tag. </p>
+                              <div class="bd-example">
+                                <div class="card" style="width: 25rem;">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                                    <p class="card-text mb-3">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                    <a href="#" class="card-link">Card link</a>
+                                    <a href="#" class="btn btn-primary">Button</a>
                                   </div>
                                 </div>
                               </div>
-                             </div>
-                             <h5 class="my-3">Code</h5>
-                             <div class="card border-0 mt-2">
+                            </div>
+                            <div class="card border-0 mt-3">
+                              <button class="btn-clipboard mt-3">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre class="mt-3">
+																						<code>
+  &lt;div class="card" style="width: 25rem;"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+      &lt;h6 class="card-subtitle mb-2 text-muted"&gt;Card subtitle&lt;/h6&gt;
+      &lt;p class="card-text mb-3"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+      &lt;a href="#" class="card-link"&gt;Card link&lt;/a&gt;
+      &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;                       
+                                      </code>
+																					</pre>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="card-img">Cards with Chart</h5>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                              <p class="text mb-3">Charts can be embedded in the card and be placed either top or bottom of the container. <code class="highlighter-rouge">.card-img-top</code> and <code class="highlighter-rouge">.card-img-bottom</code> place an image to the top and bottom, respectively. In the same way, text can be displayed in the card within <code class="highlighter-rouge">.card-text</code>. </p>
+                              <div class="bd-example">
+                                <div class="card" style="width: 25rem;">
+                                  <img class="card-img-top" src="./assets/img/cards-img-cap.svg" alt="Card Chart cap" />
+                                  <div class="card-body">
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card border-0 mt-3">
+                              <button class="btn-clipboard mt-3">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre class="mt-3">
+																						<code>
+  &lt;div class="card" style="width: 25rem;"&gt;
+    &lt;img class="card-img-top" src="./assets/img/cards-img-cap.svg" alt="Card image cap" &gt;
+      &lt;div class="card-body"&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;                       
+                                      </code>
+																					</pre>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="card-sz">Cards Sizes</h5>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                              <p class="text mb-3">Cards are 100% wide in width unless specified. There are several options to customized card sizes.</p>
+                              <div class="card p-3 border-0">
+                                <ul style="list-style-type:circle;">
+                                  <li>
+                                    <a href="#css-class">CSS Class</a>
+                                  </li>
+                                  <li>
+                                    <a href="#utilities">Card Utilities</a>
+                                  </li>
+                                  <li>
+                                    <a href="#grid-class">Grid Class</a>
+                                  </li>
+                                </ul>
+                              </div>
+                              <!--css class-->
+                              <div class="card border-0">
+                                <h6 class="my-3" id="css-class">Using CSS Customization</h6>
+                                <p class="text mb-3">CSS stylesheets or as inline style to specify width of the card. </p>
+                                <div class="card" style="width: 18rem;">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Chart</h5>
+                                    <p class="card-text mb-3">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Button</a>
+                                  </div>
+                                </div>
+                                <div class="card border-0 mt-3">
+                                  <button class="btn-clipboard mt-3">
+                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                  </button>
+                                  <pre class="mt-3">
+																								<code>
+  &lt;div class="card" style="width: 18rem;"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Sample text&lt;/h5&gt;
+        &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;                       
+                                      </code>
+																							</pre>
+                                </div>
+                              </div>
+                              <!--card utilities-->
+                              <div class="card border-0">
+                                <h6 class="my-3" id="utilities">Using Card Utilities</h6>
+                                <p class="text mb-3">There are various available sizing utilities options to set the dimensions. This can be seen in the dashboard wherein chart sizes vary from one another depending on the importance and content of the charts.</p>
+                                <div class="card w-75 mb-3">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text mb-3">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Button</a>
+                                  </div>
+                                </div>
+                                <div class="card w-50">
+                                  <div class="card-body">
+                                    <h5 class="card-title">Card title</h5>
+                                    <p class="card-text mb-3">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="card-link">Link</a>
+                                  </div>
+                                </div>
+                                <div class="card border-0 mt-3">
+                                  <button class="btn-clipboard mt-3">
+                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                  </button>
+                                  <pre class="mt-3">
+																								<code>
+  &lt;div class="card w-75"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="card w-50"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+        &lt;a href="#" class="card-link"&gt;Link&lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt; 
+
+                                      </code>
+																							</pre>
+                                </div>
+                              </div>
+                              <!--grid class-->
+                              <div class="card border-0">
+                                <h6 class="my-3" id="grid-class">Using Grid Classes</h6>
+                                <p class="text mb-3">Grids have its own specifications for column and row width.</p>
+                                <div class="alert alert-success  d-flex align-items-start mb-3" role="alert">
+                                  <div class="alert-icon">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                  </div>
+                                  <div class="alert-message">
+                                    <h5 class="alert-title-success"> Tip</h5>
+                                    <p class="alert-text"> Fore more information about Grids, go to <a href="layouts.html">here</a>. </p>
+                                  </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-sm-4">
+                                    <div class="card">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Chart 1</h5>
+                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="card-link">Link</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-8">
+                                    <div class="card">
+                                      <div class="card-body">
+                                        <h5 class="card-title">Chart 2</h5>
+                                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                        <a href="#" class="btn btn-primary">Button</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card border-0 mt-3">
+                                  <button class="btn-clipboard mt-3">
+                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                  </button>
+                                  <pre class="mt-3">
+																								<code>
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-4"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h5 class="card-title"&gt;Chart 1&lt;/h5&gt;
+          &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+          &lt;a href="#" class="card-link"&gt;Link&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-sm-8"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h5 class="card-title"&gt;Chart 1&lt;/h5&gt;
+          &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+          &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+
+                                      </code>
+																							</pre>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane " id="v-pills-six-chips" role="tabpanel" aria-labelledby="v-pills-six-chips-tab">
+                      <div class="tab-text">
+                        <h3 class="mb-3">Chips</h3>
+                        <div class="row">
+                          <div class="col-12">
+                            <p class="text mb-1">A way to categorize content with the use of text and icons. It is also use to filter data results and narrowing charts.</p>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="card p-3 mx-3">
+                            <p class="text mb-3">For charts that could only be filtered by one category, you may use the single selection.</p>
+                            <div class="d-flex justify-content-start mb-3 mt-2" id="chips">
+                              <div class="chip chip-primary mx-1">Last 7 days</div>
+                              <div class="chip chip-primary-outline mx-1 ">Last 14 days</div>
+                              <div class="chip chip-primary-outline mx-1">Last 28 days</div>
+                            </div>
+                            <script type="text/javascript">
+                              $(function() {
+                                $('.chip-primary-outline').click(function() {
+                                  $("#chips>div").removeClass("chip-primary").addClass('chip-primary-outline');
+                                  $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+                                });
+                                $('.chip-primary').click(function() {
+                                  $("#chips>div").removeClass("chip-primary").addClass('chip-primary-outline');
+                                  $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+                                });
+                              });
+                            </script>
+                            <h5 class="my-3">HTML</h5>
+                            <div class="card border-0 mt-2">
                               <button class="btn-clipboard">
                                 <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
                               </button>
                               <pre>
-																	<code>Code here
-                                  </code>
-                              </pre>
+																						<code>
+&lt;div class="d-flex flex-row mb-3 mt-2" id="chips"&gt;
+  &lt;div class="chip chip-primary mx-1"&gt;Last 7 days&lt;/div&gt;
+  &lt;div class="chip chip-primary-outline mx-1 "&gt;Last 14 days&lt;/div&gt;
+  &lt;div class="chip chip-primary-outline mx-1"&gt;Last 28 days&lt;/div&gt;
+&lt;/div&gt;                             
+                                
+                                                                </code>
+																					</pre>
                             </div>
+                            <h5 class="my-3">JS</h5>
+                            <div class="card border-0 mt-2">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																						<code>
+     &lt;script type="text/javascript"&gt;
+      $(function() {
+      $('.chip-primary-outline').click(function() {
+        $("#chips&gt;div").removeClass("chip-primary").addClass('chip-primary-outline');
+        $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+     });
+     $('.chip-primary').click(function() {
+       $("#chips&gt;div").removeClass("chip-primary").addClass('chip-primary-outline');
+        $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+      });
+    });
+  &lt;/script&gt;
+  
+                                  </code>
+																					</div>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<!--     <div class="tab-pane " id="v-pills-six-form-elements" role="tabpanel" aria-labelledby="v-pills-six-form-elements-tab"><div class="tab-text"><p class="text"><h3>Form Elements</h3></p></div></div> -->
+																	<div class="tab-pane " id="v-pills-six-icons" role="tabpanel" aria-labelledby="v-pills-six-icons">
+																		<div class="tab-text">
+																			<p class="text">
+																				<h3>Icons</h3>
+																			</p>
+																		</div>
+																	</div>
+																	<!--Modals will come here-->
+																	<div class="tab-pane " id="v-pills-six-modals" role="tabpanel" aria-labelledby="v-pills-six-modals">
+																		<div class="tab-text">
+																			<!--< class="text">-->
+																			<!--<h3>Modals</h3>-->
+																			<!--Put your works below here-->
+																			<div class="row">
+																				<div class="col-md-6">
+																					<h3 class="mb-3">Modals</h3>
+																					<div class="card p-3">
+																						<p class="text mb-1">A way for user to (1) provide multiple inputs 
+																							<a href="#form-modal">(form modal)</a> that were related together such as advanced filters, (2) another way to display tips and 
+																							<a href="#info-modal">infomation</a> about charts or data and (3) a pop up window to view a Youtube video. 
+																						</p>
+																						<p class="text mb-1">The modal is a popup screen that only available whenever needed.</p>
+																					</div>
+																				</div>
+																				<div class="col-md-6">
+																					<div class="border-1 my-3 bg-light ">
+																						<table class="table table-hover bg-light">
+																							<thead>
+																								<tr>
+																									<th>Modal</th>
+																									<th >Use</th>
+																								</tr>
+																							</thead>
+																							<tbody>
+																								<tr>
+																									<td>
+																										<a href="#info-modal">Infor Modal</a>
+																									</td>
+																									<td>Display help tips about a chart or pages. </td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<a href="#form-modal">Form Modal</a>
+																									</td>
+																									<td>
+																										<!--<code>.alert alert-primary</code>--> Used to ask a multiple inputs from the user.
+                                    
+																									</td>
+																								</tr>
+																								<tr>
+																									<td>
+																										<a href="#media-modal">Embed Media Modal</a>
+																									</td>
+																									<td>
+																										<!--<code>.alert alert-primary</code>--> A pop up screen that will embed a Youtube video URL.
+                                    
+																									</td>
+																								</tr>
+																								<!--Next row here-->
+																							</tbody>
+																						</table>
+																					</div>
+																				</div>
+																			</div>
+																			<!--Modal starts from here-->
+																			<div class="card p-3 mt-3">
+																				<h5 class="my-3" id="info-modal">Info Modal</h5>
+																				<p class="text mb-3">For explainer or help tips about a particular chart or data, the info modal best suite these needs.</p>
+																				<h5 class="my-3">Preview</h5>
+																				<!-- Button trigger modal -->
+																				<div class="d-flex justify-content-start">
+																					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+																						<i class="bi bi-lightbulb"></i>Tips 
+																					</button>
+																				</div>
+																				<!-- Modal -->
+																				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+																					<div class="modal-dialog modal-dialog-centered">
+																						<div class="modal-content">
+																							<div class="modal-header">
+																								<h5 class="modal-title" id="exampleModalLabel">Tips</h5>
+																								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+																							</div>
+																							<div class="modal-body">
+																								<h6> Drilling Down Data</h6>
+																								<p class="text my-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id eleifend est. Sed auctor eleifend sem ut posuere. Aenean tellus mi, lacinia mollis mollis nec, rutrum ut elit </p>
+																								<h6> How Data is Computed</h6>
+																								<p class="text my-3"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id eleifend est. Sed auctor eleifend sem ut posuere. Aenean tellus mi, lacinia mollis mollis nec, rutrum ut elit </p>
+																							</div>
+																							<div class="modal-footer">
+																								<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+																							</div>
+																						</div>
+																					</div>
+																				</div>
+																				<!--End of the modal-->
+																				<h5 class="my-3">Code</h5>
+																				<div class="card border-0 mt-2">
+																					<button class="btn-clipboard">
+																						<i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+																					</button>
+																					<pre>
+																						<code>
+		&lt;div class="d-flex justify-content-start"&gt;
+        &lt;button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"&gt; 
+      &lt;i class="bi bi-lightbulb"&gt;&lt;/i&gt;Tips&lt;/button&gt;
+  &lt;/div&gt;
+    &lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-dialog-centered"&gt;
+         &lt;div class="modal-content"&gt;
+           &lt;div class="modal-header"&gt;
+             &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Tips&lt;/h5&gt;
+             &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+           &lt;/div&gt;
+          &lt;div class="modal-body"&gt; 
+        &lt;h6&gt; Drilling Down Data&lt;/h6&gt; 
+       &lt;p class="text my-3"&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id eleifend est. Sed auctor eleifend sem ut posuere. Aenean tellus mi, lacinia mollis mollis nec, rutrum ut elit
+        &lt;/p&gt;
+       &lt;h6&gt; How Data is Computed&lt;/h6&gt; 
+      &lt;p class="text my-3"&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque id eleifend est. Sed auctor eleifend sem ut posuere. Aenean tellus mi, lacinia mollis mollis nec, rutrum ut elit
+    &lt;/p&gt;
+  &lt;/div&gt;
+   &lt;div class="modal-footer"&gt;
+&lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+ 																				</code>
+																					</pre>
+                            </div>
+                          </div>
+                          <!--End of code-->
+                          <div class="card p-3 mt-3">
+                            <h5 class="my-3" id="form-modal">Form Modal</h5>
+                            <p class="text mb-3">Form modal is used for advanced filtering of graphs or it could be the settings of dashboard that consist of 2 or more inputs from the user</p>
+                            <h5 class="my-3">Preview</h5>
+                            <!-- Button trigger modal -->
+                            <div class="d-flex justify-content-start">
+                              <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                                <i class="bi bi-gear"></i> Settings </button>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Dashboard Settings</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <form class="row gx-3 gy-2 align-items-center">
+                                      <div class="col-md-6">
+                                        <label for="specificSizeInputGroupUsername">Date From</label>
+                                        <div class="input-group date" id="datepickerFrom">
+                                          <input type="text" class="form-control">
+                                          <span class="input-group-append">
+                                            <span class="input-group-text bg-white">
+                                              <i class="bi-calendar-event"></i>
+                                            </span>
+                                          </span>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <label for="specificSizeInputGroupUsername">Date To</label>
+                                        <div class="input-group date" id="datepickerTo">
+                                          <input type="text" class="form-control">
+                                          <span class="input-group-append">
+                                            <span class="input-group-text bg-white">
+                                              <i class="bi-calendar-event"></i>
+                                            </span>
+                                          </span>
+                                        </div>
+                                      </div>
+                                    </form>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Save</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--End of the modal-->
+                            <h5 class="my-3">Code</h5>
+                            <div class="card border-0 mt-2">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																								<code>
+
+  &lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+      &lt;div class="modal-dialog modal-dialog-centered"&gt;
+         &lt;div class="modal-content"&gt;
+           &lt;div class="modal-body"&gt; 
+                .....
+          &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+      &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+																							</pre>
+                            </div>
+                          </div>
+                          <!--End of code-->
+                          <!--Next Modal-->
+                          <div class="card p-3 mt-3">
+                            <h5 class="my-3" id="media-modal">Embed Media Modal</h5>
+                            <p class="text mb-3">Media Modal is used to embed Youtube Video.</p>
+                            <h5 class="my-3">Preview</h5>
+                            <!-- Button trigger modal -->
+                            <div class="d-flex justify-content-start">
+                              <button type="button" class="btn btn-primary-outline" data-bs-toggle="modal" data-bs-target="#scrollableModal">
+                                <i class="bi bi-box-arrow-up-right"></i> View </button>
+                            </div>
+                            <!-- Modal -->
+                            <div class="modal fade" id="scrollableModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <div class="modal-dialog modal-dialog-centered modal-lg">
+                                <!--To make it sctollable-->
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Video Content</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                    <div class="ratio ratio-16x9">
+                                      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VyhLRJVoIrI"></iframe>
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--End of the modal-->
+                            <h5 class="my-3">Code</h5>
+                            <div class="card border-0 mt-2">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																								<code>
+																									<!--Put code here-->
+&lt;div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"&gt;
+  &lt;div class="modal-dialog"&gt;
+    &lt;div class="modal-content"&gt;
+      &lt;div class="modal-header"&gt;
+        &lt;h5 class="modal-title" id="exampleModalLabel"&gt;Modal title&lt;/h5&gt;
+        &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div class="modal-body"&gt;
+        ...
+      &lt;/div&gt;
+      &lt;div class="modal-footer"&gt;
+        &lt;button type="button" class="btn btn-secondary" data-bs-dismiss="modal"&gt;Close&lt;/button&gt;
+        &lt;button type="button" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+                        
+																						
+																					
+																								</code>
+																							</pre>
+                            </div>
+                          </div>
+                          <!--PUT YOUR WORKS ABOVE HERE-->
+                          <!--         
+                </div></div></div></div></div> 
+            -->
+                          </p>
                         </div>
-                        <!--PUT YOUR WORKS ABOVE HERE-->        
-                        </p>
                       </div>
-                    </div>
-                    <div class="tab-pane " id="v-pills-six-navigational" role="tabpanel" aria-labelledby="v-pills-six-navigational">
-                      <div class="tab-text">
-                        <p class="text">
-                        <h3>Navigational Elements</h3>
-                        </p>
+                      <div class="tab-pane " id="v-pills-six-navigational" role="tabpanel" aria-labelledby="v-pills-six-navigational">
+                        <div class="tab-text">
+                          <p class="text">
+                          <h3>Navigational Elements</h3>
+                          </p>
+                        </div>
                       </div>
-                    </div>
-                    <div class="tab-pane " id="v-pills-six-scroll-top" role="tabpanel" aria-labelledby="v-pills-six-scroll-top">
-                      <div class="tab-text">
-                        <p class="text">
-                        <h3>Scroll to Top</h3>
-                        </p>
+                      <!--Beginning of the scroll category-->
+                      <div class="tab-pane " id="v-pills-six-scroll-top" role="tabpanel" aria-labelledby="v-pills-six-scroll-top">
+                        <div class="tab-text">
+                          <h5 class="my-3" id="simple-alert">Scroll to Top</h5>
+                          <p class="text mb-1"> A way to provide quickly scroll to top from anywhere on a page.</p>
+                          <p class="text mb-3"> The scroll to top button will quickly appear whenever user start to scroll on a page</p>
+                          <div class="card p-3 mt-3">
+                            <h5 class="my-3">Preview</h5>
+                            <!-- Modal -->
+                            <!--Adapted-->
+                            <div class="alert alert-primary  d-flex align-items-start" role="alert">
+                              <div class="alert-icon">
+                                <i class="bi bi-info-circle-fill"></i>
+                              </div>
+                              <div class="alert-message">
+                                <h5 class="alert-title-primary"> Note</h5>
+                                <p class="alert-text"> To view the preview, start scrolling this page and the Scroll to Top button will appear at the bottom right. </p>
+                              </div>
+                            </div>
+                            <!--code goes here-->
+                            <h5 class="my-3">HTML</h5>
+                            <p class="text mb-3"> The scroll to top always appear at the bottom of the page. The styles for the button is built-in to the design.</p>
+                            <div class="card border-0 mt-3">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																							<code>
+                              
+&lt;button onclick="topFunction()" id="scrollToTopDemo" title="Go to top" style="display: block;"&gt;
+  &lt;i class="bi bi-arrow-up"&gt;&lt;/i&gt;
+&lt;/button&gt;
+                            </code>
+																						</pre>
+                            </div>
+                            <!--End of HTML CODE code-->
+                            <h5 class="my-3">JS</h5>
+                            <p class="text mb-3"> The JS code below is required in order the Scroll to Top component to work.</p>
+                            <div class="card border-0 mt-2">
+                              <button class="btn-clipboard mt-3">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																							<code>                  
+window.onscroll = function() {scrollFunction()};
+let mybutton = document.getElementById("scrollToTop");
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }  
+  
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;  }
+
+                            </code>
+																						</pre>
+                            </div>
+                            <!--End of JS Code-->
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <!--End of Scroll to top-->
-                    <div class="tab-pane " id="v-pills-six-spinners" role="tabpanel" aria-labelledby="v-pills-six-spinners">
-                      <div class="tab-text">
-                        <h3 class="mb-2">Spinners</h3>
-                        <div class="card p-3">
+                      <!--End of Scroll to top-->
+                      <div class="tab-pane " id="v-pills-six-spinners" role="tabpanel" aria-labelledby="v-pills-six-spinners">
+                        <div class="tab-text">
                           <p class="text"></p>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <h3 class="mb-2">Spinners</h3>
+                              <div class="card p-3 mb-3">
+                                <p class="text mb-3"> A way to provide feedback to user that a certain action is currently being done by the system.</p>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div class="mt-2">
+                                <table class="table table-hover bg-light">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Spinner</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <a href="#border-spnr">Border Spinner</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <a href="#button-spnr">Button Spinners</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <a href="#spnr-color">Spinner Color</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <a href="#spnr-size">Spinner Sizes</a>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card p-3">
+                            <div class="card-heading">
+                              <h5 class="my-3" id="border-spnr">Border Spinner</h5>
+                              <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                                <p class="text mb-3">The border spinner is used when the section page is enough and not limited. Consider the appropriate <a href="spnr-size">sizes</a> of the containers or screens when using a spinner. </p>
+                                <div class="spinner-primary" role="status">
+                                  <span class="sr-only"></span>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card border-0 mt-3">
+                              <button class="btn-clipboard mt-3">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre class="mt-3">
+																							<code>
+  &lt;div class="spinner-primary" role="status"&gt;
+    &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
+  &lt;/div&gt;
+                          </code>
+																						</pre>
+                            </div>
+                          </div>
+                          <div class="card p-3 mt-3">
+                            <div class="card-heading">
+                              <h5 class="my-3" id="button-spnr">Button Spinners</h5>
+                              <p class="text mb-3"> Use spinners within buttons to indicate an action is currently processing or taking place. You may also swap the text out of the spinner element and utilize button text as needed. </p>
+                            </div>
+                            <!--border spinner in button -->
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-1">
+                              <div>
+                                <button class="btn btn-primary disabled" type="button">
+                                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                  <span class="sr-only"></span>
+                                </button>
+                                <button class="btn btn-primary disabled">
+                                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading... </button>
+                              </div>
+                              <div class="card border-0 mt-3">
+                                <button class="btn-clipboard mt-3">
+                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                </button>
+                                <pre>
+																								<code>
+  &lt;button class="btn btn-primary" type="button" disabled&gt;
+    &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;&lt;/span&gt;
+      &lt;span class="sr-only"&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;button class="btn btn-primary" type="button" disabled&gt;
+    &lt;span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"&gt;Loading...&lt;/span&gt;
+  &lt;/button&gt;
+                    </code>
+																							</pre>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="card p-3 mt-3">
+                            <div class="card-heading">
+                              <h5 class="my-3" id="spnr-size">Spinner Sizes</h5>
+                              <p class="text mb-3"> Customize spinner sizes by adding <code class="highlighter-rouge">.spinner-sm</code> or <code class="highlighter-rouge">.spinner-lg</code> to alter the spinner dimension as needed. Smaller spinner is mainly used for charts with small window of display whereas larger spinner for the whole page loading. </p>
+                              <div class="d-flex flex-row justify-content-evenly mb-3">
+                                <div class="p-2">
+                                  <p class="text p-2">
+                                    <code>.spinner-sm</code>
+                                  </p>
+                                  <div class="spinner-sm"></div>
+                                </div>
+                                <div class="p-2">
+                                  <p class="text p-2">
+                                    <code>.spinner-primary</code>
+                                  </p>
+                                  <div class="spinner-primary"></div>
+                                </div>
+                                <div class="p-2">
+                                  <p class="text p-2">
+                                    <code>.spinner-lg</code>
+                                  </p>
+                                  <div class="spinner-lg"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  <!-- row -->
                 </div>
-                <!-- row -->
+                <!-- tabs one -->
               </div>
-              <!-- tabs one -->
             </div>
           </div>
         </div>
-      </div>
-      <!--====== MAIN AREA ENDS ======-->
-      <!--====== JQuery js ======-->
-      <script src="./assets/js/jquery.min.js"></script>
-      <!--====== Main js ======-->
-      <script src="./assets/js/main.js"></script>
-      <!--====== Tabs js ======-->
-      <script src="./assets/js/tabs.js"></script>
-      <!--====== Bootstrap js ======-->
-      <script src="./assets/js/bootstrap.bundle.min.js"></script>
-
-
-
+        <!--====== MAIN AREA ENDS ======-->
+        <!--====== Main js ======-->
+        <script src="./assets/js/main.js"></script>
+        <!--====== Tabs js ======-->
+        <script src="./assets/js/tabs.js"></script>
+        <!--====== Bootstrap js ======-->
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

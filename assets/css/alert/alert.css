@@ -15,9 +15,13 @@
     overflow: hidden;
     border: none !important;
   }
-  .alert.alert-primary .alert-text,  .alert.alert-secondary .alert-text {
+  .alert.alert-primary .alert-text{
     font-size: 16px !important;
     color: var(--black) !important;
+  }
+  .alert.alert-secondary .alert-text {
+    font-size: 16px !important;
+    color: var(--white) !important;
   }
   .alert.alert-error .alert-text{
     font-size: 16px !important;
@@ -35,7 +39,7 @@
   }
   .alert-title-secondary{
     font-size: 16px !important;
-    color: var(--primary) !important;
+    color: var(--white) !important;
     font-weight: 700 !important;
     margin: 8px 0;
   }
@@ -52,10 +56,10 @@
     margin: 8px 0;
   }
   .alert-simple{
-    background-color: var(--gray);
+    background-color: var(--charcoal-lite);
     color: var(--charcoal);
     border-left: 3px solid var(--primary) !important;
-    border: 1px solid var(--charcoal-light);
+    border: 1px solid var(--black);
   }
   .alert::before {
     content: "";
@@ -105,8 +109,8 @@
   }
 
   .alert.alert-secondary {
-    background: var(--tetra-mustard);
-    color: var(--black);
+    background: var(--muted-blue);
+    color: var(--white);
     border: none !important;
   }
   .alert.alert-success {
@@ -128,6 +132,9 @@
   }
   .alert.alert-success .alert-icon {
     color: var(--sat-green);
+  }
+  .alert.alert-secondary .alert-icon {
+    color: var(--white);
   }
   .alert.alert-primary .alert-message,.alert.alert-secondary .alert-message, .alert.alert-success .alert-message   {
     color: var(--black) ;

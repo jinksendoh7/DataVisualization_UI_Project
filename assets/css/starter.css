@@ -29,15 +29,20 @@
   --tangerine: #FF4700;
   --sky-blue: #26E7FF;
   --royal-purple: #6917E5;
-  --heliotrope: #FF33CB;
-  --rich-dewberry:#CC149D;
-  --dewberry:#993D81;
+  --heliotrope: #CC149D;
+  --rich-dewberry:#993A8C;
+  --dewberry:#752967;
   --charcoal:#646464;
-  --charcoal-plus:#4B4B4B;
-  --charcoal-light: #cbc7c7;
-  --black: #191919;
+  --charcoal-lite: #E1E1E1;
+  --charcoal-plus:#4D4D4D;
+  --yale: #005B8F;
+  --apricot: #FFA733;
+  --rosso: #CC0007;
+  --shamrock: #48B200;
+  --navy-blue:#1F1F67;
+  --turquoise: #009EBD;
+  --black: #252020;
   --white: #FFFFFF;
-  --gray: #f9f9f9;
   --shadow-1: 0px 0px 1px rgba(40, 41, 61, 0.08),
     0px 0.5px 2px rgba(232, 233, 238, 0.16);
   --shadow-2: 0px 0px 1px rgba(40, 41, 61, 0.04),
@@ -315,13 +320,32 @@ a{
 }
 
 .spinner {
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: conic-gradient(#0000 10%,#ff0009);
-  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  background: conic-gradient(#0000 10%,#FF4700);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
   animation: spinner-zp9dbg 0.6s infinite linear;
   margin: 5rem auto;
+}
+
+.spinner-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 5%,#FF4700);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
+  animation: spinner-zp9dbg 0.6s infinite linear;
+}
+
+.spinner-lg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%,#FF4700);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
+  animation: spinner-zp9dbg 0.6s infinite linear;
+
 }
 
 @keyframes spinner-zp9dbg {
@@ -343,7 +367,7 @@ pre {
   overflow-x: auto;
   word-wrap:break-word;
   padding: 15px 12px;
-  background-color: var(--charcoal-light);
+  background-color: var(--charcoal-lite);
   border-radius: 5px;
   width:auto;
   tab-size:  0;
@@ -356,7 +380,7 @@ pre {
   z-index: 10;
   display: block;
   padding: 5px;
-  color: var(--charcoal-light);
+  color: var(--charcoal-lite);
   cursor: pointer;
   background-color: transparent;
   border: 0;
@@ -393,10 +417,49 @@ pre {
   box-shadow: var(--shadow-4)
 }
 
+/*This is added for scroll to top demo*/
+#scrollToTopDemo {
+  display: none;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-4)
+} 
+
 #scrollToTop:hover {
   background-color: var(--white);
   color: var(--primary);
   border-color: var(--primary);
   border: 1px solid var(--primary);
+}
+.spinner-primary{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%,var(--primary));
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#000 0);
+  animation: spinner-zp9dbg 0.6s infinite linear;
+}
+
+
+.lite{
+  background: var(--charcoal-lite);
+  padding: 15px;
+  border: 1px dotted var(--charcoal);
+}
+.badge-mustard{
+  font-size: 15px;
+  font-family: var(--font-family-medium);
+  background: var(--tetra-mustard);
+  color: var(--black);
+  border-color: var(--white);
+  border-radius: 20px;
+  width: 40px;
 }
 /*# sourceMappingURL=starter.css.map */

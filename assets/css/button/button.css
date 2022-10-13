@@ -9,6 +9,7 @@
   background: var(--primary);
   color: var(--white);
   box-shadow: var(--shadow-2);
+  border-color:var(--white);
 }
 .btn.disabled{
   opacity:0.6 !important;
@@ -17,15 +18,17 @@
   border-color: var(--primary);
 
 }
-.btn-warning {
-  background: var(--tetra-mustard);
+.btn-secondary {
+  background: var(--muted-blue);
   color: var(--white);
   box-shadow: var(--shadow-2);
+  border-color:var(--white);
 }
 .btn-success {
   background: var(--sat-green);
   color: var(--white);
   box-shadow: var(--shadow-2);
+  border-color:var(--white);
 }
 
 .btn-error {
@@ -66,21 +69,21 @@
   border-color: var(--sat-green);
 }
 
-.btn-lg.btn-warning:hover {
+.btn-lg.btn-secondary:hover {
   background: var(--white) !important;
-  color: var(--tetra-mustard) !important;
+  color: var(--black) !important;
   box-shadow: var(--shadow-4) !important;
-  border-color: var(--tetra-mustard) !important;
+  border-color: var(--muted-blue) !important;
 }
 
 
-.active.btn.btn-warning,
-.btn.btn-warning:hover,
-.btn.btn-warning:focus {
+.active.btn.btn-secondary,
+.btn.btn-secondary:hover,
+.btn.btn-secondary:focus {
   background: var(--white);
-  color: var(--tetra-mustard);
+  color: var(--black);
   box-shadow: var(--shadow-4);
-  border-color: var(--tetra-mustard);
+  border-color: var(--muted-blue);
 }
 
 .active.btn.btn-error,
@@ -110,11 +113,15 @@
   border-color: var(--charcoal-plus);
 }
 
-.active.btn-link,
-.btn-link:hover,
-.btn-link:focus {
-  color: var(--black);
+.active.btn.btn-light,
+.btn.btn-light:hover,
+.btn.btn-light:focus {
+  background:#e3e3e3 !important;
+  color: var(--charcoal-plus);
+  box-shadow: var(--shadow-4);
+  border-color: var(--charcoal-plus);
 }
+
 /* Outlines */
 .btn-primary-outline {
   border-color: var(--primary) !important;
@@ -128,15 +135,15 @@
   color: var(--white) !important;
 }
 
-.btn-warning-outline {
-  border-color: var(--tetra-mustard) !important;
-  color: var(--tetra-mustard) !important;
+.btn-secondary-outline {
+  border-color: var(--muted-blue) !important;
+  color: var(--muted-blue) !important;
   background: var(--white);
 }
-.active.btn-warning-outline,
-.btn-warning-outline:hover,
-.btn-warning-outline:focus {
-  background: var(--tetra-mustard) !important;
+.active.btn-secondary-outline,
+.btn-secondary-outline:hover,
+.btn-secondary-outline:focus {
+  background: var(--muted-blue) !important;
   color: var(--white) !important;
 }
 .btn-error-outline {
