@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./assets/css/navbar/navbar.css" />
     <link rel="stylesheet" href="./assets/css/tab/tab.css" />
     <link rel="stylesheet" href="./assets/css/colors/color.css" />
+    <link rel="stylesheet" href="./assets/css/alert/alert.css" />
   </head>
   <body>
     <button onclick="topFunction()" id="scrollToTop" title="Go to top"><i class="bi bi-arrow-up"></i></button>
@@ -279,14 +280,12 @@
                     </div>
                     <div class="tab-pane " id="v-pills-six-contents" role="tabpanel" aria-labelledby="v-pills-six-contents-tab">
                         <div class="tab-text">
-                          <p class="text"><div class="row">
+                          <p class="text">
+                          <div class="row">
                             <div class="col-md-6">
                               <h3 class="mb-3">Contents</h3>
                               <div class="card p-3">
-                                <p class="text mb-1">The grid is the building blocks used to provide layout service on pages.</p>
-                                <p class="text mb-1">It uses a series of containers, rows, and columns to layout and align content. It’s built with flexbox and is fully responsive.</p>
-                                <p class="text mb-2">The grid can accomodate up to 12 columns.</p>
-                              
+                                <p class="text mb-1">The layout of contents includes images, embed videos, and tables.</p>
                               </div>
                             </div>
                             <div class="col-md-6">
@@ -315,6 +314,150 @@
                                 </tbody>
                               </table>
                             </div>
+                            <div class="card p-3 mt-3">
+                                <h5 class="my-3" id="images">Images</h5>
+                                <p class="text mb-3"> All images should be rendered responsive to the breakpoint or screen of the page.</p>
+                                <img src="assets/img/guide_header.jpg" class="img-fluid mb-3" alt="Responsive image">
+                                <div class="alert alert-simple my-3">
+                                  <strong>Note</strong> To see that the image is responsive, resize the window of your screen.</code>
+                                </div>
+                                <div class="card border-0 my-3">
+                                  <button class="btn-clipboard">
+                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                  </button>
+                                  <pre><code>
+&lt;img src="..." class="img-fluid" alt="..."&gt;
+                                  </code></pre>
+                                </div>
+                                <h5 class="my-3" id="videos">Embed Videos</h5>
+                                <p class="text mb-1"> For better watching experience, always consider the aspect ratio of the video so that it won't affect the quality.</p>
+                                <p class="text mb-3"> In embeding video, use the following HTML tags <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code> and <code>&lt;video&gt;</code>.</p>
+                             
+                                <div class="alert alert-success  d-flex align-items-start" role="alert">
+                                  <div class="alert-icon">
+                                    <i class="bi bi-info-circle-fill"></i>
+                                  </div>
+                                  <div class="alert-message">
+                                    <h5 class="alert-title-success"> Tip</h5>
+                                    <p class="alert-text"> Since the design library is built on top of Boostrap, you don’t need <code>frameborder="0"</code> on your iframe's.</p>
+                                  </div>
+                                </div>
+                                <div class="ratio ratio-16x9">
+                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VyhLRJVoIrI"></iframe>
+                                </div>
+                                <div class="card border-0 my-3">
+                                  <button class="btn-clipboard">
+                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                  </button>
+                                  <pre><code>
+&lt;div class="ratio ratio-16x9"&gt;
+  &lt;iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VyhLRJVoIrI"&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+ </code></pre>
+ <div class="alert alert-success  d-flex align-items-start" role="alert">
+  <div class="alert-icon">
+    <i class="bi bi-info-circle-fill"></i>
+  </div>
+  <div class="alert-message">
+    <h5 class="alert-title-success"> Tip</h5>
+    <p class="alert-text"> Modals can also be alternative to embed videos, refer to <a href="components.html">UI Components</a> section.</p>
+  </div>
+</div>
+                                  <p class="text my-3"> The following are available aspect ration that you can use. .</p>
+                                  <img src="./assets/img/aspect-ratio.JPG" class="img-fluid"/> 
+                                  <div class="card border-0 my-3">
+                                    <button class="btn-clipboard">
+                                      <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                    </button>
+                                    <pre><code>&lt;div class="ratio ratio-1x1"&gt;
+  &lt;div&gt;1x1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-4x3"&gt;
+  &lt;div&gt;4x3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-16x9"&gt;
+  &lt;div&gt;16x9&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-21x9"&gt;
+  &lt;div&gt;21x9&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                  </div>
+                                </div>
+                                <h5 class="my-3" id="tables">Tables</h5>
+                                <p class="text mb-3"> Tables are used to display data in tabular format. To access the styles use class <code>class="table"</code>.</p>
+                                <table class="table mb-3">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Rank #</th>
+                                      <th scope="col">YT Channel</th>
+                                      <th scope="col">Category</th>
+                                      <th scope="col">Subscribers</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row">1</th>
+                                      <td>Mr. Beast</td>
+                                      <td>Entertainment</td>
+                                      <td>322.8M</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">2</th>
+                                      <td>CNN</td>
+                                      <td>News</td>
+                                      <td>321.2M</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row">3</th>
+                                      <td>NBA</td>
+                                      <td>Sports</td>
+                                      <td>320.2M</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+
+                                <div class="card border-0 my-3">
+                                  <button class="btn-clipboard">
+                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                  </button>
+                                  <pre><code>&lt;div class="ratio ratio-1x1"&gt;
+&lt;div&gt;1x1&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-4x3"&gt;
+&lt;div&gt;4x3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-16x9"&gt;
+&lt;div&gt;16x9&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="ratio ratio-21x9"&gt;
+&lt;div&gt;21x9&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                                <p class="text mb-3"> On top of the <code>class="table"</code>, there were available variations. Refer below.</p>
+                                <table class="table table-bordered mb-3">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Class</th>
+                                      <th scope="col">Description</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <th scope="row"><code>.table-bordered</code></th>
+                                      <td>To put borders on all sides.</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row"><code>.table-hovered</code></th>
+                                      <td>When you hovered a row, it will highlight the row.</td>
+                                    </tr>
+                                    <tr>
+                                      <th scope="row"><code>.table-condensed</code></th>
+                                      <td>To make the cells more densed, applicable for long list of data display.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                             </div>
+                            
                           </div>
                           </p>
                         </div>

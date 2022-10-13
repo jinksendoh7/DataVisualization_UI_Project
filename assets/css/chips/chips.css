@@ -3,17 +3,17 @@
     box-shadow: var(--shadow-2);
     border-radius: 50px;
     font-size: 15px;
-    min-width: 120px;
+    min-width: 110px;
     text-align: center;
     
 }
-.chip-primary, .chip-primary-outline:hover{
+.chip-primary{
     color: var(--white);
     background: var(--primary);
     border: 2px solid var(--white);
     
 }
-.chip-primary:hover, .chip-primary-outline{
+.chip-primary-outline{
     color: var(--primary);
     background: var(--white);
     border: 2px solid var(--primary);
@@ -26,10 +26,7 @@
     border: 2px solid var(--white);
     
 }
-.disabled{
-    background: var(--charcoal-lite) !important;
-    opacity: 0.5;
-}
+
 .chip-success{
     color: var(--white);
     background: var(--success);
