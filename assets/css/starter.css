@@ -453,4 +453,13 @@ pre {
   padding: 15px;
   border: 1px dotted var(--charcoal);
 }
+.badge-mustard{
+  font-size: 15px;
+  font-family: var(--font-family-medium);
+  background: var(--tetra-mustard);
+  color: var(--black);
+  border-color: var(--white);
+  border-radius: 20px;
+  width: 40px;
+}
 /*# sourceMappingURL=starter.css.map */

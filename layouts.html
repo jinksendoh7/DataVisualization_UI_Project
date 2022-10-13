@@ -22,7 +22,9 @@
     <link rel="stylesheet" href="./assets/css/alert/alert.css" />
   </head>
   <body>
-    <button onclick="topFunction()" id="scrollToTop" title="Go to top"><i class="bi bi-arrow-up"></i></button>
+    <button onclick="topFunction()" id="scrollToTop" title="Go to top">
+      <i class="bi bi-arrow-up"></i>
+    </button>
     <!--====== NAVBAR FOUR PART START ======-->
     <section class="navbar-area navbar-six">
       <div class="container">
@@ -35,23 +37,23 @@
                 <span class="toggler-icon"></span>
               </button>
               <a class="navbar-brand" href="javascript:void(0)">
-                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live<span class="live-green">Wire</span>
+                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live <span class="live-green">Wire</span>
               </a>
               <div class="collapse navbar-collapse justify-content-end" id="navbarFour">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                      <a href="guides.html">Brand Guides</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="charts.html">Data Visualization</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="active" href="layouts.html">Page Layouts</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="components.html">UI Components</a>
-                    </li>
-                  </ul>
+                  <li class="nav-item">
+                    <a href="guides.html">Brand Guides</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="charts.html">Data Visualization</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="active" href="layouts.html">Page Layouts</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="components.html">UI Components</a>
+                  </li>
+                </ul>
                 <div class="navbar-social d-none d-sm-flex align-items-center">
                   <ul>
                     <li>
@@ -77,14 +79,14 @@
         <div class="col">
           <div class="tabs mt-3">
             <h5 class="tabs-title mb-5">
-                <i class="bi bi-grid-1x2 text-primary"></i> Page Layouts
+              <i class="bi bi-grid-1x2 text-primary"></i> Page Layouts
             </h5>
             <div class="single-tabs tabs-six">
               <div class="row no-gutters">
                 <div class="col-sm-3">
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <!-- <a class="active" id="v-pills-six-sidebar-tab" data-bs-toggle="pill" href="#v-pills-six-sidebar" role="tab" aria-controls="v-pills-six-sidebar" aria-selected="true"> Sidebar</a> -->
-                    <a class="active"  id="v-pills-six-grid-tab" data-bs-toggle="pill" href="#v-pills-six-grid" role="tab" aria-controls="v-pills-six-grid" aria-selected="true"> Grid System</a>
+                    <a class="active" id="v-pills-six-grid-tab" data-bs-toggle="pill" href="#v-pills-six-grid" role="tab" aria-controls="v-pills-six-grid" aria-selected="true"> Grid System</a>
                     <a id="v-pills-six-contents-tab" data-bs-toggle="pill" href="#v-pills-six-contents" role="tab" aria-controls="v-pills-six-contents" aria-selected="false"> Contents</a>
                     <a id="v-pills-six-media-queries-tab" data-bs-toggle="pill" href="#v-pills-six-media-queries" role="tab" aria-controls="v-pills-six-media-queries" aria-selected="false"> Breakpoints</a>
                   </div>
@@ -92,82 +94,68 @@
                 <div class="col-sm-9">
                   <div class="spinner" id="spinner"></div>
                   <div class="tab-content" id="v-pills-tabContent" style="display:none">
-                <!--     <div class="tab-pane  " id="v-pills-six-sidebar" role="tabpanel" aria-labelledby="v-pills-six-sidebar-tab">
-                      <div class="tab-text">
-                        <h3 class="mb-2">Sidebar Layout</h3>
-                        <div class="card p-1"> This is a sample card</div>
-                      </div>
-                    </div> -->
+                    <!--     <div class="tab-pane  " id="v-pills-six-sidebar" role="tabpanel" aria-labelledby="v-pills-six-sidebar-tab"><div class="tab-text"><h3 class="mb-2">Sidebar Layout</h3><div class="card p-1"> This is a sample card</div></div></div> -->
                     <div class="tab-pane show active" id="v-pills-six-grid" role="tabpanel" aria-labelledby="v-pills-six-grid-tab">
                       <div class="tab-text">
                         <p class="text">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <h3 class="mb-3">Grid System</h3>
-                              <div class="card p-3">
-                                <p class="text mb-1">The grid is the building blocks used to provide layout service on pages.</p>
-                                <p class="text mb-1">It uses a series of classes for <code>.containers</code>, <code>.row</code> and <code>.col</code> to layout and align content. It’s built with flexbox and is fully responsive.</p>
-                                <p class="text mb-2">The grid can accomodate up to 12 columns.</p>
-                              
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <table class="table table-hover bg-light">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Quick Links</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>
-                                      <a href="#example">Example</a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#grid-option"> Grid Options</a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#auto-layout"> Auto Layout</a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#equal-width"> Setting One Column Width</a>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h3 class="mb-3">Grid System</h3>
+                            <div class="card p-3">
+                              <p class="text mb-1">The grid is the building blocks used to provide layout service on pages.</p>
+                              <p class="text mb-1">It uses a series of classes for <code>.containers</code>, <code>.row</code> and <code>.col</code> to layout and align content. It’s built with flexbox and is fully responsive. </p>
+                              <p class="text mb-2">The grid can accomodate up to 12 columns.</p>
                             </div>
                           </div>
-                          <div class="row mt-3">
-                            <div class="card p-3 m-2">
-                              <h5 class="mb-3" id="example">Example</h5>
-                              <p class="text mb-3">
-                                Below is a three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent <code>.container</code>.
-                              </p>
-                              <div class="container text-center">
-                                <div class="row">
-                                  <div class="col lite">
-                                    Column
-                                  </div>
-                                  <div class="col lite">
-                                    Column
-                                  </div>
-                                  <div class="col lite">
-                                    Column
-                                  </div>
-                                </div>
+                          <div class="col-md-6">
+                            <table class="table table-hover bg-light">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Quick Links</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a href="#example">Example</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#grid-option"> Grid Options</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#auto-layout"> Auto Layout</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#equal-width"> Setting One Column Width</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="row mt-3">
+                          <div class="card p-3 m-2">
+                            <h5 class="mb-3" id="example">Example</h5>
+                            <p class="text mb-3"> Below is a three equal-width columns across all devices and viewports using our predefined grid classes. Those columns are centered in the page with the parent <code>.container</code>. </p>
+                            <div class="container text-center">
+                              <div class="row">
+                                <div class="col lite"> Column </div>
+                                <div class="col lite"> Column </div>
+                                <div class="col lite"> Column </div>
                               </div>
-                             
-                              <div class="card border-0 my-3">
-                                <button class="btn-clipboard">
-                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                                </button>
-                                <pre><code>
+                            </div>
+                            <div class="card border-0 my-3">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																			<code>
 &lt;div class="container text-center"&gt;
   &lt;div class="row"&gt;
     &lt;div class="col lite"&gt;
@@ -181,43 +169,38 @@
     &lt;/div&gt;
    &lt;/div&gt;
   &lt;/div&gt;
-                                </code></pre>
-                              </div>
-                           
+                                </code>
+																		</pre>
+                            </div>
                             <h5 class="my-3" id="grid-option">Grid Options</h5>
                             <table class="table table-bordered mb-4">
                               <thead>
                                 <tr>
                                   <th scope="col"></th>
-                                  <th scope="col">
-                                    xs<br>
+                                  <th scope="col"> xs <br>
                                     <span class="fw-normal">&lt;576px</span>
                                   </th>
-                                  <th scope="col">
-                                    sm<br>
+                                  <th scope="col"> sm <br>
                                     <span class="fw-normal">≥576px</span>
                                   </th>
-                                  <th scope="col">
-                                    md<br>
+                                  <th scope="col"> md <br>
                                     <span class="fw-normal">≥768px</span>
                                   </th>
-                                  <th scope="col">
-                                    lg<br>
+                                  <th scope="col"> lg <br>
                                     <span class="fw-normal">≥992px</span>
                                   </th>
-                                  <th scope="col">
-                                    xl<br>
+                                  <th scope="col"> xl <br>
                                     <span class="fw-normal">≥1200px</span>
                                   </th>
-                                  <th scope="col">
-                                    xxl<br>
+                                  <th scope="col"> xxl <br>
                                     <span class="fw-normal">≥1400px</span>
                                   </th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code></th>
+                                  <th class="text-nowrap" scope="row">Container <code class="fw-normal">max-width</code>
+                                  </th>
                                   <td>None (auto)</td>
                                   <td>540px</td>
                                   <td>720px</td>
@@ -227,12 +210,24 @@
                                 </tr>
                                 <tr>
                                   <th class="text-nowrap" scope="row">Class prefix</th>
-                                  <td><code>.col-</code></td>
-                                  <td><code>.col-sm-</code></td>
-                                  <td><code>.col-md-</code></td>
-                                  <td><code>.col-lg-</code></td>
-                                  <td><code>.col-xl-</code></td>
-                                  <td><code>.col-xxl-</code></td>
+                                  <td>
+                                    <code>.col-</code>
+                                  </td>
+                                  <td>
+                                    <code>.col-sm-</code>
+                                  </td>
+                                  <td>
+                                    <code>.col-md-</code>
+                                  </td>
+                                  <td>
+                                    <code>.col-lg-</code>
+                                  </td>
+                                  <td>
+                                    <code>.col-xl-</code>
+                                  </td>
+                                  <td>
+                                    <code>.col-xxl-</code>
+                                  </td>
                                 </tr>
                                 <tr>
                                   <th class="text-nowrap" scope="row"># of columns</th>
@@ -241,24 +236,19 @@
                               </tbody>
                             </table>
                             <h5 class="mb-3" id="auto-layout">Auto Layout</h5>
-                            <p class="text mb-3">
-                              Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <code>.col-sm-6</code>.
-                            </p>
-
+                            <p class="text mb-3"> Utilize breakpoint-specific column classes for easy column sizing without an explicit numbered class like <code>.col-sm-6</code>. </p>
                             <h5 class="mb-3" id="auto-layout">Setting One Column Width</h5>
-                            <p class="text mb-3">
-                              Here are two grid layouts that apply to every device and viewport, from xs to xxl. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
-                            </p>
+                            <p class="text mb-3"> Here are two grid layouts that apply to every device and viewport, from xs to xxl. Add any number of unit-less classes for each breakpoint you need and every column will be the same width. </p>
                             <div class="container text-center">
                               <div class="row my-5">
                                 <div class="col lite">
-                                 <code>.col</code>
+                                  <code>.col</code>
                                 </div>
                                 <div class="col-6 lite">
-                                 <code>.col-6</code>
+                                  <code>.col-6</code>
                                 </div>
                                 <div class="col lite">
-                                 <code>.col</code>
+                                  <code>.col</code>
                                 </div>
                               </div>
                               <div class="row my-5">
@@ -274,102 +264,106 @@
                               </div>
                             </div>
                           </div>
-                          </div>
+                        </div>
                         </p>
                       </div>
                     </div>
                     <div class="tab-pane " id="v-pills-six-contents" role="tabpanel" aria-labelledby="v-pills-six-contents-tab">
-                        <div class="tab-text">
-                          <p class="text">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <h3 class="mb-3">Contents</h3>
-                              <div class="card p-3">
-                                <p class="text mb-1">The layout of contents includes images, embed videos, and tables.</p>
+                      <div class="tab-text">
+                        <p class="text">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h3 class="mb-3">Contents</h3>
+                            <div class="card p-3">
+                              <p class="text mb-1">The layout of contents includes images, embed videos, and tables.</p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <table class="table table-hover bg-light">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Type of Contents</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <a href="#images">Images</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#videos"> Embed Videos</a>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <a href="#tables"> Tables</a>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="card p-3 mt-3">
+                            <h5 class="my-3" id="images">Images</h5>
+                            <p class="text mb-3"> All images should be rendered responsive to the breakpoint or screen of the page.</p>
+                            <img src="assets/img/guide_header.jpg" class="img-fluid mb-3" alt="Responsive image">
+                            <div class="alert alert-simple my-3">
+                              <strong>Note</strong> To see that the image is responsive, resize the window of your screen. </code>
+                            </div>
+                            <div class="card border-0 my-3">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																									<code>
+&lt;img src="..." class="img-fluid" alt="..."&gt;
+                                  </code>
+																								</pre>
+                            </div>
+                            <h5 class="my-3" id="videos">Embed Videos</h5>
+                            <p class="text mb-1"> For better watching experience, always consider the aspect ratio of the video so that it won't affect the quality.</p>
+                            <p class="text mb-3"> In embeding video, use the following HTML tags <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code> and <code>&lt;video&gt;</code>. </p>
+                            <div class="alert alert-success  d-flex align-items-start" role="alert">
+                              <div class="alert-icon">
+                                <i class="bi bi-info-circle-fill"></i>
+                              </div>
+                              <div class="alert-message">
+                                <h5 class="alert-title-success"> Tip</h5>
+                                <p class="alert-text"> Since the design library is built on top of Boostrap, you don’t need <code>frameborder="0"</code> on your iframe's. </p>
                               </div>
                             </div>
-                            <div class="col-md-6">
-                              <table class="table table-hover bg-light">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">Type of Contents</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <td>
-                                      <a href="#images">Images</a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#videos"> Embed Videos</a>
-                                    </td>
-                                  </tr>
-                                  <tr>
-                                    <td>
-                                      <a href="#tables"> Tables</a>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                            <div class="ratio ratio-16x9">
+                              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VyhLRJVoIrI"></iframe>
                             </div>
-                            <div class="card p-3 mt-3">
-                                <h5 class="my-3" id="images">Images</h5>
-                                <p class="text mb-3"> All images should be rendered responsive to the breakpoint or screen of the page.</p>
-                                <img src="assets/img/guide_header.jpg" class="img-fluid mb-3" alt="Responsive image">
-                                <div class="alert alert-simple my-3">
-                                  <strong>Note</strong> To see that the image is responsive, resize the window of your screen.</code>
-                                </div>
-                                <div class="card border-0 my-3">
-                                  <button class="btn-clipboard">
-                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                                  </button>
-                                  <pre><code>
-&lt;img src="..." class="img-fluid" alt="..."&gt;
-                                  </code></pre>
-                                </div>
-                                <h5 class="my-3" id="videos">Embed Videos</h5>
-                                <p class="text mb-1"> For better watching experience, always consider the aspect ratio of the video so that it won't affect the quality.</p>
-                                <p class="text mb-3"> In embeding video, use the following HTML tags <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code> and <code>&lt;video&gt;</code>.</p>
-                             
-                                <div class="alert alert-success  d-flex align-items-start" role="alert">
-                                  <div class="alert-icon">
-                                    <i class="bi bi-info-circle-fill"></i>
-                                  </div>
-                                  <div class="alert-message">
-                                    <h5 class="alert-title-success"> Tip</h5>
-                                    <p class="alert-text"> Since the design library is built on top of Boostrap, you don’t need <code>frameborder="0"</code> on your iframe's.</p>
-                                  </div>
-                                </div>
-                                <div class="ratio ratio-16x9">
-                                  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VyhLRJVoIrI"></iframe>
-                                </div>
-                                <div class="card border-0 my-3">
-                                  <button class="btn-clipboard">
-                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                                  </button>
-                                  <pre><code>
+                            <div class="card border-0 my-3">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																									<code>
 &lt;div class="ratio ratio-16x9"&gt;
   &lt;iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VyhLRJVoIrI"&gt;&lt;/iframe&gt;
  &lt;/div&gt;
- </code></pre>
- <div class="alert alert-success  d-flex align-items-start" role="alert">
-  <div class="alert-icon">
-    <i class="bi bi-info-circle-fill"></i>
-  </div>
-  <div class="alert-message">
-    <h5 class="alert-title-success"> Tip</h5>
-    <p class="alert-text"> Modals can also be alternative to embed videos, refer to <a href="components.html">UI Components</a> section.</p>
-  </div>
-</div>
-                                  <p class="text my-3"> The following are available aspect ration that you can use. .</p>
-                                  <img src="./assets/img/aspect-ratio.JPG" class="img-fluid"/> 
-                                  <div class="card border-0 my-3">
-                                    <button class="btn-clipboard">
-                                      <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                                    </button>
-                                    <pre><code>&lt;div class="ratio ratio-1x1"&gt;
+ </code>
+																								</pre>
+                              <div class="alert alert-success  d-flex align-items-start" role="alert">
+                                <div class="alert-icon">
+                                  <i class="bi bi-info-circle-fill"></i>
+                                </div>
+                                <div class="alert-message">
+                                  <h5 class="alert-title-success"> Tip</h5>
+                                  <p class="alert-text"> Modals can also be alternative to embed videos, refer to <a href="components.html">UI Components</a> section. </p>
+                                </div>
+                              </div>
+                              <p class="text my-3"> The following are available aspect ration that you can use. .</p>
+                              <img src="./assets/img/aspect-ratio.JPG" class="img-fluid" />
+                              <div class="card border-0 my-3">
+                                <button class="btn-clipboard">
+                                  <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                </button>
+                                <pre>
+																										<code>&lt;div class="ratio ratio-1x1"&gt;
   &lt;div&gt;1x1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="ratio ratio-4x3"&gt;
@@ -380,47 +374,48 @@
 &lt;/div&gt;
 &lt;div class="ratio ratio-21x9"&gt;
   &lt;div&gt;21x9&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                                  </div>
-                                </div>
-                                <h5 class="my-3" id="tables">Tables</h5>
-                                <p class="text mb-3"> Tables are used to display data in tabular format. To access the styles use class <code>class="table"</code>.</p>
-                                <table class="table mb-3">
-                                  <thead>
-                                    <tr>
-                                      <th scope="col">Rank #</th>
-                                      <th scope="col">YT Channel</th>
-                                      <th scope="col">Category</th>
-                                      <th scope="col">Subscribers</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <th scope="row">1</th>
-                                      <td>Mr. Beast</td>
-                                      <td>Entertainment</td>
-                                      <td>322.8M</td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">2</th>
-                                      <td>CNN</td>
-                                      <td>News</td>
-                                      <td>321.2M</td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row">3</th>
-                                      <td>NBA</td>
-                                      <td>Sports</td>
-                                      <td>320.2M</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-
-                                <div class="card border-0 my-3">
-                                  <button class="btn-clipboard">
-                                    <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
-                                  </button>
-                                  <pre><code>&lt;div class="ratio ratio-1x1"&gt;
+&lt;/div&gt;</code>
+																									</pre>
+                              </div>
+                            </div>
+                            <h5 class="my-3" id="tables">Tables</h5>
+                            <p class="text mb-3"> Tables are used to display data in tabular format. To access the styles use class <code>class="table"</code>. </p>
+                            <table class="table mb-3">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Rank #</th>
+                                  <th scope="col">YT Channel</th>
+                                  <th scope="col">Category</th>
+                                  <th scope="col">Subscribers</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">1</th>
+                                  <td>Mr. Beast</td>
+                                  <td>Entertainment</td>
+                                  <td>322.8M</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">2</th>
+                                  <td>CNN</td>
+                                  <td>News</td>
+                                  <td>321.2M</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">3</th>
+                                  <td>NBA</td>
+                                  <td>Sports</td>
+                                  <td>320.2M</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <div class="card border-0 my-3">
+                              <button class="btn-clipboard">
+                                <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                              </button>
+                              <pre>
+																									<code>&lt;div class="ratio ratio-1x1"&gt;
 &lt;div&gt;1x1&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="ratio ratio-4x3"&gt;
@@ -431,154 +426,158 @@
 &lt;/div&gt;
 &lt;div class="ratio ratio-21x9"&gt;
 &lt;div&gt;21x9&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-                                </div>
-                                <p class="text mb-3"> On top of the <code>class="table"</code>, there were available variations. Refer below.</p>
-                                <table class="table table-bordered mb-3">
-                                  <thead>
-                                    <tr>
-                                      <th scope="col">Class</th>
-                                      <th scope="col">Description</th>
-                                    </tr>
-                                  </thead>
-                                  <tbody>
-                                    <tr>
-                                      <th scope="row"><code>.table-bordered</code></th>
-                                      <td>To put borders on all sides.</td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row"><code>.table-hovered</code></th>
-                                      <td>When you hovered a row, it will highlight the row.</td>
-                                    </tr>
-                                    <tr>
-                                      <th scope="row"><code>.table-condensed</code></th>
-                                      <td>To make the cells more densed, applicable for long list of data display.</td>
-                                    </tr>
-                                  </tbody>
-                                </table>
-                             </div>
-                            
+&lt;/div&gt;</code>
+																								</pre>
+                            </div>
+                            <p class="text mb-3"> On top of the <code>class="table"</code>, there were available variations. Refer below. </p>
+                            <table class="table table-bordered mb-3">
+                              <thead>
+                                <tr>
+                                  <th scope="col">Class</th>
+                                  <th scope="col">Description</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row">
+                                    <code>.table-bordered</code>
+                                  </th>
+                                  <td>To put borders on all sides.</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">
+                                    <code>.table-hovered</code>
+                                  </th>
+                                  <td>When you hovered a row, it will highlight the row.</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row">
+                                    <code>.table-condensed</code>
+                                  </th>
+                                  <td>To make the cells more densed, applicable for long list of data display.</td>
+                                </tr>
+                              </tbody>
+                            </table>
                           </div>
-                          </p>
                         </div>
+                        </p>
                       </div>
-                      <div class="tab-pane " id="v-pills-six-media-queries" role="tabpanel" aria-labelledby="v-pills-six-media-queries-tab">
+                    </div>
+                    <div class="tab-pane " id="v-pills-six-media-queries" role="tabpanel" aria-labelledby="v-pills-six-media-queries-tab">
                       <div class="tab-text">
                         <p class="text m-3">
-                        <h3 >Breakpoints</h3>
+                        <h3>Breakpoints</h3>
                         </p>
                         <div class="row mt-3">
                           <div class="card p-3">
-                                <p class="text mb-2">Setting up the web application dimensions in different screen sizes of the device. These breakpoints will be used to create a flexible interfaces regardless the site is viewed in mobile, tablets or desktop.</p>
+                            <p class="text mb-2">Setting up the web application dimensions in different screen sizes of the device. These breakpoints will be used to create a flexible interfaces regardless the site is viewed in mobile, tablets or desktop.</p>
                           </div>
                         </div>
-
-                          <h4 class="my-3">Core Concepts</h4>
-                             <div class="card border-0">
-                               <p class="text mb-3">There are six default breakpoints (grid tiers) to make a responsive design. The following are the identified screen size dimensions. </p>
-                              
-                                    <div class="card-heading">
-                                            <h5 class="my-3" id="min-setup">Default Breakpoints</h5>
-                                          </div>
-                                          <div class="card p-3 border-0">
-                                          <table class="table border-0">
-                                              <thead>
-                                                <tr style="border-bottom-color:var(--primary)">
-                                                  <th>Breakpoint</th>
-                                                  <th>Class infix</th>
-                                                  <th>Dimensions</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr style="border-bottom-color: var(--charcoal-lite)">
-                                                  <td>X-Small</td>
-                                                  <td><em>None</em></td>
-                                                  <td>&lt;576px</td>
-                                                </tr>
-                                                <tr style="border-bottom-color: #E1E1E1">
-                                                  <td>Small</td>
-                                                  <td><code>sm</code></td>
-                                                  <td>&ge;576px</td>
-                                                </tr>
-                                                <tr style="border-bottom-color: #E1E1E1">
-                                                  <td>Medium</td>
-                                                  <td><code>md</code></td>
-                                                  <td>&ge;768px</td>
-                                                </tr>
-                                                <tr style="border-bottom-color: #E1E1E1">
-                                                  <td>Large</td>
-                                                  <td><code>lg</code></td>
-                                                  <td>&ge;992px</td>
-                                                </tr>
-                                                <tr style="border-bottom-color: #E1E1E1">
-                                                  <td>Extra large</td>
-                                                  <td><code>xl</code></td>
-                                                  <td>&ge;1200px</td>
-                                                </tr>
-                                                <tr style="border-bottom-color: #E1E1E1">
-                                                  <td>Extra extra large</td>
-                                                  <td><code>xxl</code></td>
-                                                  <td>&ge;1400px</td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </div>
-                                          <div class="alert alert-simple mt-3">
-                                              <strong>Note:</strong> Breakpoint width are multiples of 12 and customizable via Sass— in a Sass map in the <code>_variables.scss</code> stylesheet.
-                                            </div>
-                                       <p class="text mb-3">Breakpoints are supported through using a handful of media queries that will make the page responsive as viewport changes. </p>
-                                  
-                                    <div class="card p-3">
-                                          <table class="table border-0">
-                                              <thead>
-                                                <tr style="border-bottom-color: #FF0009;">
-                                                  <th class="col-md-3">Viewport</th>
-                                                  <th class="col-md-6">Breakpoint</th>
-                                                  <th class="col-md-3">Notes</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr style="border-bottom-color: #E1E1E1">
-                                                  <td>Min-width</td>
-                                                  <td style="font-size: 12px">
-                                                    <ul style="list-style-type:circle;">
-                                                      <li>@include media-breakpoint-up(sm) { ... }</li>
-                                                      <li>@include media-breakpoint-up(md) { ... }</li>
-                                                      <li>@include media-breakpoint-up(lg) { ... }</li>
-                                                      <li>@include media-breakpoint-up(xl) { ... }</li>
-                                                      <li>@include media-breakpoint-up(xxl) { ... }</li>
-                                                    </ul>
-                                                  </td>
-                                                  <td style="font-size: 12px">
-                                                    For xs breakpoint, @media (min-width: 0) { ... } is used.
-                                                  </td>
-                                                </tr>
-                                                <tr style="border-bottom-color: #E1E1E1">
-                                                  <td>Max-width</td>
-                                                  <td style="font-size: 12px">
-                                                    <ul style="list-style-type:circle;">
-                                                      <li>@include media-breakpoint-down(sm) { ... }</li>
-                                                      <li>@include media-breakpoint-down(md) { ... }</li>
-                                                      <li>@include media-breakpoint-down(lg) { ... }</li>
-                                                      <li>@include media-breakpoint-down(xl) { ... }</li>
-                                                      <li>@include media-breakpoint-down(xxl) { ... }</li>
-                                                    </ul>
-                                                  </td>
-                                                  <td style="font-size: 12px">
-                                                    For xs breakpoint, @media (max-width: 0) { ... } is used.
-                                                  </td>
-                                                </tr>
-                                              </tbody>
-                                            </table>
-                                          </div>
-
-                             
-                             </div>
-
-                             
-       
-                         
-
+                        <h4 class="my-3">Core Concepts</h4>
+                        <div class="card border-0">
+                          <p class="text mb-3">There are six default breakpoints (grid tiers) to make a responsive design. The following are the identified screen size dimensions. </p>
+                          <div class="card-heading">
+                            <h5 class="my-3" id="min-setup">Default Breakpoints</h5>
+                          </div>
+                          <div class="card p-3 border-0">
+                            <table class="table border-0">
+                              <thead>
+                                <tr style="border-bottom-color:var(--primary)">
+                                  <th>Breakpoint</th>
+                                  <th>Class infix</th>
+                                  <th>Dimensions</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr style="border-bottom-color: var(--charcoal-lite)">
+                                  <td>X-Small</td>
+                                  <td>
+                                    <em>None</em>
+                                  </td>
+                                  <td>&lt;576px</td>
+                                </tr>
+                                <tr style="border-bottom-color: #E1E1E1">
+                                  <td>Small</td>
+                                  <td>
+                                    <code>sm</code>
+                                  </td>
+                                  <td>&ge;576px</td>
+                                </tr>
+                                <tr style="border-bottom-color: #E1E1E1">
+                                  <td>Medium</td>
+                                  <td>
+                                    <code>md</code>
+                                  </td>
+                                  <td>&ge;768px</td>
+                                </tr>
+                                <tr style="border-bottom-color: #E1E1E1">
+                                  <td>Large</td>
+                                  <td>
+                                    <code>lg</code>
+                                  </td>
+                                  <td>&ge;992px</td>
+                                </tr>
+                                <tr style="border-bottom-color: #E1E1E1">
+                                  <td>Extra large</td>
+                                  <td>
+                                    <code>xl</code>
+                                  </td>
+                                  <td>&ge;1200px</td>
+                                </tr>
+                                <tr style="border-bottom-color: #E1E1E1">
+                                  <td>Extra extra large</td>
+                                  <td>
+                                    <code>xxl</code>
+                                  </td>
+                                  <td>&ge;1400px</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <div class="alert alert-simple mt-3">
+                            <strong>Note:</strong> Breakpoint width are multiples of 12 and customizable via Sass— in a Sass map in the <code>_variables.scss</code> stylesheet.
+                          </div>
+                          <p class="text mb-3">Breakpoints are supported through using a handful of media queries that will make the page responsive as viewport changes. </p>
+                          <div class="card p-3">
+                            <table class="table border-0">
+                              <thead>
+                                <tr style="border-bottom-color: #FF0009;">
+                                  <th class="col-md-3">Viewport</th>
+                                  <th class="col-md-6">Breakpoint</th>
+                                  <th class="col-md-3">Notes</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr style="border-bottom-color: #E1E1E1">
+                                  <td>Min-width</td>
+                                  <td style="font-size: 12px">
+                                    <ul style="list-style-type:circle;">
+                                      <li>@include media-breakpoint-up(sm) { ... }</li>
+                                      <li>@include media-breakpoint-up(md) { ... }</li>
+                                      <li>@include media-breakpoint-up(lg) { ... }</li>
+                                      <li>@include media-breakpoint-up(xl) { ... }</li>
+                                      <li>@include media-breakpoint-up(xxl) { ... }</li>
+                                    </ul>
+                                  </td>
+                                  <td style="font-size: 12px"> For xs breakpoint, @media (min-width: 0) { ... } is used. </td>
+                                </tr>
+                                <tr style="border-bottom-color: #E1E1E1">
+                                  <td>Max-width</td>
+                                  <td style="font-size: 12px">
+                                    <ul style="list-style-type:circle;">
+                                      <li>@include media-breakpoint-down(sm) { ... }</li>
+                                      <li>@include media-breakpoint-down(md) { ... }</li>
+                                      <li>@include media-breakpoint-down(lg) { ... }</li>
+                                      <li>@include media-breakpoint-down(xl) { ... }</li>
+                                      <li>@include media-breakpoint-down(xxl) { ... }</li>
+                                    </ul>
+                                  </td>
+                                  <td style="font-size: 12px"> For xs breakpoint, @media (max-width: 0) { ... } is used. </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
