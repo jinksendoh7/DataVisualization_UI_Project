@@ -774,16 +774,293 @@
                     </div>
                     <div class="tab-pane " id="v-pills-six-cards" role="tabpanel" aria-labelledby="v-pills-six-cards-tab">
                       <div class="tab-text">
-                        <h3>Cards Aaron</h3>
-                        <p class="text">
-                        <div class="card">
-                          <div class="card-primary">
-                            <div class="card-body"> This is some text within a card body. </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h3 class="mb-2">Cards</h3>
+                            <div class="card p-3 mb-3">
+                              <p class="text mb-3"> A box-form container that holds the website's information and charts. It flexibly design the presentation of the website using multiple variants and option sizes. </p>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="mt-2">
+                              <table class="table table-hover bg-light">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Variations</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <a href="#card-lkbtn">Cards with links and buttons</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#card-img">Cards with images</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                    <a href="#card-sz">Cards sizing</a>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
                           </div>
                         </div>
-                        </p>
+
+                        <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="card-lkbtn">Cards with links and buttons</h5>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                              <p class="text mb-3">Cards are easily be customized by adding <code class="highlighter-rouge">.card-title</code> to a <code class="highlighter-rouge">&lt;h*&gt;</code> tag. Similarly, links and buttons are added and placed next to each other by adding <code class="highlighter-rouge">.card-link</code> and <code class="highlighter-rouge">.btn</code> to an <code class="highlighter-rouge">&lt;a&gt;</code> tag.  </p>
+                              <p class="text mb-3">For showing additional information about the charts, a subtitle class is available to support the main content. It is used by adding a <code class="highlighter-rouge">.card-subtitle</code> to a <code class="highlighter-rouge">&lt;h*&gt;</code> tag. </p>
+                              <div class="bd-example">
+<div class="card" style="width: 25rem;">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
+</div>
+                            </div>
+                          </div>
+                          <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+  &lt;div class="card" style="width: 25rem;"&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+      &lt;h6 class="card-subtitle mb-2 text-muted"&gt;Card subtitle&lt;/h6&gt;
+      &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+      &lt;a href="#" class="card-link"&gt;Card link&lt;/a&gt;
+      &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;                       
+                                      </code>
+																		</pre>
+                          </div>
+                        </div>
                       </div>
+
+
+
+                      <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="card-img">Cards with images</h5>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                              <p class="text mb-3">Images as well as charts can be embedded in the card and be placed either top or bottom of the container. <code class="highlighter-rouge">.card-img-top</code> and <code class="highlighter-rouge">.card-img-bottom</code> place an image to the top and bottom, respectively. In the same way, text can be displayed in the card within <code class="highlighter-rouge">.card-text</code>. </p>
+                              <div class="bd-example">
+<div class="card" style="width: 25rem;">
+  <img class="card-img-top" src="./assets/img/cards-img-cap.svg" alt="Card image cap" />
+  <div class="card-body">
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+</div>
+</div>
+                          </div>
+                          <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+  &lt;div class="card" style="width: 25rem;"&gt;
+    &lt;img class="card-img-top" src="./assets/img/cards-img-cap.svg" alt="Card image cap" &gt;
+      &lt;div class="card-body"&gt;
+        &lt;p class="card-text"&gt;Some quick example text to build on the card title and make up the bulk of the card's content.&lt;/p&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;                       
+                                      </code>
+																		</pre>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                      <div class="card p-3 mt-3">
+                          <div class="card-heading">
+                            <h5 class="my-3" id="card-sz">Cards sizing</h5>
+                            <div class="d-flex-md justify-content-start align-content-center p-1 mb-3">
+                              <p class="text mb-3">Cards are 100% wide in width unless specified. There are several options to customized card sizes.</p>
+                              <div class="card p-3 border-0">
+                                  <ul style="list-style-type:circle;">
+                                    <li>
+                                       <a href="#css-class">CSS class</a>
+                                    </li>
+                                    <li>
+                                      <a href="#utilities">card utilities</a>
+                                    </li>
+                                    <li>
+                                      <a href="#grid-class">grid class</a>
+                                    </li>
+                                  </ul>
+                              </div>
+                                  
+
+                                <!--css class-->
+                                <div class="card p-3">
+                                  <h6 class="my-3" id="css-class">Using CSS customization</h6>
+                                  <p class="text mb-3">CSS stylesheets or as inline style to specify width of the card. </p>
+                                  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Chart</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
+</div>
+
+                        <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+  &lt;div class="card" style="width: 18rem;"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Sample text&lt;/h5&gt;
+        &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;                       
+                                      </code>
+																		</pre>
+                          </div>
+                                </div>
+                               
+
+                               <!--card utilities-->
+                                <div class="card p-3">
+                                  <h6 class="my-3" id="utilities">Using card utilities</h6>
+                                  <p class="text mb-3">There are various available sizing utilities options to set the dimensions. This can be seen in the dashboard wherein chart sizes vary from one another depending on the importance and content of the charts.</p>
+                                  
+                                  <div class="card w-75">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="btn btn-primary">Button</a>
+  </div>
+</div>
+
+<div class="card w-50">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="#" class="card-link">Link</a>
+  </div>
+</div>
+
+                        <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+  &lt;div class="card w-75"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+        &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="card w-50"&gt;
+      &lt;div class="card-body"&gt;
+        &lt;h5 class="card-title"&gt;Card title&lt;/h5&gt;
+        &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+        &lt;a href="#" class="card-link"&gt;Link&lt;/a&gt;
+      &lt;/div&gt;
+  &lt;/div&gt; 
+
+                                      </code>
+																		</pre>
+                          </div>
+                                </div>
+
+
+
+                                 <!--grid class-->
+                                <div class="card p-3">
+                                  <h6 class="my-3" id="grid-class">Using grid classes</h6>
+                                  <p class="text mb-3">Grids have its own specifications for column and row width.</p>
+                                  
+                                  <div class="row">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Chart 1</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="card-link">Link</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Chart 2</h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-primary">Button</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+                        <div class="card border-0 mt-3">
+                            <button class="btn-clipboard mt-3">
+                              <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                            </button>
+                            <pre class="mt-3">
+																			<code>
+  &lt;div class="row"&gt;
+    &lt;div class="col-sm-4"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h5 class="card-title"&gt;Chart 1&lt;/h5&gt;
+          &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+          &lt;a href="#" class="card-link"&gt;Link&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="col-sm-8"&gt;
+      &lt;div class="card"&gt;
+        &lt;div class="card-body"&gt;
+          &lt;h5 class="card-title"&gt;Chart 1&lt;/h5&gt;
+          &lt;p class="card-text"&gt;With supporting text below as a natural lead-in to additional content.&lt;/p&gt;
+          &lt;a href="#" class="btn btn-primary"&gt;Button&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+
+                                      </code>
+																		</pre>
+                          </div>
+                                </div>
+
+                          </div>
+                          
+
+
+                          
+                        </div>
+                      </div>
+
+
+
+
                     </div>
+                </div>
+
+
                     <div class="tab-pane " id="v-pills-six-chips" role="tabpanel" aria-labelledby="v-pills-six-chips-tab">
                       <div class="tab-text">
                         <h3 class="mb-3">Chips</h3>
@@ -1242,6 +1519,7 @@ function scrollFunction() {
                                     </td>
                                   </tr>
                                   <tr>
+                                    <td>
                                     <a href="#spnr-color">Spinner Color</a>
                                     </td>
                                   </tr>
@@ -1273,7 +1551,7 @@ function scrollFunction() {
 																			<code>
   &lt;div class="spinner-primary" role="status"&gt;
     &lt;span class="sr-only"&gt;Loading...&lt;/span&gt;
-
+  &lt;/div&gt;
                           </code>
 																		</pre>
                           </div>
