@@ -37,7 +37,7 @@
                 <span class="toggler-icon"></span>
               </button>
               <a class="navbar-brand" href="javascript:void(0)">
-                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live<span class="live-green">Wire</span>
+                <img src="./assets/img/livewire-smlogo.png" alt="Logo" class="pl-2" /> Live <span class="live-green">Wire</span>
               </a>
               <div class="collapse navbar-collapse justify-content-end" id="navbarFour">
                 <ul class="navbar-nav">
@@ -95,24 +95,118 @@
                   <div class="tab-content" id="v-pills-tabContent" style="display:none">
                     <div class="tab-pane  show active" id="v-pills-six-getting-started" role="tabpanel" aria-labelledby="v-pills-six-getting-started-tab">
                       <div class="tab-text">
-                        <h2 class="mb-2">Getting Started</h2>
-                        <hr>
-                        <div class="text pb-3">
-                          <div>
-                            <h3>Welcome</h3><br>
-                            <img src="assets/img/guide_header.jpg" class="img-fluid pb-3" alt="Responsive image">
-                            <p>
-                              This is your guide in using LiveWire's brand typography and colors.
-                              Here, you'll have better understanding on how to use LiveWire's branding
-                              and assets consistently that stays true to the brand and embodies
-                              <span class="text-primary">PASSION, SPEED and ENERGY</span> throughout.
-                            </p>
-                            <br>
-                            <p>
-                              Feel free to use this guide in creating LiveWire holistic materials,
-                              whether for branding or informative data charts. Navigate using the main menus at the top
-                              and specific sections using the side bar to the left of the page.
-                            </p>
+                        <h3 class="mb-3">LiveWire UI Kit</h3>
+                        <div class="card border-0 my-3">
+                          <img src="assets/img/guide_header.jpg" class="img-fluid pb-3" alt="Responsive image">
+                          <p class="my-3"> This is your guide in using LiveWire's brand typography and colors. Here, you'll have better understanding on how to use LiveWire's branding and assets consistently that stays true to the brand and embodies <span class="text-primary">PASSION, SPEED and ENERGY</span> throughout. </p>
+                          <p class="mt-3"> The LiveWire UI Kit includes the following:
+                          <div class="list-group my-3">
+                            <a href="components.html" class="list-group-item list-group-item-action py-3" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="text-primary mb-1">
+                                  <i class="bi bi-layers text-primary"></i> UI Elements
+                                </h5>
+                              </div>
+                              <small class="mx-4 mb-2 text-wrap">Collection of building blocks to build the dashboard from zero to up.</small>
+                            </a>
+                            <a href="layouts.html" class="list-group-item list-group-item-action py-3" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="text-primary mb-1">
+                                  <i class="bi bi-bar-chart text-primary"></i> Page Layouts
+                                </h5>
+                              </div>
+                              <small class="mx-4 mb-2 text-wrap">Some core principles and guidelines to layout your pages and content.</small>
+                            </a>
+                            <a href="charts.html" class="list-group-item list-group-item-action py-3" aria-current="true">
+                              <div class="d-flex w-100 justify-content-between">
+                                <h5 class="text-primary mb-1">
+                                  <i class="bi bi-grid-1x2 text-primary"></i> Data Visualization
+                                </h5>
+                              </div>
+                              <small class="mx-4 mb-2 text-wrap">A collection of data charts for your visual needs.</small>
+                            </a>
+                          </div>
+                          </p>
+                          <div class="card py-3 border-0">
+                            <h5 class="mb-3">Getting Started</h5>
+                            <p class="text mb-3">To get started, make sure you do the following steps.</p>
+                            <ol class="list-group list-group-numbered p-3">
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div style="width:98%">
+                                  <div class="fw-bold mb-3">Enable Mobile Responsive</div>
+                                  <p class="text mb-3">Include the <code>&lt;meta name="viewport"&gt;</code> tag as well for <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag">proper responsive behavior</a> in mobile devices. </p>
+                                  <div class="card border-0 my-3">
+                                    <button class="btn-clipboard">
+                                      <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                    </button>
+                                    <pre>
+																						<code>
+&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+    &lt;title&gt;Bootstrap demo&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;                                       
+                                      </code>
+																					</pre>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div style="width:98%">
+                                  <div class="fw-bold mb-3">Include the Boostrap JS and CSS</div>
+                                  <p class="text mb-3"> Place the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> for our CSS, and the <code>&lt;script&gt;</code> tag for our JavaScript bundle before the closing <code>&lt;body&gt;</code>. </p>
+                                  <div class="card border-0 my-3">
+                                    <button class="btn-clipboard">
+                                      <i class="bi bi-clipboard-check-fill" style="font-size:1.5rem; color: var(--primary)"></i>
+                                    </button>
+                                    <pre>
+																						<code>
+&lt;!--CSS --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"&gt;
+&lt;/head&gt;
+&lt;!--JS --&gt;              
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"&gt;&lt;/script&gt;                   
+                                    </code>
+																					</pre>
+                                    <h5 class="my-2">CDN Links</h5>
+                                    <table class="table">
+                                      <thead>
+                                        <tr>
+                                          <th>Description</th>
+                                          <th>URL</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>CSS</td>
+                                          <td>
+                                            <code>https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css</code>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <td>JS</td>
+                                          <td>
+                                            <code>https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js</code>
+                                          </td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <div class="ms-2 me-auto">
+                                  <div class="fw-bold">Read the Documentation</div>
+                                  <p class="my-3"> Read through the documentation so you will be familiarize with the available UI elements. </p>
+                                </div>
+                              </li>
+                            </ol>
                           </div>
                         </div>
                       </div>
