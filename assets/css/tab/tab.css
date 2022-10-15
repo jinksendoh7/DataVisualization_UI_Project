@@ -16,7 +16,7 @@
 /* tabs-six */
 .tabs-six {
   border: none;
- 
+  min-height: 90vh;
   font-family: var(--font-family-medium);
 }
 .tabs-six .nav {
