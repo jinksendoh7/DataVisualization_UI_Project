@@ -13,93 +13,93 @@
 .stat-chart-primary{
     border: 2px solid var(--white);
     color: var(--white);
-    background: var(--primary);
+    background: var(--rosso);
 }
 .stat-chart-primary:hover{
-    color: var(--primary);
+    color: var(--rosso);
     background: var(--white);
     cursor:pointer;
-    border-color: var(--primary);
+    border-color: var(--rosso);
 }
 .stat-chart-primary-outline:hover{
     border: 2px solid var(--white);
     color: var(--white);
-    background: var(--primary);
+    background: var(--rosso);
 }
 .stat-chart-primary-outline{
-    color: var(--primary);
+    color: var(--rosso);
     background: var(--white);
     cursor:pointer;
-    border-color: var(--primary);
+    border-color: var(--rosso);
 }
 .stat-chart-warning{
     border: 2px solid var(--white);
-    color: var(--black);
-    background: var(--tetra-mustard);
+    color: var(--white);
+    background: var(--apricot);
 }
 .stat-chart-warning:hover{
-    color: var(--black);
+    color: var(--apricot);
     background: var(--white);
     cursor:pointer;
-    border-color: var(--tetra-mustard);
+    border-color: var(--apricot);
 }
 .stat-chart-warning-outline:hover{
     border: 2px solid var(--white);
     color: var(--black);
-    background: var(--tetra-mustard);
+    background: var(--apricot);
 }
 .stat-chart-warning-outline{
     color: var(--black);
     background: var(--white);
     cursor:pointer;
-    border-color: var(--tetra-mustard);
+    border-color: var(--apricot);
 }
 .stat-chart-success{
     border: 2px solid var(--white);
     color: var(--white);
-    background: var(--sat-green);
+    background: var(--shamrock);
 }
 .stat-chart-success:hover{
-    color: var(--sat-green);
+    color: var(--shamrock);
     background: var(--white);
     cursor:pointer;
-    border-color: var(--sat-green);
+    border-color: var(--shamrock);
 }
 
 .stat-chart-success-outline:hover{
     border: 2px solid var(--white);
     color: var(--white);
-    background: var(--sat-green);
+    background: var(--shamrock);
 }
 .stat-chart-success-outline{
-    color: var(--sat-green);
+    color: var(--shamrock);
     background: var(--white);
     cursor:pointer;
-    border-color: var(--sat-green);
+    border-color: var(--shamrock);
 }
 
 
 .stat-chart-dark{
     border: 2px solid var(--white);
     color: var(--white);
-    background: var(--muted-blue);
+    background: var(--navy-blue);
 }
 .stat-chart-dark:hover{
     color: var(--p);
     background: var(--white);
     cursor:pointer;
-    border-color: var(--muted-blue);
+    border-color: var(--navy-blue);
 }
 .stat-chart-dark-outline:hover{
-    border: 2px solid var(--muted-blue);
-    color: var(--muted-blue);
+    border: 2px solid var(--navy-blue);
+    color: var(--navy-blue);
     background: var(--white);
 }
 .stat-chart-dark-outline{
-    color: var(--muted-blue);
+    color: var(--navy-blue);
     background: var(--white);
     cursor:pointer;
-    border-color: var(--muted-blue);
+    border-color: var(--navy-blue);
 }
 .stat-chart-title{
     font-family: var(--font-family-bold);

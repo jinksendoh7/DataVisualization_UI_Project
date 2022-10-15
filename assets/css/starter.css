@@ -466,4 +466,26 @@ pre {
   border-radius: 20px;
   width: 40px;
 }
+
+.img-bg{
+  background-image: url('../img/LiveWire-Banner-Hero.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.lead{
+  color:var(--white) !important;
+  box-shadow: var(--shadow-4);
+}
+.avatar {
+  vertical-align: middle !important;
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+}
+.footer{
+  border-top: 4px solid var(--primary);
+  padding: 20px 10px;
+  background: var(--tetra-mustard);
+  color: var(--white) !important;
+}
 /*# sourceMappingURL=starter.css.map */
