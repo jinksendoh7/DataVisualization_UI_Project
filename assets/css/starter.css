@@ -477,7 +477,7 @@ pre {
 }
 .lead{
   color:var(--white) !important;
-  box-shadow: var(--shadow-4);
+  box-shadow: var(--shadow-4) !important;
 }
 .avatar {
   vertical-align: middle !important;
