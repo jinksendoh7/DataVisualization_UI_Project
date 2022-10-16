@@ -6,7 +6,11 @@
         document.getElementById('v-pills-tabContent').style.display = 'block';
     },1000)
     
-
+    setTimeout(()=>{
+      document.getElementById('spinner').style.display = 'none'
+      document.getElementById('div').style.display = 'block';
+  },1000)
+  
 
 }) ();
 

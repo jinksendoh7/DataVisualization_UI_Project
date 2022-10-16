@@ -64,6 +64,10 @@ body {
   color: var(--black);
   font-size: 16px;
 }
+
+.icon-red {
+  color: #CC0007 !important;
+}
 @media (max-width: 991px) {
   body {
     font-size: 14px;
@@ -403,7 +407,7 @@ pre {
 #scrollToTop {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 70px;
   right: 30px;
   z-index: 99;
   font-size: 18px;
@@ -461,5 +465,29 @@ pre {
   border-color: var(--white);
   border-radius: 20px;
   width: 40px;
+}
+
+.img-bg{
+  background-image: url('../img/LiveWire-Banner-Hero.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.lead{
+  color:var(--white) !important;
+  box-shadow: var(--shadow-4);
+}
+.avatar {
+  vertical-align: middle !important;
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+}
+.footer{
+  border-top: 3px solid var(--primary);
+  padding: 15px 5px;
+  background: var(--tetra-mustard);
+  color: var(--black) !important;
+  width:100%;
+  text-align: center;
 }
 /*# sourceMappingURL=starter.css.map */
