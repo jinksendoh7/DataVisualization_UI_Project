@@ -451,6 +451,9 @@ pre {
   animation: spinner-zp9dbg 0.6s infinite linear;
 }
 
+.bg-profile{
+  background: #efefef;
+}
 
 .lite{
   background: var(--charcoal-lite);
