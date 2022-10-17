@@ -88,12 +88,12 @@
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="active" id="v-pills-six-stat-charts-tab" data-bs-toggle="pill" href="#v-pills-six-stat-charts" role="tab" aria-controls="v-pills-six-stat-charts" aria-selected="true"> Stat Charts</a>
                     <a id="v-pills-six-doughnut-charts-tab" data-bs-toggle="pill" href="#v-pills-six-doughnut-charts" role="tab" aria-controls="v-pills-doughnut-chartsdoughnut-charts" aria-selected="false"> Donut Charts</a>
+                    <a id="v-pills-six-pie-charts-tab" data-bs-toggle="pill" href="#v-pills-six-pie-charts" role="tab" aria-controls="v-pills-six-pie-charts" aria-selected="false"> Pie Charts</a>
                     <a id="v-pills-six-area-charts-tab" data-bs-toggle="pill" href="#v-pills-six-area-charts" role="tab" aria-controls="v-pills-six-area-charts" aria-selected="false"> Area Charts</a>
                     <a id="v-pills-six-bar-charts-tab" data-bs-toggle="pill" href="#v-pills-six-bar-charts" role="tab" aria-controls="v-pills-six-bar-charts" aria-selected="false"> Bar Charts</a>
                     <a id="v-pills-six-line-charts-tab" data-bs-toggle="pill" href="#v-pills-six-line-charts" role="tab" aria-controls="v-pills-line-charts" aria-selected="false"> Line Charts</a>
                     <a id="v-pills-six-scatter-charts-tab" data-bs-toggle="pill" href="#v-pills-six-scatter-charts" role="tab" aria-controls="v-pills-six-scatter-charts" aria-selected="false"> Scatter Charts</a>
                     <a id="v-pills-six-mixed-charts-tab" data-bs-toggle="pill" href="#v-pills-six-mixed-charts" role="tab" aria-controls="v-pills-six-mixed-charts" aria-selected="false"> Mixed Charts</a>
-                    <a id="v-pills-six-pie-charts-tab" data-bs-toggle="pill" href="#v-pills-six-pie-charts" role="tab" aria-controls="v-pills-six-pie-charts" aria-selected="false"> Pie Charts</a>
                   </div>
                 </div>
                 <div class="col-sm-9">
@@ -104,7 +104,7 @@
                         <h3 class="mb-3">Stat Chart</h3>
                         <div class="row">
                           <div class="col-md-8">
-                            <div class="card p-3 m-2">
+                            <div class="card border-0">
                               <p class="text mb-1">A way to display single value data in order to make the value stand out at a glance.</p>
                               <p class="text mb-3">Stat chart usually aggregated data value to provide meaningful insights. It is recommended that it is always display at the top and should start on the left side of the screen</p>
                             </div>
@@ -140,7 +140,7 @@
                             </table>
                           </div>
                         
-                          <div class="card m-3 p-3">
+                          <div class="card border-0 p-3">
                             <h3 class="mb-3" id="stat-chart-simple">Simple Stat Chart</h3>
                             <p class="text mb-2">The simple stat chart comes with the following variants such as primary, secondary, success and info.</p>
                           
@@ -334,7 +334,7 @@
 <!-- BRENNDON - I INPUTTED HERE  -->
                           <div class="row">
                             <div class="col-md-8">
-                              <div class="card p-3">
+                              <div class="card border-0">
                                 <p class="text mb-1">Provides a clear overview of data relationships through percentages. Donut charts are a consistent way to compare the relationships of a set of values. This can be utilized to maintain on top of the most relative important information gathered through a statistic of data.</p>
                               </div>
                             </div>
@@ -381,7 +381,7 @@
                         <h3 class="mb-3">Area Charts</h3>
                         </p>
                         <div class="row">
-                            <div class="card mx-3 p-3">
+                            <div class="card border-0 p-3">
                               <p class="text mb-1">A quantitative data displacement for categorical charting, emphasizing fluctuations based on respective data. Ability to visual reflect on the changes through specific time frames while conclusively distinguishing the relative data represented.</p>
                             </div>
                               <div class="card p-3 border-0 my-2">
@@ -406,7 +406,7 @@
                         </p>
                         <div class="row">
                           <div class="col-md-8">
-                            <div class="card p-3">
+                            <div class="card border-0">
                               <p class="text mb-1">Provides comparison of categorical data through length of the bars based on the represented data, either horizontally or vertically. The charts can be represented efficiently based on displaying single values, multi values, and stacked values.</p>
                             </div>
                           </div>
@@ -586,16 +586,20 @@
                         <h3 class="mb-3">Pie Charts</h3>
                         </p>
                           <div class="row">
-                            <div class="col-md-8">
-                              <div class="card p-3 m-3">
-                                <p class="text mb-1">A simple way to display proportional data, another alternative to the doughnut charts. Pie charts visibly display data relationships based on percentages, a clear visualization of comparisons between set of valeus to a whole. Each pie displays values based on the related category to determine differentiations, allowing easy conclusions to be analyzed.</p>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-10">
-                                <div class="card p-3 m-3">
-                                  <p class="text mb-3">Example:<br>A full representation of a whole based on relative categories based on a 100% ratio. Distinctive clarity through each pie color section and values obtaining most popularity in categories vs least favorable.</p>
-                                <img src="./assets/img/charts/Pie Chart.jpg" class="img-fluid my-2" alt="ScatterChart"/>
+                              <div class="card p-3 border-0 ">
+                                <p class="text mb-3">A simple way to display proportional data, another alternative to the doughnut charts. Pie charts visibly display data relationships based on percentages, a clear visualization of comparisons between set of valeus to a whole. Each pie displays values based on the related category to determine differentiations, allowing easy conclusions to be analyzed.</p>
+                               </div>
+                                <div class="card p-3 border-0">
+                                  <div class="alert alert-primary  d-flex align-items-start" role="alert">
+                                    <div class="alert-icon">
+                                      <i class="bi bi-info-circle-fill"></i>
+                                    </div>
+                                    <div class="alert-message">
+                                      <h5 class="alert-title-primary"> Note</h5>
+                                      <p class="alert-text"> A full representation of a whole based on relative categories based on a 100% ratio. Distinctive clarity through each pie color section and values obtaining most popularity in categories vs least favorable.</p>
+                                    </div>
+                                  </div>
+                                <img src="./assets/img/charts/Pie Chart.jpg" class="img-fluid p-3" alt="ScatterChart"/>
                                 </div>
                               </div>
                             </div>
@@ -614,7 +618,7 @@
    </div>
    <footer class="footer">
     <div class="container">
-      <span class="text-primary fw-bold">Copyright 2022, Internet & Web Applications. INFO-3170 - Data Visualization & UI, Fall of 2022</span>
+      <span class="text-white fw-bold">Copyright 2022, Internet & Web Applications. INFO-3171 - Data Visualization & UI, Fall of 2022</span>
     </div>
   </footer>
       <!--====== MAIN AREA ENDS ======-->

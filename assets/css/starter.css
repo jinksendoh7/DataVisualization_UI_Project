@@ -506,10 +506,10 @@ pre {
   border-radius: 50% !important;
 }
 .footer{
-  border-top: 3px solid var(--primary);
+  border-top: 3px solid var(--white);
   padding: 15px 5px;
-  background: var(--tetra-mustard);
-  color: var(--black) !important;
+  background: var(--primary);
+  color: var(--white) !important;
   width:100%;
   text-align: center;
 }
