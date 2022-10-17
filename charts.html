@@ -331,7 +331,6 @@
                         <p class="text">
                         <h3 class="mb-3">Donut Charts</h3>
                         </p>
-<!-- BRENNDON - I INPUTTED HERE  -->
                           <div class="row">
                             <div class="col-md-8">
                               <div class="card border-0">
@@ -369,33 +368,71 @@
                                     <h5 class="my-3">Single Donut Chart</h5>
                                     <p class="text mb-3">Similar to the multi chart, a single value variant can be used to display the relationship between a single metric vs a specific category.</p>
                                   <img src="./assets/img/charts/Single_Doughnut_Chart_LWTheme.jpeg" class="img-fluid p-3" alt="SingleDoughnutChart"/>
-                                  
                                 </div>
                                 </div>
                           </div>
                       </div>
                     </div>
+                    
                     <div class="tab-pane " id="v-pills-six-area-charts" role="tabpanel" aria-labelledby="v-pills-six-area-charts-tab">
                       <div class="tab-text">
                         <p class="text">
                         <h3 class="mb-3">Area Charts</h3>
                         </p>
                         <div class="row">
+                          <div class="col-md-8">
                             <div class="card border-0 p-3">
                               <p class="text mb-1">A quantitative data displacement for categorical charting, emphasizing fluctuations based on respective data. Ability to visual reflect on the changes through specific time frames while conclusively distinguishing the relative data represented.</p>
                             </div>
+                          </div>
+                          <div class="col-md-4">
+                              <table class="table table-hover bg-light">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Variations</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <a href="#area-chart-multi">Multi Value Area Chart</a>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      <a href="#area-chart-stacked">Stacked Value Area Chart</a>
+                                    </td>
+                                  </tr>
+                              </table>
+                            </div>
                               <div class="card p-3 border-0 my-2">
+                                <h5 class="my-3">Multi Value Area Chart</h5>
                                 <div class="alert alert-primary  d-flex align-items-start" role="alert">
                                   <div class="alert-icon">
                                     <i class="bi bi-info-circle-fill"></i>
                                   </div>
-                                  <div class="alert-message">
+                                  <div class="alert-message" id="area-chart-multi">
                                     <h5 class="alert-title-primary"> Preview</h5>
                                     <p class="alert-text"> 
                                       Another relative option in comparing the top 5 content creators view engagements over a time span of four years. Visually attaining insight on the most responsive channels fluctuation in popularity through the time frame.          </div>
                                 </div>
-                                <img src="./assets/img/charts/Area_Chart.jpeg" class="img-fluid p-3" alt="AreaChart"/>
                               </div>
+                                <img src="./assets/img/charts/Area_Chart.jpeg" class="img-fluid p-3" alt="AreaChart"/>
+
+                                <div class="card p-3 border-0 my-2">
+                                  <h5 class="my-3">Stacked Value Area Chart</h5>
+                                  <div class="alert alert-primary  d-flex align-items-start" role="alert">
+                                    <div class="alert-icon">
+                                      <i class="bi bi-info-circle-fill"></i>
+                                    </div>
+                                    <div class="alert-message" id="area-chart-stacked">
+                                      <h5 class="alert-title-primary"> Preview</h5>
+                                      <p class="alert-text"> 
+                                        Alternative visual displacement through stacked notation. Each respectfully color coded based on category reflecting the top 5 viewer engagements.          </div>
+                                  </div>
+                                </div>
+                              <img src="./assets/img/charts/Stacked_Area_Chart1.jpeg" class="img-fluid p-3" alt="StackedAreaChart"/>
+                              
                           </div>
                       </div>
                     </div>
@@ -410,7 +447,6 @@
                               <p class="text mb-1">Provides comparison of categorical data through length of the bars based on the represented data, either horizontally or vertically. The charts can be represented efficiently based on displaying single values, multi values, and stacked values.</p>
                             </div>
                           </div>
-
                           <div class="col-md-4">
                             <table class="table table-hover bg-light">
                               <thead>
@@ -492,16 +528,40 @@
                         </div>
                       </div>
                     </div>
+                    
                     <div class="tab-pane " id="v-pills-six-line-charts" role="tabpanel" aria-labelledby="v-pills-six-line-charts-tab">
                       <div class="tab-text">
                         <p class="text">
                         <h3 class="mb-3">Line Charts</h3>
                         </p>
                           <div class="row">
+                            <div class="col-md-8">
                               <div class="card p-3 border-0">
                                 <p class="text mb-1">Most beneficial when comparing data sets over periods of time. Continuous data representation is best displayed with these charts, allowing full visual representation of relationships of ongoing fluctuation in data. Colors are implemented to make this visual reflection efficient and conclusive.</p>
                               </div>
+                            </div>
+                              <div class="col-md-4">
+                                <table class="table table-hover bg-light">
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">Variations</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <a href="#line-chart-multi">Multi Value Line Chart</a>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <a href="#line-chart-stacked">Stacked Value Line Chart</a>
+                                      </td>
+                                    </tr>
+                                </table>
+                              </div>
                                 <div class="card p-3 border-0">
+                                  <h5 class="my-3">Multi Value Line Chart</h5>
                                   <div class="alert alert-primary  d-flex align-items-start" role="alert">
                                     <div class="alert-icon">
                                       <i class="bi bi-info-circle-fill"></i>
@@ -512,10 +572,24 @@
                                         Relative viewer engagements in relation to each of the top 5 channels through the past four years, reflecting the transition based off each respected channel.</p>
                                     </div>
                                   </div>
-                                <img src="./assets/img/charts/Multivalue_Line_Chart_White.jpeg" class="img-fluid p-3" alt="LineChart"/>
+                                <img src="./assets/img/charts/Multivalue_Line_Chart_White.jpeg"  id="line-chart-multi" class="img-fluid p-3" alt="LineChart"/>
+
+                                <div class="card p-3 border-0" id="line-chart-stacked">
+                                  <h5 class="my-3">Stacked Value Line Chart</h5>
+                                  <div class="alert alert-primary  d-flex align-items-start" role="alert">
+                                    <div class="alert-icon">
+                                      <i class="bi bi-info-circle-fill"></i>
+                                    </div>
+                                    <div class="alert-message">
+                                      <h5 class="alert-title-primary"> Example</h5>
+                                      <p class="alert-text"> 
+                                        Alternative method of displacement providing reflection of transitions based off respected channels through stacked line notations.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                                <img src="./assets/img/charts/Stacked_Line_Chart2.jpeg" class="img-fluid p-3" alt="StackedLineChart"/>
                                 </div>
                               </div>
-                            
                       </div>
                     </div>
                     <div class="tab-pane " id="v-pills-six-scatter-charts" role="tabpanel" aria-labelledby="v-pills-six-scatter-charts-tab">
