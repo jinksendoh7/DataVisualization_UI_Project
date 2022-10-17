@@ -11,6 +11,20 @@
   src: url('../fonts/Quicksand-Medium.ttf');
 }
 
+@font-face {
+  font-family: ZillaSlab-Regular;
+  src: url('../fonts/ZillaSlab-Regular.ttf');
+}
+@font-face {
+  font-family: ZillaSlab-Medium;
+  src: url('../fonts/ZillaSlab-Medium.ttf');
+}
+@font-face {
+  font-family: ZillaSlab-Bold;
+  src: url('../fonts/ZillaSlab-Bold.ttf');
+}
+
+
 /*===========================
   COMMON css 
 ===========================*/
@@ -19,6 +33,9 @@
   --font-family: Quicksand-Regular, sans-serif;
   --font-family-bold: Quicksand-Bold, sans-serif;
   --font-family-medium: Quicksand-Medium,sans-serif;
+  --font-family-sec: ZillaSlab-Regular, sans-serif;
+  --font-family-sec-bold: ZillaSlab-Bold, sans-serif;
+  --font-family-sec-medium: ZillaSlab-Medium,sans-serif;
   --primary: #FF0009;
   --tetra-mustard: #FFCA0D;
   --blue: #0D52FF;
@@ -198,6 +215,9 @@ p {
 .text-regular {
   font-family: var(--font-family), sans-serif;
 
+}
+.text-regular-sec {
+  font-family: var(--font-family-sec), sans-serif;
 }
 
 .text-medium {
