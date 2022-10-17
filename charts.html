@@ -87,12 +87,13 @@
                 <div class="col-sm-3">
                   <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="active" id="v-pills-six-stat-charts-tab" data-bs-toggle="pill" href="#v-pills-six-stat-charts" role="tab" aria-controls="v-pills-six-stat-charts" aria-selected="true"> Stat Charts</a>
-                    <a id="v-pills-six-doughnut-charts-tab" data-bs-toggle="pill" href="#v-pills-six-doughnut-charts" role="tab" aria-controls="v-pills-doughnut-chartsdoughnut-charts" aria-selected="false"> Dougnut Charts</a>
+                    <a id="v-pills-six-doughnut-charts-tab" data-bs-toggle="pill" href="#v-pills-six-doughnut-charts" role="tab" aria-controls="v-pills-doughnut-chartsdoughnut-charts" aria-selected="false"> Donut Charts</a>
                     <a id="v-pills-six-area-charts-tab" data-bs-toggle="pill" href="#v-pills-six-area-charts" role="tab" aria-controls="v-pills-six-area-charts" aria-selected="false"> Area Charts</a>
                     <a id="v-pills-six-bar-charts-tab" data-bs-toggle="pill" href="#v-pills-six-bar-charts" role="tab" aria-controls="v-pills-six-bar-charts" aria-selected="false"> Bar Charts</a>
                     <a id="v-pills-six-line-charts-tab" data-bs-toggle="pill" href="#v-pills-six-line-charts" role="tab" aria-controls="v-pills-line-charts" aria-selected="false"> Line Charts</a>
                     <a id="v-pills-six-scatter-charts-tab" data-bs-toggle="pill" href="#v-pills-six-scatter-charts" role="tab" aria-controls="v-pills-six-scatter-charts" aria-selected="false"> Scatter Charts</a>
                     <a id="v-pills-six-mixed-charts-tab" data-bs-toggle="pill" href="#v-pills-six-mixed-charts" role="tab" aria-controls="v-pills-six-mixed-charts" aria-selected="false"> Mixed Charts</a>
+                    <a id="v-pills-six-pie-charts-tab" data-bs-toggle="pill" href="#v-pills-six-pie-charts" role="tab" aria-controls="v-pills-six-pie-charts" aria-selected="false"> Pie Charts</a>
                   </div>
                 </div>
                 <div class="col-sm-9">
@@ -328,7 +329,7 @@
                     <div class="tab-pane " id="v-pills-six-doughnut-charts" role="tabpanel" aria-labelledby="v-pills-six-doughnut-charts-tab">
                       <div class="tab-text">
                         <p class="text">
-                        <h3 class="mb-3">Doughnut Charts</h3>
+                        <h3 class="mb-3">Donut Charts</h3>
                         </p>
 <!-- BRENNDON - I INPUTTED HERE  -->
                           <div class="row">
@@ -347,12 +348,12 @@
                                 <tbody>
                                   <tr>
                                     <td>
-                                      <a href="#doughnut-chart-multi">Multi Value Doughnut Chart</a>
+                                      <a href="#doughnut-chart-multi">Multi Value Donut Chart</a>
                                     </td>
                                   </tr>
                                   <tr>
                                     <td>
-                                      <a href="#doughnut-chart-single">Single Value Doughnut Chart</a>
+                                      <a href="#doughnut-chart-single">Single Value Donut Chart</a>
                                     </td>
                                   </tr>
                               </table>
@@ -360,12 +361,12 @@
 
                             <div class="row">
                                 <div class="card p-3 border-0" id="doughnut-chart-multi">
-                                  <h5 class="my-3">Multi Value Doughnut Chart</h5>
+                                  <h5 class="my-3">Multi Value Donut Chart</h5>
                                   <p class="text mb-2">A clear representation of related categories based on a 100% ratio, ranging from highest to lowest. Clearly retrieving the most popular categories vs the least favorable.</p>
                                 <img src="./assets/img/charts/Multivalue_Doughnut_Chart_LWTheme.jpeg" class="img-fluid p-3" alt="DoughnutChart"/>
                               </div>
                                   <div class="card p-3 border-0" id="doughnut-chart-single">
-                                    <h5 class="my-3">Single Doughnut Chart</h5>
+                                    <h5 class="my-3">Single Donut Chart</h5>
                                     <p class="text mb-3">Similar to the multi chart, a single value variant can be used to display the relationship between a single metric vs a specific category.</p>
                                   <img src="./assets/img/charts/Single_Doughnut_Chart_LWTheme.jpeg" class="img-fluid p-3" alt="SingleDoughnutChart"/>
                                   
@@ -579,6 +580,28 @@
                           </div>
                       </div>
                     </div>
+                    <div class="tab-pane " id="v-pills-six-pie-charts" role="tabpanel" aria-labelledby="v-pills-six-pie-charts-tab">
+                      <div class="tab-text">
+                        <p class="text">
+                        <h3 class="mb-3">Pie Charts</h3>
+                        </p>
+                          <div class="row">
+                            <div class="col-md-8">
+                              <div class="card p-3 m-3">
+                                <p class="text mb-1">A simple way to display proportional data, another alternative to the doughnut charts. Pie charts visibly display data relationships based on percentages, a clear visualization of comparisons between set of valeus to a whole. Each pie displays values based on the related category to determine differentiations, allowing easy conclusions to be analyzed.</p>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <div class="card p-3 m-3">
+                                  <p class="text mb-3">Example:<br>A full representation of a whole based on relative categories based on a 100% ratio. Distinctive clarity through each pie color section and values obtaining most popularity in categories vs least favorable.</p>
+                                <img src="./assets/img/charts/Pie Chart.jpg" class="img-fluid my-2" alt="ScatterChart"/>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <!-- row -->
@@ -604,11 +627,4 @@
       <!--====== Bootstrap js ======-->
       <script src="./assets/js/bootstrap.bundle.min.js"></script>
   </body>
-
-
-
-
-
-
-
 </html>
