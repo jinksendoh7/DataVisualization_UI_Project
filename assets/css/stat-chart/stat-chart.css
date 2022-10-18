@@ -86,7 +86,7 @@
     background: var(--navy-blue);
 }
 .stat-chart-dark:hover{
-    color: var(--p);
+    color: var(--black);
     background: var(--white);
     cursor:pointer;
     border-color: var(--navy-blue);
