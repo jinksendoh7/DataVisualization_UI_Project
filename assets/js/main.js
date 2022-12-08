@@ -3,7 +3,7 @@
     "use strict";
     setTimeout(()=>{
         document.getElementById('spinner').style.display = 'none'
-        document.getElementById('v-pills-tabContent').style.display = 'block';
+        document.getElementById('main').style.display = 'block';
     },1000)
     
     setTimeout(()=>{
