@@ -7,7 +7,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!--====== Title ======-->
-    <title>LiveWire UI Design Pattern Library | Project #1</title>
+    <title>LiveWire Dashboard | Project #2</title>
     <!--====== Favicon Icon ======-->
     <link rel="shortcut icon" href="./assets/img/favicon.svg" type="image/svg" />
     <!--====== Bootstrap css ======-->
@@ -18,8 +18,10 @@
     <link rel="stylesheet" href="./assets/css/starter.css" />
     <link rel="stylesheet" href="./assets/css/navbar/navbar.css" />
     <link rel="stylesheet" href="./assets/css/tab/tab.css" />
-    <link rel="stylesheet" href="./assets/css/colors/color.css" />
-    <link rel="stylesheet" href="./assets/css/typography/typograhpy.css" />
+    <link rel="stylesheet" href="./assets/css/alert/alert.css" />
+    <link rel="stylesheet" href="./assets/css/button/button.css" />
+    <link rel="stylesheet" href="./assets/css/cards/cards.css" />
+    <link rel="stylesheet" href="./assets/css/chips/chips.css">
   </head>
   <body>
     <button onclick="topFunction()" id="scrollToTop" title="Go to top">
@@ -42,10 +44,11 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarFour">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="active" href="channels.html">Channels</a>
+                    <a class="active" href="channels.php">YouTubers</a>
                   </li>
+                
                   <li class="nav-item">
-                    <a href="engagements.html">Engagements</a>
+                    <a href="engagements.html">Reachs</a>
                   </li>
                   <li class="nav-item">
                     <a href="earnings.html">Earnings</a>
@@ -71,44 +74,64 @@
     </section>
     <!--====== NAVBAR FOUR PART ENDS ======-->
     <!--====== MAIN AREA START ======-->
-    <div class="container-md">
-      <div class="row p-md-3">
-        <div class="col">
-          <div class="tabs mt-3">
-            <h5 class="tabs-title mb-5">
-              <i class="bi bi-window-stack text-primary"></i> Brand Guides
-            </h5>
-            <div class="single-tabs tabs-six">
-              <div class="row no-gutters">
-                <div class="col-sm-3">
-                  <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="active" id="v-pills-six-getting-started-tab" data-bs-toggle="pill" href="#v-pills-six-getting-started" role="tab" aria-controls="v-pills-six-getting-started" aria-selected="true"> Chart 1</a>
-                    <a id="v-pills-six-typography-tab" data-bs-toggle="pill" href="#v-pills-six-typography" role="tab" aria-controls="v-pills-six-accordions" aria-selected="false"> Chart 2</a>
-                    <a id="v-pills-six-colors-tab" data-bs-toggle="pill" href="#v-pills-six-colors" role="tab" aria-controls="v-pills-six-colors" aria-selected="false"> Chart 3</a>
+    <div class="container-md mt-3">
+      
+        <div class="mt-5 vh-100">
+      
+        <div class="spinner mt-5" id="spinner"></div>
+          <div class="row" id="main" style="display:none">
+              <!-- Navigational Chips -->
+              <div class="d-flex flex-row justify-content-end pt-3 mb-3 mt-5" id="chips">
+                <div class="chip chip-primary mx-1">All time</div>
+                <div class="chip chip-primary-outline mx-1">Last 28 days</div>
+                <div class="chip chip-primary-outline mx-1 ">Last 14 days</div>
+                <div class="chip chip-primary-outline mx-1 ">Last 7 days</div>
+              </div> 
+              <!-- start of chart -->
+
+              <div class="container text-center mt-5">
+                <div class="row">
+                  <div class="col-sm-3">
+                        <div class="card p-3 mb-3" style="height: 12.75rem">
+                              <h2 class="text-muted align-middle">Chart 8</h1>
+                        </div>
+                        <div class="card p-3 mb-3" style="height: 12.75rem">
+                              <h2 class="text-muted align-middle">Chart 9</h1>
+                        </div>
                   </div>
-                </div>
-                <div class="col-sm-9">
-                  <div class="spinner" id="spinner"></div>
-                  <div class="tab-content" id="v-pills-tabContent" style="display:none">
-                    <div class="tab-pane  show active" id="v-pills-six-getting-started" role="tabpanel" aria-labelledby="v-pills-six-getting-started-tab">
-                      <div class="tab-text">Chart 1</div>
+                  <div class="col-sm-9">
+                    <div class="row mb-3">
+                          <div class="col-md-6">
+                              <div class="card p-3" style="height: 12.50rem">
+                                  <h2 class="text-muted align-middle">Chart 1</h1>
+                              </div>
+                          </div>
+                          <div class="col-md-6">
+                              <div class="card p-3" style="height: 12.50rem">
+                                  <h2 class="text-muted align-middle">Chart 3</h1>
+                              </div>
+                          </div>
                     </div>
-                    <div class="tab-pane " id="v-pills-six-typography" role="tabpanel" aria-labelledby="v-pills-six-typography-tab">
-                      <div class="tab-text">
-                        Chart 2
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="card p-3" style="height: 25.50rem">
+                        <h2 class="text-muted align-middle">Chart 6</h1>
+                        </div>
                       </div>
-                    </div>
-                    <div class="tab-pane " id="v-pills-six-colors" role="tabpanel" aria-labelledby="v-pills-six-colors-tab">
-                      <div class="tab-text">Chart 3</div>
+             
+                     
                     </div>
                   </div>
                 </div>
-                <!-- row -->
               </div>
-              <!-- tabs one -->
+             
+
+    
+
             </div>
-          </div>
         </div>
+                                  
+        
       </div>
       </div>
       <footer class="footer">
