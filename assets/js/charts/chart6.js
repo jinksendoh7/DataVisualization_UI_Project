@@ -15,13 +15,6 @@ function createCountryList (list){
         li.className = 'list-group-item';
         li.data = list[i];
         li.innerHTML ='<div class="country-select" onclick="onSelectCountry('+"'"+list[i]+"')"+'"'+'><b>' + list[i] + '</b>' + '<img src ="'+'./assets/flags/'+list[i]+'.png" class="flag-icon" style="margin-left: 1rem"/></div>';
-      /*   li.addEventListener('click', function (event) {
-            console.log(event.target.innerText,'in');
-            this.style.backgroundColor = '#D6D6D6';
-            countryInput = event.target.innerText;
-            document.getElementById("btn-flag").innerHTML = '<img src ="'+'./assets/flags/'+list[i]+'.png" class="flag-icon"/>'
-            onSelectCountry(countryInput);
-        }); */
         document.getElementById("country-list").appendChild(li);
     });
 }
@@ -76,9 +69,12 @@ var xscale = d3.scaleBand()
 var yscale = d3.scaleLinear()
     .range([inner_height, 0])
 
+var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
-var palettes = ["#FFCA0D",
-               "#14CC16",
+var palettes = [
+                '#FF0009',
+                "#FFCA0D",
+                "#14CC16",
                 "#0D52FF",
                 "#CC149D",
                 "#993A8C",
@@ -179,7 +175,15 @@ setTimeout(() => {
             .attr('width', xscale.bandwidth())
             .attr('height', function(d) {
                 return inner_height - yscale(0)
-            });
+            })
+            .on("mouseover", function(event,d){
+                tooltip
+                  .style("left", event.clientX -10 + "px")
+                  .style("top", event.clientY - 10 + "px")
+                  .style("display", "inline-block")
+                  .html((d.category) + " <b>("+ (d.value) + " channels)</b>");
+            })
+                .on("mouseout", function(d){ tooltip.style("display", "none");});
 
         //14. add transition for the chart
         svg.selectAll('rect')

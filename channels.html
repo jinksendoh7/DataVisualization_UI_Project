@@ -44,20 +44,21 @@
               <div class="collapse navbar-collapse justify-content-end" id="navbarFour">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="active" href="channels.php">YouTubers</a>
+                    <a href="index.html">Home</a>
+                  </li>
+                 
+                  <li class="nav-item">
+                    <a class="active" href="channels.php">Dashboard</a>
                   </li>
                   <li class="nav-item">
-                    <a href="engagements.html">Reachs</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="earnings.html">Earnings</a>
+                    <a href="https://livewire-ui-pattern.vercel.app/index.html">Design Pattern</a>
                   </li>
                 </ul>
                 <div class="navbar-social d-none d-sm-flex align-items-center">
                   <ul>
                     <li>
                       <a href="https://github.com/aasuncion-fol/ui-data-visualization-project">
-                        <i class="bi bi-github" style="font-size: 2rem; color: var(--sat-green) !important;"></i>
+                        <i class="bi bi-github" style="font-size: 2rem; color: var(--tetra-mustard) !important;"></i>
                       </a>
                     </li>
                   </ul>
@@ -73,16 +74,20 @@
     </section>
     <!--====== NAVBAR FOUR PART ENDS ======-->
     <!--====== MAIN AREA START ======-->
-    <div class="container-md mt-3 vh-100">
+    <div class="container-md mt-3" style="min-height:100%">
       <div class="spinner mt-5" id="spinner"></div>
       <div class="mt-5" id="div" style="display:none">
-        <div class="row">
+        <div class="row pt-3">
           <!-- Navigational Chips -->
-          <div class="d-flex flex-row justify-content-end pt-3 mb-3 mt-5" id="chips">
-            <div class="chip chip-primary mx-1">All time</div>
-            <div class="chip chip-primary-outline mx-1">Last 28 days</div>
-            <div class="chip chip-primary-outline mx-1 ">Last 14 days</div>
-            <div class="chip chip-primary-outline mx-1 ">Last 7 days</div>
+          <div class="chip-wrapper  p-1 mb-1 mt-5">
+          <h4 class="p-1" style="color:var(--primary)"><i class="bi bi-youtube pt-2"></i>  Channels </h4>
+          <div class="d-flex flex-row justify-content-end" id="chips" >
+             <h6 class="p-3 mr-5 border-left fw-bold" style="border-right: 3px solid #e3e3e3">Select Board </h6>
+              <div class="chip chip-primary mx-1">Channels</div>
+              <div class="chip chip-primary-outline mx-1">Audience</div>
+              <div class="chip chip-primary-outline mx-1 ">Earnings</div>
+            </div>
+          
           </div>
           <!-- start of chart -->
           <div class="container text-center mt-5">
