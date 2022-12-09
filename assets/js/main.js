@@ -1,18 +1,8 @@
-(function () {
 
-    "use strict";
     setTimeout(()=>{
         document.getElementById('spinner').style.display = 'none'
-        document.getElementById('main').style.display = 'block';
+        document.getElementById('div').style.display = 'block';
     },1000)
-    
-    setTimeout(()=>{
-      document.getElementById('spinner').style.display = 'none'
-      document.getElementById('div').style.display = 'block';
-  },1000)
-  
-
-}) ();
 
 
 // When the user scrolls down 20px from the top of the document, show the button
