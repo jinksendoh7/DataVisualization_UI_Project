@@ -515,4 +515,16 @@ pre {
   width:100%;
   text-align: center;
 }
+
+.flag-icon{
+  width: 40px;
+  height: 22px;
+}
+.country-select{
+  margin-left: 1.5rem;
+  cursor:pointer;
+}
+.list-group-item:hover{
+  background-color: #D6D6D6;
+}
 /*# sourceMappingURL=starter.css.map */
