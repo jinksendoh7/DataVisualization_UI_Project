@@ -75,11 +75,15 @@
 }
 html {
   scroll-behavior: smooth;
+  height: 100% !important;
 }
 body {
   font-family: var(--font-family);
   color: var(--black);
   font-size: 16px;
+  height: 100% !important;
+  margin: 0;
+  padding: 0;
 }
 
 .icon-red {
@@ -526,5 +530,31 @@ pre {
 }
 .list-group-item:hover{
   background-color: #D6D6D6;
+}
+
+.toolTip {
+  position: absolute;
+  display: none;
+  min-width: 80px;
+  height: auto;
+  background: none repeat scroll 0 0 #d6d6d6;
+  border: 1px solid var(--primary);
+  color:#000;
+  padding: 14px;
+  text-align: center;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: var(--shadow-3);
+}
+.chip-wrapper{
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  border: 1px solid #e3e3e3;
+  padding: 1rem !important;
+  margin: .5rem;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
 }
 /*# sourceMappingURL=starter.css.map */
