@@ -4,9 +4,7 @@ var padding = 100;
 
 var svg = d3.select("#chart-1")
     .append('svg')
-    .attr('viewBox', '0  0 500 500')
-    .attr('width', svgwidth)
-    .attr('height', svgheight);
+    .attr('viewBox', '0 0 500 500')
 
 //-------------------------TITLE FOR PIE CHART-------------------------\\    
 svg.append("text")  

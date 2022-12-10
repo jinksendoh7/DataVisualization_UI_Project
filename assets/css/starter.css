@@ -561,4 +561,8 @@ pre {
   justify-content: space-between;
 
 }
+
+.bg-dark{
+  background-color: var(--primary) !important;
+}
 /*# sourceMappingURL=starter.css.map */
