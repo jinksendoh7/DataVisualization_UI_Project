@@ -71,19 +71,7 @@ var yscale = d3.scaleLinear()
 
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
-var palettes = [
-                "#FFCA0D",
-                "#14CC16",
-                "#0D52FF",
-                "#CC149D",
-                "#993A8C",
-                "#752967",
-                "#009EBD",
-                "#005B8F",
-                "#1F1F67",
-                "#FFA733",
-                "#CC0007", 
-                "#48B200"];
+var palettes = ['#CC0007', '#1F1F67',  '#4D4D4D', '#FFA733', '#005B8F', '#009EBD','#752967', '#E1E1E1', '#4D4D4D',  '#993A8C', '#0D0D0D']
 spinner.style.display = 'block';
 setTimeout(() => {
 
