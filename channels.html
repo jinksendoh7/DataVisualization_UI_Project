@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./assets/css/button/button.css" />
     <link rel="stylesheet" href="./assets/css/cards/cards.css" />
     <link rel="stylesheet" href="./assets/css/chips/chips.css">
+    <link rel="stylesheet" href="./assets/css/stat-chart/stat-chart.css"/>
   </head>
   <body>
     <button onclick="topFunction()" id="scrollToTop" title="Go to top">
@@ -83,32 +84,53 @@
           <h4 class="p-1" style="color:var(--primary)"><i class="bi bi-youtube pt-2"></i>  Channels </h4>
           <div class="d-flex flex-row justify-content-end" id="chips" >
              <h6 class="p-3 mr-5 border-left fw-bold" style="border-right: 3px solid #e3e3e3">Select Board </h6>
-              <div class="chip chip-primary mx-1">Channels</div>
-              <div class="chip chip-primary-outline mx-1">Audience</div>
-              <div class="chip chip-primary-outline mx-1 ">Earnings</div>
+              <div class="chip chip-primary mx-1 py-3">Channels</div>
+              <div class="chip chip-primary-outline mx-1 py-3">Audience</div>
+              <div class="chip chip-primary-outline mx-1 py-3">Earnings</div>
             </div>
           
           </div>
           <!-- start of chart -->
           <div class="container text-center mt-5">
-            <div class="row">
-              <div class="col-sm-3">
+            <div class="row mb-3">
+              <div class="col-md-3">
+                  <div class="card mb-5 stat-chart-icon stat-chart-primary-outline ">
+                    <div class="d-flex justify-content-around p-3">
+                    <div class="start-chart-icon" id="top-country-flag">1
+                      </div>
+                      
+                      <div class="stat-chart-title" id="top-country-flag-value">40</div>
+              
+                    </div>
+                    <div class="stat-chart-subtitle">Top Country</div>
+                    <div class="stat-chart-text-lg"> Most YouTube Channels</div>
+                    <ul class="list-group list-group-flush my-2">
+                      <li class="list-group-item  fs-5 text-start">
+                        <i class="bi bi-2-square-fill"></i> 
+                        <span class="" id="top-2-country-flag"></span>
+                      
+                      </li>
+                      <li class="list-group-item  fs-5 text-start">
+                        <i class="bi bi-3-square-fill"></i> 
+                        <span class="" id="top-3-country-flag"></span>
+                     
+                      </li>
+                    </ul>
+                  </div>
+
                 <div class="card p-3 mb-3" style="height: 12.75rem">
-                  <h2 class="text-muted align-middle">Chart 8 </h1>
-                </div>
-                <div class="card p-3 mb-3" style="height: 12.75rem">
-                  <h2 class="text-muted align-middle">Chart 9 </h1>
+                  <h2 class="text-muted align-middle fs-4">Chart 9 </h1>
                 </div>
               </div>
-              <div class="col-sm-9">
+              <div class="col-md-9">
                 <div class="row mb-3">
                   <div class="col-md-6">
-                    <div class="card p-3" style="height: 12.50rem">
+                    <div class="card p-3 mb-3" style="height: 12.50rem">
                       <h2 class="text-muted align-middle">Chart 1 </h1>
                     </div>
                   </div>
                   <div class="col-md-6">
-                    <div class="card p-3" style="height: 12.50rem" id="chart-3">
+                    <div class="card p-3 mb-3" style="height: 12.50rem" id="chart-3">
                       <h2 class="text-muted align-middle">Chart 3 </h1>
                     </div>
                   </div>

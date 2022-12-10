@@ -1,7 +1,7 @@
 
 var countryInput = 'US'; // get it from the dropdown   
 const spinner = document.getElementById('spinner-sm');
- 
+let topCountry = [];
 const chart = document.getElementById('chart-6');
 
 //Functions
@@ -72,7 +72,6 @@ var yscale = d3.scaleLinear()
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
 var palettes = [
-                '#FF0009',
                 "#FFCA0D",
                 "#14CC16",
                 "#0D52FF",
@@ -91,14 +90,16 @@ setTimeout(() => {
     d3.csv("./data/top_100_youtubers.csv").then(function(data) {
 
         
-        const categoryUnique = [...new Set(data.map(d => d.Category))] //select only unique values of category
+        const categoryUnique = [...new Set(data.map(d => d.Category))].sort() //select only unique values of category
         const countryUnique = [...new Set(data.map(d => d.Country))].sort() //select only unique values of countries
         createCountryList(countryUnique);
       
           
       
         let barValues = [];
+        let countriesCountValues = [];
         let itemCount = 0;
+        let countriesCount = 0;
         // Restructure the data
         Object.keys(categoryUnique).forEach(index => {
             itemCount = 0;
@@ -115,14 +116,48 @@ setTimeout(() => {
             });
 
         });
-        console.log(barValues, 'bv')
-        var colorScale = d3.scaleOrdinal().domain(barValues.map(d => d.category))
+        Object.keys(countryUnique).forEach(index => {
+            countriesCount = 0;
+            Object.entries(data).forEach(entry => {
+                const [key, item] = entry;
+                if (countryUnique[index] === item.Country) {
+                    countriesCount+= 1;
+                }
+            });
+            // reconstruct the data
+            countriesCountValues.push({
+                country: countryUnique[index],
+                total_channel: countriesCount
+            });
+        });
+
+        console.log( countriesCountValues.sort(function(a, b) {
+            return b.total_channel - a.total_channel
+          }))
+
+       
+        
+        topCountry =countriesCountValues.sort(function(a, b) {
+            return b.total_channel - a.total_channel
+          })
+        
+            //for stat chart value
+            const flag = document.getElementById('top-country-flag');
+            flag.innerHTML = '<img src ="'+'./assets/flags/'+topCountry[0].country+'.png" alt ="'+topCountry[0].country+'" class="flag-icon-alt"/><div class="fs-6">'+topCountry[0].country+'</div>';
+            const flagVal = document.getElementById('top-country-flag-value');
+            flagVal.innerHTML = topCountry[0].total_channel;
+     
+            document.getElementById('top-2-country-flag').innerHTML  =  ' <img alt ="'+topCountry[1].country+'" src ="'+'./assets/flags/'+topCountry[1].country+'.png" class="flag-icon"/> ' + topCountry[1].country + '  <span class="badge bg-dark rounded-pill float-end mt-1">'+topCountry[1].total_channel+'</span>';
+            document.getElementById('top-3-country-flag').innerHTML  =  ' <img alt ="'+topCountry[2].country+'" src ="'+'./assets/flags/'+topCountry[2].country+'.png" class="flag-icon"/> ' + topCountry[2].country + '  <span class="badge bg-dark rounded-pill float-end mt-1">'+topCountry[2].total_channel+'</span>';
+     
+            var colorScale = d3.scaleOrdinal().domain(barValues.map(d => d.category))
             .range(palettes)
 
-        xscale.domain(barValues.map(d => d.category))
+             xscale.domain(barValues.map(d => d.category))
 
-        var xaxis = d3.axisBottom()
-            .scale(xscale)
+             var xaxis = d3.axisBottom()
+                .scale(xscale)
+          
      
 
         g.append('g')
@@ -141,7 +176,8 @@ setTimeout(() => {
 
         var yaxis = d3.axisLeft()
             .scale(yscale)
-          
+            .tickFormat(d3.format('.0f'))
+            .ticks(d3.max(barValues, d => parseInt(d.value) + 1));
 
         g.append('g')
             .call(yaxis)
@@ -163,7 +199,7 @@ setTimeout(() => {
 
         graph.append("rect")
             .attr("class", "bar")
-            .attr("fill", function(d){ return colorScale(d) })
+            .attr("fill", function(d){ return colorScale(d.category) })
            
             .attr('x', function(d) {
                 return xscale(d.category)
@@ -200,12 +236,16 @@ setTimeout(() => {
                 return i * 100
             })
             d3.selectAll("svg").exit();
+
+   
     });
+ 
     spinner.style.display = 'none';
-    
     chart.style.display = 'block';
     $('#exampleModal').modal('hide');
 }, 1000);
+
+
 }
 
 // main call
