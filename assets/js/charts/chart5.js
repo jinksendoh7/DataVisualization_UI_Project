@@ -1,4 +1,4 @@
-const chart = document.getElementById("chart-5");
+const chart5 = document.getElementById("chart-5");
 
 var svgwidth = 600;
 var svgheight = 550;
@@ -21,6 +21,12 @@ svg_grp
   .attr("class", "chart-title")
   .attr("x", inner_width / 2)
   .attr("y", 30)
+  .attr("transform", "translate(220, 0)")
+  .style("text-anchor", "middle")
+  .style("font-family", "var(--family-bold-sec)")
+  .style("font-weight", "800")
+  .style("font-size", 22)
+  .style("fill", "var(--primary)")
   .text("Top 5 Channel Income");
 
 var g_grpbar = svg_grp
@@ -57,9 +63,9 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .attr("x", inner_width / 2)
     .attr("y", 40)
     .style("fill", "#222")
-    .style("font-family", "Quicksand")
-    .style("font-weight", "bold")
-    .style("font-size", "14px")
+    .style("font-family", "var(--family-bold-sec)")
+    .style("font-size", "22px")
+    .style("font-weight", "700")
     .text("Quarterly Income");
 
   //get yaxis
@@ -80,8 +86,9 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .attr("x", -150)
     .attr("y", -110)
     .style("fill", "#222")
-    .style("font-family", "Quicksand")
-    .style("font-size", "14px")
+    .style("font-family", "var(--family-bold-sec)")
+    .style("font-size", "22px")
+    .style("font-weight", "700")
     .text("YouTube Channels");
 
   var subgroups = data.columns.slice(19);

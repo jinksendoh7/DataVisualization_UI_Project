@@ -1,12 +1,12 @@
 /* d3js code here */
-const chart = document.getElementById("chart-3");
+const chart3 = document.getElementById("chart-3");
 
-var svgwidth_bar = 500;
-var svgheight_bar = 500;
+var svgwidth_bar = 600;
+var svgheight_bar = 600;
 var barWidth = 50;
 var padding = 20;
-var inner_width = svgwidth_bar - 100; //400
-var inner_height = svgheight_bar - 100; //400
+var inner_width = svgwidth_bar - 200; //400
+var inner_height = svgheight_bar - 200; //400
 
 var svg_bar = d3
   .select("#chart-3")
@@ -16,8 +16,8 @@ var svg_bar = d3
   // .attr('height', svgheight_bar)
   .attr("width", "100%")
   .attr("height", "100%")
-  .attr("viewBox", "0 0 600 550")
-  // .attr("viewBox", "0 0 " + svgwidth_bar + " " + svgheight_bar)
+  //.attr('viewBox', '0 0 650 500')
+  .attr("viewBox", "0 0 " + svgwidth_bar + " " + svgheight_bar)
   .attr("preserveAspectRatio", "xMidYMid meet");
 
 svg_bar
@@ -25,20 +25,24 @@ svg_bar
   .attr("class", "chart-title")
   .attr("x", 80)
   .attr("y", 30)
-  .style("font-family", "Quicksand")
-  .style("font-size", "18px")
+  .attr("transform", "translate(220, 0)")
+   .style("text-anchor", "middle")
+  .style("font-family", "var(--family-bold-sec)")
+  .style("font-weight", "800")
+  .style("font-size", 22)
+  .style("fill", 'var(--primary)')
   .text("Top Countries with YouTube Content Creators");
 
 var g_bar = svg_bar
   .append("g")
   .attr("class", "group")
-  .attr("transform", "translate(50, 50)");
+  .attr("transform", "translate(80, 50)");
 
 var xscale = d3.scaleBand().range([0, inner_width]).paddingInner(0.5);
 
 var yscale = d3.scaleLinear().range([inner_height, 0]);
 
-var tooltip = d3.select("#chart-3").append("div").attr("class", "toolTip");
+var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip");
 
 d3.csv("./data/top_100_youtubers.csv").then(function (data) {
   console.log(data);
@@ -123,18 +127,17 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .attr("dx", "-.8em")
     .attr("dy", ".15em")
     .attr("transform", "rotate(-65)")
-    .style("font-size", "13px");
+    .style("font-size", "15px");
 
-    g_bar.append("text")
+  g_bar
+    .append("text")
     .attr("x", inner_width / 2)
-    .attr("y", inner_height + 90)
+    .attr("y", inner_height + 120)
     .style("fill", "#222")
-    .style("font-family", "Quicksand")
-    .style("font-weight", "bold")
-    .style("font-size", "15px")
-    .style("padding", padding)
-    .text("Country")
-    
+    .style("font-family", "var(--family-bold-sec)")
+    .style("font-size", "22px")
+    .style("font-weight", "900")
+    .text("Country");
 
   yscale.domain([0, d3.max(countObjValues, (d) => parseInt(d.Count)) + 2]);
 
@@ -143,15 +146,15 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
   g_bar
     .append("g")
     .call(yaxis)
-    .style("font-size", "13px")
+    .style("font-size", "15px")
     .append("text")
     .attr("transform", "rotate(-90)")
-    .attr("x", -170)
+    .attr("x", -120)
     .attr("y", -30)
     .style("fill", "#222")
-    .style("font-family", "Quicksand")
-    .style("font-weight", "bold")
-    .style("font-size", "14px")
+    .style("font-family", "var(--family-bold-sec)")
+    .style("font-size", "22px")
+    .style("font-weight", "700")
     .text("# of Content Creators");
 
   var color_bar = d3
@@ -199,11 +202,11 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .on("mouseover", function (event, d) {
       //changing color when hover
       d3.select(this).style("fill", "#E1E1E1");
-      tooltip
-       .style("left", event.clientX -10 + "px")
-                  .style("top", event.clientY - 10 + "px")
-                  .style("display", "inline-block")
-                  .html((d.Country) + " <b>("+ (d.Count) + " content creators)</b>");
+      tooltip_chart3
+        .style("left", event.clientX - 1050 + "px")
+        .style("top", event.clientY - 300 + "px")
+        .style("display", "inline-block")
+        .html(d.Country + " <br/> " + d.Count);
     })
     .on("mouseout", function (d) {
       d3.select(this).style("fill", (d) => color_bar(d.Country));
@@ -219,27 +222,13 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .attr("y", function (d) {
       return yscale(parseInt(d.Count) + 2);
     })
-    .attr("dx", ".80em")
-    .attr("dy", ".80em")
+    .attr("dx", ".60em")
+    .attr("dy", ".60em")
     .text(function (d) {
       return d.Count;
     })
     .attr("fill", "#222")
-    .style("font-size", "14px");
+    .style("font-size", "16px");
 
-  //14. add transition for the chart
-  svg_bar
-    .selectAll("rect")
-    .transition()
-    .ease(d3.easeLinear)
-    .duration(800)
-    .attr("y", function (d) {
-      return yscale(parseInt(d.Count));
-    })
-    .attr("height", function (d) {
-      return inner_height - yscale(parseInt(d.Count));
-    })
-    .delay(function (d, i) {
-      return i * 100;
-    });
+ 
 });

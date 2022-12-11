@@ -1,4 +1,4 @@
-const chart = document.getElementById("chart-4");
+const chart4 = document.getElementById("chart-4");
 
 var svgwidth_area = 500;
 var svgheight_area = 500;
@@ -29,6 +29,12 @@ svg_area
   .style("font-family", "Quicksand")
   .style("font-size", "20")
   .style("font-weight", "bold")
+  .attr("transform", "translate(220, 0)")
+  .style("text-anchor", "middle")
+  .style("font-family", "var(--family-bold-sec)")
+  .style("font-weight", "800")
+  .style("font-size", 22)
+  .style("fill", "var(--primary)")
   .text("Top 5 Channels Ave. Views per Year");
 
 var g_stkarea = svg_area
@@ -74,9 +80,9 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     .attr("x", inner_width_area / 2)
     .attr("y", 40)
     .style("fill", "#222")
-    .style("font-family", "Quicksand")
-    .style("font-weight", "bold")
-    .style("font-size", "14px")
+    .style("font-family", "var(--family-bold-sec)")
+    .style("font-size", "22px")
+    .style("font-weight", "700")
     .text("Year");
 
   var yscale = d3
@@ -109,9 +115,9 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     .attr("x", -100)
     .attr("y", -50)
     .style("fill", "#222")
-    .style("font-family", "Quicksand")
-    .style("font-weight", "bold")
-    .style("font-size", "14px")
+    .style("font-family", "var(--family-bold-sec)")
+    .style("font-size", "22px")
+    .style("font-weight", "700")
     .text("Average Views");
 
   //var keysToStack = ['T-Series', 'ABCkidTV - Nursery Rhymes', 'SET India', 'PewDiePie', 'MrBeast'];
