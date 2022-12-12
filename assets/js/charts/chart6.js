@@ -30,14 +30,15 @@ function onSelectCountry(countryInput){
 
 function drawChart (countryInput){
     
-var svgwidth = screen.width * .50;
+var svgwidth = screen.width > 500 ? screen.width *.50 : 500;
 var svgheight = 500;
 var padding = 100;
 
+var viewBox = screen.width > 500 ? '0 0 1000 500' : '0 0 400 500'
 
 var svg = d3.select('#chart-6')
     .append('svg')
-    .attr('viewBox', '0 0 1000 500')
+    .attr('viewBox', viewBox)
   
 
 svg.append("text")
@@ -137,6 +138,8 @@ setTimeout(() => {
      
             document.getElementById('top-2-country-flag').innerHTML  =  ' <img alt ="'+topCountry[1].country+'" src ="'+'./assets/flags/'+topCountry[1].country+'.png" class="flag-icon"/> ' + topCountry[1].country + '  <span class="badge bg-dark rounded-pill float-end mt-1">'+topCountry[1].total_channel+'</span>';
             document.getElementById('top-3-country-flag').innerHTML  =  ' <img alt ="'+topCountry[2].country+'" src ="'+'./assets/flags/'+topCountry[2].country+'.png" class="flag-icon"/> ' + topCountry[2].country + '  <span class="badge bg-dark rounded-pill float-end mt-1">'+topCountry[2].total_channel+'</span>';
+            document.getElementById('top-4-country-flag').innerHTML  =  ' <img alt ="'+topCountry[3].country+'" src ="'+'./assets/flags/'+topCountry[3].country+'.png" class="flag-icon"/> ' + topCountry[3].country + '  <span class="badge bg-dark rounded-pill float-end mt-1">'+topCountry[3].total_channel+'</span>';
+            document.getElementById('top-5-country-flag').innerHTML  =  ' <img alt ="'+topCountry[4].country+'" src ="'+'./assets/flags/'+topCountry[4].country+'.png" class="flag-icon"/> ' + topCountry[4].country + '  <span class="badge bg-dark rounded-pill float-end mt-1">'+topCountry[4].total_channel+'</span>';
      
             var colorScale = d3.scaleOrdinal().domain(barValues.map(d => d.category))
             .range(palettes)

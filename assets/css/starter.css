@@ -559,8 +559,14 @@ pre {
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-
+  overflow-y:auto;
 }
+@media (max-width: 767px) {
+  .d-sm-none {
+    display:none;
+  }
+}
+
 
 .bg-dark{
   background-color: var(--primary) !important;

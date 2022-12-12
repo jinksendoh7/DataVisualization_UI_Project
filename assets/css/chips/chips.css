@@ -7,13 +7,13 @@
     text-align: center;
     
 }
-.chip-primary{
+.chip-primary, .chip-primary-outline:hover{
     color: var(--white);
     background: var(--primary);
     border: 2px solid var(--white);
     
 }
-.chip-primary-outline{
+.chip-primary-outline, .chip-primary:hover{
     color: var(--primary);
     background: var(--white);
     border: 2px solid var(--primary);
