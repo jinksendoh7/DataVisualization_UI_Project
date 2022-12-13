@@ -23,26 +23,28 @@ function onSelectCountry(countryInput){
    
     chart.style.display = 'none';
     document.getElementById("btn-flag").innerHTML = '<img src ="'+'./assets/flags/'+countryInput+'.png" class="flag-icon"/>'
-    d3.selectAll("svg").remove()
+    d3.selectAll("svg6").remove();
+    chart.innerHTML = '';
     $('#exampleModal').modal('hide');
     drawChart(countryInput);
  }
 
 function drawChart (countryInput){
     
-var svgwidth = screen.width > 500 ? screen.width *.50 : 500;
-var svgheight = 500;
+var svgwidth = screen.width > 1920 ? screen.width *.50 :screen.width *.75;
+var svgheight = 800;
 var padding = 100;
 
-var viewBox = screen.width > 500 ? '0 0 1000 500' : '0 0 400 500'
+var viewBox = '0 0 1200 900'
 
 var svg = d3.select('#chart-6')
     .append('svg')
+    .attr('class', 'svg6')
     .attr('viewBox', viewBox)
   
 
 svg.append("text")
-    .style('font-size', '1.2rem')
+    .style('font-size', 30)
     .style('font-weight', '800')
     .style('fill','var(--primary)')
     .attr("x", 30)
@@ -72,7 +74,7 @@ var yscale = d3.scaleLinear()
 
 var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
-var palettes = ['#CC0007', '#1F1F67',  '#4D4D4D', '#FFA733', '#005B8F', '#009EBD','#752967', '#E1E1E1', '#4D4D4D',  '#993A8C', '#0D0D0D']
+var palettes =  ['#CC0007', '#1F1F67',  '#4D4D4D', '#FFA733', '#005B8F', '#009EBD','#752967', '#E1E1E1', '#4D4D4D',  '#993A8C', '#0D0D0D']
 spinner.style.display = 'block';
 setTimeout(() => {
 
@@ -82,8 +84,6 @@ setTimeout(() => {
         const categoryUnique = [...new Set(data.map(d => d.Category))].sort() //select only unique values of category
         const countryUnique = [...new Set(data.map(d => d.Country))].sort() //select only unique values of countries
         createCountryList(countryUnique);
-      
-          
       
         let barValues = [];
         let countriesCountValues = [];
@@ -120,10 +120,7 @@ setTimeout(() => {
             });
         });
 
-        console.log( countriesCountValues.sort(function(a, b) {
-            return b.total_channel - a.total_channel
-          }))
-
+   
        
         
         topCountry =countriesCountValues.sort(function(a, b) {
@@ -132,7 +129,7 @@ setTimeout(() => {
         
             //for stat chart value
             const flag = document.getElementById('top-country-flag');
-            flag.innerHTML = '<img src ="'+'./assets/flags/'+topCountry[0].country+'.png" alt ="'+topCountry[0].country+'" class="flag-icon-alt"/><div class="fs-6">'+topCountry[0].country+'</div>';
+            flag.innerHTML = '<i class="bi bi-1-square text-primary"></i> <img src ="'+'./assets/flags/'+topCountry[0].country+'.png" alt ="'+topCountry[0].country+'" class="flag-icon-alt"/><div class="fs-6">'+topCountry[0].country+'</div>';
             const flagVal = document.getElementById('top-country-flag-value');
             flagVal.innerHTML = topCountry[0].total_channel;
      
@@ -154,14 +151,26 @@ setTimeout(() => {
         g.append('g')
             .attr('transform', 'translate(0,' + inner_height + ')')
             .call(xaxis)
-            .append('text')
-            .attr('x', inner_width / 2.5)
-            .attr('y', 40)
+            .selectAll("text")
+            .style("text-anchor", "end")
+            .attr("dx", "-.8em")
+            .attr("dy", ".15em")
+            .attr('fill', '#000')
+            .attr('font-weight','700')
+            .attr('font-family', 'var(--font-family-bold)')
+            .attr("transform", "rotate(-45)")
+            .style("font-size", "20px");
+
+        g.append('text')
+            .attr('x', inner_width / 2 -110)
+            .attr("y", inner_height + 120)
+           
             .attr('fill', '#FF0009')
-            .attr('font-size','1rem')
+            .attr('font-size','22px')
             .attr('font-weight','700')
             .attr('font-family', 'var(--font-family-bold)')
             .text('Categories')
+            
 
         yscale.domain([0, d3.max(barValues, d => parseInt(d.value) + 1)])
 
@@ -169,15 +178,22 @@ setTimeout(() => {
             .scale(yscale)
             .tickFormat(d3.format('.0f'))
             .ticks(d3.max(barValues, d => parseInt(d.value) + 1));
+        
 
         g.append('g')
             .call(yaxis)
-            .append('text')
+            .selectAll("text")
+            .attr('fill', '#000')
+            .attr('font-weight','700')
+            .attr('font-family', 'var(--font-family-bold)')
+            .style("font-size", "20px");
+        
+        g.append('text')
             .attr('transform', 'rotate(-90)')
-            .attr('x', -170)
-            .attr('y', -30)
+            .attr('x', -400)
+            .attr('y', -35)
             .attr('fill', '#FF0009')
-            .attr('font-size','1rem')
+            .attr('font-size','20px')
             .attr('font-weight','700')
             .attr('font-family', 'var(--font-family-bold)')
             .text('Total Channels')
@@ -204,13 +220,16 @@ setTimeout(() => {
                 return inner_height - yscale(0)
             })
             .on("mouseover", function(event,d){
+                d3.select(this).style("opacity", "0.5");
                 tooltip
-                  .style("left", event.clientX -10 + "px")
-                  .style("top", event.clientY - 10 + "px")
+                  .style("left", event.clientX -5 + "px")
+                  .style("top", event.clientY - 100 + "px")
                   .style("display", "inline-block")
                   .html((d.category) + " <b>("+ (d.value) + " channels)</b>");
             })
-                .on("mouseout", function(d){ tooltip.style("display", "none");});
+                .on("mouseout", function(d){ 
+                    d3.select(this).style("opacity", "1");
+                    tooltip.style("display", "none");});
 
         //14. add transition for the chart
         svg.selectAll('rect')

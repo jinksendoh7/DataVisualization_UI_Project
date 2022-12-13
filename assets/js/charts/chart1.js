@@ -1,6 +1,6 @@
 var svgwidth = 450;
 var svgheight = 450;
-var padding = 100;
+var padding = 50;
 
 var svg = d3.select("#chart-1")
     .append('svg')
@@ -27,7 +27,7 @@ var g = svg.append("g")
     .attr("class", "graph")
 
 //-------------------------RADIUS FOR PIECHART-------------------------\\    
-var radius = Math.min(inner_width, inner_height) / 2; 
+var radius = Math.min(inner_width, inner_height) / 2 -25; 
 
 d3.csv('./data/top_100_youtubers.csv').then(function(data) { 
 
@@ -46,6 +46,9 @@ categories.forEach((item, data) => {
  const sum = values.reduce((acc, value) =>{
             return acc + value;
         }, 0)
+// Stat Chart Value
+console.log(values);
+
 const palletes = ['#CC0007', '#1F1F67',  '#4D4D4D', '#FFA733', '#005B8F', '#009EBD','#752967',   '#993A8C', '#0D0D0D']
 var color = d3.scaleOrdinal()
     .range(palletes); //colors
@@ -135,11 +138,23 @@ g.selectAll('.allLabels')
     })
 
 //-------------------------LEGEND CREATION-------------------------\\
-var legendValue = Object.entries(totalCat).length/2;
+
     var itemWidth =150;
     var itemHeight = 15;
     var legendValue = Object.entries(totalCat).length/3;
-      
+   
+    var cats = Object.entries(totalCat).sort((a,b) => b[1]-a[1]).map(el=>el[0]);
+    var catsValue = Object.entries(totalCat).sort((a,b) => b[1]-a[1]).map(el=>el[1]);
+    console.log(catsValue,'CA');
+    const cat = document.getElementById('top-category');
+    cat.innerHTML = '<i class="bi bi-1-square text-primary"></i> <i class="bi bi-controller"></i><br/><div class="fs-6">'+cats[0]+'</div>';
+    document.getElementById('top-category-value').innerHTML = catsValue[0];
+    document.getElementById('top-2-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-music-note-beamed"></i> '+ cats[1] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[1]+'</span>';
+    document.getElementById('top-3-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-dash-circle-dotted"></i> '+ cats[2] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[2]+'</span>';
+    document.getElementById('top-4-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-tv"></i> '+ cats[3] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[3]+'</span>';
+    document.getElementById('top-5-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-scissors"></i> '+ cats[4] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[4]+'</span>';
+   
+
 svg.selectAll(".legend")
     .data(pie(Object.entries(totalCat)))
     .enter()

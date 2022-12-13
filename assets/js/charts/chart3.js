@@ -14,22 +14,20 @@ var svg_bar = d3
   //.attr("style", "outline: thin solid #4D4D4D;")
   // .attr('width', svgwidth_bar)
   // .attr('height', svgheight_bar)
-  .attr("width", "100%")
-  .attr("height", "100%")
+ 
   //.attr('viewBox', '0 0 650 500')
-  .attr("viewBox", "0 0 " + svgwidth_bar + " " + svgheight_bar)
-  .attr("preserveAspectRatio", "xMidYMid meet");
-
+  .attr("viewBox", "0 0  500 500")
+ 
 svg_bar
   .append("text")
   .attr("class", "chart-title")
-  .attr("x", 80)
+  .attr("x", 30)
   .attr("y", 30)
   .attr("transform", "translate(220, 0)")
    .style("text-anchor", "middle")
   .style("font-family", "var(--family-bold-sec)")
-  .style("font-weight", "800")
-  .style("font-size", 22)
+  .style("font-weight", "700")
+  .style("font-size", '20px')
   .style("fill", 'var(--primary)')
   .text("Top Countries with YouTube Content Creators");
 
@@ -153,7 +151,7 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .attr("y", -30)
     .style("fill", "#222")
     .style("font-family", "var(--family-bold-sec)")
-    .style("font-size", "22px")
+    .style("font-size", "16px")
     .style("font-weight", "700")
     .text("# of Content Creators");
 
@@ -201,7 +199,7 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .attr("fill", (d) => color_bar(d.Country))
     .on("mouseover", function (event, d) {
       //changing color when hover
-      d3.select(this).style("fill", "#E1E1E1");
+      d3.select(this).style("opacity", "0.5");
       tooltip_chart3
         .style("left", event.clientX - 1050 + "px")
         .style("top", event.clientY - 300 + "px")
@@ -209,8 +207,8 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
         .html(d.Country + " <br/> " + d.Count);
     })
     .on("mouseout", function (d) {
-      d3.select(this).style("fill", (d) => color_bar(d.Country));
-      tooltip.style("display", "none");
+      d3.select(this).style("opacity", "1");
+      tooltip_chart3.style("display", "none");
     });
 
   graph_bar

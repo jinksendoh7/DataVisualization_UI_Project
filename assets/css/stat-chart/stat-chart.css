@@ -16,13 +16,13 @@
     color: var(--white);
     background: var(--rosso);
 }
-.stat-chart-primary1:hover{
+.stat-chart-primary:hover{
     color: var(--rosso);
     background: var(--white);
     cursor:pointer;
     border-color: var(--rosso);
 }
-.stat-chart-primary-outline1:hover{
+.stat-chart-primary-outline:hover{
     border: 2px solid var(--white);
     color: var(--white);
     background: var(--rosso);
@@ -68,9 +68,8 @@
 }
 
 .stat-chart-success-outline:hover{
-    border: 2px solid var(--white);
+    border: 2px solid var(--shamrock);
     color: var(--white);
-    background: var(--shamrock);
 }
 .stat-chart-success-outline{
     color: var(--shamrock);
@@ -104,9 +103,8 @@
 }
 .stat-chart-title{
     font-family: var(--font-family-bold);
-    font-size: 55px;
+    font-size: 60px;
     font-weight: 600;
-    border-left: 2px dotted var(--primary);
     padding-left: 1.8rem;
     margin-bottom: 1rem;
 }
@@ -128,5 +126,7 @@
 }
 .stat-chart-text-lg{
     font-family: var(--font-family-bold);
-    font-size:16px;
+    font-size:20px;
+    padding-left: 1rem;
+    text-align: left;
 }
