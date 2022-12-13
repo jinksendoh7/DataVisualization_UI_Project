@@ -46,10 +46,11 @@ var svg = d3.select('#chart-6')
 svg.append("text")
     .style('font-size', 30)
     .style('font-weight', '800')
-    .style('fill','var(--primary)')
+    .style('fill','var(--rosso)')
     .attr("x", 30)
     .attr('y', 30)
     .attr('id', 'chart-title')
+    .attr('font-family', 'var(--font-family-sec-bold)')
     .text('YouTube Channels By Category' + ' ('+countryInput+')')
 
 var inner_width = svgwidth - padding; //400
@@ -157,7 +158,7 @@ setTimeout(() => {
             .attr("dy", ".15em")
             .attr('fill', '#000')
             .attr('font-weight','700')
-            .attr('font-family', 'var(--font-family-bold)')
+            .attr('font-family', 'var(--font-family-sec-bold)')
             .attr("transform", "rotate(-45)")
             .style("font-size", "20px");
 
@@ -168,7 +169,7 @@ setTimeout(() => {
             .attr('fill', '#FF0009')
             .attr('font-size','22px')
             .attr('font-weight','700')
-            .attr('font-family', 'var(--font-family-bold)')
+            .attr('font-family', 'var(--font-family-sec-bold)')
             .text('Categories')
             
 
@@ -185,7 +186,7 @@ setTimeout(() => {
             .selectAll("text")
             .attr('fill', '#000')
             .attr('font-weight','700')
-            .attr('font-family', 'var(--font-family-bold)')
+            .attr('font-family', 'var(--font-family-sec-bold)')
             .style("font-size", "20px");
         
         g.append('text')
@@ -195,7 +196,7 @@ setTimeout(() => {
             .attr('fill', '#FF0009')
             .attr('font-size','20px')
             .attr('font-weight','700')
-            .attr('font-family', 'var(--font-family-bold)')
+            .attr('font-family', 'var(--font-family-sec-bold)')
             .text('Total Channels')
 
         var graph = g.selectAll(".graph")

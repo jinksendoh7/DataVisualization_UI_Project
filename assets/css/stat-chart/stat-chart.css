@@ -102,14 +102,14 @@
     border-color: var(--navy-blue);
 }
 .stat-chart-title{
-    font-family: var(--font-family-bold);
+    font-family: var(--font-family-sec-bold);
     font-size: 60px;
     font-weight: 600;
     padding-left: 1.8rem;
     margin-bottom: 1rem;
 }
 .stat-chart-icon{
-    font-family: var(--font-family-bold);
+    font-family: var(--font-family-sec-bold);
     font-size: 44px;
     font-weight: 600;
     border-radius: 8px;
@@ -120,12 +120,12 @@
     font-weight: 600;
 }
 .stat-chart-text{
-    font-family: var(--font-family-bold);
+    font-family: var(--font-family-sec-bold);
     font-size:12px;
 
 }
 .stat-chart-text-lg{
-    font-family: var(--font-family-bold);
+    font-family: var(--font-family-sec-bold);
     font-size:20px;
     padding-left: 1rem;
     text-align: left;

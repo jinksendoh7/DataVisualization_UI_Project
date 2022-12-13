@@ -18,10 +18,10 @@ const svg3 = d3.select("#chart-3")
     .attr("y", -10)
     .attr("transform", "translate(220, 0)")
      .style("text-anchor", "end")
-    .style("font-family", "var(--family-bold-sec)")
+     .attr('font-family', 'var(--font-family-sec-bold)')
     .style("font-weight", "700")
     .style("font-size", '14px')
-    .style("fill", 'var(--primary)')
+    .style("fill", 'var(--rosso)')
     .text("Top Countries with YouTube Content Creators");
 
 // Parse the Data
@@ -58,7 +58,7 @@ var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip"
       .style("text-anchor", "end")
       .attr('fill', '#000')
       .attr('font-weight','700')
-      .attr('font-family', 'var(--font-family-bold)')
+      .attr('font-family', 'var(--font-family-sec-bold)')
       .style("font-size", "12px")
       .attr('fill', '#000')
       
@@ -74,7 +74,7 @@ var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip"
     .selectAll("text")
     .attr('fill', '#000')
     .attr('font-weight','700')
-    .attr('font-family', 'var(--font-family-bold)')
+    .attr('font-family', 'var(--font-family-sec-bold)')
     .style("font-size", "12px")
     .attr('fill', '#000')
     

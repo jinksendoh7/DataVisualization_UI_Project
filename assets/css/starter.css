@@ -422,9 +422,9 @@ pre {
   border-radius: none !important;
 }
 .text-primary{
-  font-family:var(--font-family-bold) !important; 
+  font-family:var(--font-family-sec-bold) !important; 
   font-weight:700 !important; 
-  color:var(--primary) !important;
+  color:var(--rosso) !important;
 }
 .small{
   font-size: 15px !important;

@@ -16,7 +16,7 @@ svg.append("text")
     .style("font-family", "var(--family-bold-sec)")
     .style("font-weight", "700")
     .style("font-size", 22)
-    .style("fill", 'var(--primary)')
+    .style("fill", 'var(--rosso)')
     .text("Top 100 YouTube Channels Per Category")
 
 var inner_width = svgwidth - padding;
@@ -126,7 +126,7 @@ g.selectAll('.allLabels')
     .style("font-family", "var(--family-bold-sec)")
     .style("font-weight", "700")
     .style("font-size", 15)
-    .style("fill", 'var(--primary)')
+    .style("fill", 'var(--rosso)')
     .attr("x", -12)
     .attr("y",2)
     .text(d => {
