@@ -10,7 +10,6 @@ var inner_height = svgheight - 150; //350
 var svg_grp = d3
   .select("#chart-5")
   .append("svg")
-  .attr("style", "outline: thin solid #4D4D4D;")
   .attr("width", "100%")
   .attr("height", "100%")
   .attr("viewBox", "0 0 " + svgwidth + " " + svgheight)
@@ -19,13 +18,13 @@ var svg_grp = d3
 svg_grp
   .append("text")
   .attr("class", "chart-title")
-  .attr("x", inner_width / 2)
+  .attr("x", 10)
   .attr("y", 30)
   .attr("transform", "translate(220, 0)")
   .style("text-anchor", "middle")
   .style("font-family", "var(--family-bold-sec)")
   .style("font-weight", "800")
-  .style("font-size", 22)
+  .style("font-size", "15px")
   .style("fill", "var(--primary)")
   .text("Top 5 Channel Income");
 
@@ -62,9 +61,9 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .append("text")
     .attr("x", inner_width / 2)
     .attr("y", 40)
-    .style("fill", "#222")
-    .style("font-family", "var(--family-bold-sec)")
-    .style("font-size", "22px")
+    .style("fill", "var(--primary)")
+    .style("font-family", "var(--font-family-sec-bold)")
+    .style("font-size", "15px")
     .style("font-weight", "700")
     .text("Quarterly Income");
 
@@ -85,14 +84,14 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .attr("transform", "rotate(-90)")
     .attr("x", -150)
     .attr("y", -110)
-    .style("fill", "#222")
-    .style("font-family", "var(--family-bold-sec)")
-    .style("font-size", "22px")
+    .style("fill", "var(--primary)")
+    .style("font-family", "var(--font-family-sec-bold)")
+    .style("font-size", "15px")
     .style("font-weight", "700")
     .text("YouTube Channels");
 
   var subgroups = data.columns.slice(19);
-  console.log(subgroups);
+  var tooltip = d3.select("body").append("div").attr("class", "toolTip");
 
   var ySubGroup = d3
     .scaleBand()
@@ -122,12 +121,21 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .attr("width", (d) => xscale(d.value))
     .attr("height", ySubGroup.bandwidth())
     .attr("fill", (d) => color(d.key))
-    .on("mouseover", function (d) {
-      d3.select(this).style("fill", "#E1E1E1");
+    .on("mouseover", function (event, d) {
+      d3.select(this).style("opacity", "0.5");
+      tooltip
+        .style("left", event.clientX-5 + "px")
+        .style("top", event.clientY+150 + "px")
+        .style("display", "inline-block")
+        .html((d.key) + " <b> ($ "+ (Math.sign(d.value)*((Math.abs(d.value)/10000).toFixed(2)) + 'K') + ")</b>");
     })
     .on("mouseout", function (d) {
-      d3.select(this).style("fill", (d) => color(d.key));
-    });
+      d3.select(this).style("opacity", "1");
+      tooltip.style("display", "none");});
+
+      d3.selectAll('text')
+      .style("font-family", "var(--font-family-sec-bold)");
+
 
   //                 // Legends which is in right side
   // var legend = svg_grp.selectAll(".legend")
@@ -175,4 +183,5 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     })
     .style("font-size", "12px")
     .style("font-family", "Quicksand");
-});
+
+  });

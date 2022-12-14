@@ -81,20 +81,28 @@
         <div class="row pt-3">
           <!-- Navigational Chips -->
           <div class="chip-wrapper  p-1 mb-1 mt-5">
-          <h4 class="p-1 	d-sm-none d-md-block" style="color:var(--primary)"><i class="bi bi-youtube pt-2"></i>  Channels </h4>
-          <div class="d-flex flex-row justify-content-end" id="chips" >
-             <h6 class="p-3 mr-5 border-left fw-bold 	d-sm-none d-md-block" style="border-right: 3px solid #e3e3e3">Select Board </h6>
-             <div class="chip chip-primary mx-1 py-3"><a href="channels.html" class="text-white">Channels</a></div>
-             <div class="chip chip-primary-outline mx-1 py-3"><a href="audience.html">Audience</a></div>
-             <div class="chip chip-primary-outline mx-1 py-3"><a href="earnings.html">Earnings</a></div>
-            </div>
+          <h4 class="p-1 	d-sm-none d-md-block" style="color:var(--primary)">
+            <img src="./assets/img/icons/OUTLINED/li_youtubevideo_o.svg" height="48" width="48" class="text-primary"/>  
+            YouTube Channels 
+            <div class="small-text fs-6">Charts for YouTube Channels related</div>
+          </h4>
+          <div class="d-flex flex-row mb-3 mt-2" id="chips">
+            <div class="chip chip-primary mx-1"> Channels</div>
+            <div class="chip chip-primary-outline mx-1 ">
+              Audience</div>
+            <div class="chip chip-primary-outline mx-1">
+              Earnings</div>
+          </div>                             
+                                          
+                                                                          
+                                                    
           
           </div>
           <!-- start of chart -->
           <div class="container text-center mt-2">
             <div class="alert alert-simple d-flex align-items-start mb-3" role="alert">
               <div class="">
-                <p class="alert-text"><b>Point the graph to view more details via tooltip.</b></p>
+                <p class="alert-text"> <i class="bi bi-info-circle-fill text-primary"></i> <b>Point the graph to view more details via tooltip.</b></p>
               </div>
             </div>
             <div class="row mb-3">
@@ -249,8 +257,6 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="./assets/js/charts/chart1.js"></script>
     <script src="./assets/js/charts/chart3-1.js"></script>
-    <script src="./assets/js/charts/chart4.js"></script>
-    <script src="./assets/js/charts/chart5.js"></script>
     <script src="./assets/js/charts/chart6.js"></script>
   </body>
 </html>

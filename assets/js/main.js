@@ -23,3 +23,18 @@ function scrollFunction() {
   }
 
  
+  $(function() {
+    $('.chip-primary-outline').click(function() {
+      $("#chips>div").removeClass("chip-primary").addClass('chip-primary-outline');
+      $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+      var chipText = $(this)[0].innerText.toLowerCase() + '.html';
+      location.assign(chipText);
+   });
+   $('.chip-primary').click(function() {
+     $("#chips>div").removeClass("chip-primary").addClass('chip-primary-outline');
+      $(this).removeClass('chip-primary-outline').addClass('chip-primary');
+      var chipText = ($(this)[0].innerText).toLowerCase() + '.html';
+      location.assign(chipText);
+   
+    });
+  });

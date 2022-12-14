@@ -7,10 +7,8 @@ var padding_area = 200;
 var svg_area = d3
   .select("#chart-4")
   .append("svg")
-  .attr("style", "outline: thin solid #4D4D4D;")
-  .attr("width", "100%")
-  .attr("height", "100%")
-  .attr("viewBox", "0 0 " + svgwidth_area + " " + svgheight_area)
+
+  .attr("viewBox", "0 0 " + svgwidth_area + " 450")
   .attr("preserveAspectRatio", "xMidYMid meet");
 
 var inner_width_area = svgwidth_area - 100;
@@ -26,16 +24,16 @@ svg_area
     "translate(" + svgwidth_area / 2 + " ," + (svgheight_area - 460) + ")"
   )
   .style("text-anchor", "middle")
-  .style("font-family", "Quicksand")
-  .style("font-size", "20")
   .style("font-weight", "bold")
   .attr("transform", "translate(220, 0)")
   .style("text-anchor", "middle")
-  .style("font-family", "var(--family-bold-sec)")
-  .style("font-weight", "800")
-  .style("font-size", 22)
+  .style("font-family", "var(--font-family-sec-bold)")
+  .style("font-weight", "700")
+  .style("font-size", 14)
+  .attr("x", -10)
+  .attr('y', 65)
   .style("fill", "var(--primary)")
-  .text("Top 5 Channels Ave. Views per Year");
+  .text("Top 5 Channels (Average Views/Year)");
 
 var g_stkarea = svg_area
   .append("g")
@@ -79,12 +77,13 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     .append("text")
     .attr("x", inner_width_area / 2)
     .attr("y", 40)
-    .style("fill", "#222")
-    .style("font-family", "var(--family-bold-sec)")
-    .style("font-size", "22px")
+    .style("fill", "var(--primary)")
+    .style("text-anchor", "middle")
+    .style("font-family", "var(--font-family-sec-bold)")
     .style("font-weight", "700")
     .text("Year");
-
+  
+   
   var yscale = d3
     .scaleLinear()
     .domain([
@@ -114,19 +113,24 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     .attr("transform", "rotate(-90)")
     .attr("x", -100)
     .attr("y", -50)
-    .style("fill", "#222")
-    .style("font-family", "var(--family-bold-sec)")
-    .style("font-size", "22px")
+    .style("fill", "var(--primary)")
+    .style("text-anchor", "middle")
+    .style("font-family", "var(--font-family-sec-bold)")
     .style("font-weight", "700")
     .text("Average Views");
 
   //var keysToStack = ['T-Series', 'ABCkidTV - Nursery Rhymes', 'SET India', 'PewDiePie', 'MrBeast'];
   var keysToStack = data.columns.slice(1);
-  console.log(keysToStack);
+  console.log(keysToStack,'key');
 
   var generateStack = d3.stack().keys(keysToStack)(data);
-
+  var tooltip = d3.select("body").append("div").attr("class", "toolTip");
   console.log("generateStack", generateStack);
+
+  var initialarea = d3.area()
+  .x(function(d) { return xscale(d.data.Year); })
+  .y0(yscale(0))
+  .y1(yscale(0));
 
   var generateLine = d3
     .area()
@@ -144,45 +148,41 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     .selectAll("path")
     .data(generateStack)
     .join("path")
+    .attr("d", initialarea)
+    .transition()
+    .delay(200)
+    .duration(2000)
     .attr("d", generateLine)
+   
     .style("fill", (d) => color_area(d.key));
-  //  .attr("fill", "none")
-  //   .style("stroke", (d) => color(d.key))
-  //   .attr("stroke-width", 1.5)
+    
+    d3.selectAll('text')
+    .style("font-family", "var(--font-family-sec-bold)");
 
-  var legend_area = svg_area
-    .selectAll(".legend")
+    svg_area.selectAll("mydots")
     .data(keysToStack)
     .enter()
-    .append("g")
-    .attr("class", "legend")
-    .attr("transform", function (d, i) {
-      return "translate(" + -10 * i + "," + 450 + ")";
-    })
-    .attr("width", 36);
-
-  legend_area
-    .append("rect")
-    .attr("x", function (d, i) {
-      return 10 + 120 * i;
-    })
-    .attr("width", 18)
-    .attr("height", 18)
-    .style("fill", color_area);
-
-  legend_area
+    .append("circle")
+      .attr("cx", 100)
+      .attr("cy", function(d,i){ return 100 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+      .attr("r", 7)
+      .style("fill", function(d){ return color_area(d)})
+  
+  // Add one dot in the legend for each name.
+  svg_area.selectAll("mylabels")
+    .data(keysToStack)
+    .enter()
     .append("text")
-    //.attr("x", width - 24)
-    .attr("x", function (d, i) {
-      return 10 + 120 * i + 20;
-    })
-    .attr("y", 9)
-    .attr("dy", ".35em")
+      .attr("x", 120)
+      .attr("y", function(d,i){ return 100 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
+      .style("fill", function(d){ return color_area(d)})
+      .text(function(d){ return d})
+      .attr("text-anchor", "left")
+      .style("font-family", "var(--family-bold-sec)")
+      .style("font-weight", "700")
+      .style("font-size", '12px')
+      .style("alignment-baseline", "middle")
 
-    //.style("text-anchor", "end")
-    .text(function (d) {
-      return d;
-    })
-    .style("font-size", "7px")
-    .style("font-family", "Quicksand");
+
+  
 });

@@ -115,7 +115,7 @@ var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip"
       d3.select(this).style("opacity", "0.5");
       tooltip_chart3
         .style("left", (event.clientX -250) + "px")
-        .style("top", (event.clientY- 800)+ "px")
+        .style("top", (event.clientY- 500)+ "px")
         .style("display", "inline-block")
         .html('<img class="flag-icon" src="./assets/flags/'+d.country + '.png"/>'+" <br/> "+d.country+': <b>' + d.value+'</b>');
     })

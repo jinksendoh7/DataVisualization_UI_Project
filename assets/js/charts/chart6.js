@@ -31,7 +31,7 @@ function onSelectCountry(countryInput){
 
 function drawChart (countryInput){
     
-var svgwidth = screen.width > 1920 ? screen.width *.50 :screen.width *.75;
+var svgwidth = 1600
 var svgheight = 800;
 var padding = 100;
 
@@ -223,8 +223,8 @@ setTimeout(() => {
             .on("mouseover", function(event,d){
                 d3.select(this).style("opacity", "0.5");
                 tooltip
-                  .style("left", event.clientX -5 + "px")
-                  .style("top", event.clientY - 100 + "px")
+                  .style("left", event.clientX-5 + "px")
+                  .style("top", event.clientY+250 + "px")
                   .style("display", "inline-block")
                   .html((d.category) + " <b>("+ (d.value) + " channels)</b>");
             })
