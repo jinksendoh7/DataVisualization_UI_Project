@@ -583,6 +583,9 @@ font-family: var(--font-family-sec-bold) !important;
 }
 
 .bg-dark{
-  background-color: var(--primary) !important;
+  background-color: var(--rosso) !important;
+}
+.bg-warn{
+  background-color: var(--apricot) !important;
 }
 /*# sourceMappingURL=starter.css.map */

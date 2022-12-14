@@ -35,7 +35,7 @@
     border-color: var(--rosso);
 }
 .stat-chart-warning{
-    border: 2px solid var(--white);
+    border: 2px solid var(--apricot);
     color: var(--white);
     background: var(--apricot);
 }
@@ -46,7 +46,7 @@
     border-color: var(--apricot);
 }
 .stat-chart-warning-outline:hover{
-    border: 2px solid var(--white);
+    border: 2px solid var(--apricot);
     color: var(--black);
     background: var(--apricot);
 }
@@ -55,6 +55,7 @@
     background: var(--white);
     cursor:pointer;
     border-color: var(--apricot);
+    border: 2px solid var(--apricot);
 }
 .stat-chart-success{
     border: 2px solid var(--white);
