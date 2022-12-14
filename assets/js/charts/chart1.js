@@ -147,7 +147,7 @@ g.selectAll('.allLabels')
     var catsValue = Object.entries(totalCat).sort((a,b) => b[1]-a[1]).map(el=>el[1]);
     console.log(catsValue,'CA');
     const cat = document.getElementById('top-category');
-    cat.innerHTML = '<i class="bi bi-1-square text-primary"></i> <i class="bi bi-controller"></i><br/><div class="fs-6">'+cats[0]+'</div>';
+    cat.innerHTML = '<i class="bi bi-1-square"></i> <i class="bi bi-controller"></i><br/><div class="fs-6">'+cats[0]+'</div>';
     document.getElementById('top-category-value').innerHTML = catsValue[0];
     document.getElementById('top-2-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-music-note-beamed"></i> '+ cats[1] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[1]+'</span>';
     document.getElementById('top-3-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-dash-circle-dotted"></i> '+ cats[2] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[2]+'</span>';

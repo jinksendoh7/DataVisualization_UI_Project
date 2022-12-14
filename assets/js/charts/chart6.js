@@ -44,13 +44,13 @@ var svg = d3.select('#chart-6')
   
 
 svg.append("text")
-    .style('font-size', 30)
+    .style('font-size', '45px')
     .style('font-weight', '800')
     .style('fill','var(--rosso)')
     .attr("x", 30)
     .attr('y', 30)
     .attr('id', 'chart-title')
-    .attr('font-family', 'var(--font-family-sec-bold)')
+    .style('font-family', 'var(--font-family-sec-bold)')
     .text('YouTube Channels By Category' + ' ('+countryInput+')')
 
 var inner_width = svgwidth - padding; //400
@@ -130,7 +130,7 @@ setTimeout(() => {
         
             //for stat chart value
             const flag = document.getElementById('top-country-flag');
-            flag.innerHTML = '<i class="bi bi-1-square text-primary"></i> <img src ="'+'./assets/flags/'+topCountry[0].country+'.png" alt ="'+topCountry[0].country+'" class="flag-icon-alt"/><div class="fs-6">'+topCountry[0].country+'</div>';
+            flag.innerHTML = '<i class="bi bi-1-square"></i> <img src ="'+'./assets/flags/'+topCountry[0].country+'.png" alt ="'+topCountry[0].country+'" class="flag-icon-alt"/><div class="fs-6">'+topCountry[0].country+'</div>';
             const flagVal = document.getElementById('top-country-flag-value');
             flagVal.innerHTML = topCountry[0].total_channel;
      

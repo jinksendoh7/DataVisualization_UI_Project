@@ -121,7 +121,6 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
 
   //var keysToStack = ['T-Series', 'ABCkidTV - Nursery Rhymes', 'SET India', 'PewDiePie', 'MrBeast'];
   var keysToStack = data.columns.slice(1);
-  console.log(keysToStack,'key');
 
   var generateStack = d3.stack().keys(keysToStack)(data);
   var tooltip = d3.select("body").append("div").attr("class", "toolTip");
@@ -168,6 +167,7 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
       .attr("r", 7)
       .style("fill", function(d){ return color_area(d)})
   
+    
   // Add one dot in the legend for each name.
   svg_area.selectAll("mylabels")
     .data(keysToStack)

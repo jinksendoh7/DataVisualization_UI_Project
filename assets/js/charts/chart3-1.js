@@ -12,16 +12,15 @@ const svg3 = d3.select("#chart-3")
   .append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-  svg3.append("text")
-    .attr("class", "chart-title")
-    .attr("x",48)
-    .attr("y", -10)
-    .attr("transform", "translate(220, 0)")
-     .style("text-anchor", "end")
-     .attr('font-family', 'var(--font-family-sec-bold)')
-    .style("font-weight", "700")
-    .style("font-size", '14px')
-    .style("fill", 'var(--rosso)')
+ 
+svg3.append("text")
+.style('font-size', '22px')
+.style('font-weight', '700')
+.style('fill','var(--rosso)')
+.attr("x", 0)
+.attr('y', -5)
+.attr('id', 'chart-title')
+.style('font-family', 'var(--font-family-sec-bold)')
     .text("Top Countries with YouTube Content Creators");
 
 // Parse the Data
@@ -58,7 +57,6 @@ var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip"
       .style("text-anchor", "end")
       .attr('fill', '#000')
       .attr('font-weight','700')
-      .attr('font-family', 'var(--font-family-sec-bold)')
       .style("font-size", "12px")
       .attr('fill', '#000')
       

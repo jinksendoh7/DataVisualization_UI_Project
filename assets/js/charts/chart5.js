@@ -112,7 +112,7 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .selectAll("rect")
     .data(function (d) {
       return subgroups.map(function (key) {
-        return { key: key, value: d[key] };
+        return { key: key, value: d[key], channelName: d.ChannelName };
       });
     })
     .join("rect")
@@ -125,9 +125,9 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
       d3.select(this).style("opacity", "0.5");
       tooltip
         .style("left", event.clientX-5 + "px")
-        .style("top", event.clientY+150 + "px")
+        .style("top", event.clientY+100 + "px")
         .style("display", "inline-block")
-        .html((d.key) + " <b> ($ "+ (Math.sign(d.value)*((Math.abs(d.value)/10000).toFixed(2)) + 'K') + ")</b>");
+        .html((d.channelName) + ': <b> '+d.key+" ($ "+ (Math.sign(d.value)*((Math.abs(d.value)/10000).toFixed(2)) + 'K') + ")</b>");
     })
     .on("mouseout", function (d) {
       d3.select(this).style("opacity", "1");
@@ -184,4 +184,6 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     .style("font-size", "12px")
     .style("font-family", "Quicksand");
 
+
+    
   });

@@ -23,12 +23,13 @@
     border-color: var(--rosso);
 }
 .stat-chart-primary-outline:hover{
-    border: 2px solid var(--white);
+    border: 2px solid var(--rosso);
     color: var(--white);
     background: var(--rosso);
 }
 .stat-chart-primary-outline{
     color: var(--rosso);
+    border: 2px solid var(--rosso);
     background: var(--white);
     cursor:pointer;
     border-color: var(--rosso);
@@ -76,6 +77,7 @@
     background: var(--white);
     cursor:pointer;
     border-color: var(--shamrock);
+    border: 2px solid var(--shamrock);
 }
 
 
