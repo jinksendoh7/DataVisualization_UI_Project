@@ -82,7 +82,7 @@ body {
   font-family: var(--font-family);
   color: var(--black);
   font-size: 16px;
-  height: 100% !important;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -587,5 +587,17 @@ font-family: var(--font-family-sec-bold) !important;
 }
 .bg-warn{
   background-color: var(--apricot) !important;
+}
+.row-team{
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}
+  @media (max-width: 414px) {
+    .row-team{
+      flex-direction:column;
+    }
+  }
+
 }
 /*# sourceMappingURL=starter.css.map */
