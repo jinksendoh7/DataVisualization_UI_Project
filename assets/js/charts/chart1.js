@@ -149,10 +149,10 @@ g.selectAll('.allLabels')
     const cat = document.getElementById('top-category');
     cat.innerHTML = '<i class="bi bi-1-square"></i> <i class="bi bi-controller"></i><br/><div class="fs-6">'+cats[0]+'</div>';
     document.getElementById('top-category-value').innerHTML = catsValue[0];
-    document.getElementById('top-2-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-music-note-beamed"></i> '+ cats[1] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[1]+'</span>';
-    document.getElementById('top-3-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-dash-circle-dotted"></i> '+ cats[2] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[2]+'</span>';
-    document.getElementById('top-4-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-tv"></i> '+ cats[3] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[3]+'</span>';
-    document.getElementById('top-5-category').innerHTML  =  '<span class="text-primary"> <i class="bi bi-scissors"></i> '+ cats[4] + '</span>  <span class="badge bg-dark rounded-pill float-end mt-1">'+catsValue[4]+'</span>';
+    document.getElementById('top-2-category').innerHTML  =  '<span class=""> <i class="bi bi-music-note-beamed"></i> '+ cats[1] + '</span>  <span class="badge bg-warn rounded-pill float-end mt-1">'+catsValue[1]+'</span>';
+    document.getElementById('top-3-category').innerHTML  =  '<span class=""> <i class="bi bi-dash-circle-dotted"></i> '+ cats[2] + '</span>  <span class="badge bg-warn rounded-pill float-end mt-1">'+catsValue[2]+'</span>';
+    document.getElementById('top-4-category').innerHTML  =  '<span class=""> <i class="bi bi-tv"></i> '+ cats[3] + '</span>  <span class="badge bg-warn rounded-pill float-end mt-1">'+catsValue[3]+'</span>';
+    document.getElementById('top-5-category').innerHTML  =  '<span class=""> <i class="bi bi-scissors"></i> '+ cats[4] + '</span>  <span class="badge bg-warn rounded-pill float-end mt-1">'+catsValue[4]+'</span>';
    
 
 svg.selectAll(".legend")
