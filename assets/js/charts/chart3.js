@@ -43,7 +43,7 @@ var yscale = d3.scaleLinear().range([inner_height, 0]);
 var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip");
 
 d3.csv("./data/top_100_youtubers.csv").then(function (data) {
-  console.log(data);
+ 
 
   // define count object that holds count for each country
   var countObj = {};
@@ -63,7 +63,7 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     var country = d.Country;
     d.count = countObj[country];
   });
-  console.log(countObj);
+
 
   var countObjValues = [];
   var keyCount = "Count";
@@ -110,7 +110,6 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
     countObjValues.push({ [keyCountry]: countryText, [keyCount]: value[1] }); // usa, 40
   }
   countObjValues.sort((a, b) => b.Count - a.Count);
-  console.log(countObjValues);
 
   xscale.domain(countObjValues.map((d) => d.Country));
 

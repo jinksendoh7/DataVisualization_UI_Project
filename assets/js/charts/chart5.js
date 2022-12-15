@@ -34,16 +34,15 @@ var g_grpbar = svg_grp
   .attr("transform", "translate(150, 50)");
 
 d3.csv("./data/top_100_youtubers.csv").then(function (data) {
-  console.log(data);
+ 
 
   //format file to get only the first 5
   var slicedData = data.slice(0, 5); //top 5 here
-  console.log(slicedData);
+
 
   //get xaxis
   var groups = data.map((d) => d.ChannelName).slice(0, 5); //top 5 here
-  console.log(groups);
-
+ 
   var xscale = d3.scaleLinear().domain([0, 1000000]).range([0, inner_width]);
 
   var xaxis = d3
@@ -116,9 +115,10 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
       });
     })
     .join("rect")
+    .attr("id","my_rect")
     .attr("x", (d) => xscale(20))
     .attr("y", (d) => ySubGroup(d.key))
-    .attr("width", (d) => xscale(d.value))
+    .attr("width",0)
     .attr("height", ySubGroup.bandwidth())
     .attr("fill", (d) => color(d.key))
     .on("mouseover", function (event, d) {
@@ -127,15 +127,18 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
         .style("left", event.clientX-5 + "px")
         .style("top", event.clientY+100 + "px")
         .style("display", "inline-block")
-        .html((d.channelName) + ': <b> '+d.key+" ($ "+ (Math.sign(d.value)*((Math.abs(d.value)/10000).toFixed(2)) + 'K') + ")</b>");
+        .html((d.channelName) + '<br/><b> '+d.key+" ($ "+ (Math.sign(d.value)*((Math.abs(d.value)/10000).toFixed(2)) + 'K') + ")</b>");
     })
     .on("mouseout", function (d) {
       d3.select(this).style("opacity", "1");
-      tooltip.style("display", "none");});
+      tooltip.style("display", "none");})
+     
+      .transition()
+      .duration(2000)
+      .attr("width", d=>xscale(d.value));
 
-      d3.selectAll('text')
-      .style("font-family", "var(--font-family-sec-bold)");
-
+     
+   
 
   //                 // Legends which is in right side
   // var legend = svg_grp.selectAll(".legend")
@@ -182,8 +185,9 @@ d3.csv("./data/top_100_youtubers.csv").then(function (data) {
       return d;
     })
     .style("font-size", "12px")
-    .style("font-family", "Quicksand");
 
+    d3.selectAll('text')
+    .style("font-family", "var(--font-family-sec-bold)");
 
     
   });

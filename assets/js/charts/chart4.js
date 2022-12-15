@@ -1,8 +1,24 @@
 const chart4 = document.getElementById("chart-4");
 
+
 var svgwidth_area = 500;
 var svgheight_area = 500;
 var padding_area = 200;
+
+    // What to do when one group is hovered
+    var highlight = function(d){
+    
+      // reduce opacity of all groups
+      d3.selectAll("#myArea").style("opacity", .1)
+      // expect the one that is hovered
+      d3.select("."+d).style("opacity", 1)
+    }
+
+    // And when it is not hovered anymore
+    var noHighlight = function(d){
+      d3.selectAll("#myArea").style("opacity", 1)
+    }
+
 
 var svg_area = d3
   .select("#chart-4")
@@ -46,7 +62,6 @@ var g_stkarea = svg_area
 d3.csv("./data/avg_view_every_year.csv").then(function (data) {
   //get xaxis
   var years = data.map((d) => d.Year);
-  console.log(years);
 
   data.forEach(function (d) {
     d.Year = parseTime(d.Year);
@@ -56,8 +71,6 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     d.PewDiePie = parseInt(d.PewDiePie);
     d.MrBeast = parseInt(d.MrBeast);
   });
-  console.log(data);
-
   //create xaxis
   var xscale = d3
     .scaleTime()
@@ -124,7 +137,7 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
 
   var generateStack = d3.stack().keys(keysToStack)(data);
   var tooltip = d3.select("body").append("div").attr("class", "toolTip");
-  console.log("generateStack", generateStack);
+
 
   var initialarea = d3.area()
   .x(function(d) { return xscale(d.data.Year); })
@@ -152,7 +165,10 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     .delay(200)
     .duration(2000)
     .attr("d", generateLine)
-   
+    .attr("id","myArea")
+    .attr("class", function(d) { 
+        return d.key === 'SET India' ? "myArea_" + (d.key.length + 1): "myArea_" + (d.key.length);
+      })
     .style("fill", (d) => color_area(d.key));
     
     d3.selectAll('text')
@@ -166,6 +182,18 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
       .attr("cy", function(d,i){ return 100 + i*25}) // 100 is where the first dot appears. 25 is the distance between dots
       .attr("r", 7)
       .style("fill", function(d){ return color_area(d)})
+      .on("mouseover", (event, d)=> {
+        if(d === 'SET India'){
+          highlight('myArea_'+(d.length+ 1))
+        }
+        else{
+          highlight('myArea_'+d.length)
+        }
+        })
+      .on("mouseleave", (event)=>{
+        noHighlight();
+      })
+
   
     
   // Add one dot in the legend for each name.
@@ -182,6 +210,17 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
       .style("font-weight", "700")
       .style("font-size", '12px')
       .style("alignment-baseline", "middle")
+      .on("mouseover", (event, d)=> {
+        if(d === 'SET India'){
+          highlight('myArea_'+(d.length+ 1))
+        }
+        else{
+          highlight('myArea_'+d.length)
+        }
+        })
+      .on("mouseleave", (event)=>{
+        noHighlight();
+      })
 
 
   

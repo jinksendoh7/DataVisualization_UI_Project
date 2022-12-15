@@ -41,7 +41,7 @@ var svg = d3.select('#chart-6')
     .append('svg')
     .attr('class', 'svg6')
     .attr('viewBox', viewBox)
-  
+
 
 svg.append("text")
     .style('font-size', '45px')
@@ -151,6 +151,7 @@ setTimeout(() => {
 
         g.append('g')
             .attr('transform', 'translate(0,' + inner_height + ')')
+            .attr('class','x-axis')
             .call(xaxis)
             .selectAll("text")
             .style("text-anchor", "end")
@@ -158,18 +159,17 @@ setTimeout(() => {
             .attr("dy", ".15em")
             .attr('fill', '#000')
             .attr('font-weight','700')
-            .attr('font-family', 'var(--font-family-sec-bold)')
+            .style('font-family', 'var(--font-family-sec-bold)')
             .attr("transform", "rotate(-45)")
             .style("font-size", "20px");
 
         g.append('text')
-            .attr('x', inner_width / 2 -110)
+            .attr('x', 550)
             .attr("y", inner_height + 120)
-           
+            .style("font-size", "30px")
             .attr('fill', '#FF0009')
-            .attr('font-size','22px')
-            .attr('font-weight','700')
-            .attr('font-family', 'var(--font-family-sec-bold)')
+            .style('font-weight','700')
+            .style('font-family', 'var(--font-family-sec-bold)')
             .text('Categories')
             
 
@@ -187,16 +187,16 @@ setTimeout(() => {
             .attr('fill', '#000')
             .attr('font-weight','700')
             .attr('font-family', 'var(--font-family-sec-bold)')
-            .style("font-size", "20px");
+            .style("font-size", "25px");
         
         g.append('text')
             .attr('transform', 'rotate(-90)')
             .attr('x', -400)
-            .attr('y', -35)
+            .attr('y', -31)
             .attr('fill', '#FF0009')
-            .attr('font-size','20px')
             .attr('font-weight','700')
             .attr('font-family', 'var(--font-family-sec-bold)')
+            .style("font-size", "30px")
             .text('Total Channels')
 
         var graph = g.selectAll(".graph")
@@ -246,8 +246,7 @@ setTimeout(() => {
             .delay(function(d, i) {
                 return i * 100
             })
-            d3.selectAll("svg").exit();
-
+        
    
     });
  
@@ -256,8 +255,8 @@ setTimeout(() => {
     $('#exampleModal').modal('hide');
 }, 1000);
 
-
 }
 
 // main call
 drawChart(countryInput)
+

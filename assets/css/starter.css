@@ -549,9 +549,13 @@ pre {
   padding: 5px;
   font-weight: 500;
   border-radius: 8px;
-  box-shadow: var(--shadow-3);
+  box-shadow: var(--shadow-4);
   z-index:990;
+font-family: var(--font-family-sec-bold);
+}
 
+circle{
+  cursor: pointer;
 }
 .chip-wrapper{
   background-color: #fbfbfb;
@@ -570,6 +574,10 @@ pre {
   }
 }
 
+#my_rect{
+  font-family: var(--font-family-sec-bold);
+}
+
 #chart-3, #chart-4, #chart-5, #chart-6-wrapper{
   border: 1px solid var(--primary) !important;
   box-shadow:var(--shadow-3)
@@ -578,7 +586,7 @@ pre {
   border: 2px solid var(--primary) !important;
   box-shadow:var(--shadow-3)
 }
-svg>text{
+svg{
 font-family: var(--font-family-sec-bold) !important;
 }
 

@@ -29,7 +29,7 @@
             Object.entries(data).forEach(entry => {
                 const [key, item] = entry;
                 if (channelUnique[index] === item.ChannelName) {
-                    console.log(item.ChannelName, item.followers,'a')
+           
                     channelSumValue =  channelSumValue + parseInt(item.followers)
                 }
                 
@@ -46,7 +46,7 @@
       const topChannelSubs =channelAllValues.sort(function(a, b) {
         return b.value - a.value
       })
-    console.log(topChannelSubs,'CT')
+
      //for stat chart value
      const flag = document.getElementById('top-category-followers');
      flag.innerHTML =  '<i class="bi bi-controller"></i><br/><div class="fs-4"<div class="fs-6">'+topCatFollowers[0].category+'</div>';;

@@ -5,6 +5,7 @@ var padding = 50;
 var svg = d3.select("#chart-1")
     .append('svg')
     .attr('viewBox', '0 0 500 500')
+ 
 
 //-------------------------TITLE FOR PIE CHART-------------------------\\    
 svg.append("text")  
@@ -26,6 +27,9 @@ var g = svg.append("g")
     .attr("transform", "translate(250, 250)")
     .attr("class", "graph")
 
+
+    
+   
 //-------------------------RADIUS FOR PIECHART-------------------------\\    
 var radius = Math.min(inner_width, inner_height) / 2 -25; 
 
@@ -47,7 +51,7 @@ categories.forEach((item, data) => {
             return acc + value;
         }, 0)
 // Stat Chart Value
-console.log(values);
+
 
 const palletes = ['#CC0007', '#1F1F67',  '#4D4D4D', '#FFA733', '#005B8F', '#009EBD','#752967',   '#993A8C', '#0D0D0D']
 var color = d3.scaleOrdinal()
@@ -62,7 +66,7 @@ var arc = d3.arc() // manage arc
     .innerRadius(radius - 100)
     .outerRadius(radius * .8)    
     
-var tooltip = d3.select("body").append("div").attr("class", "toolTip");
+var tooltip = d3.select("body").append("div").attr("class", "toolTip").style("font-family", "var(--font-family-sec-bold)");
 
     
 g.selectAll('.graph') //input Category data count
@@ -71,7 +75,7 @@ g.selectAll('.graph') //input Category data count
     .attr('transform', 'rotate(2)')
     .attr('d', arc)
     .attr('fill', function(d){
-        // console.log(d.data)
+       
         return color(d.data)
     })
     .attr('stroke', 'white')
@@ -145,7 +149,7 @@ g.selectAll('.allLabels')
    
     var cats = Object.entries(totalCat).sort((a,b) => b[1]-a[1]).map(el=>el[0]);
     var catsValue = Object.entries(totalCat).sort((a,b) => b[1]-a[1]).map(el=>el[1]);
-    console.log(catsValue,'CA');
+
     const cat = document.getElementById('top-category');
     cat.innerHTML = '<i class="bi bi-1-square"></i> <i class="bi bi-controller"></i><br/><div class="fs-6">'+cats[0]+'</div>';
     document.getElementById('top-category-value').innerHTML = catsValue[0];
@@ -174,7 +178,7 @@ svg.selectAll("mylabels")
     .attr("x", 95)
     .attr("y", 425)
     .join('text')
-    .style("font-family", "var(--family-bold-sec)")
+    .style("font-family", "var(--font-family-sec-bold)")
     .style("font-weight", "700")
     .style("font-size", 15)
     .attr("transform", function(d,i) { return "translate(" + i%legendValue * itemWidth + "," + Math.floor(i/legendValue) * itemHeight + ")"; })
@@ -185,4 +189,6 @@ svg.selectAll("mylabels")
     })
     .attr("text-anchor", "right")
     .style("alignment-baseline", "middle")  
+
+    d3.selectAll("path").data(pie(Object.entries(totalCat))).transition().duration(2000);
 })  

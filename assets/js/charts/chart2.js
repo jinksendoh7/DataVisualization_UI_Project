@@ -50,9 +50,8 @@ var g = svg.append('g')
 d3.csv("../data/top_100_youtubers.csv").then(function(data){
     var maxFollowers = d3.max(data, function(d) { return +d.followers;} );
     var maxLikes = d3.max(data, function(d) { return +d.Likes;} );
-    console.log(maxLikes)
-    
-    console.log(maxFollowers.toFixed(2))
+
+
 
     var xscale = d3.scaleLinear()
                     .domain([0, maxFollowers.toFixed(3)])

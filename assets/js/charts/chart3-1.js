@@ -1,6 +1,6 @@
 
 // set the dimensions and margins of the graph
-console.log(screen.width,'sc--')
+
 const margin = {top: 20, right: 30, bottom: 40, left: 50},
     width = 600-margin.left - margin.right,
     height = 400 - margin.top - margin.bottom;
@@ -59,7 +59,7 @@ var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip"
       .attr('font-weight','700')
       .style("font-size", "12px")
       .attr('fill', '#000')
-      
+      .style('font-family', 'var(--font-family-sec-bold)')
 
   // Y axis
   const y = d3.scaleBand()
@@ -71,12 +71,21 @@ var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip"
     .call(d3.axisLeft(y))
     .selectAll("text")
     .attr('fill', '#000')
-    .attr('font-weight','700')
-    .attr('font-family', 'var(--font-family-sec-bold)')
+    .style('font-weight','700')
+
     .style("font-size", "12px")
-    .attr('fill', '#000')
     
-  
+    svg3.append("text")
+    .attr("text-anchor", "middle")
+    .style("font-size", "15px")
+    .attr('fill', 'var(--primary)')
+    .attr("transform", "rotate(-90)")
+    .attr("x", -180)
+    .attr("y", -32)
+    .text("Top Countries")
+    .style('font-family', 'var(--font-family-sec-bold)')
+
+
     var color_bar = d3
     .scaleOrdinal()
     .domain(countriesCountValues)
@@ -112,8 +121,8 @@ var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip"
       //changing color when hover
       d3.select(this).style("opacity", "0.5");
       tooltip_chart3
-        .style("left", (event.clientX -250) + "px")
-        .style("top", (event.clientY- 500)+ "px")
+        .style("left", (event.clientX -300) + "px")
+        .style("top", (event.clientY-500)+ "px")
         .style("display", "inline-block")
         .html('<img class="flag-icon" src="./assets/flags/'+d.country + '.png"/>'+" <br/> "+d.country+': <b>' + d.value+'</b>');
     })
@@ -121,6 +130,17 @@ var tooltip_chart3 = d3.select("#chart-3").append("div").attr("class", "toolTip"
       d3.select(this).style("opacity", "1");
       tooltip_chart3.style("display", "none");
     });
+    svg3.append("text")
+    .attr('x', 250)
+    .attr("y", inner_height -20)
+    .attr("text-anchor", "middle")
+    .style("font-size", "15px")
+    .attr('fill', '#FF0009')
+    .attr('font-size','20px')
+    .attr('font-weight','700')
+    .attr('font-family', 'var(--font-family-sec-bold)')
+    .text('Total YouTube Creators');
+
 
     d3.selectAll("#bar_rect")
       .data(countriesCountValues)
