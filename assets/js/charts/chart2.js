@@ -1,17 +1,16 @@
-var svgwidth = 500;
-var svgheight = 500;
-var padding = 200;
+var svgwidth = 550;
+var svgheight = 600;
+var padding = 100;
 
 var numFormat = d3.format(".2s");
 
-var svg = d3.select("#scatter_plot")
+var svg = d3.select("#chart-2")
             .append('svg')
             .attr('width', '100%')
             .attr('height', '100%')
-            .attr("style", "outline: thin solid #4D4D4D;")
             .attr('viewBox',
                 '0 0 ' + svgwidth + ' ' + svgheight
-            ).attr('preserveAspectRatio', 'xMidYMid meet')
+            )
 
 var inner_width = svgwidth - padding;
 var inner_height = svgheight - padding;
@@ -20,34 +19,35 @@ var inner_height = svgheight - padding;
 svg.append("text")
     .attr("transform", "translate(" + (svgwidth/2) + " ," + (svgheight-40) + ")")
     .style("text-anchor", "middle")
-    .style("font-family", "Quicksand")
-    .style("font-weight", "bold")
+    .style("font-family", "var(--font-family-sec-bold)")
+    .attr('fill', 'var(--rosso)')
+    .style("font-size", "14px")
     .text("Followers/Subscribers");
 
     //Title "Relationship Between Likes and Subscribes"
 svg.append("text")
-    .attr("transform", "translate(" + (svgwidth/2) + " ," + (svgheight-460) + ")")
-    .style("text-anchor", "middle")
-    .style("font-family", "Quicksand")
-    .style("font-size", "20")
+    .attr("transform", "translate(" + (30) + " ," + (80) + ")")
+    .style("font-family", "var(--font-family-sec-bold)")
+    .attr('fill', 'var(--rosso)')
+    .style("font-size", "18px")
     .style("font-weight", "bold")
-    .text("Relationship Between Likes and Subscribes");
+    .text("Relationship Between Likes and Subscribers");
 
 //Y axis Title "Likes"
 svg.append("text")
     .attr("transform", "rotate(-90)")
     .attr("x", -(svgheight/2))
     .attr("y", 50)
-    .style("text-anchor", "middle")
-    .style("font-family", "Quicksand")
-    .style("font-weight", "bold")
+    .style("font-family", "var(--font-family-sec-bold)")
+    .attr('fill', 'var(--rosso)')
+    .style("font-size", "14px")
     .text("Likes");
 
 var g = svg.append('g')
             .attr('transform', 'translate(110, 90)')
             .attr('class', 'graph');
 
-d3.csv("../data/top_100_youtubers.csv").then(function(data){
+d3.csv("./data/top_100_youtubers.csv").then(function(data){
     var maxFollowers = d3.max(data, function(d) { return +d.followers;} );
     var maxLikes = d3.max(data, function(d) { return +d.Likes;} );
 

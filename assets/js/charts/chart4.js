@@ -45,10 +45,10 @@ svg_area
   .style("text-anchor", "middle")
   .style("font-family", "var(--font-family-sec-bold)")
   .style("font-weight", "700")
-  .style("font-size", 14)
+  .style("font-size", "16px")
   .attr("x", -10)
   .attr('y', 65)
-  .style("fill", "var(--primary)")
+  .style("fill", "var(--rosso)")
   .text("Top 5 Channels (Average Views/Year)");
 
 var g_stkarea = svg_area
@@ -90,10 +90,11 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     .append("text")
     .attr("x", inner_width_area / 2)
     .attr("y", 40)
-    .style("fill", "var(--primary)")
+    .style("fill", "var(--rosso)")
     .style("text-anchor", "middle")
     .style("font-family", "var(--font-family-sec-bold)")
     .style("font-weight", "700")
+    .style("font-size","14px")
     .text("Year");
   
    
@@ -126,10 +127,11 @@ d3.csv("./data/avg_view_every_year.csv").then(function (data) {
     .attr("transform", "rotate(-90)")
     .attr("x", -100)
     .attr("y", -50)
-    .style("fill", "var(--primary)")
+    .style("fill", "var(--rosso)")
     .style("text-anchor", "middle")
     .style("font-family", "var(--font-family-sec-bold)")
     .style("font-weight", "700")
+    .style("font-size", "14px")
     .text("Average Views");
 
   //var keysToStack = ['T-Series', 'ABCkidTV - Nursery Rhymes', 'SET India', 'PewDiePie', 'MrBeast'];
