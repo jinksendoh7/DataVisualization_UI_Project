@@ -578,11 +578,11 @@ circle{
   font-family: var(--font-family-sec-bold);
 }
 
-#chart-3, #chart-4, #chart-5, #chart-6-wrapper{
+#chart-3, #chart-2, #chart-4, #chart-5, #chart-6-wrapper{
   border: 1px solid var(--primary) !important;
   box-shadow:var(--shadow-3)
 }
-#chart-3:hover,#chart-5:hover,#chart-4:hover, #chart-6-wrapper:hover{
+#chart-3:hover,#chart-5:hover,#chart-4:hover,#chart-2:hover, #chart-6-wrapper:hover{
   border: 2px solid var(--primary) !important;
   box-shadow:var(--shadow-3)
 }

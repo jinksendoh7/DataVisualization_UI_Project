@@ -58,13 +58,13 @@
     border: 2px solid var(--apricot);
 }
 .stat-chart-success{
-    border: 2px solid var(--white);
-    color: var(--white);
+    border: 2px solid var(--shamrock);
+    color: var(--shamrock);
     background: var(--shamrock);
 }
 .stat-chart-success:hover{
-    color: var(--shamrock);
-    background: var(--white);
+    color: var(-white);
+    background: var(--shamrock);
     cursor:pointer;
     border-color: var(--shamrock);
 }
@@ -72,6 +72,7 @@
 .stat-chart-success-outline:hover{
     border: 2px solid var(--shamrock);
     color: var(--white);
+    background: var(--shamrock);
 }
 .stat-chart-success-outline{
     color: var(--shamrock);

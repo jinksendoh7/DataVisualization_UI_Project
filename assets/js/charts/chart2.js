@@ -1,13 +1,12 @@
-var svgwidth = 550;
-var svgheight = 600;
+var svgwidth = 650;
+var svgheight = 590;
 var padding = 100;
 
 var numFormat = d3.format(".2s");
 
 var svg = d3.select("#chart-2")
             .append('svg')
-            .attr('width', '100%')
-            .attr('height', '100%')
+         
             .attr('viewBox',
                 '0 0 ' + svgwidth + ' ' + svgheight
             )
@@ -29,7 +28,7 @@ svg.append("text")
     .attr("transform", "translate(" + (30) + " ," + (80) + ")")
     .style("font-family", "var(--font-family-sec-bold)")
     .attr('fill', 'var(--rosso)')
-    .style("font-size", "18px")
+    .style("font-size", "20px")
     .style("font-weight", "bold")
     .text("Relationship Between Likes and Subscribers");
 
